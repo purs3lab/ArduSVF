@@ -4,23 +4,70 @@ import sys, getopt
 funcs = {} # This is the PDG
 data ={}
 cfg = {} #This remains the CFG
-def mergePairs():
-
+compartments=[]
+compartmentMap={}
 def paint():
+	global funcs
+	global data
+	global PDG
+	global compartments
+	global compartmentMap
 	for func in funcs:
-        iter =0
-        if func not in compartmentMap:
-            for val in funcs[func]:
-                if val in compartmentMap:
-                    break;
-                iter+=1
-            if iter==len(funcs[func]):
-                compartment = [func]
-                compartmentMap[func] = compartment
-                for val in funcs[func]:
-                    compartment.append(val)
-                    compartmentMap[val] = compartment
-                compartments.append(compartment)
+		colors=[]
+		if func in compartmentMap:
+			colors.append(compartmentMap[func])
+		for obj in funcs[func]:
+			if obj in compartmentMap:
+				if compartmentMap[obj] not in colors:
+					colors.append(compartmentMap[obj])
+
+		print("Different colors: ")
+		print colors
+		#Repaint
+#print("Different Compartments before in the colored compart:")
+#		print(colors)
+		compartment = []
+		for color in colors:
+			for obj in color:
+				oldCompartment = compartmentMap[obj]
+				compartmentMap[obj] = compartment
+				compartment.append(obj)
+				oldCompartment.remove(obj)
+				if len(oldCompartment) == 0:
+					compartments.remove(oldCompartment)
+#		print("Merged Compartment")
+#		print(compartment)
+
+		print("After merge: ")
+		print(compartment)
+		compartments.append(compartment)
+		print("Lets see what we have in paint: ")
+		print(compartments)
+
+def addToCompartment(func, compart):
+		compart.append(func)
+		compartmentMap[func] = compart
+def spreadPaint():
+	global funcs
+	global data
+	global PDG
+	global compartments
+	global compartmentMap
+	compartment=[]
+	for func in funcs:
+		if func not in compartmentMap:
+#print("There was funcs not in compartments")
+			for val in funcs[func]:
+				if val in compartmentMap:
+					#At this point all compartments must be same in the pointed thing
+					compartment=compartmentMap[val]
+					break;
+			addToCompartment(func, compartment)
+			for val in funcs[func]:
+				if val not in compartmentMap:
+					compartment.append(val)
+					compartmentMap[val] = compartment
+		
 
 def main(argv):
 	cfg = ''
@@ -28,6 +75,8 @@ def main(argv):
 	global funcs
 	global data
 	global PDG
+	global compartments
+	global compartmentMap
 	try:
 		opts, args = getopt.getopt(argv,"hc:d:",["cfile=","dfile="])
 	except getopt.GetoptError:
@@ -121,8 +170,6 @@ def main(argv):
 #print(funcs[func])
 	print("Leaf Compartments:" +str(len(leaves)))
 	print("Loose Functions:" + str(objCount - len(leaves)))
-	compartments=[]
-	compartmentMap={}
 
 	##############################
 	# Initialize compartments with dominator nodes - Leaf with dominator nodes
@@ -242,11 +289,20 @@ def main(argv):
 #			print(len(colors))
 	print("Total mixed compartments:" +str(i))
 
+	paint()
+	spreadPaint()
+	print(compartments)
+#paint()
+#	spreadPaint()
+#	paint()
 	j=0
 	for compartment in compartments:
 		j+= len(compartment)
+	print("EndOfTheScript")
 	print("Compartments:" +str(j))
 	print("Loose Functions:" + str(objCount - j))
+#	print(compartments)
+#print(funcs)
 	
 
 #print(colors)
