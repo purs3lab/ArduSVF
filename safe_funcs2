@@ -1,0 +1,16 @@
+//Intrinsic functions
+llvm.lifetime.start.p0i8
+llvm.dbg.declare
+llvm.lifetime.end.p0i8
+llvm.dbg.value
+llvm.va_start
+llvm.va_end
+llvm.memset.p0i8.i32
+llvm.umul.with.overflow.i32
+llvm.memcpy.p0i8.p0i8.i32
+//Kernel Interfaces
+xQueueReceive
+xQueueSend
+xTaskGetTickCount
+xQueueGenericSend
+_write

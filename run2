@@ -1,0 +1,1 @@
+./Debug-build/bin/svf-ex /home/arslan/projects/LBC/FreeRTOS/FreeRTOS/Demo/CORTEX_M3_MPS2_QEMU_GCC/./build/RTOSDemo.axf.bc ./kern_funcs2 ./user_funcs2 ./safe_funcs2 ./create_funcs ./dev.map

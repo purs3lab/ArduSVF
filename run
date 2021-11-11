@@ -1,0 +1,1 @@
+./Debug-build/bin/svf-ex ~/projects/LBC/checkedC/workspace/RTOS/checked/SafeRT/safert.bc ./kern_funcs ./user_funcs ./safe_funcs ./create_funcs 

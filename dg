@@ -1,0 +1,465 @@
+*********************************
+isr_vector
+Used By:
+****************
+_estack
+Used By:
+****************
+_sidata
+Used By:
+****************
+_sdata
+Used By:
+****************
+_edata
+Used By:
+_reset
+****************
+_sbss
+Used By:
+****************
+_ebss
+Used By:
+_reset
+****************
+.str
+Used By:
+write_number
+****************
+.str.1
+Used By:
+write_number
+****************
+.str.2
+Used By:
+write_number
+****************
+.str.3
+Used By:
+write_number
+****************
+.str.4
+Used By:
+write_number
+****************
+.str.5
+Used By:
+write_number
+****************
+.str.6
+Used By:
+write_number
+****************
+.str.7
+Used By:
+write_number
+****************
+.str.8
+Used By:
+write_number
+****************
+.str.9
+Used By:
+write_number
+****************
+heap_end
+Used By:
+_sbrk
+****************
+_heap_bottom
+Used By:
+_sbrk
+****************
+_heap_top
+Used By:
+_sbrk
+****************
+uxTimerTaskStack
+Used By:
+vApplicationGetTimerTaskMemory
+****************
+vApplicationGetIdleTaskMemory.xIdleTaskTCB
+Used By:
+****************
+vApplicationGetIdleTaskMemory.uxIdleTaskStack
+Used By:
+vApplicationGetIdleTaskMemory
+****************
+vApplicationGetTimerTaskMemory.xTimerTaskTCB
+Used By:
+****************
+uxCriticalNesting
+Used By:
+prvTaskExitError
+xPortStartScheduler
+vPortEndScheduler
+vPortEnterCritical
+vPortExitCritical
+****************
+ucMaxSysCallPriority
+Used By:
+vPortValidateInterruptPriority
+****************
+ulMaxPRIGROUPValue
+Used By:
+vPortValidateInterruptPriority
+****************
+pxCurrentTCB
+Used By:
+xTaskIncrementTick
+vTaskDelay
+eTaskGetState
+xTaskPriorityInherit
+xTaskPriorityDisinherit
+vTaskPriorityDisinheritAfterTimeout
+uxTaskResetEventItemValue
+pvTaskIncrementMutexHeldCount
+ulTaskGenericNotifyTake
+xTaskGenericNotifyWait
+xTaskGenericNotify
+prvAddNewTaskToReadyList
+vTaskDelete
+xTaskDelayUntil
+xTaskResumeAll
+vTaskGenericNotifyGiveFromISR
+xTaskGenericNotifyStateClear
+ulTaskGenericNotifyValueClear
+uxTaskPriorityGet
+uxTaskPriorityGetFromISR
+vTaskPrioritySet
+vTaskSuspend
+vTaskResume
+xTaskResumeFromISR
+pcTaskGetName
+uxTaskGetSystemState
+xTaskAbortDelay
+vTaskPlaceOnEventList
+vTaskPlaceOnUnorderedEventList
+vTaskPlaceOnEventListRestricted
+xTaskRemoveFromEventList
+vTaskRemoveFromUnorderedEventList
+xTaskCheckForTimeOut
+vTaskGetInfo
+uxTaskGetStackHighWaterMark2
+uxTaskGetStackHighWaterMark
+xTaskGetCurrentTaskHandle
+xTaskGenericNotifyFromISR
+****************
+uxTopUsedPriority
+Used By:
+****************
+llvm.used
+Used By:
+****************
+uxSchedulerSuspended
+Used By:
+xTaskIncrementTick
+vTaskSuspendAll
+vTaskDelay
+vTaskSwitchContext
+vTaskDelete
+xTaskDelayUntil
+xTaskResumeAll
+vTaskGenericNotifyGiveFromISR
+vTaskSuspend
+xTaskResumeFromISR
+xTaskGetHandle
+uxTaskGetSystemState
+xTaskCatchUpTicks
+xTaskAbortDelay
+vTaskPlaceOnUnorderedEventList
+xTaskRemoveFromEventList
+vTaskRemoveFromUnorderedEventList
+vTaskGetInfo
+xTaskGetSchedulerState
+xTaskGenericNotifyFromISR
+****************
+xYieldPending
+Used By:
+xTaskIncrementTick
+xTaskResumeAll
+****************
+uxTopReadyPriority
+Used By:
+xTaskIncrementTick
+vTaskSwitchContext
+xTaskPriorityInherit
+xTaskPriorityDisinherit
+vTaskPriorityDisinheritAfterTimeout
+xTaskGenericNotify
+prvAddNewTaskToReadyList
+xTaskResumeAll
+vTaskGenericNotifyGiveFromISR
+vTaskPrioritySet
+vTaskSuspend
+vTaskResume
+xTaskResumeFromISR
+xTaskAbortDelay
+xTaskRemoveFromEventList
+vTaskRemoveFromUnorderedEventList
+xTaskGenericNotifyFromISR
+****************
+pxReadyTasksLists
+Used By:
+xTaskIncrementTick
+vTaskSwitchContext
+xTaskPriorityInherit
+xTaskPriorityDisinherit
+vTaskPriorityDisinheritAfterTimeout
+xTaskGenericNotify
+prvAddNewTaskToReadyList
+xTaskResumeAll
+vTaskGenericNotifyGiveFromISR
+vTaskPrioritySet
+vTaskSuspend
+vTaskResume
+xTaskResumeFromISR
+prvIdleTask
+xTaskGetHandle
+uxTaskGetSystemState
+xTaskAbortDelay
+xTaskRemoveFromEventList
+vTaskRemoveFromUnorderedEventList
+xTaskGenericNotifyFromISR
+****************
+uxCurrentNumberOfTasks
+Used By:
+prvAddNewTaskToReadyList
+vTaskDelete
+xTaskResumeAll
+vTaskSuspend
+prvIdleTask
+uxTaskGetNumberOfTasks
+uxTaskGetSystemState
+****************
+xDelayedTaskList1
+Used By:
+****************
+xDelayedTaskList2
+Used By:
+****************
+xPendingReadyList
+Used By:
+xTaskResumeAll
+****************
+xTasksWaitingTermination
+Used By:
+eTaskGetState
+prvIdleTask
+xTaskGetHandle
+uxTaskGetSystemState
+vTaskGetInfo
+****************
+xSuspendedTaskList
+Used By:
+eTaskGetState
+vTaskSuspend
+vTaskResume
+xTaskResumeFromISR
+xTaskGetHandle
+uxTaskGetSystemState
+xTaskAbortDelay
+vTaskGetInfo
+****************
+pxDelayedTaskList
+Used By:
+xTaskIncrementTick
+vTaskDelay
+eTaskGetState
+ulTaskGenericNotifyTake
+xTaskGenericNotifyWait
+vTaskDelete
+xTaskDelayUntil
+xTaskResumeAll
+vTaskSuspend
+xTaskGetHandle
+uxTaskGetSystemState
+xTaskAbortDelay
+vTaskPlaceOnEventList
+vTaskPlaceOnUnorderedEventList
+vTaskPlaceOnEventListRestricted
+vTaskGetInfo
+****************
+pxOverflowDelayedTaskList
+Used By:
+xTaskIncrementTick
+vTaskDelay
+eTaskGetState
+ulTaskGenericNotifyTake
+xTaskGenericNotifyWait
+xTaskDelayUntil
+xTaskGetHandle
+uxTaskGetSystemState
+xTaskAbortDelay
+vTaskPlaceOnEventList
+vTaskPlaceOnUnorderedEventList
+vTaskPlaceOnEventListRestricted
+vTaskGetInfo
+****************
+xSchedulerRunning
+Used By:
+prvAddNewTaskToReadyList
+vTaskDelete
+vTaskSuspend
+xTaskGetSchedulerState
+****************
+uxTaskNumber
+Used By:
+prvAddNewTaskToReadyList
+vTaskDelete
+****************
+uxDeletedTasksWaitingCleanUp
+Used By:
+vTaskDelete
+prvIdleTask
+****************
+xNextTaskUnblockTime
+Used By:
+xTaskIncrementTick
+vTaskDelay
+ulTaskGenericNotifyTake
+xTaskGenericNotifyWait
+xTaskDelayUntil
+vTaskPlaceOnEventList
+vTaskPlaceOnUnorderedEventList
+vTaskPlaceOnEventListRestricted
+****************
+xTickCount
+Used By:
+xTaskIncrementTick
+vTaskDelay
+ulTaskGenericNotifyTake
+xTaskGenericNotifyWait
+xTaskGenericNotify
+xTaskDelayUntil
+xTaskGetTickCount
+xTaskGetTickCountFromISR
+vTaskPlaceOnEventList
+vTaskPlaceOnUnorderedEventList
+vTaskPlaceOnEventListRestricted
+vTaskSetTimeOutState
+vTaskInternalSetTimeOutState
+xTaskCheckForTimeOut
+xTaskGenericNotifyFromISR
+****************
+xPendedTicks
+Used By:
+xTaskIncrementTick
+xTaskResumeAll
+xTaskCatchUpTicks
+****************
+xNumOfOverflows
+Used By:
+xTaskIncrementTick
+vTaskSetTimeOutState
+vTaskInternalSetTimeOutState
+xTaskCheckForTimeOut
+****************
+.str.19
+Used By:
+vTaskStartScheduler
+****************
+xIdleTaskHandle
+Used By:
+xTaskGetIdleTaskHandle
+****************
+xQueueRegistry
+Used By:
+vQueueUnregisterQueue
+vQueueAddToRegistry
+pcQueueGetName
+****************
+xTimerQueue
+Used By:
+xTimerCreateTimerTask
+prvTimerTask
+prvInitialiseNewTimer
+xTimerGenericCommand
+xTimerPendFunctionCallFromISR
+xTimerPendFunctionCall
+****************
+xActiveTimerList1
+Used By:
+****************
+xActiveTimerList2
+Used By:
+****************
+pxCurrentTimerList
+Used By:
+prvTimerTask
+prvSampleTimeNow
+****************
+pxOverflowTimerList
+Used By:
+prvTimerTask
+prvSampleTimeNow
+****************
+prvCheckForValidListAndQueue.ucStaticTimerQueueStorage
+Used By:
+xTimerCreateTimerTask
+prvInitialiseNewTimer
+****************
+prvCheckForValidListAndQueue.xStaticTimerQueue
+Used By:
+xTimerCreateTimerTask
+prvInitialiseNewTimer
+****************
+.str.1.32
+Used By:
+xTimerCreateTimerTask
+prvInitialiseNewTimer
+****************
+.str.33
+Used By:
+xTimerCreateTimerTask
+****************
+xTimerTaskHandle
+Used By:
+xTimerGetTimerDaemonTaskHandle
+****************
+prvSampleTimeNow.xLastTime
+Used By:
+prvSampleTimeNow
+****************
+pvPortMalloc.pucAlignedHeap
+Used By:
+pvPortMalloc
+****************
+ucHeap
+Used By:
+pvPortMalloc
+****************
+xNextFreeByte
+Used By:
+pvPortMalloc
+xPortGetFreeHeapSize
+****************
+ulRxEvents
+Used By:
+prvQueueReceiveTask
+****************
+.str.40
+Used By:
+case_prog
+****************
+.str.1.41
+Used By:
+case_prog
+****************
+xQueue
+Used By:
+prvQueueReceiveTask
+prvQueueSendTask
+****************
+.str.2.44
+Used By:
+main_blinky
+****************
+.str.3.45
+Used By:
+main_blinky
+****************
+.str.4.46
+Used By:
+prvQueueReceiveTask
+****************

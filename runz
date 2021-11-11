@@ -1,0 +1,1 @@
+./Debug-build/bin/svf-ex /home/arslan/zephyrproject/zephyr/build2/build/./zephyr/zephyr_prebuilt.elf ./kern_funcsz ./user_funcsz ./safe_funcsz ./create_funcsz ./dev.map

@@ -1,0 +1,3944 @@
+./partition.py -c ./cg -d ./dg 
+CFG file is " ./cg
+DFG file is " ./dg
+WARNING: You're attempting to print out a bitcode file.
+
+This is inadvisable as it may cause display problems. If
+
+you REALLY want to taste LLVM bitcode first-hand, you
+
+can force output with the `-f' option.
+
+
+
+Call graph node <<null function>><<0x5573acd29960>>  #uses=0
+
+  CS<None> calls function 'Reset_Handler'
+
+  CS<None> calls function 'Default_Handler'
+
+  CS<None> calls function 'Default_Handler2'
+
+  CS<None> calls function 'Default_Handler3'
+
+  CS<None> calls function 'Default_Handler4'
+
+  CS<None> calls function 'Default_Handler5'
+
+  CS<None> calls function 'Default_Handler6'
+
+  CS<None> calls function '_reset'
+
+  CS<None> calls function 'llvm.lifetime.start.p0i8'
+
+  CS<None> calls function 'llvm.lifetime.end.p0i8'
+
+  CS<None> calls function 'prvGetRegistersFromStack'
+
+  CS<None> calls function '_start'
+
+  CS<None> calls function 'exit'
+
+  CS<None> calls function 'uart_init'
+
+  CS<None> calls function '_fstat'
+
+  CS<None> calls function '_read'
+
+  CS<None> calls function 'write_number'
+
+  CS<None> calls function '_write'
+
+  CS<None> calls function '_sbrk'
+
+  CS<None> calls function 'main'
+
+  CS<None> calls function 'vApplicationMallocFailedHook'
+
+  CS<None> calls function 'vApplicationStackOverflowHook'
+
+  CS<None> calls function 'vApplicationIdleHook'
+
+  CS<None> calls function 'vApplicationTickHook'
+
+  CS<None> calls function 'vAssertCalled'
+
+  CS<None> calls function 'vLoggingPrintf'
+
+  CS<None> calls function 'llvm.va_start'
+
+  CS<None> calls function 'vprintf'
+
+  CS<None> calls function 'llvm.va_end'
+
+  CS<None> calls function 'vApplicationGetIdleTaskMemory'
+
+  CS<None> calls function 'vApplicationGetTimerTaskMemory'
+
+  CS<None> calls function 'pxPortInitialiseStack'
+
+  CS<None> calls function 'prvTaskExitError'
+
+  CS<None> calls function 'vPortSVCHandler'
+
+  CS<None> calls function 'Function'
+
+  CS<None> calls function 'xPortStartScheduler'
+
+  CS<None> calls function 'vPortSetupTimerInterrupt'
+
+  CS<None> calls function 'vPortEndScheduler'
+
+  CS<None> calls function 'vPortEnterCritical'
+
+  CS<None> calls function 'vPortExitCritical'
+
+  CS<None> calls function 'xPortPendSVHandler'
+
+  CS<None> calls function 'pendSV'
+
+  CS<None> calls function 'xPortSysTickHandler'
+
+  CS<None> calls function 'vPortValidateInterruptPriority'
+
+  CS<None> calls function 'vTaskSwitchContext'
+
+  CS<None> calls function 'xTaskCreateStatic'
+
+  CS<None> calls function 'llvm.memset.p0i8.i32'
+
+  CS<None> calls function 'xTaskCreate'
+
+  CS<None> calls function 'vTaskDelete'
+
+  CS<None> calls function 'xTaskDelayUntil'
+
+  CS<None> calls function 'xTaskResumeAll'
+
+  CS<None> calls function 'xTaskIncrementTick'
+
+  CS<None> calls function 'vTaskSuspendAll'
+
+  CS<None> calls function 'vTaskDelay'
+
+  CS<None> calls function 'eTaskGetState'
+
+  CS<None> calls function 'uxTaskPriorityGet'
+
+  CS<None> calls function 'uxTaskPriorityGetFromISR'
+
+  CS<None> calls function 'vTaskPrioritySet'
+
+  CS<None> calls function 'vTaskSuspend'
+
+  CS<None> calls function 'vTaskResume'
+
+  CS<None> calls function 'xTaskResumeFromISR'
+
+  CS<None> calls function 'vTaskStartScheduler'
+
+  CS<None> calls function 'prvIdleTask'
+
+  CS<None> calls function 'vTaskEndScheduler'
+
+  CS<None> calls function 'xTaskGetTickCount'
+
+  CS<None> calls function 'xTaskGetTickCountFromISR'
+
+  CS<None> calls function 'uxTaskGetNumberOfTasks'
+
+  CS<None> calls function 'pcTaskGetName'
+
+  CS<None> calls function 'xTaskGetHandle'
+
+  CS<None> calls function 'strlen'
+
+  CS<None> calls function 'uxTaskGetSystemState'
+
+  CS<None> calls function 'xTaskGetIdleTaskHandle'
+
+  CS<None> calls function 'xTaskCatchUpTicks'
+
+  CS<None> calls function 'xTaskAbortDelay'
+
+  CS<None> calls function 'vTaskPlaceOnEventList'
+
+  CS<None> calls function 'vTaskPlaceOnUnorderedEventList'
+
+  CS<None> calls function 'vTaskPlaceOnEventListRestricted'
+
+  CS<None> calls function 'xTaskRemoveFromEventList'
+
+  CS<None> calls function 'vTaskRemoveFromUnorderedEventList'
+
+  CS<None> calls function 'vTaskSetTimeOutState'
+
+  CS<None> calls function 'vTaskInternalSetTimeOutState'
+
+  CS<None> calls function 'xTaskCheckForTimeOut'
+
+  CS<None> calls function 'vTaskMissedYield'
+
+  CS<None> calls function 'uxTaskGetTaskNumber'
+
+  CS<None> calls function 'vTaskSetTaskNumber'
+
+  CS<None> calls function 'vTaskGetInfo'
+
+  CS<None> calls function 'uxTaskGetStackHighWaterMark2'
+
+  CS<None> calls function 'uxTaskGetStackHighWaterMark'
+
+  CS<None> calls function 'xTaskGetCurrentTaskHandle'
+
+  CS<None> calls function 'xTaskGetSchedulerState'
+
+  CS<None> calls function 'xTaskPriorityInherit'
+
+  CS<None> calls function 'xTaskPriorityDisinherit'
+
+  CS<None> calls function 'vTaskPriorityDisinheritAfterTimeout'
+
+  CS<None> calls function 'uxTaskResetEventItemValue'
+
+  CS<None> calls function 'pvTaskIncrementMutexHeldCount'
+
+  CS<None> calls function 'ulTaskGenericNotifyTake'
+
+  CS<None> calls function 'xTaskGenericNotifyWait'
+
+  CS<None> calls function 'xTaskGenericNotify'
+
+  CS<None> calls function 'xTaskGenericNotifyFromISR'
+
+  CS<None> calls function 'vTaskGenericNotifyGiveFromISR'
+
+  CS<None> calls function 'xTaskGenericNotifyStateClear'
+
+  CS<None> calls function 'ulTaskGenericNotifyValueClear'
+
+  CS<None> calls function 'vListInitialise'
+
+  CS<None> calls function 'vListInitialiseItem'
+
+  CS<None> calls function 'vListInsertEnd'
+
+  CS<None> calls function 'vListInsert'
+
+  CS<None> calls function 'uxListRemove'
+
+  CS<None> calls function 'xQueueGenericReset'
+
+  CS<None> calls function 'xQueueGenericCreateStatic'
+
+  CS<None> calls function 'xQueueGenericCreate'
+
+  CS<None> calls function 'llvm.umul.with.overflow.i32'
+
+  CS<None> calls function 'xQueueCreateMutex'
+
+  CS<None> calls function 'xQueueGenericSend'
+
+  CS<None> calls function 'llvm.memcpy.p0i8.p0i8.i32'
+
+  CS<None> calls function 'xQueueCreateMutexStatic'
+
+  CS<None> calls function 'xQueueGetMutexHolder'
+
+  CS<None> calls function 'xQueueGetMutexHolderFromISR'
+
+  CS<None> calls function 'xQueueGiveMutexRecursive'
+
+  CS<None> calls function 'xQueueTakeMutexRecursive'
+
+  CS<None> calls function 'xQueueSemaphoreTake'
+
+  CS<None> calls function 'xQueueCreateCountingSemaphoreStatic'
+
+  CS<None> calls function 'xQueueCreateCountingSemaphore'
+
+  CS<None> calls function 'xQueueGenericSendFromISR'
+
+  CS<None> calls function 'xQueueGiveFromISR'
+
+  CS<None> calls function 'xQueueReceive'
+
+  CS<None> calls function 'xQueuePeek'
+
+  CS<None> calls function 'xQueueReceiveFromISR'
+
+  CS<None> calls function 'xQueuePeekFromISR'
+
+  CS<None> calls function 'uxQueueMessagesWaiting'
+
+  CS<None> calls function 'uxQueueSpacesAvailable'
+
+  CS<None> calls function 'uxQueueMessagesWaitingFromISR'
+
+  CS<None> calls function 'vQueueDelete'
+
+  CS<None> calls function 'vQueueUnregisterQueue'
+
+  CS<None> calls function 'uxQueueGetQueueNumber'
+
+  CS<None> calls function 'vQueueSetQueueNumber'
+
+  CS<None> calls function 'ucQueueGetQueueType'
+
+  CS<None> calls function 'xQueueIsQueueEmptyFromISR'
+
+  CS<None> calls function 'xQueueIsQueueFullFromISR'
+
+  CS<None> calls function 'vQueueAddToRegistry'
+
+  CS<None> calls function 'pcQueueGetName'
+
+  CS<None> calls function 'vQueueWaitForMessageRestricted'
+
+  CS<None> calls function 'xQueueCreateSet'
+
+  CS<None> calls function 'xQueueAddToSet'
+
+  CS<None> calls function 'xQueueRemoveFromSet'
+
+  CS<None> calls function 'xQueueSelectFromSet'
+
+  CS<None> calls function 'xQueueSelectFromSetFromISR'
+
+  CS<None> calls function 'xTimerCreateTimerTask'
+
+  CS<None> calls function 'prvTimerTask'
+
+  CS<None> calls function 'xTimerCreate'
+
+  CS<None> calls function 'xTimerCreateStatic'
+
+  CS<None> calls function 'xTimerGenericCommand'
+
+  CS<None> calls function 'xTimerGetTimerDaemonTaskHandle'
+
+  CS<None> calls function 'xTimerGetPeriod'
+
+  CS<None> calls function 'vTimerSetReloadMode'
+
+  CS<None> calls function 'uxTimerGetReloadMode'
+
+  CS<None> calls function 'xTimerGetExpiryTime'
+
+  CS<None> calls function 'pcTimerGetName'
+
+  CS<None> calls function 'xTimerIsTimerActive'
+
+  CS<None> calls function 'pvTimerGetTimerID'
+
+  CS<None> calls function 'vTimerSetTimerID'
+
+  CS<None> calls function 'xTimerPendFunctionCallFromISR'
+
+  CS<None> calls function 'xTimerPendFunctionCall'
+
+  CS<None> calls function 'uxTimerGetTimerNumber'
+
+  CS<None> calls function 'vTimerSetTimerNumber'
+
+  CS<None> calls function 'xEventGroupCreateStatic'
+
+  CS<None> calls function 'xEventGroupCreate'
+
+  CS<None> calls function 'xEventGroupSync'
+
+  CS<None> calls function 'xEventGroupSetBits'
+
+  CS<None> calls function 'xEventGroupWaitBits'
+
+  CS<None> calls function 'xEventGroupClearBits'
+
+  CS<None> calls function 'xEventGroupClearBitsFromISR'
+
+  CS<None> calls function 'vEventGroupClearBitsCallback'
+
+  CS<None> calls function 'xEventGroupGetBitsFromISR'
+
+  CS<None> calls function 'vEventGroupDelete'
+
+  CS<None> calls function 'vEventGroupSetBitsCallback'
+
+  CS<None> calls function 'xEventGroupSetBitsFromISR'
+
+  CS<None> calls function 'uxEventGroupGetNumber'
+
+  CS<None> calls function 'vEventGroupSetNumber'
+
+  CS<None> calls function 'pvPortMalloc'
+
+  CS<None> calls function 'vPortFree'
+
+  CS<None> calls function 'vPortInitialiseBlocks'
+
+  CS<None> calls function 'xPortGetFreeHeapSize'
+
+  CS<None> calls function 'case_prog'
+
+  CS<None> calls function 'printf'
+
+  CS<None> calls function 'main_blinky'
+
+  CS<None> calls function 'prvQueueReceiveTask'
+
+  CS<None> calls function 'prvQueueSendTask'
+
+  CS<None> calls function 'bnch_marking_init'
+
+  CS<None> calls function 'curr_stamp'
+
+  CS<None> calls function 'mystrlen'
+
+  CS<None> calls function 'mymemcmp'
+
+
+
+Call graph node for function: 'Default_Handler'<<0x5573acff4100>>  #uses=1
+
+  CS<0x5573acd4b800> calls external node
+
+
+
+Call graph node for function: 'Default_Handler2'<<0x5573acff4180>>  #uses=1
+
+  CS<0x5573acd3bbe0> calls external node
+
+
+
+Call graph node for function: 'Default_Handler3'<<0x5573acff42b0>>  #uses=1
+
+
+
+Call graph node for function: 'Default_Handler4'<<0x5573acff4330>>  #uses=1
+
+
+
+Call graph node for function: 'Default_Handler5'<<0x5573acff43b0>>  #uses=1
+
+
+
+Call graph node for function: 'Default_Handler6'<<0x5573accf6bf0>>  #uses=1
+
+
+
+Call graph node for function: 'Function'<<0x5573acee8880>>  #uses=1
+
+
+
+Call graph node for function: 'Reset_Handler'<<0x5573acd29a20>>  #uses=1
+
+  CS<0x5573acd46640> calls external node
+
+  CS<0x5573acd48580> calls external node
+
+  CS<0x5573acd48600> calls external node
+
+  CS<0x5573acd48680> calls external node
+
+
+
+Call graph node for function: '_fstat'<<0x5573acee8740>>  #uses=1
+
+
+
+Call graph node for function: '_read'<<0x5573acee87c0>>  #uses=1
+
+
+
+Call graph node for function: '_reset'<<0x5573accf6c70>>  #uses=1
+
+
+
+Call graph node for function: '_sbrk'<<0x5573acee8e50>>  #uses=1
+
+
+
+Call graph node for function: '_start'<<0x5573accf7100>>  #uses=1
+
+  CS<0x5573acd747f0> calls function 'uart_init'
+
+  CS<0x5573acd74870> calls external node
+
+  CS<0x5573acd74920> calls function 'curr_stamp'
+
+  CS<0x5573acd750f0> calls function 'curr_stamp'
+
+  CS<0x5573acd752a0> calls external node
+
+  CS<0x5573acd81560> calls function 'exit'
+
+
+
+Call graph node for function: '_write'<<0x5573acee8dd0>>  #uses=2
+
+
+
+Call graph node for function: 'bnch_marking_init'<<0x5573acce3a30>>  #uses=1
+
+
+
+Call graph node for function: 'case_prog'<<0x5573acce34f0>>  #uses=1
+
+  CS<0x5573acfd9960> calls function 'printf'
+
+  CS<0x5573acfd9ba0> calls function 'printf'
+
+
+
+Call graph node for function: 'curr_stamp'<<0x5573acee8640>>  #uses=5
+
+  CS<0x5573acfe23e0> calls function 'xTaskGetTickCount'
+
+
+
+Call graph node for function: 'eTaskGetState'<<0x5573ace57810>>  #uses=1
+
+  CS<0x5573acdb28e0> calls function 'vAssertCalled'
+
+  CS<0x5573acdb2c10> calls function 'vPortEnterCritical'
+
+  CS<0x5573acdf58e0> calls function 'vPortExitCritical'
+
+
+
+Call graph node for function: 'exit'<<0x5573acee86c0>>  #uses=2
+
+  CS<0x5573acd827a0> calls external node
+
+
+
+Call graph node for function: 'llvm.lifetime.end.p0i8'<<0x5573accf7000>>  #uses=1
+
+
+
+Call graph node for function: 'llvm.lifetime.start.p0i8'<<0x5573accf6cf0>>  #uses=1
+
+
+
+Call graph node for function: 'llvm.memcpy.p0i8.p0i8.i32'<<0x5573acd5a460>>  #uses=1
+
+
+
+Call graph node for function: 'llvm.memset.p0i8.i32'<<0x5573accdf440>>  #uses=1
+
+
+
+Call graph node for function: 'llvm.umul.with.overflow.i32'<<0x5573acd30720>>  #uses=1
+
+
+
+Call graph node for function: 'llvm.va_end'<<0x5573accf4be0>>  #uses=1
+
+
+
+Call graph node for function: 'llvm.va_start'<<0x5573accf4b30>>  #uses=1
+
+
+
+Call graph node for function: 'main'<<0x5573acee8ed0>>  #uses=1
+
+  CS<0x5573acd8fa20> calls external node
+
+  CS<0x5573acd8fac0> calls external node
+
+  CS<0x5573acd8fb70> calls function 'main_blinky'
+
+
+
+Call graph node for function: 'main_blinky'<<0x5573acee8f80>>  #uses=2
+
+  CS<0x5573acfda500> calls function 'xQueueGenericCreate'
+
+  CS<0x5573acfda840> calls function 'xTaskCreate'
+
+  CS<0x5573acfda9b0> calls function 'xTaskCreate'
+
+  CS<0x5573acfdaa60> calls function 'vTaskStartScheduler'
+
+
+
+Call graph node for function: 'mymemcmp'<<0x5573acce3b30>>  #uses=1
+
+
+
+Call graph node for function: 'mystrlen'<<0x5573acce3ab0>>  #uses=1
+
+
+
+Call graph node for function: 'pcQueueGetName'<<0x5573acd57250>>  #uses=1
+
+  CS<0x5573acf688d0> calls function 'vAssertCalled'
+
+
+
+Call graph node for function: 'pcTaskGetName'<<0x5573ace58710>>  #uses=1
+
+  CS<0x5573ace1bc30> calls function 'vAssertCalled'
+
+
+
+Call graph node for function: 'pcTimerGetName'<<0x5573acd34e50>>  #uses=1
+
+  CS<0x5573acfa68a0> calls function 'vAssertCalled'
+
+
+
+Call graph node for function: 'pendSV'<<0x5573accde9d0>>  #uses=27
+
+
+
+Call graph node for function: 'printf'<<0x5573acce3570>>  #uses=3
+
+  CS<None> calls external node
+
+
+
+Call graph node for function: 'prvAddNewTaskToReadyList'<<0x5573accdeef0>>  #uses=3
+
+  CS<0x5573acd977a0> calls function 'vPortEnterCritical'
+
+  CS<0x5573acd98190> calls function 'vListInitialise'
+
+  CS<0x5573acd98420> calls function 'vListInitialise'
+
+  CS<0x5573acd98680> calls function 'vListInitialise'
+
+  CS<0x5573acd98720> calls function 'vListInitialise'
+
+  CS<0x5573acdc4570> calls function 'vListInitialise'
+
+  CS<0x5573acdc47d0> calls function 'vListInitialise'
+
+  CS<0x5573acdc4a30> calls function 'vListInitialise'
+
+  CS<0x5573acdc4c90> calls function 'vListInitialise'
+
+  CS<0x5573acdc4ef0> calls function 'vListInitialise'
+
+  CS<0x5573acdc5150> calls function 'vListInitialise'
+
+  CS<0x5573acdc5300> calls function 'vListInitialise'
+
+  CS<0x5573acdc53d0> calls function 'vListInitialise'
+
+  CS<0x5573acdc54a0> calls function 'vListInitialise'
+
+  CS<0x5573acdc5570> calls function 'vListInitialise'
+
+  CS<0x5573acdc5640> calls function 'vListInitialise'
+
+  CS<0x5573acdc6b80> calls function 'vListInsertEnd'
+
+  CS<0x5573acdc6c00> calls function 'vPortExitCritical'
+
+  CS<0x5573acdc7330> calls function 'pendSV'
+
+  CS<0x5573acdc73e0> calls external node
+
+  CS<0x5573acdc7460> calls external node
+
+
+
+Call graph node for function: 'prvGetRegistersFromStack'<<0x5573accf7080>>  #uses=1
+
+
+
+Call graph node for function: 'prvIdleTask'<<0x5573acd56790>>  #uses=1
+
+  CS<0x5573ace17790> calls function 'vPortEnterCritical'
+
+  CS<0x5573ace17cd0> calls function 'uxListRemove'
+
+  CS<0x5573ace18100> calls function 'vPortExitCritical'
+
+  CS<0x5573ace18640> calls function 'vPortFree'
+
+  CS<0x5573ace187b0> calls function 'vPortFree'
+
+  CS<0x5573ace189c0> calls function 'vPortFree'
+
+  CS<0x5573ace18b10> calls function 'vAssertCalled'
+
+  CS<0x5573ace19020> calls function 'pendSV'
+
+  CS<0x5573ace190d0> calls external node
+
+  CS<0x5573ace19150> calls external node
+
+  CS<0x5573ace19270> calls function 'vApplicationIdleHook'
+
+
+
+Call graph node for function: 'prvInitialiseNewTask'<<0x5573accdee70>>  #uses=3
+
+  CS<0x5573acdb7fb0> calls function 'vAssertCalled'
+
+  CS<0x5573acdb8830> calls function 'vListInitialiseItem'
+
+  CS<0x5573acdb89f0> calls function 'vListInitialiseItem'
+
+  CS<0x5573acdb9680> calls function 'pxPortInitialiseStack'
+
+
+
+Call graph node for function: 'prvInitialiseNewTimer'<<0x5573acd57e40>>  #uses=2
+
+  CS<0x5573acf97ee0> calls function 'vAssertCalled'
+
+  CS<0x5573acf97fd0> calls function 'vPortEnterCritical'
+
+  CS<0x5573acf982e0> calls function 'vListInitialise'
+
+  CS<0x5573acf983b0> calls function 'vListInitialise'
+
+  CS<0x5573acf98680> calls function 'xQueueGenericCreateStatic'
+
+  CS<0x5573acf989d0> calls function 'vQueueAddToRegistry'
+
+  CS<0x5573acf98b20> calls function 'vPortExitCritical'
+
+  CS<0x5573acf993a0> calls function 'vListInitialiseItem'
+
+
+
+Call graph node for function: 'prvNotifyQueueSetContainer'<<0x5573acd30b40>>  #uses=4
+
+  CS<0x5573acf0e280> calls function 'vAssertCalled'
+
+  CS<0x5573acf0e770> calls function 'vAssertCalled'
+
+  CS<0x5573acf0fca0> calls function 'xTaskPriorityDisinherit'
+
+  CS<0x5573acf11520> calls function 'xTaskRemoveFromEventList'
+
+  CS<0x5573acf117e0> calls function 'vAssertCalled'
+
+
+
+Call graph node for function: 'prvPortStartFirstTask'<<0x5573acee8a00>>  #uses=1
+
+  CS<0x5573acd7f6c0> calls external node
+
+
+
+Call graph node for function: 'prvQueueReceiveTask'<<0x5573acce3730>>  #uses=1
+
+  CS<0x5573acfdd2e0> calls function 'xQueueReceive'
+
+  CS<0x5573acfdd880> calls function '_write'
+
+  CS<0x5573acfddb90> calls function 'curr_stamp'
+
+  CS<0x5573acfde200> calls function 'vTaskDelay'
+
+  CS<0x5573acfde470> calls external node
+
+  CS<0x5573acfde540> calls external node
+
+  CS<0x5573acfde690> calls function 'curr_stamp'
+
+
+
+Call graph node for function: 'prvQueueSendTask'<<0x5573acce39b0>>  #uses=1
+
+  CS<0x5573acfe07f0> calls function 'xTaskGetTickCount'
+
+  CS<0x5573acfe0c60> calls function 'xTaskDelayUntil'
+
+  CS<0x5573acfe0f40> calls function 'xQueueGenericSend'
+
+
+
+Call graph node for function: 'prvSampleTimeNow'<<0x5573acd57ab0>>  #uses=2
+
+  CS<0x5573ace4d1b0> calls function 'xTaskGetTickCount'
+
+  CS<0x5573acf914b0> calls function 'uxListRemove'
+
+  CS<0x5573acf92b10> calls function 'vListInsert'
+
+  CS<0x5573acf92f60> calls external node
+
+  CS<0x5573acf93ba0> calls external node
+
+
+
+Call graph node for function: 'prvSearchForNameWithinSingleList'<<0x5573accf4ff0>>  #uses=5
+
+
+
+Call graph node for function: 'prvTaskExitError'<<0x5573accf4de0>>  #uses=1
+
+  CS<0x5573acd99e00> calls function 'vAssertCalled'
+
+  CS<0x5573acd99f10> calls external node
+
+
+
+Call graph node for function: 'prvTimerTask'<<0x5573acd57a30>>  #uses=1
+
+  CS<0x5573acf7fe80> calls function 'vTaskSuspendAll'
+
+  CS<0x5573acf80090> calls function 'prvSampleTimeNow'
+
+  CS<0x5573acf80770> calls function 'xTaskResumeAll'
+
+  CS<0x5573acf81020> calls function 'uxListRemove'
+
+  CS<0x5573acf82ac0> calls function 'vListInsert'
+
+  CS<0x5573acf82f80> calls function 'vListInsert'
+
+  CS<0x5573acf83320> calls external node
+
+  CS<0x5573acf83780> calls external node
+
+  CS<0x5573acf84150> calls function 'vQueueWaitForMessageRestricted'
+
+  CS<0x5573acf84200> calls function 'xTaskResumeAll'
+
+  CS<0x5573acf84450> calls function 'pendSV'
+
+  CS<0x5573acf84500> calls external node
+
+  CS<0x5573acf84580> calls external node
+
+  CS<0x5573acf846a0> calls function 'xTaskResumeAll'
+
+  CS<0x5573acf84d70> calls function 'xQueueReceive'
+
+  CS<0x5573acf85560> calls external node
+
+  CS<0x5573acf85e00> calls function 'uxListRemove'
+
+  CS<0x5573acf860b0> calls function 'prvSampleTimeNow'
+
+  CS<0x5573acf87950> calls function 'vListInsert'
+
+  CS<0x5573acf87e10> calls function 'vListInsert'
+
+  CS<0x5573ace46460> calls function 'vListInsert'
+
+  CS<0x5573ace46920> calls function 'vListInsert'
+
+  CS<0x5573ace46cc0> calls external node
+
+  CS<0x5573ace47160> calls external node
+
+  CS<0x5573ace47ca0> calls function 'vAssertCalled'
+
+  CS<0x5573ace48ca0> calls function 'vListInsert'
+
+  CS<0x5573ace48ea0> calls function 'vListInsert'
+
+  CS<0x5573ace49440> calls function 'vPortFree'
+
+
+
+Call graph node for function: 'prvUnlockQueue'<<0x5573acd5a3e0>>  #uses=13
+
+  CS<0x5573acf14060> calls function 'vPortEnterCritical'
+
+  CS<0x5573acf14bf0> calls function 'prvNotifyQueueSetContainer'
+
+  CS<0x5573acf14e40> calls function 'vTaskMissedYield'
+
+  CS<0x5573acf15190> calls function 'xTaskRemoveFromEventList'
+
+  CS<0x5573acf153e0> calls function 'vTaskMissedYield'
+
+  CS<0x5573acf158d0> calls function 'vPortExitCritical'
+
+  CS<0x5573acf15980> calls function 'vPortEnterCritical'
+
+  CS<0x5573acf16380> calls function 'xTaskRemoveFromEventList'
+
+  CS<0x5573acf165d0> calls function 'vTaskMissedYield'
+
+  CS<0x5573acf16ac0> calls function 'vPortExitCritical'
+
+
+
+Call graph node for function: 'pvPortMalloc'<<0x5573accdf540>>  #uses=7
+
+  CS<0x5573acfd5870> calls function 'vTaskSuspendAll'
+
+  CS<0x5573acfd63f0> calls function 'xTaskResumeAll'
+
+  CS<0x5573acfd6780> calls function 'xTaskResumeAll'
+
+  CS<0x5573acfd6970> calls function 'vApplicationMallocFailedHook'
+
+
+
+Call graph node for function: 'pvTaskIncrementMutexHeldCount'<<0x5573acd594a0>>  #uses=2
+
+
+
+Call graph node for function: 'pvTimerGetTimerID'<<0x5573acd35060>>  #uses=1
+
+  CS<0x5573acfa8940> calls function 'vAssertCalled'
+
+  CS<0x5573acfa8a30> calls function 'vPortEnterCritical'
+
+  CS<0x5573acfa8d50> calls function 'vPortExitCritical'
+
+
+
+Call graph node for function: 'pxPortInitialiseStack'<<0x5573accf4d60>>  #uses=2
+
+
+
+Call graph node for function: 'strlen'<<0x5573accf4ee0>>  #uses=2
+
+  CS<None> calls external node
+
+
+
+Call graph node for function: 'uart_init'<<0x5573acee85c0>>  #uses=2
+
+
+
+Call graph node for function: 'ucQueueGetQueueType'<<0x5573acd56fc0>>  #uses=1
+
+
+
+Call graph node for function: 'ulTaskGenericNotifyTake'<<0x5573acd59520>>  #uses=1
+
+  CS<0x5573acd6e4f0> calls function 'vAssertCalled'
+
+  CS<0x5573acd6e5e0> calls function 'vPortEnterCritical'
+
+  CS<0x5573aceb8a50> calls function 'uxListRemove'
+
+  CS<0x5573aceb8e70> calls function 'vListInsertEnd'
+
+  CS<0x5573aceb9780> calls function 'vListInsert'
+
+  CS<0x5573aceb9b40> calls function 'vListInsert'
+
+  CS<0x5573aceb9f90> calls function 'pendSV'
+
+  CS<0x5573aceba040> calls external node
+
+  CS<0x5573aceba0c0> calls external node
+
+  CS<0x5573aceba1e0> calls function 'vPortExitCritical'
+
+  CS<0x5573aceba290> calls function 'vPortEnterCritical'
+
+  CS<0x5573acebb210> calls function 'vPortExitCritical'
+
+
+
+Call graph node for function: 'ulTaskGenericNotifyValueClear'<<0x5573acd2fef0>>  #uses=1
+
+  CS<0x5573aced8500> calls function 'vPortEnterCritical'
+
+  CS<0x5573aced8ac0> calls function 'vPortExitCritical'
+
+
+
+Call graph node for function: 'uxEventGroupGetNumber'<<0x5573acce32c0>>  #uses=1
+
+
+
+Call graph node for function: 'uxListRemove'<<0x5573accdf6c0>>  #uses=36
+
+
+
+Call graph node for function: 'uxQueueGetQueueNumber'<<0x5573acd56ec0>>  #uses=1
+
+
+
+Call graph node for function: 'uxQueueMessagesWaiting'<<0x5573acd340e0>>  #uses=1
+
+  CS<0x5573ace79dd0> calls function 'vAssertCalled'
+
+  CS<0x5573ace79ec0> calls function 'vPortEnterCritical'
+
+  CS<0x5573ace7a1e0> calls function 'vPortExitCritical'
+
+
+
+Call graph node for function: 'uxQueueMessagesWaitingFromISR'<<0x5573acd56c90>>  #uses=1
+
+  CS<0x5573ace7bfe0> calls function 'vAssertCalled'
+
+
+
+Call graph node for function: 'uxQueueSpacesAvailable'<<0x5573acd56b60>>  #uses=1
+
+  CS<0x5573ace7adc0> calls function 'vAssertCalled'
+
+  CS<0x5573ace7aeb0> calls function 'vPortEnterCritical'
+
+  CS<0x5573ace7b3f0> calls function 'vPortExitCritical'
+
+
+
+Call graph node for function: 'uxTaskGetNumberOfTasks'<<0x5573ace58690>>  #uses=1
+
+
+
+Call graph node for function: 'uxTaskGetStackHighWaterMark'<<0x5573acd58f60>>  #uses=1
+
+
+
+Call graph node for function: 'uxTaskGetStackHighWaterMark2'<<0x5573acd58ee0>>  #uses=1
+
+
+
+Call graph node for function: 'uxTaskGetSystemState'<<0x5573accf5300>>  #uses=1
+
+  CS<0x5573acdece50> calls external node
+
+  CS<0x5573ace59c80> calls external node
+
+  CS<0x5573ace5a1b0> calls function 'xTaskResumeAll'
+
+  CS<0x5573ace5c190> calls function 'xTaskResumeAll'
+
+
+
+Call graph node for function: 'uxTaskGetTaskNumber'<<0x5573acd58cb0>>  #uses=1
+
+
+
+Call graph node for function: 'uxTaskPriorityGet'<<0x5573ace57890>>  #uses=1
+
+  CS<0x5573acdf79c0> calls function 'vPortEnterCritical'
+
+  CS<0x5573acdf8040> calls function 'vPortExitCritical'
+
+
+
+Call graph node for function: 'uxTaskPriorityGetFromISR'<<0x5573ace57910>>  #uses=1
+
+  CS<0x5573acdf8ed0> calls function 'vPortValidateInterruptPriority'
+
+  CS<0x5573acdf8fa0> calls external node
+
+  CS<0x5573acdf9bf0> calls external node
+
+
+
+Call graph node for function: 'uxTaskResetEventItemValue'<<0x5573acd59420>>  #uses=3
+
+
+
+Call graph node for function: 'uxTimerGetReloadMode'<<0x5573acd34ca0>>  #uses=1
+
+  CS<0x5573acfa4940> calls function 'vAssertCalled'
+
+  CS<0x5573acfa4a30> calls function 'vPortEnterCritical'
+
+  CS<0x5573acfa4f10> calls function 'vPortExitCritical'
+
+
+
+Call graph node for function: 'uxTimerGetTimerNumber'<<0x5573acd353f0>>  #uses=1
+
+
+
+Call graph node for function: 'vApplicationGetIdleTaskMemory'<<0x5573accf4c60>>  #uses=2
+
+
+
+Call graph node for function: 'vApplicationGetTimerTaskMemory'<<0x5573accf4ce0>>  #uses=2
+
+
+
+Call graph node for function: 'vApplicationIdleHook'<<0x5573acee9130>>  #uses=2
+
+
+
+Call graph node for function: 'vApplicationMallocFailedHook'<<0x5573acee9000>>  #uses=2
+
+  CS<0x5573acd90690> calls external node
+
+
+
+Call graph node for function: 'vApplicationStackOverflowHook'<<0x5573acee9080>>  #uses=1
+
+  CS<0x5573acd91260> calls external node
+
+
+
+Call graph node for function: 'vApplicationTickHook'<<0x5573acee91b0>>  #uses=3
+
+
+
+Call graph node for function: 'vAssertCalled'<<0x5573acee9230>>  #uses=157
+
+  CS<0x5573acd93c40> calls function 'vPortEnterCritical'
+
+  CS<0x5573acd93ec0> calls function 'vPortExitCritical'
+
+
+
+Call graph node for function: 'vEventGroupClearBitsCallback'<<0x5573acce2e20>>  #uses=1
+
+  CS<0x5573acfcc0c0> calls function 'vAssertCalled'
+
+  CS<0x5573acfcc350> calls function 'vAssertCalled'
+
+  CS<0x5573acfcc600> calls function 'vPortEnterCritical'
+
+  CS<0x5573acfccab0> calls function 'vPortExitCritical'
+
+
+
+Call graph node for function: 'vEventGroupDelete'<<0x5573acce3000>>  #uses=1
+
+  CS<0x5573acfcf570> calls function 'vAssertCalled'
+
+  CS<0x5573acfcf880> calls function 'vTaskSuspendAll'
+
+  CS<0x5573acfd00f0> calls function 'vAssertCalled'
+
+  CS<0x5573acfd0320> calls function 'vTaskRemoveFromUnorderedEventList'
+
+  CS<0x5573acfd0940> calls function 'vPortFree'
+
+  CS<0x5573acfd0a90> calls function 'xTaskResumeAll'
+
+
+
+Call graph node for function: 'vEventGroupSetBitsCallback'<<0x5573acce3190>>  #uses=1
+
+  CS<0x5573acfd17d0> calls function 'xEventGroupSetBits'
+
+
+
+Call graph node for function: 'vEventGroupSetNumber'<<0x5573acce3340>>  #uses=1
+
+
+
+Call graph node for function: 'vListInitialise'<<0x5573accdf140>>  #uses=30
+
+
+
+Call graph node for function: 'vListInitialiseItem'<<0x5573accdf0c0>>  #uses=4
+
+
+
+Call graph node for function: 'vListInsert'<<0x5573ace56ce0>>  #uses=25
+
+
+
+Call graph node for function: 'vListInsertEnd'<<0x5573accdf3c0>>  #uses=29
+
+
+
+Call graph node for function: 'vLoggingPrintf'<<0x5573accf4a30>>  #uses=1
+
+  CS<0x5573acd95140> calls function 'vprintf'
+
+
+
+Call graph node for function: 'vPortEndScheduler'<<0x5573accde840>>  #uses=2
+
+  CS<0x5573acd7fb20> calls function 'vAssertCalled'
+
+
+
+Call graph node for function: 'vPortEnterCritical'<<0x5573acee92b0>>  #uses=66
+
+  CS<0x5573acd803b0> calls external node
+
+  CS<0x5573acd80970> calls function 'vAssertCalled'
+
+
+
+Call graph node for function: 'vPortExitCritical'<<0x5573accf49b0>>  #uses=73
+
+  CS<0x5573acda6a70> calls function 'vAssertCalled'
+
+  CS<0x5573acda6ff0> calls external node
+
+
+
+Call graph node for function: 'vPortFree'<<0x5573accdf5c0>>  #uses=11
+
+
+
+Call graph node for function: 'vPortInitialiseBlocks'<<0x5573acce33f0>>  #uses=1
+
+
+
+Call graph node for function: 'vPortSVCHandler'<<0x5573accf5900>>  #uses=1
+
+  CS<0x5573acd73040> calls external node
+
+
+
+Call graph node for function: 'vPortSetupTimerInterrupt'<<0x5573acee8980>>  #uses=2
+
+
+
+Call graph node for function: 'vPortValidateInterruptPriority'<<0x5573accdebe0>>  #uses=11
+
+  CS<0x5573acdaa520> calls external node
+
+  CS<0x5573acdaac30> calls function 'vAssertCalled'
+
+  CS<0x5573acdab030> calls function 'vAssertCalled'
+
+
+
+Call graph node for function: 'vQueueAddToRegistry'<<0x5573acd571a0>>  #uses=3
+
+  CS<0x5573acf5cb60> calls function 'vAssertCalled'
+
+
+
+Call graph node for function: 'vQueueDelete'<<0x5573acd56d10>>  #uses=1
+
+  CS<0x5573ace7cf30> calls function 'vQueueUnregisterQueue'
+
+  CS<0x5573ace7d050> calls function 'vAssertCalled'
+
+  CS<0x5573ace7d0f0> calls function 'vQueueUnregisterQueue'
+
+  CS<0x5573ace7d5a0> calls function 'vPortFree'
+
+
+
+Call graph node for function: 'vQueueSetQueueNumber'<<0x5573acd56f40>>  #uses=1
+
+
+
+Call graph node for function: 'vQueueUnregisterQueue'<<0x5573acd56d90>>  #uses=3
+
+  CS<0x5573ace7f640> calls function 'vAssertCalled'
+
+
+
+Call graph node for function: 'vQueueWaitForMessageRestricted'<<0x5573acd57300>>  #uses=2
+
+  CS<0x5573acf6f3a0> calls function 'vPortEnterCritical'
+
+  CS<0x5573acf6fc20> calls function 'vPortExitCritical'
+
+  CS<0x5573acf700f0> calls function 'vTaskPlaceOnEventListRestricted'
+
+  CS<0x5573acf70260> calls function 'prvUnlockQueue'
+
+
+
+Call graph node for function: 'vTaskDelay'<<0x5573ace57380>>  #uses=2
+
+  CS<0x5573acdefb10> calls function 'vAssertCalled'
+
+  CS<0x5573acdefdc0> calls external node
+
+  CS<0x5573acdf0520> calls function 'uxListRemove'
+
+  CS<0x5573acdf0d90> calls function 'vListInsert'
+
+  CS<0x5573acdf1150> calls function 'vListInsert'
+
+  CS<0x5573acdb0f90> calls function 'xTaskResumeAll'
+
+  CS<0x5573acdb13a0> calls function 'pendSV'
+
+  CS<0x5573acdb1450> calls external node
+
+  CS<0x5573acdb14d0> calls external node
+
+
+
+Call graph node for function: 'vTaskDelete'<<0x5573accdf640>>  #uses=1
+
+  CS<0x5573acdcc030> calls function 'vPortEnterCritical'
+
+  CS<0x5573acdcc5b0> calls function 'uxListRemove'
+
+  CS<0x5573acdcca60> calls function 'uxListRemove'
+
+  CS<0x5573acdccff0> calls function 'vListInsertEnd'
+
+  CS<0x5573acdcd9d0> calls function 'vPortFree'
+
+  CS<0x5573acdcdb40> calls function 'vPortFree'
+
+  CS<0x5573acdcdd50> calls function 'vPortFree'
+
+  CS<0x5573acdcdea0> calls function 'vAssertCalled'
+
+  CS<0x5573acdce8b0> calls function 'vPortExitCritical'
+
+  CS<0x5573acdceff0> calls function 'vAssertCalled'
+
+  CS<0x5573acdcf0e0> calls function 'pendSV'
+
+  CS<0x5573acdcf190> calls external node
+
+  CS<0x5573acdcf210> calls external node
+
+
+
+Call graph node for function: 'vTaskEndScheduler'<<0x5573acd56aa0>>  #uses=1
+
+  CS<0x5573ace19db0> calls external node
+
+  CS<0x5573ace19e30> calls function 'vPortEndScheduler'
+
+
+
+Call graph node for function: 'vTaskGenericNotifyGiveFromISR'<<0x5573acd5a360>>  #uses=1
+
+  CS<0x5573aced1c40> calls function 'vAssertCalled'
+
+  CS<0x5573aced1ed0> calls function 'vAssertCalled'
+
+  CS<0x5573aced1fc0> calls function 'vPortValidateInterruptPriority'
+
+  CS<0x5573aced21a0> calls external node
+
+  CS<0x5573aced30c0> calls function 'vAssertCalled'
+
+  CS<0x5573aced3500> calls function 'uxListRemove'
+
+  CS<0x5573aced3b50> calls function 'vListInsertEnd'
+
+  CS<0x5573aced3cb0> calls function 'vListInsertEnd'
+
+  CS<0x5573aced4ab0> calls external node
+
+
+
+Call graph node for function: 'vTaskGetInfo'<<0x5573acd58db0>>  #uses=1
+
+  CS<0x5573ace9d7b0> calls external node
+
+  CS<0x5573ace9dce0> calls function 'xTaskResumeAll'
+
+  CS<0x5573ace9e070> calls function 'vPortEnterCritical'
+
+  CS<0x5573ace9e6b0> calls function 'vPortExitCritical'
+
+
+
+Call graph node for function: 'vTaskInternalSetTimeOutState'<<0x5573acd58a80>>  #uses=5
+
+
+
+Call graph node for function: 'vTaskMissedYield'<<0x5573acd58c30>>  #uses=4
+
+
+
+Call graph node for function: 'vTaskPlaceOnEventList'<<0x5573acd58240>>  #uses=5
+
+  CS<0x5573acdf39c0> calls function 'vAssertCalled'
+
+  CS<0x5573acdf3c80> calls function 'vListInsert'
+
+  CS<0x5573acdf44a0> calls function 'uxListRemove'
+
+  CS<0x5573acdf48c0> calls function 'vListInsertEnd'
+
+  CS<0x5573acdf51d0> calls function 'vListInsert'
+
+  CS<0x5573acde2a20> calls function 'vListInsert'
+
+
+
+Call graph node for function: 'vTaskPlaceOnEventListRestricted'<<0x5573acd58490>>  #uses=2
+
+  CS<0x5573acde8360> calls function 'vAssertCalled'
+
+  CS<0x5573acde8620> calls function 'vListInsertEnd'
+
+  CS<0x5573acde90c0> calls function 'uxListRemove'
+
+  CS<0x5573acde9930> calls function 'vListInsert'
+
+  CS<0x5573acde9cf0> calls function 'vListInsert'
+
+  CS<0x5573ace8b6f0> calls function 'uxListRemove'
+
+  CS<0x5573ace8b970> calls function 'vListInsertEnd'
+
+
+
+Call graph node for function: 'vTaskPlaceOnUnorderedEventList'<<0x5573acd582c0>>  #uses=3
+
+  CS<0x5573acde4470> calls function 'vAssertCalled'
+
+  CS<0x5573acde4770> calls function 'vAssertCalled'
+
+  CS<0x5573acde4cd0> calls function 'vListInsertEnd'
+
+  CS<0x5573acde54f0> calls function 'uxListRemove'
+
+  CS<0x5573acde5910> calls function 'vListInsertEnd'
+
+  CS<0x5573acde6220> calls function 'vListInsert'
+
+  CS<0x5573acde65e0> calls function 'vListInsert'
+
+
+
+Call graph node for function: 'vTaskPriorityDisinheritAfterTimeout'<<0x5573acd592f0>>  #uses=2
+
+  CS<0x5573aceb1160> calls function 'vAssertCalled'
+
+  CS<0x5573aceb1db0> calls function 'vAssertCalled'
+
+  CS<0x5573aceb2b10> calls function 'uxListRemove'
+
+  CS<0x5573aceb30a0> calls function 'vListInsertEnd'
+
+
+
+Call graph node for function: 'vTaskPrioritySet'<<0x5573ace57aa0>>  #uses=1
+
+  CS<0x5573acdfc410> calls function 'vAssertCalled'
+
+  CS<0x5573acdfc670> calls function 'vPortEnterCritical'
+
+  CS<0x5573acdfea00> calls function 'uxListRemove'
+
+  CS<0x5573acdfef90> calls function 'vListInsertEnd'
+
+  CS<0x5573acdff190> calls function 'pendSV'
+
+  CS<0x5573acdff240> calls external node
+
+  CS<0x5573acdff2c0> calls external node
+
+  CS<0x5573acdff3e0> calls function 'vPortExitCritical'
+
+
+
+Call graph node for function: 'vTaskRemoveFromUnorderedEventList'<<0x5573acd58830>>  #uses=3
+
+  CS<0x5573ace902a0> calls function 'vAssertCalled'
+
+  CS<0x5573ace90a20> calls function 'vAssertCalled'
+
+  CS<0x5573ace90b30> calls function 'uxListRemove'
+
+  CS<0x5573ace90cf0> calls function 'uxListRemove'
+
+  CS<0x5573ace91340> calls function 'vListInsertEnd'
+
+
+
+Call graph node for function: 'vTaskResume'<<0x5573ace58030>>  #uses=1
+
+  CS<0x5573ace08920> calls function 'vAssertCalled'
+
+  CS<0x5573ace08cc0> calls function 'vPortEnterCritical'
+
+  CS<0x5573ace097c0> calls function 'uxListRemove'
+
+  CS<0x5573ace09e10> calls function 'vListInsertEnd'
+
+  CS<0x5573ace0a2d0> calls function 'pendSV'
+
+  CS<0x5573ace0a380> calls external node
+
+  CS<0x5573ace0a400> calls external node
+
+  CS<0x5573ace0a520> calls function 'vPortExitCritical'
+
+
+
+Call graph node for function: 'vTaskSetTaskNumber'<<0x5573acd58d30>>  #uses=1
+
+
+
+Call graph node for function: 'vTaskSetTimeOutState'<<0x5573acd58a00>>  #uses=1
+
+  CS<0x5573ace925a0> calls function 'vAssertCalled'
+
+  CS<0x5573ace92690> calls function 'vPortEnterCritical'
+
+  CS<0x5573ace92be0> calls function 'vPortExitCritical'
+
+
+
+Call graph node for function: 'vTaskStartScheduler'<<0x5573ace58510>>  #uses=2
+
+  CS<0x5573ace123c0> calls function 'vApplicationGetIdleTaskMemory'
+
+  CS<0x5573ace132d0> calls function 'vAssertCalled'
+
+  CS<0x5573ace13560> calls function 'vAssertCalled'
+
+  CS<0x5573ace13b90> calls function 'vAssertCalled'
+
+  CS<0x5573ace146c0> calls function 'prvInitialiseNewTask'
+
+  CS<0x5573ace14790> calls function 'prvAddNewTaskToReadyList'
+
+  CS<0x5573ace151c0> calls function 'xTimerCreateTimerTask'
+
+  CS<0x5573ace154c0> calls external node
+
+  CS<0x5573ace158f0> calls function 'xPortStartScheduler'
+
+  CS<0x5573ace15a40> calls function 'vAssertCalled'
+
+
+
+Call graph node for function: 'vTaskSuspend'<<0x5573ace57bd0>>  #uses=1
+
+  CS<0x5573ace019b0> calls function 'vPortEnterCritical'
+
+  CS<0x5573ace01e80> calls function 'uxListRemove'
+
+  CS<0x5573ace02330> calls function 'uxListRemove'
+
+  CS<0x5573ace024c0> calls function 'vListInsertEnd'
+
+  CS<0x5573ace02dd0> calls function 'vPortExitCritical'
+
+  CS<0x5573ace030c0> calls function 'vPortEnterCritical'
+
+  CS<0x5573ace03a60> calls function 'vPortExitCritical'
+
+  CS<0x5573ace04240> calls function 'vAssertCalled'
+
+  CS<0x5573ace04330> calls function 'pendSV'
+
+  CS<0x5573ace043e0> calls external node
+
+  CS<0x5573ace04460> calls external node
+
+  CS<0x5573ace05560> calls function 'vAssertCalled'
+
+
+
+Call graph node for function: 'vTaskSuspendAll'<<0x5573ace57300>>  #uses=11
+
+  CS<0x5573acdee770> calls external node
+
+
+
+Call graph node for function: 'vTaskSwitchContext'<<0x5573acee8ae0>>  #uses=2
+
+  CS<0x5573acdac580> calls function 'vAssertCalled'
+
+
+
+Call graph node for function: 'vTimerSetReloadMode'<<0x5573acd34bf0>>  #uses=1
+
+  CS<0x5573acfa32b0> calls function 'vAssertCalled'
+
+  CS<0x5573acfa33a0> calls function 'vPortEnterCritical'
+
+  CS<0x5573acfa3c60> calls function 'vPortExitCritical'
+
+
+
+Call graph node for function: 'vTimerSetTimerID'<<0x5573acd35190>>  #uses=1
+
+  CS<0x5573acfa9b10> calls function 'vAssertCalled'
+
+  CS<0x5573acfa9c00> calls function 'vPortEnterCritical'
+
+  CS<0x5573acfa9e60> calls function 'vPortExitCritical'
+
+
+
+Call graph node for function: 'vTimerSetTimerNumber'<<0x5573acd35470>>  #uses=1
+
+
+
+Call graph node for function: 'vprintf'<<0x5573accf4ab0>>  #uses=2
+
+  CS<None> calls external node
+
+
+
+Call graph node for function: 'write_number'<<0x5573acee8840>>  #uses=1
+
+
+
+Call graph node for function: 'xEventGroupClearBits'<<0x5573acce2d20>>  #uses=1
+
+  CS<0x5573acfc9aa0> calls function 'vAssertCalled'
+
+  CS<0x5573acfc9d30> calls function 'vAssertCalled'
+
+  CS<0x5573acfc9e20> calls function 'vPortEnterCritical'
+
+  CS<0x5573acfca350> calls function 'vPortExitCritical'
+
+
+
+Call graph node for function: 'xEventGroupClearBitsFromISR'<<0x5573acce2da0>>  #uses=1
+
+  CS<0x5573acfcb030> calls function 'xTimerPendFunctionCallFromISR'
+
+
+
+Call graph node for function: 'xEventGroupCreate'<<0x5573acd35680>>  #uses=1
+
+  CS<0x5573acfb2850> calls function 'pvPortMalloc'
+
+  CS<0x5573acfb2d90> calls function 'vListInitialise'
+
+
+
+Call graph node for function: 'xEventGroupCreateStatic'<<0x5573acd354f0>>  #uses=1
+
+  CS<0x5573acfb0b90> calls function 'vAssertCalled'
+
+  CS<0x5573acfb11f0> calls function 'vAssertCalled'
+
+  CS<0x5573acfb18f0> calls function 'vListInitialise'
+
+
+
+Call graph node for function: 'xEventGroupGetBitsFromISR'<<0x5573acce2f80>>  #uses=1
+
+  CS<0x5573acfcded0> calls external node
+
+  CS<0x5573acfce6b0> calls external node
+
+
+
+Call graph node for function: 'xEventGroupSetBits'<<0x5573acd359e0>>  #uses=3
+
+  CS<0x5573acfbc250> calls function 'vAssertCalled'
+
+  CS<0x5573acfbc4e0> calls function 'vAssertCalled'
+
+  CS<0x5573acfbc970> calls function 'vTaskSuspendAll'
+
+  CS<0x5573acfbedc0> calls function 'vTaskRemoveFromUnorderedEventList'
+
+  CS<0x5573acfbf730> calls function 'xTaskResumeAll'
+
+
+
+Call graph node for function: 'xEventGroupSetBitsFromISR'<<0x5573acce3210>>  #uses=1
+
+  CS<0x5573acfd25b0> calls function 'xTimerPendFunctionCallFromISR'
+
+
+
+Call graph node for function: 'xEventGroupSync'<<0x5573acd35700>>  #uses=1
+
+  CS<0x5573acfb5a30> calls function 'vAssertCalled'
+
+  CS<0x5573acfb5cc0> calls function 'vAssertCalled'
+
+  CS<0x5573acfb5db0> calls function 'xTaskGetSchedulerState'
+
+  CS<0x5573acfb60f0> calls function 'vAssertCalled'
+
+  CS<0x5573acfb61e0> calls function 'vTaskSuspendAll'
+
+  CS<0x5573acfb6540> calls function 'xEventGroupSetBits'
+
+  CS<0x5573acfb74d0> calls function 'xTaskResumeAll'
+
+  CS<0x5573acfb7970> calls function 'vTaskPlaceOnUnorderedEventList'
+
+  CS<0x5573acfb7cc0> calls function 'xTaskResumeAll'
+
+  CS<0x5573acfb7f90> calls function 'pendSV'
+
+  CS<0x5573acfb8040> calls external node
+
+  CS<0x5573acfb80c0> calls external node
+
+  CS<0x5573acfb81e0> calls function 'uxTaskResetEventItemValue'
+
+  CS<0x5573acfb85d0> calls function 'vPortEnterCritical'
+
+  CS<0x5573acfb8d10> calls function 'vPortExitCritical'
+
+
+
+Call graph node for function: 'xEventGroupWaitBits'<<0x5573acd35a60>>  #uses=1
+
+  CS<0x5573acfc32c0> calls function 'vAssertCalled'
+
+  CS<0x5573acfc34e0> calls function 'vAssertCalled'
+
+  CS<0x5573acfc3770> calls function 'vAssertCalled'
+
+  CS<0x5573acfc3860> calls function 'xTaskGetSchedulerState'
+
+  CS<0x5573acfc3ba0> calls function 'vAssertCalled'
+
+  CS<0x5573acfc3c90> calls function 'vTaskSuspendAll'
+
+  CS<0x5573acfc5410> calls function 'xTaskResumeAll'
+
+  CS<0x5573acfc5d80> calls function 'vTaskPlaceOnUnorderedEventList'
+
+  CS<0x5573acfc60d0> calls function 'xTaskResumeAll'
+
+  CS<0x5573acfc63a0> calls function 'pendSV'
+
+  CS<0x5573acfc6450> calls external node
+
+  CS<0x5573acfc64d0> calls external node
+
+  CS<0x5573acfc65f0> calls function 'uxTaskResetEventItemValue'
+
+  CS<0x5573acfc69e0> calls function 'vPortEnterCritical'
+
+  CS<0x5573acfc77e0> calls function 'vPortExitCritical'
+
+
+
+Call graph node for function: 'xPortGetFreeHeapSize'<<0x5573acce3470>>  #uses=1
+
+
+
+Call graph node for function: 'xPortPendSVHandler'<<0x5573accde950>>  #uses=1
+
+  CS<0x5573acda8c10> calls external node
+
+
+
+Call graph node for function: 'xPortStartScheduler'<<0x5573acee8900>>  #uses=2
+
+  CS<0x5573acd9f900> calls function 'vPortSetupTimerInterrupt'
+
+  CS<0x5573acd9fa70> calls function 'prvPortStartFirstTask'
+
+  CS<0x5573acd9fb20> calls function 'vTaskSwitchContext'
+
+  CS<0x5573acda0110> calls function 'vAssertCalled'
+
+  CS<0x5573acda0220> calls external node
+
+
+
+Call graph node for function: 'xPortSysTickHandler'<<0x5573accdea50>>  #uses=1
+
+  CS<0x5573acda9530> calls external node
+
+  CS<0x5573acda95b0> calls function 'xTaskIncrementTick'
+
+  CS<0x5573acda99d0> calls external node
+
+
+
+Call graph node for function: 'xQueueAddToSet'<<0x5573acd574e0>>  #uses=1
+
+  CS<0x5573acf71a30> calls function 'vPortEnterCritical'
+
+  CS<0x5573acf724b0> calls function 'vPortExitCritical'
+
+
+
+Call graph node for function: 'xQueueCreateCountingSemaphore'<<0x5573acd32130>>  #uses=1
+
+  CS<0x5573acf30850> calls function 'vAssertCalled'
+
+  CS<0x5573acf30ae0> calls function 'vAssertCalled'
+
+  CS<0x5573acf30c30> calls function 'xQueueGenericCreate'
+
+
+
+Call graph node for function: 'xQueueCreateCountingSemaphoreStatic'<<0x5573acd320b0>>  #uses=1
+
+  CS<0x5573acf2e6a0> calls function 'vAssertCalled'
+
+  CS<0x5573acf2e930> calls function 'vAssertCalled'
+
+  CS<0x5573acd03300> calls function 'xQueueGenericCreateStatic'
+
+
+
+Call graph node for function: 'xQueueCreateMutex'<<0x5573acd307a0>>  #uses=1
+
+  CS<0x5573acef8190> calls function 'pvPortMalloc'
+
+  CS<0x5573acef97f0> calls function 'vPortEnterCritical'
+
+  CS<0x5573acefaae0> calls function 'vListInitialise'
+
+  CS<0x5573acefacf0> calls function 'vListInitialise'
+
+  CS<0x5573acefada0> calls function 'vPortExitCritical'
+
+  CS<0x5573acefbad0> calls function 'xQueueGenericSend'
+
+
+
+Call graph node for function: 'xQueueCreateMutexStatic'<<0x5573acd30e10>>  #uses=1
+
+  CS<0x5573acd03b40> calls function 'xQueueGenericCreateStatic'
+
+  CS<0x5573acf18bf0> calls function 'xQueueGenericSend'
+
+
+
+Call graph node for function: 'xQueueCreateSet'<<0x5573acd57460>>  #uses=1
+
+  CS<0x5573acf70da0> calls function 'xQueueGenericCreate'
+
+
+
+Call graph node for function: 'xQueueGenericCreate'<<0x5573acd306a0>>  #uses=4
+
+  CS<0x5573acda2ce0> calls function 'vAssertCalled'
+
+  CS<0x5573acda33b0> calls function 'vAssertCalled'
+
+  CS<0x5573acda36d0> calls function 'vAssertCalled'
+
+  CS<0x5573acda37e0> calls function 'pvPortMalloc'
+
+  CS<0x5573acef4bc0> calls function 'vPortEnterCritical'
+
+  CS<0x5573acef5e80> calls function 'vListInitialise'
+
+  CS<0x5573acef6090> calls function 'vListInitialise'
+
+  CS<0x5573acef6140> calls function 'vPortExitCritical'
+
+
+
+Call graph node for function: 'xQueueGenericCreateStatic'<<0x5573acd30390>>  #uses=5
+
+  CS<0x5573aceea4a0> calls function 'vAssertCalled'
+
+  CS<0x5573aceea730> calls function 'vAssertCalled'
+
+  CS<0x5573aceeaae0> calls function 'vAssertCalled'
+
+  CS<0x5573aceeae90> calls function 'vAssertCalled'
+
+  CS<0x5573aceeb4f0> calls function 'vAssertCalled'
+
+  CS<0x5573aceecbf0> calls function 'vPortEnterCritical'
+
+  CS<0x5573aceedfa0> calls function 'vListInitialise'
+
+  CS<0x5573aceee1f0> calls function 'vListInitialise'
+
+  CS<0x5573aceee2a0> calls function 'vPortExitCritical'
+
+
+
+Call graph node for function: 'xQueueGenericReset'<<0x5573acd2ff70>>  #uses=1
+
+  CS<0x5573ace24970> calls function 'vAssertCalled'
+
+  CS<0x5573ace24a60> calls function 'vPortEnterCritical'
+
+  CS<0x5573ace26300> calls function 'xTaskRemoveFromEventList'
+
+  CS<0x5573ace26550> calls function 'pendSV'
+
+  CS<0x5573ace26600> calls external node
+
+  CS<0x5573ace26680> calls external node
+
+  CS<0x5573ace268b0> calls function 'vListInitialise'
+
+  CS<0x5573ace26a70> calls function 'vListInitialise'
+
+  CS<0x5573ace26b90> calls function 'vPortExitCritical'
+
+
+
+Call graph node for function: 'xQueueGenericSend'<<0x5573acd30970>>  #uses=8
+
+  CS<0x5573acf00730> calls function 'vAssertCalled'
+
+  CS<0x5573acf00c30> calls function 'vAssertCalled'
+
+  CS<0x5573acf01130> calls function 'vAssertCalled'
+
+  CS<0x5573acf01220> calls function 'xTaskGetSchedulerState'
+
+  CS<0x5573acf01640> calls function 'vAssertCalled'
+
+  CS<0x5573acf01d10> calls function 'vPortEnterCritical'
+
+  CS<0x5573acf02c80> calls function 'vPortEnterCritical'
+
+  CS<0x5573acf03c80> calls function 'xTaskPriorityDisinherit'
+
+  CS<0x5573acf06b00> calls function 'prvNotifyQueueSetContainer'
+
+  CS<0x5573acf06d50> calls function 'pendSV'
+
+  CS<0x5573acf06e00> calls external node
+
+  CS<0x5573acf06e80> calls external node
+
+  CS<0x5573acf07350> calls function 'xTaskRemoveFromEventList'
+
+  CS<0x5573acf075a0> calls function 'pendSV'
+
+  CS<0x5573acf07650> calls external node
+
+  CS<0x5573acf076d0> calls external node
+
+  CS<0x5573acf07990> calls function 'pendSV'
+
+  CS<0x5573acf07a40> calls external node
+
+  CS<0x5573acf07ac0> calls external node
+
+  CS<0x5573acf07be0> calls function 'vPortExitCritical'
+
+  CS<0x5573acf08050> calls function 'vPortExitCritical'
+
+  CS<0x5573acf082a0> calls function 'vTaskInternalSetTimeOutState'
+
+  CS<0x5573acf085b0> calls function 'vPortExitCritical'
+
+  CS<0x5573acf08660> calls function 'vTaskSuspendAll'
+
+  CS<0x5573acf08710> calls function 'vPortEnterCritical'
+
+  CS<0x5573acf08e10> calls function 'vPortExitCritical'
+
+  CS<0x5573acf08fe0> calls function 'xTaskCheckForTimeOut'
+
+  CS<0x5573acf09370> calls function 'vPortEnterCritical'
+
+  CS<0x5573acf09760> calls function 'vPortExitCritical'
+
+  CS<0x5573acf09ab0> calls function 'vTaskPlaceOnEventList'
+
+  CS<0x5573acf09b80> calls function 'prvUnlockQueue'
+
+  CS<0x5573acf09c30> calls function 'xTaskResumeAll'
+
+  CS<0x5573acf09e80> calls function 'pendSV'
+
+  CS<0x5573acf09f30> calls external node
+
+  CS<0x5573acf09fb0> calls external node
+
+  CS<0x5573acf0a0f0> calls function 'prvUnlockQueue'
+
+  CS<0x5573acf0a1a0> calls function 'xTaskResumeAll'
+
+  CS<0x5573acf0a2e0> calls function 'prvUnlockQueue'
+
+  CS<0x5573acf0a390> calls function 'xTaskResumeAll'
+
+
+
+Call graph node for function: 'xQueueGenericSendFromISR'<<0x5573acd32260>>  #uses=3
+
+  CS<0x5573acf33b30> calls function 'vAssertCalled'
+
+  CS<0x5573acf34030> calls function 'vAssertCalled'
+
+  CS<0x5573acf34530> calls function 'vAssertCalled'
+
+  CS<0x5573acf34620> calls function 'vPortValidateInterruptPriority'
+
+  CS<0x5573acf346f0> calls external node
+
+  CS<0x5573acf36190> calls function 'xTaskPriorityDisinherit'
+
+  CS<0x5573ace84f90> calls function 'prvNotifyQueueSetContainer'
+
+  CS<0x5573ace85810> calls function 'xTaskRemoveFromEventList'
+
+  CS<0x5573ace85ce0> calls function 'vAssertCalled'
+
+  CS<0x5573ace86680> calls external node
+
+
+
+Call graph node for function: 'xQueueGetMutexHolder'<<0x5573acd30e90>>  #uses=1
+
+  CS<0x5573acdfb7b0> calls function 'vAssertCalled'
+
+  CS<0x5573acdfb8a0> calls function 'vPortEnterCritical'
+
+  CS<0x5573acf1b580> calls function 'vPortExitCritical'
+
+
+
+Call graph node for function: 'xQueueGetMutexHolderFromISR'<<0x5573acd30f70>>  #uses=1
+
+  CS<0x5573acf1c2c0> calls function 'vAssertCalled'
+
+
+
+Call graph node for function: 'xQueueGiveFromISR'<<0x5573acd32390>>  #uses=1
+
+  CS<0x5573ace897e0> calls function 'vAssertCalled'
+
+  CS<0x5573ace89ba0> calls function 'vAssertCalled'
+
+  CS<0x5573ace8a240> calls function 'vAssertCalled'
+
+  CS<0x5573ace8a330> calls function 'vPortValidateInterruptPriority'
+
+  CS<0x5573ace8a400> calls external node
+
+  CS<0x5573ace5f580> calls function 'prvNotifyQueueSetContainer'
+
+  CS<0x5573ace5fe00> calls function 'xTaskRemoveFromEventList'
+
+  CS<0x5573ace602d0> calls function 'vAssertCalled'
+
+  CS<0x5573ace60af0> calls external node
+
+
+
+Call graph node for function: 'xQueueGiveMutexRecursive'<<0x5573acd30ff0>>  #uses=1
+
+  CS<0x5573acf1da90> calls function 'vAssertCalled'
+
+  CS<0x5573acf1dd80> calls function 'xTaskGetCurrentTaskHandle'
+
+  CS<0x5573acf1e550> calls function 'xQueueGenericSend'
+
+
+
+Call graph node for function: 'xQueueIsQueueEmptyFromISR'<<0x5573acd57040>>  #uses=1
+
+  CS<0x5573acf56c90> calls function 'vAssertCalled'
+
+
+
+Call graph node for function: 'xQueueIsQueueFullFromISR'<<0x5573acd570f0>>  #uses=1
+
+  CS<0x5573acf57cd0> calls function 'vAssertCalled'
+
+
+
+Call graph node for function: 'xQueuePeek'<<0x5573acd323d0>>  #uses=1
+
+  CS<0x5573ace6e9c0> calls function 'vAssertCalled'
+
+  CS<0x5573ace6eec0> calls function 'vAssertCalled'
+
+  CS<0x5573ace6efb0> calls function 'xTaskGetSchedulerState'
+
+  CS<0x5573ace1d2f0> calls function 'vAssertCalled'
+
+  CS<0x5573ace1d8f0> calls function 'vPortEnterCritical'
+
+  CS<0x5573ace1f280> calls function 'xTaskRemoveFromEventList'
+
+  CS<0x5573ace1f4d0> calls function 'pendSV'
+
+  CS<0x5573ace1f580> calls external node
+
+  CS<0x5573ace1f600> calls external node
+
+  CS<0x5573ace1f720> calls function 'vPortExitCritical'
+
+  CS<0x5573ace1fb90> calls function 'vPortExitCritical'
+
+  CS<0x5573ace1fde0> calls function 'vTaskInternalSetTimeOutState'
+
+  CS<0x5573ace200f0> calls function 'vPortExitCritical'
+
+  CS<0x5573ace201a0> calls function 'vTaskSuspendAll'
+
+  CS<0x5573ace20250> calls function 'vPortEnterCritical'
+
+  CS<0x5573ace20950> calls function 'vPortExitCritical'
+
+  CS<0x5573ace20b20> calls function 'xTaskCheckForTimeOut'
+
+  CS<0x5573ace20e80> calls function 'vPortEnterCritical'
+
+  CS<0x5573ace21170> calls function 'vPortExitCritical'
+
+  CS<0x5573acf4f130> calls function 'vTaskPlaceOnEventList'
+
+  CS<0x5573acf4f200> calls function 'prvUnlockQueue'
+
+  CS<0x5573acf4f2b0> calls function 'xTaskResumeAll'
+
+  CS<0x5573acf4f500> calls function 'pendSV'
+
+  CS<0x5573acf4f5b0> calls external node
+
+  CS<0x5573acf4f630> calls external node
+
+  CS<0x5573acf4f770> calls function 'prvUnlockQueue'
+
+  CS<0x5573acf4f820> calls function 'xTaskResumeAll'
+
+  CS<0x5573acf4f960> calls function 'prvUnlockQueue'
+
+  CS<0x5573acf4fa10> calls function 'xTaskResumeAll'
+
+  CS<0x5573acf4fbd0> calls function 'vPortEnterCritical'
+
+  CS<0x5573acf4fec0> calls function 'vPortExitCritical'
+
+
+
+Call graph node for function: 'xQueuePeekFromISR'<<0x5573acd324d0>>  #uses=1
+
+  CS<0x5573ace762e0> calls function 'vAssertCalled'
+
+  CS<0x5573ace767e0> calls function 'vAssertCalled'
+
+  CS<0x5573ace76ba0> calls function 'vAssertCalled'
+
+  CS<0x5573ace76c90> calls function 'vPortValidateInterruptPriority'
+
+  CS<0x5573ace76d60> calls external node
+
+  CS<0x5573ace78c60> calls external node
+
+
+
+Call graph node for function: 'xQueueReceive'<<0x5573acd33260>>  #uses=4
+
+  CS<0x5573ace64830> calls function 'vAssertCalled'
+
+  CS<0x5573ace64d30> calls function 'vAssertCalled'
+
+  CS<0x5573ace64e20> calls function 'xTaskGetSchedulerState'
+
+  CS<0x5573ace65240> calls function 'vAssertCalled'
+
+  CS<0x5573ace65840> calls function 'vPortEnterCritical'
+
+  CS<0x5573ace672a0> calls function 'xTaskRemoveFromEventList'
+
+  CS<0x5573ace674f0> calls function 'pendSV'
+
+  CS<0x5573ace675a0> calls external node
+
+  CS<0x5573ace67620> calls external node
+
+  CS<0x5573ace67740> calls function 'vPortExitCritical'
+
+  CS<0x5573ace67bb0> calls function 'vPortExitCritical'
+
+  CS<0x5573ace67e00> calls function 'vTaskInternalSetTimeOutState'
+
+  CS<0x5573ace68110> calls function 'vPortExitCritical'
+
+  CS<0x5573ace681c0> calls function 'vTaskSuspendAll'
+
+  CS<0x5573ace68270> calls function 'vPortEnterCritical'
+
+  CS<0x5573ace68970> calls function 'vPortExitCritical'
+
+  CS<0x5573ace68b40> calls function 'xTaskCheckForTimeOut'
+
+  CS<0x5573ace68ea0> calls function 'vPortEnterCritical'
+
+  CS<0x5573ace69190> calls function 'vPortExitCritical'
+
+  CS<0x5573ace694e0> calls function 'vTaskPlaceOnEventList'
+
+  CS<0x5573ace695b0> calls function 'prvUnlockQueue'
+
+  CS<0x5573ace69660> calls function 'xTaskResumeAll'
+
+  CS<0x5573ace698b0> calls function 'pendSV'
+
+  CS<0x5573ace69960> calls external node
+
+  CS<0x5573ace699e0> calls external node
+
+  CS<0x5573ace69b20> calls function 'prvUnlockQueue'
+
+  CS<0x5573ace69bd0> calls function 'xTaskResumeAll'
+
+  CS<0x5573ace69d10> calls function 'prvUnlockQueue'
+
+  CS<0x5573ace69dc0> calls function 'xTaskResumeAll'
+
+  CS<0x5573ace69f80> calls function 'vPortEnterCritical'
+
+  CS<0x5573ace6a270> calls function 'vPortExitCritical'
+
+
+
+Call graph node for function: 'xQueueReceiveFromISR'<<0x5573acd32450>>  #uses=2
+
+  CS<0x5573ace70d50> calls function 'vAssertCalled'
+
+  CS<0x5573ace71250> calls function 'vAssertCalled'
+
+  CS<0x5573ace71340> calls function 'vPortValidateInterruptPriority'
+
+  CS<0x5573ace71410> calls external node
+
+  CS<0x5573ace73570> calls function 'xTaskRemoveFromEventList'
+
+  CS<0x5573ace73a40> calls function 'vAssertCalled'
+
+  CS<0x5573ace74330> calls external node
+
+
+
+Call graph node for function: 'xQueueRemoveFromSet'<<0x5573acd57590>>  #uses=1
+
+  CS<0x5573acf73970> calls function 'vPortEnterCritical'
+
+  CS<0x5573acf73ae0> calls function 'vPortExitCritical'
+
+
+
+Call graph node for function: 'xQueueSelectFromSet'<<0x5573acd57670>>  #uses=1
+
+  CS<0x5573acf74fd0> calls function 'xQueueReceive'
+
+
+
+Call graph node for function: 'xQueueSelectFromSetFromISR'<<0x5573acd576f0>>  #uses=1
+
+  CS<0x5573acf76020> calls function 'xQueueReceiveFromISR'
+
+
+
+Call graph node for function: 'xQueueSemaphoreTake'<<0x5573acd311d0>>  #uses=2
+
+  CS<0x5573acf24eb0> calls function 'vAssertCalled'
+
+  CS<0x5573acf25270> calls function 'vAssertCalled'
+
+  CS<0x5573acf25360> calls function 'xTaskGetSchedulerState'
+
+  CS<0x5573acf25780> calls function 'vAssertCalled'
+
+  CS<0x5573acf26100> calls function 'vPortEnterCritical'
+
+  CS<0x5573acf268f0> calls function 'pvTaskIncrementMutexHeldCount'
+
+  CS<0x5573acf26eb0> calls function 'xTaskRemoveFromEventList'
+
+  CS<0x5573acf27100> calls function 'pendSV'
+
+  CS<0x5573acf271b0> calls external node
+
+  CS<0x5573acf27230> calls external node
+
+  CS<0x5573acf27350> calls function 'vPortExitCritical'
+
+  CS<0x5573acf27960> calls function 'vAssertCalled'
+
+  CS<0x5573acf27a50> calls function 'vPortExitCritical'
+
+  CS<0x5573acf27ca0> calls function 'vTaskInternalSetTimeOutState'
+
+  CS<0x5573acf27fb0> calls function 'vPortExitCritical'
+
+  CS<0x5573acf28060> calls function 'vTaskSuspendAll'
+
+  CS<0x5573acf28110> calls function 'vPortEnterCritical'
+
+  CS<0x5573acf28810> calls function 'vPortExitCritical'
+
+  CS<0x5573acf289e0> calls function 'xTaskCheckForTimeOut'
+
+  CS<0x5573acf28d70> calls function 'vPortEnterCritical'
+
+  CS<0x5573acf29090> calls function 'vPortExitCritical'
+
+  CS<0x5573acf29460> calls function 'vPortEnterCritical'
+
+  CS<0x5573acf295d0> calls function 'xTaskPriorityInherit'
+
+  CS<0x5573acf29760> calls function 'vPortExitCritical'
+
+  CS<0x5573acf29c00> calls function 'vTaskPlaceOnEventList'
+
+  CS<0x5573acf29cd0> calls function 'prvUnlockQueue'
+
+  CS<0x5573acf29d80> calls function 'xTaskResumeAll'
+
+  CS<0x5573acf29fd0> calls function 'pendSV'
+
+  CS<0x5573acf2a080> calls external node
+
+  CS<0x5573acf2a100> calls external node
+
+  CS<0x5573acf2a240> calls function 'prvUnlockQueue'
+
+  CS<0x5573acf2a2f0> calls function 'xTaskResumeAll'
+
+  CS<0x5573acf2a430> calls function 'prvUnlockQueue'
+
+  CS<0x5573acf2a4e0> calls function 'xTaskResumeAll'
+
+  CS<0x5573acf2a6a0> calls function 'vPortEnterCritical'
+
+  CS<0x5573acf2a990> calls function 'vPortExitCritical'
+
+  CS<0x5573acf2acc0> calls function 'vPortEnterCritical'
+
+  CS<0x5573acf2baf0> calls function 'vTaskPriorityDisinheritAfterTimeout'
+
+  CS<0x5573acf2bba0> calls function 'vPortExitCritical'
+
+
+
+Call graph node for function: 'xQueueTakeMutexRecursive'<<0x5573acd31150>>  #uses=1
+
+  CS<0x5573acf1fbc0> calls function 'vAssertCalled'
+
+  CS<0x5573acf1feb0> calls function 'xTaskGetCurrentTaskHandle'
+
+  CS<0x5573acf20650> calls function 'xQueueSemaphoreTake'
+
+
+
+Call graph node for function: 'xTaskAbortDelay'<<0x5573accf5590>>  #uses=1
+
+  CS<0x5573acddb6e0> calls external node
+
+  CS<0x5573acddbbc0> calls function 'vPortEnterCritical'
+
+  CS<0x5573acddc1d0> calls function 'vPortExitCritical'
+
+  CS<0x5573acddce00> calls function 'vAssertCalled'
+
+  CS<0x5573acddd040> calls external node
+
+  CS<0x5573acde06c0> calls function 'vAssertCalled'
+
+  CS<0x5573acde09b0> calls function 'vPortEnterCritical'
+
+  CS<0x5573acde0ee0> calls function 'vPortExitCritical'
+
+  CS<0x5573acde1b70> calls function 'uxListRemove'
+
+  CS<0x5573acde1c20> calls function 'vPortEnterCritical'
+
+  CS<0x5573acde20d0> calls function 'uxListRemove'
+
+  CS<0x5573acde23d0> calls function 'vPortExitCritical'
+
+  CS<0x5573acdf15e0> calls function 'vListInsertEnd'
+
+  CS<0x5573acdf1d10> calls function 'xTaskResumeAll'
+
+
+
+Call graph node for function: 'xTaskCatchUpTicks'<<0x5573accf5430>>  #uses=1
+
+  CS<0x5573acdd94d0> calls function 'vAssertCalled'
+
+  CS<0x5573acdd9780> calls external node
+
+  CS<0x5573acdd99f0> calls function 'xTaskResumeAll'
+
+
+
+Call graph node for function: 'xTaskCheckForTimeOut'<<0x5573acd58b00>>  #uses=5
+
+  CS<0x5573ace94af0> calls function 'vAssertCalled'
+
+  CS<0x5573ace94d80> calls function 'vAssertCalled'
+
+  CS<0x5573ace94e70> calls function 'vPortEnterCritical'
+
+  CS<0x5573ace97140> calls function 'vPortExitCritical'
+
+
+
+Call graph node for function: 'xTaskCreate'<<0x5573accdf4c0>>  #uses=3
+
+  CS<0x5573acdc97b0> calls function 'pvPortMalloc'
+
+  CS<0x5573acdc9b60> calls function 'pvPortMalloc'
+
+  CS<0x5573acdc9ee0> calls function 'vPortFree'
+
+  CS<0x5573acdca5f0> calls function 'prvInitialiseNewTask'
+
+  CS<0x5573acdca6c0> calls function 'prvAddNewTaskToReadyList'
+
+
+
+Call graph node for function: 'xTaskCreateStatic'<<0x5573accded10>>  #uses=2
+
+  CS<0x5573acdaf820> calls function 'vAssertCalled'
+
+  CS<0x5573acdafab0> calls function 'vAssertCalled'
+
+  CS<0x5573acdb0110> calls function 'vAssertCalled'
+
+  CS<0x5573acdb0cd0> calls function 'prvInitialiseNewTask'
+
+  CS<0x5573acdb0da0> calls function 'prvAddNewTaskToReadyList'
+
+
+
+Call graph node for function: 'xTaskDelayUntil'<<0x5573ace56c60>>  #uses=2
+
+  CS<0x5573acdd1820> calls function 'vAssertCalled'
+
+  CS<0x5573acdd1ab0> calls function 'vAssertCalled'
+
+  CS<0x5573acdd1db0> calls function 'vAssertCalled'
+
+  CS<0x5573acdd2060> calls external node
+
+  CS<0x5573acdd38b0> calls function 'uxListRemove'
+
+  CS<0x5573acdd4150> calls function 'vListInsert'
+
+  CS<0x5573acdd4510> calls function 'vListInsert'
+
+  CS<0x5573acdd4a30> calls function 'xTaskResumeAll'
+
+  CS<0x5573acdd4d90> calls function 'pendSV'
+
+  CS<0x5573acdd4e40> calls external node
+
+  CS<0x5573acdd4ec0> calls external node
+
+
+
+Call graph node for function: 'xTaskGenericNotify'<<0x5573acd59d40>>  #uses=1
+
+  CS<0x5573acec47e0> calls function 'vAssertCalled'
+
+  CS<0x5573acec4a70> calls function 'vAssertCalled'
+
+  CS<0x5573acec4c70> calls function 'vPortEnterCritical'
+
+  CS<0x5573acec6490> calls function 'vAssertCalled'
+
+  CS<0x5573acec6910> calls function 'uxListRemove'
+
+  CS<0x5573acec6f60> calls function 'vListInsertEnd'
+
+  CS<0x5573acec72d0> calls function 'vAssertCalled'
+
+  CS<0x5573acec7800> calls function 'pendSV'
+
+  CS<0x5573acec78b0> calls external node
+
+  CS<0x5573acec7930> calls external node
+
+  CS<0x5573acec7b50> calls function 'vPortExitCritical'
+
+
+
+Call graph node for function: 'xTaskGenericNotifyFromISR'<<0x5573acd5a050>>  #uses=1
+
+  CS<0x5573acecb080> calls function 'vAssertCalled'
+
+  CS<0x5573acecb310> calls function 'vAssertCalled'
+
+  CS<0x5573acecb400> calls function 'vPortValidateInterruptPriority'
+
+  CS<0x5573acecb5e0> calls external node
+
+  CS<0x5573acecd290> calls function 'vAssertCalled'
+
+  CS<0x5573acecd8f0> calls function 'vAssertCalled'
+
+  CS<0x5573acecdd30> calls function 'uxListRemove'
+
+  CS<0x5573acece380> calls function 'vListInsertEnd'
+
+  CS<0x5573acece4e0> calls function 'vListInsertEnd'
+
+  CS<0x5573acecf3e0> calls external node
+
+
+
+Call graph node for function: 'xTaskGenericNotifyStateClear'<<0x5573acd2fe70>>  #uses=1
+
+  CS<0x5573aced6300> calls function 'vAssertCalled'
+
+  CS<0x5573aced67b0> calls function 'vPortEnterCritical'
+
+  CS<0x5573aced6fb0> calls function 'vPortExitCritical'
+
+
+
+Call graph node for function: 'xTaskGenericNotifyWait'<<0x5573acd59a30>>  #uses=1
+
+  CS<0x5573acebd960> calls function 'vAssertCalled'
+
+  CS<0x5573acebda50> calls function 'vPortEnterCritical'
+
+  CS<0x5573acebede0> calls function 'uxListRemove'
+
+  CS<0x5573acebf200> calls function 'vListInsertEnd'
+
+  CS<0x5573acebfb10> calls function 'vListInsert'
+
+  CS<0x5573acebfed0> calls function 'vListInsert'
+
+  CS<0x5573acec0320> calls function 'pendSV'
+
+  CS<0x5573acec03d0> calls external node
+
+  CS<0x5573acec0450> calls external node
+
+  CS<0x5573acec0570> calls function 'vPortExitCritical'
+
+  CS<0x5573acec0620> calls function 'vPortEnterCritical'
+
+  CS<0x5573acec1880> calls function 'vPortExitCritical'
+
+
+
+Call graph node for function: 'xTaskGetCurrentTaskHandle'<<0x5573acd58fe0>>  #uses=3
+
+
+
+Call graph node for function: 'xTaskGetHandle'<<0x5573accf4e60>>  #uses=1
+
+  CS<0x5573acd9b410> calls function 'strlen'
+
+  CS<0x5573acd9b630> calls function 'vAssertCalled'
+
+  CS<0x5573acd9b8e0> calls external node
+
+  CS<0x5573acd9be10> calls function 'prvSearchForNameWithinSingleList'
+
+  CS<0x5573acd9c450> calls function 'prvSearchForNameWithinSingleList'
+
+  CS<0x5573acd9c860> calls function 'prvSearchForNameWithinSingleList'
+
+  CS<0x5573acd9cbd0> calls function 'prvSearchForNameWithinSingleList'
+
+  CS<0x5573acd9cf40> calls function 'prvSearchForNameWithinSingleList'
+
+  CS<0x5573ace21530> calls function 'xTaskResumeAll'
+
+
+
+Call graph node for function: 'xTaskGetIdleTaskHandle'<<0x5573accf53b0>>  #uses=1
+
+  CS<0x5573acdd78e0> calls function 'vAssertCalled'
+
+
+
+Call graph node for function: 'xTaskGetSchedulerState'<<0x5573acd59060>>  #uses=8
+
+
+
+Call graph node for function: 'xTaskGetTickCount'<<0x5573acd56b20>>  #uses=4
+
+
+
+Call graph node for function: 'xTaskGetTickCountFromISR'<<0x5573ace58610>>  #uses=1
+
+  CS<0x5573ace1a8d0> calls function 'vPortValidateInterruptPriority'
+
+
+
+Call graph node for function: 'xTaskIncrementTick'<<0x5573accdeb00>>  #uses=3
+
+  CS<0x5573acda4890> calls function 'vAssertCalled'
+
+  CS<0x5573acd2c160> calls function 'uxListRemove'
+
+  CS<0x5573acd2c610> calls function 'uxListRemove'
+
+  CS<0x5573acd2cd00> calls function 'vListInsertEnd'
+
+  CS<0x5573acd2d9a0> calls function 'vApplicationTickHook'
+
+  CS<0x5573acd2e070> calls function 'vApplicationTickHook'
+
+
+
+Call graph node for function: 'xTaskPriorityDisinherit'<<0x5573acd59160>>  #uses=4
+
+  CS<0x5573acead640> calls function 'vAssertCalled'
+
+  CS<0x5573aceada00> calls function 'vAssertCalled'
+
+  CS<0x5573aceae3a0> calls function 'uxListRemove'
+
+  CS<0x5573aceaec50> calls function 'vListInsertEnd'
+
+
+
+Call graph node for function: 'xTaskPriorityInherit'<<0x5573acd590e0>>  #uses=2
+
+  CS<0x5573aceaa910> calls function 'uxListRemove'
+
+  CS<0x5573aceab0f0> calls function 'vListInsertEnd'
+
+
+
+Call graph node for function: 'xTaskRemoveFromEventList'<<0x5573acd58660>>  #uses=12
+
+  CS<0x5573ace8d4f0> calls function 'vAssertCalled'
+
+  CS<0x5573ace8d6f0> calls function 'uxListRemove'
+
+  CS<0x5573ace8daf0> calls function 'uxListRemove'
+
+  CS<0x5573ace8e140> calls function 'vListInsertEnd'
+
+  CS<0x5573ace8e2a0> calls function 'vListInsertEnd'
+
+
+
+Call graph node for function: 'xTaskResumeAll'<<0x5573ace56d60>>  #uses=32
+
+  CS<0x5573acd8c860> calls function 'vAssertCalled'
+
+  CS<0x5573acd8c950> calls function 'vPortEnterCritical'
+
+  CS<0x5573acd8d730> calls function 'uxListRemove'
+
+  CS<0x5573acd8d8f0> calls function 'uxListRemove'
+
+  CS<0x5573acd8df40> calls function 'vListInsertEnd'
+
+  CS<0x5573acdde310> calls function 'xTaskIncrementTick'
+
+  CS<0x5573acddee80> calls function 'pendSV'
+
+  CS<0x5573acddef30> calls external node
+
+  CS<0x5573acddefb0> calls external node
+
+  CS<0x5573acddf2b0> calls function 'vPortExitCritical'
+
+
+
+Call graph node for function: 'xTaskResumeFromISR'<<0x5573ace580b0>>  #uses=1
+
+  CS<0x5573ace0c430> calls function 'vPortValidateInterruptPriority'
+
+  CS<0x5573ace0c500> calls external node
+
+  CS<0x5573ace0d0e0> calls function 'vAssertCalled'
+
+  CS<0x5573ace0d160> calls function 'vPortValidateInterruptPriority'
+
+  CS<0x5573ace0d200> calls external node
+
+  CS<0x5573ace0d8e0> calls function 'vAssertCalled'
+
+  CS<0x5573ace0ea80> calls function 'uxListRemove'
+
+  CS<0x5573ace0f010> calls function 'vListInsertEnd'
+
+  CS<0x5573ace0f260> calls function 'vListInsertEnd'
+
+  CS<0x5573ace0f7d0> calls external node
+
+
+
+Call graph node for function: 'xTimerCreate'<<0x5573acd57dc0>>  #uses=1
+
+  CS<0x5573acf96050> calls function 'pvPortMalloc'
+
+  CS<0x5573acd4b690> calls function 'prvInitialiseNewTimer'
+
+
+
+Call graph node for function: 'xTimerCreateStatic'<<0x5573acd347c0>>  #uses=1
+
+  CS<0x5573acf9c180> calls function 'vAssertCalled'
+
+  CS<0x5573acf9c5a0> calls function 'vAssertCalled'
+
+  CS<0x5573acf9cbc0> calls function 'prvInitialiseNewTimer'
+
+
+
+Call graph node for function: 'xTimerCreateTimerTask'<<0x5573ace58590>>  #uses=2
+
+  CS<0x5573acf77c80> calls function 'vPortEnterCritical'
+
+  CS<0x5573acf77e40> calls function 'vListInitialise'
+
+  CS<0x5573acf77f10> calls function 'vListInitialise'
+
+  CS<0x5573accff6a0> calls function 'xQueueGenericCreateStatic'
+
+  CS<0x5573acf78410> calls function 'vQueueAddToRegistry'
+
+  CS<0x5573acf78560> calls function 'vPortExitCritical'
+
+  CS<0x5573acf79400> calls function 'vApplicationGetTimerTaskMemory'
+
+  CS<0x5573acf79a10> calls function 'xTaskCreateStatic'
+
+  CS<0x5573acf7a120> calls function 'vAssertCalled'
+
+
+
+Call graph node for function: 'xTimerGenericCommand'<<0x5573acd34840>>  #uses=1
+
+  CS<0x5573acf9f040> calls function 'vAssertCalled'
+
+  CS<0x5573acf9fb70> calls function 'xTaskGetSchedulerState'
+
+  CS<0x5573acf9fee0> calls function 'xQueueGenericSend'
+
+  CS<0x5573acfa0200> calls function 'xQueueGenericSend'
+
+  CS<0x5573acfa0450> calls function 'xQueueGenericSendFromISR'
+
+
+
+Call graph node for function: 'xTimerGetExpiryTime'<<0x5573acd34dd0>>  #uses=1
+
+  CS<0x5573acfa5ad0> calls function 'vAssertCalled'
+
+
+
+Call graph node for function: 'xTimerGetPeriod'<<0x5573acd34b40>>  #uses=1
+
+  CS<0x5573acfa2150> calls function 'vAssertCalled'
+
+
+
+Call graph node for function: 'xTimerGetTimerDaemonTaskHandle'<<0x5573acd34ac0>>  #uses=1
+
+  CS<0x5573acfa1660> calls function 'vAssertCalled'
+
+
+
+Call graph node for function: 'xTimerIsTimerActive'<<0x5573acd34f00>>  #uses=1
+
+  CS<0x5573acfa76f0> calls function 'vAssertCalled'
+
+  CS<0x5573acfa77e0> calls function 'vPortEnterCritical'
+
+  CS<0x5573acfa7c60> calls function 'vPortExitCritical'
+
+
+
+Call graph node for function: 'xTimerPendFunctionCall'<<0x5573acd35340>>  #uses=1
+
+  CS<0x5573acfad470> calls function 'vAssertCalled'
+
+  CS<0x5573acfade60> calls function 'xQueueGenericSend'
+
+
+
+Call graph node for function: 'xTimerPendFunctionCallFromISR'<<0x5573acd352c0>>  #uses=3
+
+  CS<0x5573acfabac0> calls function 'xQueueGenericSendFromISR'
+
+
+
+xTimerGetTimerDaemonTaskHandle  calls: 
+['vAssertCalled']
+xTaskRemoveFromEventList  calls: 
+['vAssertCalled', 'uxListRemove', 'uxListRemove', 'vListInsertEnd', 'vListInsertEnd']
+write_number  calls: 
+[]
+xTaskGenericNotifyWait  calls: 
+['vAssertCalled', 'vPortEnterCritical', 'uxListRemove', 'vListInsertEnd', 'vListInsert', 'vListInsert', 'pendSV', 'vPortExitCritical', 'vPortEnterCritical', 'vPortExitCritical']
+vTaskSetTimeOutState  calls: 
+['vAssertCalled', 'vPortEnterCritical', 'vPortExitCritical']
+vEventGroupSetBitsCallback  calls: 
+['xEventGroupSetBits']
+prvSampleTimeNow  calls: 
+['xTaskGetTickCount', 'uxListRemove', 'vListInsert']
+uxTaskResetEventItemValue  calls: 
+[]
+llvm.va_end  calls: 
+[]
+vEventGroupSetNumber  calls: 
+[]
+_fstat  calls: 
+[]
+xTimerGenericCommand  calls: 
+['vAssertCalled', 'xTaskGetSchedulerState', 'xQueueGenericSend', 'xQueueGenericSend', 'xQueueGenericSendFromISR']
+xQueueGenericReset  calls: 
+['vAssertCalled', 'vPortEnterCritical', 'xTaskRemoveFromEventList', 'pendSV', 'vListInitialise', 'vListInitialise', 'vPortExitCritical']
+uxTaskGetNumberOfTasks  calls: 
+[]
+pcTimerGetName  calls: 
+['vAssertCalled']
+xTaskAbortDelay  calls: 
+['vPortEnterCritical', 'vPortExitCritical', 'vAssertCalled', 'vAssertCalled', 'vPortEnterCritical', 'vPortExitCritical', 'uxListRemove', 'vPortEnterCritical', 'uxListRemove', 'vPortExitCritical', 'vListInsertEnd', 'xTaskResumeAll']
+mystrlen  calls: 
+[]
+vTaskGetInfo  calls: 
+['xTaskResumeAll', 'vPortEnterCritical', 'vPortExitCritical']
+vTaskResume  calls: 
+['vAssertCalled', 'vPortEnterCritical', 'uxListRemove', 'vListInsertEnd', 'pendSV', 'vPortExitCritical']
+prvTimerTask  calls: 
+['vTaskSuspendAll', 'prvSampleTimeNow', 'xTaskResumeAll', 'uxListRemove', 'vListInsert', 'vListInsert', 'vQueueWaitForMessageRestricted', 'xTaskResumeAll', 'pendSV', 'xTaskResumeAll', 'xQueueReceive', 'uxListRemove', 'prvSampleTimeNow', 'vListInsert', 'vListInsert', 'vListInsert', 'vListInsert', 'vAssertCalled', 'vListInsert', 'vListInsert', 'vPortFree']
+vApplicationMallocFailedHook  calls: 
+[]
+_sbrk  calls: 
+[]
+uxTaskPriorityGetFromISR  calls: 
+['vPortValidateInterruptPriority']
+xQueueGenericSend  calls: 
+['vAssertCalled', 'vAssertCalled', 'vAssertCalled', 'xTaskGetSchedulerState', 'vAssertCalled', 'vPortEnterCritical', 'vPortEnterCritical', 'xTaskPriorityDisinherit', 'prvNotifyQueueSetContainer', 'pendSV', 'xTaskRemoveFromEventList', 'pendSV', 'pendSV', 'vPortExitCritical', 'vPortExitCritical', 'vTaskInternalSetTimeOutState', 'vPortExitCritical', 'vTaskSuspendAll', 'vPortEnterCritical', 'vPortExitCritical', 'xTaskCheckForTimeOut', 'vPortEnterCritical', 'vPortExitCritical', 'vTaskPlaceOnEventList', 'prvUnlockQueue', 'xTaskResumeAll', 'pendSV', 'prvUnlockQueue', 'xTaskResumeAll', 'prvUnlockQueue', 'xTaskResumeAll']
+xPortPendSVHandler  calls: 
+[]
+xQueueCreateSet  calls: 
+['xQueueGenericCreate']
+xTaskGenericNotify  calls: 
+['vAssertCalled', 'vAssertCalled', 'vPortEnterCritical', 'vAssertCalled', 'uxListRemove', 'vListInsertEnd', 'vAssertCalled', 'pendSV', 'vPortExitCritical']
+xQueueReceiveFromISR  calls: 
+['vAssertCalled', 'vAssertCalled', 'vPortValidateInterruptPriority', 'xTaskRemoveFromEventList', 'vAssertCalled']
+main  calls: 
+['main_blinky']
+vTaskPlaceOnEventListRestricted  calls: 
+['vAssertCalled', 'vListInsertEnd', 'uxListRemove', 'vListInsert', 'vListInsert', 'uxListRemove', 'vListInsertEnd']
+vTaskPriorityDisinheritAfterTimeout  calls: 
+['vAssertCalled', 'vAssertCalled', 'uxListRemove', 'vListInsertEnd']
+vApplicationGetIdleTaskMemory  calls: 
+[]
+vApplicationGetTimerTaskMemory  calls: 
+[]
+uart_init  calls: 
+[]
+vListInsert  calls: 
+[]
+xTimerCreate  calls: 
+['pvPortMalloc', 'prvInitialiseNewTimer']
+uxTaskGetStackHighWaterMark  calls: 
+[]
+xTaskGenericNotifyStateClear  calls: 
+['vAssertCalled', 'vPortEnterCritical', 'vPortExitCritical']
+prvQueueSendTask  calls: 
+['xTaskGetTickCount', 'xTaskDelayUntil', 'xQueueGenericSend']
+xTaskDelayUntil  calls: 
+['vAssertCalled', 'vAssertCalled', 'vAssertCalled', 'uxListRemove', 'vListInsert', 'vListInsert', 'xTaskResumeAll', 'pendSV']
+_write  calls: 
+[]
+vTaskPlaceOnUnorderedEventList  calls: 
+['vAssertCalled', 'vAssertCalled', 'vListInsertEnd', 'uxListRemove', 'vListInsertEnd', 'vListInsert', 'vListInsert']
+xQueuePeek  calls: 
+['vAssertCalled', 'vAssertCalled', 'xTaskGetSchedulerState', 'vAssertCalled', 'vPortEnterCritical', 'xTaskRemoveFromEventList', 'pendSV', 'vPortExitCritical', 'vPortExitCritical', 'vTaskInternalSetTimeOutState', 'vPortExitCritical', 'vTaskSuspendAll', 'vPortEnterCritical', 'vPortExitCritical', 'xTaskCheckForTimeOut', 'vPortEnterCritical', 'vPortExitCritical', 'vTaskPlaceOnEventList', 'prvUnlockQueue', 'xTaskResumeAll', 'pendSV', 'prvUnlockQueue', 'xTaskResumeAll', 'prvUnlockQueue', 'xTaskResumeAll', 'vPortEnterCritical', 'vPortExitCritical']
+vTaskDelete  calls: 
+['vPortEnterCritical', 'uxListRemove', 'uxListRemove', 'vListInsertEnd', 'vPortFree', 'vPortFree', 'vPortFree', 'vAssertCalled', 'vPortExitCritical', 'vAssertCalled', 'pendSV']
+xQueueCreateCountingSemaphore  calls: 
+['vAssertCalled', 'vAssertCalled', 'xQueueGenericCreate']
+llvm.umul.with.overflow.i32  calls: 
+[]
+uxQueueSpacesAvailable  calls: 
+['vAssertCalled', 'vPortEnterCritical', 'vPortExitCritical']
+xTaskCreateStatic  calls: 
+['vAssertCalled', 'vAssertCalled', 'vAssertCalled', 'prvInitialiseNewTask', 'prvAddNewTaskToReadyList']
+uxTaskGetTaskNumber  calls: 
+[]
+xQueueCreateCountingSemaphoreStatic  calls: 
+['vAssertCalled', 'vAssertCalled', 'xQueueGenericCreateStatic']
+xTaskGetTickCount  calls: 
+[]
+pcQueueGetName  calls: 
+['vAssertCalled']
+uxTimerGetReloadMode  calls: 
+['vAssertCalled', 'vPortEnterCritical', 'vPortExitCritical']
+vPortExitCritical  calls: 
+['vAssertCalled']
+pendSV  calls: 
+[]
+vQueueWaitForMessageRestricted  calls: 
+['vPortEnterCritical', 'vPortExitCritical', 'vTaskPlaceOnEventListRestricted', 'prvUnlockQueue']
+xQueueGiveMutexRecursive  calls: 
+['vAssertCalled', 'xTaskGetCurrentTaskHandle', 'xQueueGenericSend']
+xQueueGiveFromISR  calls: 
+['vAssertCalled', 'vAssertCalled', 'vAssertCalled', 'vPortValidateInterruptPriority', 'prvNotifyQueueSetContainer', 'xTaskRemoveFromEventList', 'vAssertCalled']
+uxEventGroupGetNumber  calls: 
+[]
+vTaskPrioritySet  calls: 
+['vAssertCalled', 'vPortEnterCritical', 'uxListRemove', 'vListInsertEnd', 'pendSV', 'vPortExitCritical']
+llvm.va_start  calls: 
+[]
+prvInitialiseNewTimer  calls: 
+['vAssertCalled', 'vPortEnterCritical', 'vListInitialise', 'vListInitialise', 'xQueueGenericCreateStatic', 'vQueueAddToRegistry', 'vPortExitCritical', 'vListInitialiseItem']
+xQueueGetMutexHolder  calls: 
+['vAssertCalled', 'vPortEnterCritical', 'vPortExitCritical']
+vTimerSetTimerID  calls: 
+['vAssertCalled', 'vPortEnterCritical', 'vPortExitCritical']
+llvm.memcpy.p0i8.p0i8.i32  calls: 
+[]
+xTaskResumeFromISR  calls: 
+['vPortValidateInterruptPriority', 'vAssertCalled', 'vPortValidateInterruptPriority', 'vAssertCalled', 'uxListRemove', 'vListInsertEnd', 'vListInsertEnd']
+vApplicationStackOverflowHook  calls: 
+[]
+ulTaskGenericNotifyTake  calls: 
+['vAssertCalled', 'vPortEnterCritical', 'uxListRemove', 'vListInsertEnd', 'vListInsert', 'vListInsert', 'pendSV', 'vPortExitCritical', 'vPortEnterCritical', 'vPortExitCritical']
+xEventGroupClearBitsFromISR  calls: 
+['xTimerPendFunctionCallFromISR']
+pvTaskIncrementMutexHeldCount  calls: 
+[]
+vTaskStartScheduler  calls: 
+['vApplicationGetIdleTaskMemory', 'vAssertCalled', 'vAssertCalled', 'vAssertCalled', 'prvInitialiseNewTask', 'prvAddNewTaskToReadyList', 'xTimerCreateTimerTask', 'xPortStartScheduler', 'vAssertCalled']
+vAssertCalled  calls: 
+['vPortEnterCritical', 'vPortExitCritical']
+xTaskPriorityInherit  calls: 
+['uxListRemove', 'vListInsertEnd']
+vTaskDelay  calls: 
+['vAssertCalled', 'uxListRemove', 'vListInsert', 'vListInsert', 'xTaskResumeAll', 'pendSV']
+xTaskResumeAll  calls: 
+['vAssertCalled', 'vPortEnterCritical', 'uxListRemove', 'uxListRemove', 'vListInsertEnd', 'xTaskIncrementTick', 'pendSV', 'vPortExitCritical']
+_start  calls: 
+['uart_init', 'curr_stamp', 'curr_stamp', 'exit']
+vPortEndScheduler  calls: 
+['vAssertCalled']
+xTaskGetHandle  calls: 
+['strlen', 'vAssertCalled', 'prvSearchForNameWithinSingleList', 'prvSearchForNameWithinSingleList', 'prvSearchForNameWithinSingleList', 'prvSearchForNameWithinSingleList', 'prvSearchForNameWithinSingleList', 'xTaskResumeAll']
+xQueueSemaphoreTake  calls: 
+['vAssertCalled', 'vAssertCalled', 'xTaskGetSchedulerState', 'vAssertCalled', 'vPortEnterCritical', 'pvTaskIncrementMutexHeldCount', 'xTaskRemoveFromEventList', 'pendSV', 'vPortExitCritical', 'vAssertCalled', 'vPortExitCritical', 'vTaskInternalSetTimeOutState', 'vPortExitCritical', 'vTaskSuspendAll', 'vPortEnterCritical', 'vPortExitCritical', 'xTaskCheckForTimeOut', 'vPortEnterCritical', 'vPortExitCritical', 'vPortEnterCritical', 'xTaskPriorityInherit', 'vPortExitCritical', 'vTaskPlaceOnEventList', 'prvUnlockQueue', 'xTaskResumeAll', 'pendSV', 'prvUnlockQueue', 'xTaskResumeAll', 'prvUnlockQueue', 'xTaskResumeAll', 'vPortEnterCritical', 'vPortExitCritical', 'vPortEnterCritical', 'vTaskPriorityDisinheritAfterTimeout', 'vPortExitCritical']
+xQueueGenericSendFromISR  calls: 
+['vAssertCalled', 'vAssertCalled', 'vAssertCalled', 'vPortValidateInterruptPriority', 'xTaskPriorityDisinherit', 'prvNotifyQueueSetContainer', 'xTaskRemoveFromEventList', 'vAssertCalled']
+xEventGroupGetBitsFromISR  calls: 
+[]
+vTaskMissedYield  calls: 
+[]
+vTaskSuspendAll  calls: 
+[]
+exit  calls: 
+[]
+prvSearchForNameWithinSingleList  calls: 
+[]
+pxPortInitialiseStack  calls: 
+[]
+prvGetRegistersFromStack  calls: 
+[]
+xQueueGetMutexHolderFromISR  calls: 
+['vAssertCalled']
+ucQueueGetQueueType  calls: 
+[]
+xTaskGetTickCountFromISR  calls: 
+['vPortValidateInterruptPriority']
+xTimerGetPeriod  calls: 
+['vAssertCalled']
+xTaskGenericNotifyFromISR  calls: 
+['vAssertCalled', 'vAssertCalled', 'vPortValidateInterruptPriority', 'vAssertCalled', 'vAssertCalled', 'uxListRemove', 'vListInsertEnd', 'vListInsertEnd']
+xEventGroupSetBits  calls: 
+['vAssertCalled', 'vAssertCalled', 'vTaskSuspendAll', 'vTaskRemoveFromUnorderedEventList', 'xTaskResumeAll']
+uxQueueMessagesWaiting  calls: 
+['vAssertCalled', 'vPortEnterCritical', 'vPortExitCritical']
+xQueueSelectFromSetFromISR  calls: 
+['xQueueReceiveFromISR']
+mymemcmp  calls: 
+[]
+vListInitialiseItem  calls: 
+[]
+prvAddNewTaskToReadyList  calls: 
+['vPortEnterCritical', 'vListInitialise', 'vListInitialise', 'vListInitialise', 'vListInitialise', 'vListInitialise', 'vListInitialise', 'vListInitialise', 'vListInitialise', 'vListInitialise', 'vListInitialise', 'vListInitialise', 'vListInitialise', 'vListInitialise', 'vListInitialise', 'vListInitialise', 'vListInsertEnd', 'vPortExitCritical', 'pendSV']
+eTaskGetState  calls: 
+['vAssertCalled', 'vPortEnterCritical', 'vPortExitCritical']
+xTaskPriorityDisinherit  calls: 
+['vAssertCalled', 'vAssertCalled', 'uxListRemove', 'vListInsertEnd']
+xEventGroupCreateStatic  calls: 
+['vAssertCalled', 'vAssertCalled', 'vListInitialise']
+vTimerSetTimerNumber  calls: 
+[]
+_read  calls: 
+[]
+xQueueGenericCreate  calls: 
+['vAssertCalled', 'vAssertCalled', 'vAssertCalled', 'pvPortMalloc', 'vPortEnterCritical', 'vListInitialise', 'vListInitialise', 'vPortExitCritical']
+pvTimerGetTimerID  calls: 
+['vAssertCalled', 'vPortEnterCritical', 'vPortExitCritical']
+vPortSetupTimerInterrupt  calls: 
+[]
+_reset  calls: 
+[]
+xTimerGetExpiryTime  calls: 
+['vAssertCalled']
+xTaskIncrementTick  calls: 
+['vAssertCalled', 'uxListRemove', 'uxListRemove', 'vListInsertEnd', 'vApplicationTickHook', 'vApplicationTickHook']
+llvm.memset.p0i8.i32  calls: 
+[]
+xTaskGetCurrentTaskHandle  calls: 
+[]
+uxTaskGetSystemState  calls: 
+['xTaskResumeAll', 'xTaskResumeAll']
+prvNotifyQueueSetContainer  calls: 
+['vAssertCalled', 'vAssertCalled', 'xTaskPriorityDisinherit', 'xTaskRemoveFromEventList', 'vAssertCalled']
+xEventGroupCreate  calls: 
+['pvPortMalloc', 'vListInitialise']
+vTaskInternalSetTimeOutState  calls: 
+[]
+xEventGroupSync  calls: 
+['vAssertCalled', 'vAssertCalled', 'xTaskGetSchedulerState', 'vAssertCalled', 'vTaskSuspendAll', 'xEventGroupSetBits', 'xTaskResumeAll', 'vTaskPlaceOnUnorderedEventList', 'xTaskResumeAll', 'pendSV', 'uxTaskResetEventItemValue', 'vPortEnterCritical', 'vPortExitCritical']
+uxQueueMessagesWaitingFromISR  calls: 
+['vAssertCalled']
+main_blinky  calls: 
+['xQueueGenericCreate', 'xTaskCreate', 'xTaskCreate', 'vTaskStartScheduler']
+printf  calls: 
+[]
+llvm.lifetime.start.p0i8  calls: 
+[]
+bnch_marking_init  calls: 
+[]
+ulTaskGenericNotifyValueClear  calls: 
+['vPortEnterCritical', 'vPortExitCritical']
+vListInitialise  calls: 
+[]
+uxTimerGetTimerNumber  calls: 
+[]
+xPortStartScheduler  calls: 
+['vPortSetupTimerInterrupt', 'prvPortStartFirstTask', 'vTaskSwitchContext', 'vAssertCalled']
+prvQueueReceiveTask  calls: 
+['xQueueReceive', '_write', 'curr_stamp', 'vTaskDelay', 'curr_stamp']
+xQueueIsQueueFullFromISR  calls: 
+['vAssertCalled']
+prvIdleTask  calls: 
+['vPortEnterCritical', 'uxListRemove', 'vPortExitCritical', 'vPortFree', 'vPortFree', 'vPortFree', 'vAssertCalled', 'pendSV', 'vApplicationIdleHook']
+Default_Handler6  calls: 
+[]
+Default_Handler4  calls: 
+[]
+Default_Handler5  calls: 
+[]
+Default_Handler2  calls: 
+[]
+Default_Handler3  calls: 
+[]
+xTimerPendFunctionCallFromISR  calls: 
+['xQueueGenericSendFromISR']
+pcTaskGetName  calls: 
+['vAssertCalled']
+pvPortMalloc  calls: 
+['vTaskSuspendAll', 'xTaskResumeAll', 'xTaskResumeAll', 'vApplicationMallocFailedHook']
+xQueueSelectFromSet  calls: 
+['xQueueReceive']
+vTaskGenericNotifyGiveFromISR  calls: 
+['vAssertCalled', 'vAssertCalled', 'vPortValidateInterruptPriority', 'vAssertCalled', 'uxListRemove', 'vListInsertEnd', 'vListInsertEnd']
+xEventGroupClearBits  calls: 
+['vAssertCalled', 'vAssertCalled', 'vPortEnterCritical', 'vPortExitCritical']
+xTimerCreateStatic  calls: 
+['vAssertCalled', 'vAssertCalled', 'prvInitialiseNewTimer']
+vLoggingPrintf  calls: 
+['vprintf']
+xTaskCheckForTimeOut  calls: 
+['vAssertCalled', 'vAssertCalled', 'vPortEnterCritical', 'vPortExitCritical']
+xQueueGenericCreateStatic  calls: 
+['vAssertCalled', 'vAssertCalled', 'vAssertCalled', 'vAssertCalled', 'vAssertCalled', 'vPortEnterCritical', 'vListInitialise', 'vListInitialise', 'vPortExitCritical']
+vTaskEndScheduler  calls: 
+['vPortEndScheduler']
+xTimerIsTimerActive  calls: 
+['vAssertCalled', 'vPortEnterCritical', 'vPortExitCritical']
+xEventGroupWaitBits  calls: 
+['vAssertCalled', 'vAssertCalled', 'vAssertCalled', 'xTaskGetSchedulerState', 'vAssertCalled', 'vTaskSuspendAll', 'xTaskResumeAll', 'vTaskPlaceOnUnorderedEventList', 'xTaskResumeAll', 'pendSV', 'uxTaskResetEventItemValue', 'vPortEnterCritical', 'vPortExitCritical']
+vPortFree  calls: 
+[]
+prvInitialiseNewTask  calls: 
+['vAssertCalled', 'vListInitialiseItem', 'vListInitialiseItem', 'pxPortInitialiseStack']
+xQueueIsQueueEmptyFromISR  calls: 
+['vAssertCalled']
+uxTaskGetStackHighWaterMark2  calls: 
+[]
+vQueueUnregisterQueue  calls: 
+['vAssertCalled']
+xQueueReceive  calls: 
+['vAssertCalled', 'vAssertCalled', 'xTaskGetSchedulerState', 'vAssertCalled', 'vPortEnterCritical', 'xTaskRemoveFromEventList', 'pendSV', 'vPortExitCritical', 'vPortExitCritical', 'vTaskInternalSetTimeOutState', 'vPortExitCritical', 'vTaskSuspendAll', 'vPortEnterCritical', 'vPortExitCritical', 'xTaskCheckForTimeOut', 'vPortEnterCritical', 'vPortExitCritical', 'vTaskPlaceOnEventList', 'prvUnlockQueue', 'xTaskResumeAll', 'pendSV', 'prvUnlockQueue', 'xTaskResumeAll', 'prvUnlockQueue', 'xTaskResumeAll', 'vPortEnterCritical', 'vPortExitCritical']
+xTaskGetIdleTaskHandle  calls: 
+['vAssertCalled']
+vPortEnterCritical  calls: 
+['vAssertCalled']
+uxQueueGetQueueNumber  calls: 
+[]
+llvm.lifetime.end.p0i8  calls: 
+[]
+xPortSysTickHandler  calls: 
+['xTaskIncrementTick']
+vEventGroupDelete  calls: 
+['vAssertCalled', 'vTaskSuspendAll', 'vAssertCalled', 'vTaskRemoveFromUnorderedEventList', 'vPortFree', 'xTaskResumeAll']
+vTimerSetReloadMode  calls: 
+['vAssertCalled', 'vPortEnterCritical', 'vPortExitCritical']
+prvTaskExitError  calls: 
+['vAssertCalled']
+vTaskSetTaskNumber  calls: 
+[]
+curr_stamp  calls: 
+['xTaskGetTickCount']
+xQueueCreateMutexStatic  calls: 
+['xQueueGenericCreateStatic', 'xQueueGenericSend']
+xQueueAddToSet  calls: 
+['vPortEnterCritical', 'vPortExitCritical']
+vprintf  calls: 
+[]
+null  calls: 
+['Reset_Handler', 'Default_Handler', 'Default_Handler2', 'Default_Handler3', 'Default_Handler4', 'Default_Handler5', 'Default_Handler6', '_reset', 'llvm.lifetime.start.p0i8', 'llvm.lifetime.end.p0i8', 'prvGetRegistersFromStack', '_start', 'exit', 'uart_init', '_fstat', '_read', 'write_number', '_write', '_sbrk', 'main', 'vApplicationMallocFailedHook', 'vApplicationStackOverflowHook', 'vApplicationIdleHook', 'vApplicationTickHook', 'vAssertCalled', 'vLoggingPrintf', 'llvm.va_start', 'vprintf', 'llvm.va_end', 'vApplicationGetIdleTaskMemory', 'vApplicationGetTimerTaskMemory', 'pxPortInitialiseStack', 'prvTaskExitError', 'vPortSVCHandler', 'Function', 'xPortStartScheduler', 'vPortSetupTimerInterrupt', 'vPortEndScheduler', 'vPortEnterCritical', 'vPortExitCritical', 'xPortPendSVHandler', 'pendSV', 'xPortSysTickHandler', 'vPortValidateInterruptPriority', 'vTaskSwitchContext', 'xTaskCreateStatic', 'llvm.memset.p0i8.i32', 'xTaskCreate', 'vTaskDelete', 'xTaskDelayUntil', 'xTaskResumeAll', 'xTaskIncrementTick', 'vTaskSuspendAll', 'vTaskDelay', 'eTaskGetState', 'uxTaskPriorityGet', 'uxTaskPriorityGetFromISR', 'vTaskPrioritySet', 'vTaskSuspend', 'vTaskResume', 'xTaskResumeFromISR', 'vTaskStartScheduler', 'prvIdleTask', 'vTaskEndScheduler', 'xTaskGetTickCount', 'xTaskGetTickCountFromISR', 'uxTaskGetNumberOfTasks', 'pcTaskGetName', 'xTaskGetHandle', 'strlen', 'uxTaskGetSystemState', 'xTaskGetIdleTaskHandle', 'xTaskCatchUpTicks', 'xTaskAbortDelay', 'vTaskPlaceOnEventList', 'vTaskPlaceOnUnorderedEventList', 'vTaskPlaceOnEventListRestricted', 'xTaskRemoveFromEventList', 'vTaskRemoveFromUnorderedEventList', 'vTaskSetTimeOutState', 'vTaskInternalSetTimeOutState', 'xTaskCheckForTimeOut', 'vTaskMissedYield', 'uxTaskGetTaskNumber', 'vTaskSetTaskNumber', 'vTaskGetInfo', 'uxTaskGetStackHighWaterMark2', 'uxTaskGetStackHighWaterMark', 'xTaskGetCurrentTaskHandle', 'xTaskGetSchedulerState', 'xTaskPriorityInherit', 'xTaskPriorityDisinherit', 'vTaskPriorityDisinheritAfterTimeout', 'uxTaskResetEventItemValue', 'pvTaskIncrementMutexHeldCount', 'ulTaskGenericNotifyTake', 'xTaskGenericNotifyWait', 'xTaskGenericNotify', 'xTaskGenericNotifyFromISR', 'vTaskGenericNotifyGiveFromISR', 'xTaskGenericNotifyStateClear', 'ulTaskGenericNotifyValueClear', 'vListInitialise', 'vListInitialiseItem', 'vListInsertEnd', 'vListInsert', 'uxListRemove', 'xQueueGenericReset', 'xQueueGenericCreateStatic', 'xQueueGenericCreate', 'llvm.umul.with.overflow.i32', 'xQueueCreateMutex', 'xQueueGenericSend', 'llvm.memcpy.p0i8.p0i8.i32', 'xQueueCreateMutexStatic', 'xQueueGetMutexHolder', 'xQueueGetMutexHolderFromISR', 'xQueueGiveMutexRecursive', 'xQueueTakeMutexRecursive', 'xQueueSemaphoreTake', 'xQueueCreateCountingSemaphoreStatic', 'xQueueCreateCountingSemaphore', 'xQueueGenericSendFromISR', 'xQueueGiveFromISR', 'xQueueReceive', 'xQueuePeek', 'xQueueReceiveFromISR', 'xQueuePeekFromISR', 'uxQueueMessagesWaiting', 'uxQueueSpacesAvailable', 'uxQueueMessagesWaitingFromISR', 'vQueueDelete', 'vQueueUnregisterQueue', 'uxQueueGetQueueNumber', 'vQueueSetQueueNumber', 'ucQueueGetQueueType', 'xQueueIsQueueEmptyFromISR', 'xQueueIsQueueFullFromISR', 'vQueueAddToRegistry', 'pcQueueGetName', 'vQueueWaitForMessageRestricted', 'xQueueCreateSet', 'xQueueAddToSet', 'xQueueRemoveFromSet', 'xQueueSelectFromSet', 'xQueueSelectFromSetFromISR', 'xTimerCreateTimerTask', 'prvTimerTask', 'xTimerCreate', 'xTimerCreateStatic', 'xTimerGenericCommand', 'xTimerGetTimerDaemonTaskHandle', 'xTimerGetPeriod', 'vTimerSetReloadMode', 'uxTimerGetReloadMode', 'xTimerGetExpiryTime', 'pcTimerGetName', 'xTimerIsTimerActive', 'pvTimerGetTimerID', 'vTimerSetTimerID', 'xTimerPendFunctionCallFromISR', 'xTimerPendFunctionCall', 'uxTimerGetTimerNumber', 'vTimerSetTimerNumber', 'xEventGroupCreateStatic', 'xEventGroupCreate', 'xEventGroupSync', 'xEventGroupSetBits', 'xEventGroupWaitBits', 'xEventGroupClearBits', 'xEventGroupClearBitsFromISR', 'vEventGroupClearBitsCallback', 'xEventGroupGetBitsFromISR', 'vEventGroupDelete', 'vEventGroupSetBitsCallback', 'xEventGroupSetBitsFromISR', 'uxEventGroupGetNumber', 'vEventGroupSetNumber', 'pvPortMalloc', 'vPortFree', 'vPortInitialiseBlocks', 'xPortGetFreeHeapSize', 'case_prog', 'printf', 'main_blinky', 'prvQueueReceiveTask', 'prvQueueSendTask', 'bnch_marking_init', 'curr_stamp', 'mystrlen', 'mymemcmp']
+strlen  calls: 
+[]
+Function  calls: 
+[]
+vQueueAddToRegistry  calls: 
+['vAssertCalled']
+vQueueDelete  calls: 
+['vQueueUnregisterQueue', 'vAssertCalled', 'vQueueUnregisterQueue', 'vPortFree']
+xEventGroupSetBitsFromISR  calls: 
+['xTimerPendFunctionCallFromISR']
+xQueueRemoveFromSet  calls: 
+['vPortEnterCritical', 'vPortExitCritical']
+vTaskSuspend  calls: 
+['vPortEnterCritical', 'uxListRemove', 'uxListRemove', 'vListInsertEnd', 'vPortExitCritical', 'vPortEnterCritical', 'vPortExitCritical', 'vAssertCalled', 'pendSV', 'vAssertCalled']
+Default_Handler  calls: 
+[]
+vEventGroupClearBitsCallback  calls: 
+['vAssertCalled', 'vAssertCalled', 'vPortEnterCritical', 'vPortExitCritical']
+uxTaskPriorityGet  calls: 
+['vPortEnterCritical', 'vPortExitCritical']
+xTaskCatchUpTicks  calls: 
+['vAssertCalled', 'xTaskResumeAll']
+vTaskPlaceOnEventList  calls: 
+['vAssertCalled', 'vListInsert', 'uxListRemove', 'vListInsertEnd', 'vListInsert', 'vListInsert']
+xQueueCreateMutex  calls: 
+['pvPortMalloc', 'vPortEnterCritical', 'vListInitialise', 'vListInitialise', 'vPortExitCritical', 'xQueueGenericSend']
+xQueueTakeMutexRecursive  calls: 
+['vAssertCalled', 'xTaskGetCurrentTaskHandle', 'xQueueSemaphoreTake']
+vPortInitialiseBlocks  calls: 
+[]
+prvUnlockQueue  calls: 
+['vPortEnterCritical', 'prvNotifyQueueSetContainer', 'vTaskMissedYield', 'xTaskRemoveFromEventList', 'vTaskMissedYield', 'vPortExitCritical', 'vPortEnterCritical', 'xTaskRemoveFromEventList', 'vTaskMissedYield', 'vPortExitCritical']
+case_prog  calls: 
+['printf', 'printf']
+xTimerPendFunctionCall  calls: 
+['vAssertCalled', 'xQueueGenericSend']
+uxListRemove  calls: 
+[]
+xTimerCreateTimerTask  calls: 
+['vPortEnterCritical', 'vListInitialise', 'vListInitialise', 'xQueueGenericCreateStatic', 'vQueueAddToRegistry', 'vPortExitCritical', 'vApplicationGetTimerTaskMemory', 'xTaskCreateStatic', 'vAssertCalled']
+xQueuePeekFromISR  calls: 
+['vAssertCalled', 'vAssertCalled', 'vAssertCalled', 'vPortValidateInterruptPriority']
+prvPortStartFirstTask  calls: 
+[]
+vApplicationIdleHook  calls: 
+[]
+xTaskCreate  calls: 
+['pvPortMalloc', 'pvPortMalloc', 'vPortFree', 'prvInitialiseNewTask', 'prvAddNewTaskToReadyList']
+vTaskSwitchContext  calls: 
+['vAssertCalled']
+xTaskGetSchedulerState  calls: 
+[]
+Reset_Handler  calls: 
+[]
+vPortSVCHandler  calls: 
+[]
+xPortGetFreeHeapSize  calls: 
+[]
+vQueueSetQueueNumber  calls: 
+[]
+vApplicationTickHook  calls: 
+[]
+vTaskRemoveFromUnorderedEventList  calls: 
+['vAssertCalled', 'vAssertCalled', 'uxListRemove', 'uxListRemove', 'vListInsertEnd']
+vListInsertEnd  calls: 
+[]
+vPortValidateInterruptPriority  calls: 
+['vAssertCalled', 'vAssertCalled']
+*********************************
+isr_vector
+Used By:
+****************
+_estack
+Used By:
+****************
+_sidata
+Used By:
+****************
+_sdata
+Used By:
+****************
+_edata
+Used By:
+_reset
+****************
+_sbss
+Used By:
+****************
+_ebss
+Used By:
+_reset
+****************
+.str
+Used By:
+write_number
+****************
+.str.1
+Used By:
+write_number
+****************
+.str.2
+Used By:
+write_number
+****************
+.str.3
+Used By:
+write_number
+****************
+.str.4
+Used By:
+write_number
+****************
+.str.5
+Used By:
+write_number
+****************
+.str.6
+Used By:
+write_number
+****************
+.str.7
+Used By:
+write_number
+****************
+.str.8
+Used By:
+write_number
+****************
+.str.9
+Used By:
+write_number
+****************
+heap_end
+Used By:
+_sbrk
+****************
+_heap_bottom
+Used By:
+_sbrk
+****************
+_heap_top
+Used By:
+_sbrk
+****************
+uxTimerTaskStack
+Used By:
+vApplicationGetTimerTaskMemory
+****************
+vApplicationGetIdleTaskMemory.xIdleTaskTCB
+Used By:
+****************
+vApplicationGetIdleTaskMemory.uxIdleTaskStack
+Used By:
+vApplicationGetIdleTaskMemory
+****************
+vApplicationGetTimerTaskMemory.xTimerTaskTCB
+Used By:
+****************
+uxCriticalNesting
+Used By:
+prvTaskExitError
+xPortStartScheduler
+vPortEndScheduler
+vPortEnterCritical
+vPortExitCritical
+****************
+ucMaxSysCallPriority
+Used By:
+vPortValidateInterruptPriority
+****************
+ulMaxPRIGROUPValue
+Used By:
+vPortValidateInterruptPriority
+****************
+pxCurrentTCB
+Used By:
+xTaskIncrementTick
+vTaskDelay
+eTaskGetState
+xTaskPriorityInherit
+xTaskPriorityDisinherit
+vTaskPriorityDisinheritAfterTimeout
+uxTaskResetEventItemValue
+pvTaskIncrementMutexHeldCount
+ulTaskGenericNotifyTake
+xTaskGenericNotifyWait
+xTaskGenericNotify
+prvAddNewTaskToReadyList
+vTaskDelete
+xTaskDelayUntil
+xTaskResumeAll
+vTaskGenericNotifyGiveFromISR
+xTaskGenericNotifyStateClear
+ulTaskGenericNotifyValueClear
+uxTaskPriorityGet
+uxTaskPriorityGetFromISR
+vTaskPrioritySet
+vTaskSuspend
+vTaskResume
+xTaskResumeFromISR
+pcTaskGetName
+uxTaskGetSystemState
+xTaskAbortDelay
+vTaskPlaceOnEventList
+vTaskPlaceOnUnorderedEventList
+vTaskPlaceOnEventListRestricted
+xTaskRemoveFromEventList
+vTaskRemoveFromUnorderedEventList
+xTaskCheckForTimeOut
+vTaskGetInfo
+uxTaskGetStackHighWaterMark2
+uxTaskGetStackHighWaterMark
+xTaskGetCurrentTaskHandle
+xTaskGenericNotifyFromISR
+****************
+uxTopUsedPriority
+Used By:
+****************
+llvm.used
+Used By:
+****************
+uxSchedulerSuspended
+Used By:
+xTaskIncrementTick
+vTaskSuspendAll
+vTaskDelay
+vTaskSwitchContext
+vTaskDelete
+xTaskDelayUntil
+xTaskResumeAll
+vTaskGenericNotifyGiveFromISR
+vTaskSuspend
+xTaskResumeFromISR
+xTaskGetHandle
+uxTaskGetSystemState
+xTaskCatchUpTicks
+xTaskAbortDelay
+vTaskPlaceOnUnorderedEventList
+xTaskRemoveFromEventList
+vTaskRemoveFromUnorderedEventList
+vTaskGetInfo
+xTaskGetSchedulerState
+xTaskGenericNotifyFromISR
+****************
+xYieldPending
+Used By:
+xTaskIncrementTick
+xTaskResumeAll
+****************
+uxTopReadyPriority
+Used By:
+xTaskIncrementTick
+vTaskSwitchContext
+xTaskPriorityInherit
+xTaskPriorityDisinherit
+vTaskPriorityDisinheritAfterTimeout
+xTaskGenericNotify
+prvAddNewTaskToReadyList
+xTaskResumeAll
+vTaskGenericNotifyGiveFromISR
+vTaskPrioritySet
+vTaskSuspend
+vTaskResume
+xTaskResumeFromISR
+xTaskAbortDelay
+xTaskRemoveFromEventList
+vTaskRemoveFromUnorderedEventList
+xTaskGenericNotifyFromISR
+****************
+pxReadyTasksLists
+Used By:
+xTaskIncrementTick
+vTaskSwitchContext
+xTaskPriorityInherit
+xTaskPriorityDisinherit
+vTaskPriorityDisinheritAfterTimeout
+xTaskGenericNotify
+prvAddNewTaskToReadyList
+xTaskResumeAll
+vTaskGenericNotifyGiveFromISR
+vTaskPrioritySet
+vTaskSuspend
+vTaskResume
+xTaskResumeFromISR
+prvIdleTask
+xTaskGetHandle
+uxTaskGetSystemState
+xTaskAbortDelay
+xTaskRemoveFromEventList
+vTaskRemoveFromUnorderedEventList
+xTaskGenericNotifyFromISR
+****************
+uxCurrentNumberOfTasks
+Used By:
+prvAddNewTaskToReadyList
+vTaskDelete
+xTaskResumeAll
+vTaskSuspend
+prvIdleTask
+uxTaskGetNumberOfTasks
+uxTaskGetSystemState
+****************
+xDelayedTaskList1
+Used By:
+****************
+xDelayedTaskList2
+Used By:
+****************
+xPendingReadyList
+Used By:
+xTaskResumeAll
+****************
+xTasksWaitingTermination
+Used By:
+eTaskGetState
+prvIdleTask
+xTaskGetHandle
+uxTaskGetSystemState
+vTaskGetInfo
+****************
+xSuspendedTaskList
+Used By:
+eTaskGetState
+vTaskSuspend
+vTaskResume
+xTaskResumeFromISR
+xTaskGetHandle
+uxTaskGetSystemState
+xTaskAbortDelay
+vTaskGetInfo
+****************
+pxDelayedTaskList
+Used By:
+xTaskIncrementTick
+vTaskDelay
+eTaskGetState
+ulTaskGenericNotifyTake
+xTaskGenericNotifyWait
+vTaskDelete
+xTaskDelayUntil
+xTaskResumeAll
+vTaskSuspend
+xTaskGetHandle
+uxTaskGetSystemState
+xTaskAbortDelay
+vTaskPlaceOnEventList
+vTaskPlaceOnUnorderedEventList
+vTaskPlaceOnEventListRestricted
+vTaskGetInfo
+****************
+pxOverflowDelayedTaskList
+Used By:
+xTaskIncrementTick
+vTaskDelay
+eTaskGetState
+ulTaskGenericNotifyTake
+xTaskGenericNotifyWait
+xTaskDelayUntil
+xTaskGetHandle
+uxTaskGetSystemState
+xTaskAbortDelay
+vTaskPlaceOnEventList
+vTaskPlaceOnUnorderedEventList
+vTaskPlaceOnEventListRestricted
+vTaskGetInfo
+****************
+xSchedulerRunning
+Used By:
+prvAddNewTaskToReadyList
+vTaskDelete
+vTaskSuspend
+xTaskGetSchedulerState
+****************
+uxTaskNumber
+Used By:
+prvAddNewTaskToReadyList
+vTaskDelete
+****************
+uxDeletedTasksWaitingCleanUp
+Used By:
+vTaskDelete
+prvIdleTask
+****************
+xNextTaskUnblockTime
+Used By:
+xTaskIncrementTick
+vTaskDelay
+ulTaskGenericNotifyTake
+xTaskGenericNotifyWait
+xTaskDelayUntil
+vTaskPlaceOnEventList
+vTaskPlaceOnUnorderedEventList
+vTaskPlaceOnEventListRestricted
+****************
+xTickCount
+Used By:
+xTaskIncrementTick
+vTaskDelay
+ulTaskGenericNotifyTake
+xTaskGenericNotifyWait
+xTaskGenericNotify
+xTaskDelayUntil
+xTaskGetTickCount
+xTaskGetTickCountFromISR
+vTaskPlaceOnEventList
+vTaskPlaceOnUnorderedEventList
+vTaskPlaceOnEventListRestricted
+vTaskSetTimeOutState
+vTaskInternalSetTimeOutState
+xTaskCheckForTimeOut
+xTaskGenericNotifyFromISR
+****************
+xPendedTicks
+Used By:
+xTaskIncrementTick
+xTaskResumeAll
+xTaskCatchUpTicks
+****************
+xNumOfOverflows
+Used By:
+xTaskIncrementTick
+vTaskSetTimeOutState
+vTaskInternalSetTimeOutState
+xTaskCheckForTimeOut
+****************
+.str.19
+Used By:
+vTaskStartScheduler
+****************
+xIdleTaskHandle
+Used By:
+xTaskGetIdleTaskHandle
+****************
+xQueueRegistry
+Used By:
+vQueueUnregisterQueue
+vQueueAddToRegistry
+pcQueueGetName
+****************
+xTimerQueue
+Used By:
+xTimerCreateTimerTask
+prvTimerTask
+prvInitialiseNewTimer
+xTimerGenericCommand
+xTimerPendFunctionCallFromISR
+xTimerPendFunctionCall
+****************
+xActiveTimerList1
+Used By:
+****************
+xActiveTimerList2
+Used By:
+****************
+pxCurrentTimerList
+Used By:
+prvTimerTask
+prvSampleTimeNow
+****************
+pxOverflowTimerList
+Used By:
+prvTimerTask
+prvSampleTimeNow
+****************
+prvCheckForValidListAndQueue.ucStaticTimerQueueStorage
+Used By:
+xTimerCreateTimerTask
+prvInitialiseNewTimer
+****************
+prvCheckForValidListAndQueue.xStaticTimerQueue
+Used By:
+xTimerCreateTimerTask
+prvInitialiseNewTimer
+****************
+.str.1.32
+Used By:
+xTimerCreateTimerTask
+prvInitialiseNewTimer
+****************
+.str.33
+Used By:
+xTimerCreateTimerTask
+****************
+xTimerTaskHandle
+Used By:
+xTimerGetTimerDaemonTaskHandle
+****************
+prvSampleTimeNow.xLastTime
+Used By:
+prvSampleTimeNow
+****************
+pvPortMalloc.pucAlignedHeap
+Used By:
+pvPortMalloc
+****************
+ucHeap
+Used By:
+pvPortMalloc
+****************
+xNextFreeByte
+Used By:
+pvPortMalloc
+xPortGetFreeHeapSize
+****************
+ulRxEvents
+Used By:
+prvQueueReceiveTask
+****************
+.str.40
+Used By:
+case_prog
+****************
+.str.1.41
+Used By:
+case_prog
+****************
+xQueue
+Used By:
+prvQueueReceiveTask
+prvQueueSendTask
+****************
+.str.2.44
+Used By:
+main_blinky
+****************
+.str.3.45
+Used By:
+main_blinky
+****************
+.str.4.46
+Used By:
+prvQueueReceiveTask
+****************
+xTimerGetTimerDaemonTaskHandle  calls or touches: 
+['vAssertCalled', 'xTimerTaskHandle']
+xTaskRemoveFromEventList  calls or touches: 
+['vAssertCalled', 'uxListRemove', 'uxListRemove', 'vListInsertEnd', 'vListInsertEnd', 'uxSchedulerSuspended', 'pxCurrentTCB', 'pxReadyTasksLists', 'uxTopReadyPriority']
+write_number  calls or touches: 
+['.str', '.str.9', '.str.8', '.str.7', '.str.6', '.str.5', '.str.4', '.str.3', '.str.2', '.str.1']
+xTaskGenericNotifyWait  calls or touches: 
+['vAssertCalled', 'vPortEnterCritical', 'uxListRemove', 'vListInsertEnd', 'vListInsert', 'vListInsert', 'pendSV', 'vPortExitCritical', 'vPortEnterCritical', 'vPortExitCritical', 'pxCurrentTCB', 'xNextTaskUnblockTime', 'pxDelayedTaskList', 'xTickCount', 'pxOverflowDelayedTaskList']
+vTaskSetTimeOutState  calls or touches: 
+['vAssertCalled', 'vPortEnterCritical', 'vPortExitCritical', 'xTickCount', 'xNumOfOverflows']
+vEventGroupSetBitsCallback  calls or touches: 
+['xEventGroupSetBits']
+prvSampleTimeNow  calls or touches: 
+['xTaskGetTickCount', 'uxListRemove', 'vListInsert', 'prvSampleTimeNow.xLastTime', 'pxOverflowTimerList', 'pxCurrentTimerList']
+uxTaskResetEventItemValue  calls or touches: 
+['pxCurrentTCB']
+[]
+[]
+[]
+xTimerGenericCommand  calls or touches: 
+['vAssertCalled', 'xTaskGetSchedulerState', 'xQueueGenericSend', 'xQueueGenericSend', 'xQueueGenericSendFromISR', 'xTimerQueue']
+xQueueGenericReset  calls or touches: 
+['vAssertCalled', 'vPortEnterCritical', 'xTaskRemoveFromEventList', 'pendSV', 'vListInitialise', 'vListInitialise', 'vPortExitCritical']
+uxTaskGetNumberOfTasks  calls or touches: 
+['uxCurrentNumberOfTasks']
+pcTimerGetName  calls or touches: 
+['vAssertCalled']
+xTaskAbortDelay  calls or touches: 
+['vPortEnterCritical', 'vPortExitCritical', 'vAssertCalled', 'vAssertCalled', 'vPortEnterCritical', 'vPortExitCritical', 'uxListRemove', 'vPortEnterCritical', 'uxListRemove', 'vPortExitCritical', 'vListInsertEnd', 'xTaskResumeAll', 'uxSchedulerSuspended', 'pxCurrentTCB', 'xSuspendedTaskList', 'pxReadyTasksLists', 'pxDelayedTaskList', 'pxOverflowDelayedTaskList', 'uxTopReadyPriority']
+[]
+vTaskGetInfo  calls or touches: 
+['xTaskResumeAll', 'vPortEnterCritical', 'vPortExitCritical', 'uxSchedulerSuspended', 'pxCurrentTCB', 'xSuspendedTaskList', 'pxDelayedTaskList', 'xTasksWaitingTermination', 'pxOverflowDelayedTaskList']
+vTaskResume  calls or touches: 
+['vAssertCalled', 'vPortEnterCritical', 'uxListRemove', 'vListInsertEnd', 'pendSV', 'vPortExitCritical', 'pxCurrentTCB', 'xSuspendedTaskList', 'pxReadyTasksLists', 'uxTopReadyPriority']
+prvTimerTask  calls or touches: 
+['vTaskSuspendAll', 'prvSampleTimeNow', 'xTaskResumeAll', 'uxListRemove', 'vListInsert', 'vListInsert', 'vQueueWaitForMessageRestricted', 'xTaskResumeAll', 'pendSV', 'xTaskResumeAll', 'xQueueReceive', 'uxListRemove', 'prvSampleTimeNow', 'vListInsert', 'vListInsert', 'vListInsert', 'vListInsert', 'vAssertCalled', 'vListInsert', 'vListInsert', 'vPortFree', 'xTimerQueue', 'pxOverflowTimerList', 'pxCurrentTimerList']
+[]
+_sbrk  calls or touches: 
+['heap_end', '_heap_bottom', '_heap_top']
+uxTaskPriorityGetFromISR  calls or touches: 
+['vPortValidateInterruptPriority', 'pxCurrentTCB']
+xQueueGenericSend  calls or touches: 
+['vAssertCalled', 'vAssertCalled', 'vAssertCalled', 'xTaskGetSchedulerState', 'vAssertCalled', 'vPortEnterCritical', 'vPortEnterCritical', 'xTaskPriorityDisinherit', 'prvNotifyQueueSetContainer', 'pendSV', 'xTaskRemoveFromEventList', 'pendSV', 'pendSV', 'vPortExitCritical', 'vPortExitCritical', 'vTaskInternalSetTimeOutState', 'vPortExitCritical', 'vTaskSuspendAll', 'vPortEnterCritical', 'vPortExitCritical', 'xTaskCheckForTimeOut', 'vPortEnterCritical', 'vPortExitCritical', 'vTaskPlaceOnEventList', 'prvUnlockQueue', 'xTaskResumeAll', 'pendSV', 'prvUnlockQueue', 'xTaskResumeAll', 'prvUnlockQueue', 'xTaskResumeAll']
+[]
+xQueueCreateSet  calls or touches: 
+['xQueueGenericCreate']
+xTaskGenericNotify  calls or touches: 
+['vAssertCalled', 'vAssertCalled', 'vPortEnterCritical', 'vAssertCalled', 'uxListRemove', 'vListInsertEnd', 'vAssertCalled', 'pendSV', 'vPortExitCritical', 'pxCurrentTCB', 'pxReadyTasksLists', 'xTickCount', 'uxTopReadyPriority']
+xQueueReceiveFromISR  calls or touches: 
+['vAssertCalled', 'vAssertCalled', 'vPortValidateInterruptPriority', 'xTaskRemoveFromEventList', 'vAssertCalled']
+main  calls or touches: 
+['main_blinky']
+vTaskPlaceOnEventListRestricted  calls or touches: 
+['vAssertCalled', 'vListInsertEnd', 'uxListRemove', 'vListInsert', 'vListInsert', 'uxListRemove', 'vListInsertEnd', 'pxCurrentTCB', 'xNextTaskUnblockTime', 'pxDelayedTaskList', 'xTickCount', 'pxOverflowDelayedTaskList']
+vTaskPriorityDisinheritAfterTimeout  calls or touches: 
+['vAssertCalled', 'vAssertCalled', 'uxListRemove', 'vListInsertEnd', 'pxCurrentTCB', 'pxReadyTasksLists', 'uxTopReadyPriority']
+vApplicationGetIdleTaskMemory  calls or touches: 
+['vApplicationGetIdleTaskMemory.uxIdleTaskStack']
+vApplicationGetTimerTaskMemory  calls or touches: 
+['uxTimerTaskStack']
+[]
+[]
+xTimerCreate  calls or touches: 
+['pvPortMalloc', 'prvInitialiseNewTimer']
+uxTaskGetStackHighWaterMark  calls or touches: 
+['pxCurrentTCB']
+xTaskGenericNotifyStateClear  calls or touches: 
+['vAssertCalled', 'vPortEnterCritical', 'vPortExitCritical', 'pxCurrentTCB']
+prvQueueSendTask  calls or touches: 
+['xTaskGetTickCount', 'xTaskDelayUntil', 'xQueueGenericSend', 'xQueue']
+xTaskDelayUntil  calls or touches: 
+['vAssertCalled', 'vAssertCalled', 'vAssertCalled', 'uxListRemove', 'vListInsert', 'vListInsert', 'xTaskResumeAll', 'pendSV', 'uxSchedulerSuspended', 'pxCurrentTCB', 'xNextTaskUnblockTime', 'pxDelayedTaskList', 'xTickCount', 'pxOverflowDelayedTaskList']
+[]
+vTaskPlaceOnUnorderedEventList  calls or touches: 
+['vAssertCalled', 'vAssertCalled', 'vListInsertEnd', 'uxListRemove', 'vListInsertEnd', 'vListInsert', 'vListInsert', 'uxSchedulerSuspended', 'pxCurrentTCB', 'xNextTaskUnblockTime', 'pxDelayedTaskList', 'xTickCount', 'pxOverflowDelayedTaskList']
+xQueuePeek  calls or touches: 
+['vAssertCalled', 'vAssertCalled', 'xTaskGetSchedulerState', 'vAssertCalled', 'vPortEnterCritical', 'xTaskRemoveFromEventList', 'pendSV', 'vPortExitCritical', 'vPortExitCritical', 'vTaskInternalSetTimeOutState', 'vPortExitCritical', 'vTaskSuspendAll', 'vPortEnterCritical', 'vPortExitCritical', 'xTaskCheckForTimeOut', 'vPortEnterCritical', 'vPortExitCritical', 'vTaskPlaceOnEventList', 'prvUnlockQueue', 'xTaskResumeAll', 'pendSV', 'prvUnlockQueue', 'xTaskResumeAll', 'prvUnlockQueue', 'xTaskResumeAll', 'vPortEnterCritical', 'vPortExitCritical']
+vTaskDelete  calls or touches: 
+['vPortEnterCritical', 'uxListRemove', 'uxListRemove', 'vListInsertEnd', 'vPortFree', 'vPortFree', 'vPortFree', 'vAssertCalled', 'vPortExitCritical', 'vAssertCalled', 'pendSV', 'uxSchedulerSuspended', 'uxDeletedTasksWaitingCleanUp', 'pxCurrentTCB', 'pxDelayedTaskList', 'uxTaskNumber', 'uxCurrentNumberOfTasks', 'xSchedulerRunning']
+xQueueCreateCountingSemaphore  calls or touches: 
+['vAssertCalled', 'vAssertCalled', 'xQueueGenericCreate']
+[]
+uxQueueSpacesAvailable  calls or touches: 
+['vAssertCalled', 'vPortEnterCritical', 'vPortExitCritical']
+xTaskCreateStatic  calls or touches: 
+['vAssertCalled', 'vAssertCalled', 'vAssertCalled', 'prvInitialiseNewTask', 'prvAddNewTaskToReadyList']
+[]
+xQueueCreateCountingSemaphoreStatic  calls or touches: 
+['vAssertCalled', 'vAssertCalled', 'xQueueGenericCreateStatic']
+xTaskGetTickCount  calls or touches: 
+['xTickCount']
+pcQueueGetName  calls or touches: 
+['vAssertCalled', 'xQueueRegistry']
+uxTimerGetReloadMode  calls or touches: 
+['vAssertCalled', 'vPortEnterCritical', 'vPortExitCritical']
+vPortExitCritical  calls or touches: 
+['vAssertCalled', 'uxCriticalNesting']
+[]
+vQueueWaitForMessageRestricted  calls or touches: 
+['vPortEnterCritical', 'vPortExitCritical', 'vTaskPlaceOnEventListRestricted', 'prvUnlockQueue']
+xQueueGiveMutexRecursive  calls or touches: 
+['vAssertCalled', 'xTaskGetCurrentTaskHandle', 'xQueueGenericSend']
+xQueueGiveFromISR  calls or touches: 
+['vAssertCalled', 'vAssertCalled', 'vAssertCalled', 'vPortValidateInterruptPriority', 'prvNotifyQueueSetContainer', 'xTaskRemoveFromEventList', 'vAssertCalled']
+[]
+vTaskPrioritySet  calls or touches: 
+['vAssertCalled', 'vPortEnterCritical', 'uxListRemove', 'vListInsertEnd', 'pendSV', 'vPortExitCritical', 'pxCurrentTCB', 'pxReadyTasksLists', 'uxTopReadyPriority']
+[]
+prvInitialiseNewTimer  calls or touches: 
+['vAssertCalled', 'vPortEnterCritical', 'vListInitialise', 'vListInitialise', 'xQueueGenericCreateStatic', 'vQueueAddToRegistry', 'vPortExitCritical', 'vListInitialiseItem', 'xTimerQueue', 'prvCheckForValidListAndQueue.xStaticTimerQueue', 'prvCheckForValidListAndQueue.ucStaticTimerQueueStorage', '.str.1.32']
+xQueueGetMutexHolder  calls or touches: 
+['vAssertCalled', 'vPortEnterCritical', 'vPortExitCritical']
+vTimerSetTimerID  calls or touches: 
+['vAssertCalled', 'vPortEnterCritical', 'vPortExitCritical']
+[]
+xTaskResumeFromISR  calls or touches: 
+['vPortValidateInterruptPriority', 'vAssertCalled', 'vPortValidateInterruptPriority', 'vAssertCalled', 'uxListRemove', 'vListInsertEnd', 'vListInsertEnd', 'uxSchedulerSuspended', 'pxCurrentTCB', 'xSuspendedTaskList', 'pxReadyTasksLists', 'uxTopReadyPriority']
+[]
+ulTaskGenericNotifyTake  calls or touches: 
+['vAssertCalled', 'vPortEnterCritical', 'uxListRemove', 'vListInsertEnd', 'vListInsert', 'vListInsert', 'pendSV', 'vPortExitCritical', 'vPortEnterCritical', 'vPortExitCritical', 'pxCurrentTCB', 'xNextTaskUnblockTime', 'pxDelayedTaskList', 'xTickCount', 'pxOverflowDelayedTaskList']
+xEventGroupClearBitsFromISR  calls or touches: 
+['xTimerPendFunctionCallFromISR']
+pvTaskIncrementMutexHeldCount  calls or touches: 
+['pxCurrentTCB']
+vTaskStartScheduler  calls or touches: 
+['vApplicationGetIdleTaskMemory', 'vAssertCalled', 'vAssertCalled', 'vAssertCalled', 'prvInitialiseNewTask', 'prvAddNewTaskToReadyList', 'xTimerCreateTimerTask', 'xPortStartScheduler', 'vAssertCalled', '.str.19']
+vAssertCalled  calls or touches: 
+['vPortEnterCritical', 'vPortExitCritical']
+xTaskPriorityInherit  calls or touches: 
+['uxListRemove', 'vListInsertEnd', 'pxCurrentTCB', 'pxReadyTasksLists', 'uxTopReadyPriority']
+vTaskDelay  calls or touches: 
+['vAssertCalled', 'uxListRemove', 'vListInsert', 'vListInsert', 'xTaskResumeAll', 'pendSV', 'uxSchedulerSuspended', 'pxCurrentTCB', 'xNextTaskUnblockTime', 'pxDelayedTaskList', 'xTickCount', 'pxOverflowDelayedTaskList']
+xTaskResumeAll  calls or touches: 
+['vAssertCalled', 'vPortEnterCritical', 'uxListRemove', 'uxListRemove', 'vListInsertEnd', 'xTaskIncrementTick', 'pendSV', 'vPortExitCritical', 'xPendedTicks', 'uxSchedulerSuspended', 'pxCurrentTCB', 'xYieldPending', 'pxReadyTasksLists', 'pxDelayedTaskList', 'xPendingReadyList', 'uxCurrentNumberOfTasks', 'uxTopReadyPriority']
+_start  calls or touches: 
+['uart_init', 'curr_stamp', 'curr_stamp', 'exit']
+vPortEndScheduler  calls or touches: 
+['vAssertCalled', 'uxCriticalNesting']
+xTaskGetHandle  calls or touches: 
+['strlen', 'vAssertCalled', 'prvSearchForNameWithinSingleList', 'prvSearchForNameWithinSingleList', 'prvSearchForNameWithinSingleList', 'prvSearchForNameWithinSingleList', 'prvSearchForNameWithinSingleList', 'xTaskResumeAll', 'uxSchedulerSuspended', 'xSuspendedTaskList', 'pxReadyTasksLists', 'pxDelayedTaskList', 'xTasksWaitingTermination', 'pxOverflowDelayedTaskList']
+xQueueSemaphoreTake  calls or touches: 
+['vAssertCalled', 'vAssertCalled', 'xTaskGetSchedulerState', 'vAssertCalled', 'vPortEnterCritical', 'pvTaskIncrementMutexHeldCount', 'xTaskRemoveFromEventList', 'pendSV', 'vPortExitCritical', 'vAssertCalled', 'vPortExitCritical', 'vTaskInternalSetTimeOutState', 'vPortExitCritical', 'vTaskSuspendAll', 'vPortEnterCritical', 'vPortExitCritical', 'xTaskCheckForTimeOut', 'vPortEnterCritical', 'vPortExitCritical', 'vPortEnterCritical', 'xTaskPriorityInherit', 'vPortExitCritical', 'vTaskPlaceOnEventList', 'prvUnlockQueue', 'xTaskResumeAll', 'pendSV', 'prvUnlockQueue', 'xTaskResumeAll', 'prvUnlockQueue', 'xTaskResumeAll', 'vPortEnterCritical', 'vPortExitCritical', 'vPortEnterCritical', 'vTaskPriorityDisinheritAfterTimeout', 'vPortExitCritical']
+xQueueGenericSendFromISR  calls or touches: 
+['vAssertCalled', 'vAssertCalled', 'vAssertCalled', 'vPortValidateInterruptPriority', 'xTaskPriorityDisinherit', 'prvNotifyQueueSetContainer', 'xTaskRemoveFromEventList', 'vAssertCalled']
+[]
+[]
+vTaskSuspendAll  calls or touches: 
+['uxSchedulerSuspended']
+[]
+[]
+[]
+[]
+xQueueGetMutexHolderFromISR  calls or touches: 
+['vAssertCalled']
+[]
+xTaskGetTickCountFromISR  calls or touches: 
+['vPortValidateInterruptPriority', 'xTickCount']
+xTimerGetPeriod  calls or touches: 
+['vAssertCalled']
+xTaskGenericNotifyFromISR  calls or touches: 
+['vAssertCalled', 'vAssertCalled', 'vPortValidateInterruptPriority', 'vAssertCalled', 'vAssertCalled', 'uxListRemove', 'vListInsertEnd', 'vListInsertEnd', 'uxSchedulerSuspended', 'pxCurrentTCB', 'pxReadyTasksLists', 'xTickCount', 'uxTopReadyPriority']
+xEventGroupSetBits  calls or touches: 
+['vAssertCalled', 'vAssertCalled', 'vTaskSuspendAll', 'vTaskRemoveFromUnorderedEventList', 'xTaskResumeAll']
+uxQueueMessagesWaiting  calls or touches: 
+['vAssertCalled', 'vPortEnterCritical', 'vPortExitCritical']
+xQueueSelectFromSetFromISR  calls or touches: 
+['xQueueReceiveFromISR']
+[]
+[]
+prvAddNewTaskToReadyList  calls or touches: 
+['vPortEnterCritical', 'vListInitialise', 'vListInitialise', 'vListInitialise', 'vListInitialise', 'vListInitialise', 'vListInitialise', 'vListInitialise', 'vListInitialise', 'vListInitialise', 'vListInitialise', 'vListInitialise', 'vListInitialise', 'vListInitialise', 'vListInitialise', 'vListInitialise', 'vListInsertEnd', 'vPortExitCritical', 'pendSV', 'pxCurrentTCB', 'pxReadyTasksLists', 'uxTaskNumber', 'uxCurrentNumberOfTasks', 'uxTopReadyPriority', 'xSchedulerRunning']
+eTaskGetState  calls or touches: 
+['vAssertCalled', 'vPortEnterCritical', 'vPortExitCritical', 'pxCurrentTCB', 'xSuspendedTaskList', 'pxDelayedTaskList', 'xTasksWaitingTermination', 'pxOverflowDelayedTaskList']
+xTaskPriorityDisinherit  calls or touches: 
+['vAssertCalled', 'vAssertCalled', 'uxListRemove', 'vListInsertEnd', 'pxCurrentTCB', 'pxReadyTasksLists', 'uxTopReadyPriority']
+xEventGroupCreateStatic  calls or touches: 
+['vAssertCalled', 'vAssertCalled', 'vListInitialise']
+[]
+[]
+xQueueGenericCreate  calls or touches: 
+['vAssertCalled', 'vAssertCalled', 'vAssertCalled', 'pvPortMalloc', 'vPortEnterCritical', 'vListInitialise', 'vListInitialise', 'vPortExitCritical']
+pvTimerGetTimerID  calls or touches: 
+['vAssertCalled', 'vPortEnterCritical', 'vPortExitCritical']
+[]
+_reset  calls or touches: 
+['_edata', '_ebss']
+xTimerGetExpiryTime  calls or touches: 
+['vAssertCalled']
+xTaskIncrementTick  calls or touches: 
+['vAssertCalled', 'uxListRemove', 'uxListRemove', 'vListInsertEnd', 'vApplicationTickHook', 'vApplicationTickHook', 'xPendedTicks', 'uxSchedulerSuspended', 'pxCurrentTCB', 'xYieldPending', 'xNextTaskUnblockTime', 'pxReadyTasksLists', 'pxDelayedTaskList', 'xTickCount', 'xNumOfOverflows', 'pxOverflowDelayedTaskList', 'uxTopReadyPriority']
+[]
+xTaskGetCurrentTaskHandle  calls or touches: 
+['pxCurrentTCB']
+uxTaskGetSystemState  calls or touches: 
+['xTaskResumeAll', 'xTaskResumeAll', 'uxSchedulerSuspended', 'pxCurrentTCB', 'xSuspendedTaskList', 'pxReadyTasksLists', 'pxDelayedTaskList', 'xTasksWaitingTermination', 'uxCurrentNumberOfTasks', 'pxOverflowDelayedTaskList']
+prvNotifyQueueSetContainer  calls or touches: 
+['vAssertCalled', 'vAssertCalled', 'xTaskPriorityDisinherit', 'xTaskRemoveFromEventList', 'vAssertCalled']
+xEventGroupCreate  calls or touches: 
+['pvPortMalloc', 'vListInitialise']
+vTaskInternalSetTimeOutState  calls or touches: 
+['xTickCount', 'xNumOfOverflows']
+xEventGroupSync  calls or touches: 
+['vAssertCalled', 'vAssertCalled', 'xTaskGetSchedulerState', 'vAssertCalled', 'vTaskSuspendAll', 'xEventGroupSetBits', 'xTaskResumeAll', 'vTaskPlaceOnUnorderedEventList', 'xTaskResumeAll', 'pendSV', 'uxTaskResetEventItemValue', 'vPortEnterCritical', 'vPortExitCritical']
+uxQueueMessagesWaitingFromISR  calls or touches: 
+['vAssertCalled']
+main_blinky  calls or touches: 
+['xQueueGenericCreate', 'xTaskCreate', 'xTaskCreate', 'vTaskStartScheduler', '.str.2.44', '.str.3.45']
+[]
+[]
+[]
+ulTaskGenericNotifyValueClear  calls or touches: 
+['vPortEnterCritical', 'vPortExitCritical', 'pxCurrentTCB']
+[]
+[]
+xPortStartScheduler  calls or touches: 
+['vPortSetupTimerInterrupt', 'prvPortStartFirstTask', 'vTaskSwitchContext', 'vAssertCalled', 'uxCriticalNesting']
+prvQueueReceiveTask  calls or touches: 
+['xQueueReceive', '_write', 'curr_stamp', 'vTaskDelay', 'curr_stamp', '.str.4.46', 'ulRxEvents', 'xQueue']
+xQueueIsQueueFullFromISR  calls or touches: 
+['vAssertCalled']
+prvIdleTask  calls or touches: 
+['vPortEnterCritical', 'uxListRemove', 'vPortExitCritical', 'vPortFree', 'vPortFree', 'vPortFree', 'vAssertCalled', 'pendSV', 'vApplicationIdleHook', 'uxDeletedTasksWaitingCleanUp', 'pxReadyTasksLists', 'xTasksWaitingTermination', 'uxCurrentNumberOfTasks']
+[]
+[]
+[]
+[]
+[]
+xTimerPendFunctionCallFromISR  calls or touches: 
+['xQueueGenericSendFromISR', 'xTimerQueue']
+pcTaskGetName  calls or touches: 
+['vAssertCalled', 'pxCurrentTCB']
+pvPortMalloc  calls or touches: 
+['vTaskSuspendAll', 'xTaskResumeAll', 'xTaskResumeAll', 'vApplicationMallocFailedHook', 'ucHeap', 'pvPortMalloc.pucAlignedHeap', 'xNextFreeByte']
+xQueueSelectFromSet  calls or touches: 
+['xQueueReceive']
+vTaskGenericNotifyGiveFromISR  calls or touches: 
+['vAssertCalled', 'vAssertCalled', 'vPortValidateInterruptPriority', 'vAssertCalled', 'uxListRemove', 'vListInsertEnd', 'vListInsertEnd', 'uxSchedulerSuspended', 'pxCurrentTCB', 'pxReadyTasksLists', 'uxTopReadyPriority']
+xEventGroupClearBits  calls or touches: 
+['vAssertCalled', 'vAssertCalled', 'vPortEnterCritical', 'vPortExitCritical']
+xTimerCreateStatic  calls or touches: 
+['vAssertCalled', 'vAssertCalled', 'prvInitialiseNewTimer']
+vLoggingPrintf  calls or touches: 
+['vprintf']
+xTaskCheckForTimeOut  calls or touches: 
+['vAssertCalled', 'vAssertCalled', 'vPortEnterCritical', 'vPortExitCritical', 'pxCurrentTCB', 'xTickCount', 'xNumOfOverflows']
+xQueueGenericCreateStatic  calls or touches: 
+['vAssertCalled', 'vAssertCalled', 'vAssertCalled', 'vAssertCalled', 'vAssertCalled', 'vPortEnterCritical', 'vListInitialise', 'vListInitialise', 'vPortExitCritical']
+vTaskEndScheduler  calls or touches: 
+['vPortEndScheduler']
+xTimerIsTimerActive  calls or touches: 
+['vAssertCalled', 'vPortEnterCritical', 'vPortExitCritical']
+xEventGroupWaitBits  calls or touches: 
+['vAssertCalled', 'vAssertCalled', 'vAssertCalled', 'xTaskGetSchedulerState', 'vAssertCalled', 'vTaskSuspendAll', 'xTaskResumeAll', 'vTaskPlaceOnUnorderedEventList', 'xTaskResumeAll', 'pendSV', 'uxTaskResetEventItemValue', 'vPortEnterCritical', 'vPortExitCritical']
+[]
+prvInitialiseNewTask  calls or touches: 
+['vAssertCalled', 'vListInitialiseItem', 'vListInitialiseItem', 'pxPortInitialiseStack']
+xQueueIsQueueEmptyFromISR  calls or touches: 
+['vAssertCalled']
+uxTaskGetStackHighWaterMark2  calls or touches: 
+['pxCurrentTCB']
+vQueueUnregisterQueue  calls or touches: 
+['vAssertCalled', 'xQueueRegistry']
+xQueueReceive  calls or touches: 
+['vAssertCalled', 'vAssertCalled', 'xTaskGetSchedulerState', 'vAssertCalled', 'vPortEnterCritical', 'xTaskRemoveFromEventList', 'pendSV', 'vPortExitCritical', 'vPortExitCritical', 'vTaskInternalSetTimeOutState', 'vPortExitCritical', 'vTaskSuspendAll', 'vPortEnterCritical', 'vPortExitCritical', 'xTaskCheckForTimeOut', 'vPortEnterCritical', 'vPortExitCritical', 'vTaskPlaceOnEventList', 'prvUnlockQueue', 'xTaskResumeAll', 'pendSV', 'prvUnlockQueue', 'xTaskResumeAll', 'prvUnlockQueue', 'xTaskResumeAll', 'vPortEnterCritical', 'vPortExitCritical']
+xTaskGetIdleTaskHandle  calls or touches: 
+['vAssertCalled', 'xIdleTaskHandle']
+vPortEnterCritical  calls or touches: 
+['vAssertCalled', 'uxCriticalNesting']
+[]
+[]
+xPortSysTickHandler  calls or touches: 
+['xTaskIncrementTick']
+vEventGroupDelete  calls or touches: 
+['vAssertCalled', 'vTaskSuspendAll', 'vAssertCalled', 'vTaskRemoveFromUnorderedEventList', 'vPortFree', 'xTaskResumeAll']
+vTimerSetReloadMode  calls or touches: 
+['vAssertCalled', 'vPortEnterCritical', 'vPortExitCritical']
+prvTaskExitError  calls or touches: 
+['vAssertCalled', 'uxCriticalNesting']
+[]
+curr_stamp  calls or touches: 
+['xTaskGetTickCount']
+xQueueCreateMutexStatic  calls or touches: 
+['xQueueGenericCreateStatic', 'xQueueGenericSend']
+xQueueAddToSet  calls or touches: 
+['vPortEnterCritical', 'vPortExitCritical']
+[]
+null  calls or touches: 
+['Reset_Handler', 'Default_Handler', 'Default_Handler2', 'Default_Handler3', 'Default_Handler4', 'Default_Handler5', 'Default_Handler6', '_reset', 'llvm.lifetime.start.p0i8', 'llvm.lifetime.end.p0i8', 'prvGetRegistersFromStack', '_start', 'exit', 'uart_init', '_fstat', '_read', 'write_number', '_write', '_sbrk', 'main', 'vApplicationMallocFailedHook', 'vApplicationStackOverflowHook', 'vApplicationIdleHook', 'vApplicationTickHook', 'vAssertCalled', 'vLoggingPrintf', 'llvm.va_start', 'vprintf', 'llvm.va_end', 'vApplicationGetIdleTaskMemory', 'vApplicationGetTimerTaskMemory', 'pxPortInitialiseStack', 'prvTaskExitError', 'vPortSVCHandler', 'Function', 'xPortStartScheduler', 'vPortSetupTimerInterrupt', 'vPortEndScheduler', 'vPortEnterCritical', 'vPortExitCritical', 'xPortPendSVHandler', 'pendSV', 'xPortSysTickHandler', 'vPortValidateInterruptPriority', 'vTaskSwitchContext', 'xTaskCreateStatic', 'llvm.memset.p0i8.i32', 'xTaskCreate', 'vTaskDelete', 'xTaskDelayUntil', 'xTaskResumeAll', 'xTaskIncrementTick', 'vTaskSuspendAll', 'vTaskDelay', 'eTaskGetState', 'uxTaskPriorityGet', 'uxTaskPriorityGetFromISR', 'vTaskPrioritySet', 'vTaskSuspend', 'vTaskResume', 'xTaskResumeFromISR', 'vTaskStartScheduler', 'prvIdleTask', 'vTaskEndScheduler', 'xTaskGetTickCount', 'xTaskGetTickCountFromISR', 'uxTaskGetNumberOfTasks', 'pcTaskGetName', 'xTaskGetHandle', 'strlen', 'uxTaskGetSystemState', 'xTaskGetIdleTaskHandle', 'xTaskCatchUpTicks', 'xTaskAbortDelay', 'vTaskPlaceOnEventList', 'vTaskPlaceOnUnorderedEventList', 'vTaskPlaceOnEventListRestricted', 'xTaskRemoveFromEventList', 'vTaskRemoveFromUnorderedEventList', 'vTaskSetTimeOutState', 'vTaskInternalSetTimeOutState', 'xTaskCheckForTimeOut', 'vTaskMissedYield', 'uxTaskGetTaskNumber', 'vTaskSetTaskNumber', 'vTaskGetInfo', 'uxTaskGetStackHighWaterMark2', 'uxTaskGetStackHighWaterMark', 'xTaskGetCurrentTaskHandle', 'xTaskGetSchedulerState', 'xTaskPriorityInherit', 'xTaskPriorityDisinherit', 'vTaskPriorityDisinheritAfterTimeout', 'uxTaskResetEventItemValue', 'pvTaskIncrementMutexHeldCount', 'ulTaskGenericNotifyTake', 'xTaskGenericNotifyWait', 'xTaskGenericNotify', 'xTaskGenericNotifyFromISR', 'vTaskGenericNotifyGiveFromISR', 'xTaskGenericNotifyStateClear', 'ulTaskGenericNotifyValueClear', 'vListInitialise', 'vListInitialiseItem', 'vListInsertEnd', 'vListInsert', 'uxListRemove', 'xQueueGenericReset', 'xQueueGenericCreateStatic', 'xQueueGenericCreate', 'llvm.umul.with.overflow.i32', 'xQueueCreateMutex', 'xQueueGenericSend', 'llvm.memcpy.p0i8.p0i8.i32', 'xQueueCreateMutexStatic', 'xQueueGetMutexHolder', 'xQueueGetMutexHolderFromISR', 'xQueueGiveMutexRecursive', 'xQueueTakeMutexRecursive', 'xQueueSemaphoreTake', 'xQueueCreateCountingSemaphoreStatic', 'xQueueCreateCountingSemaphore', 'xQueueGenericSendFromISR', 'xQueueGiveFromISR', 'xQueueReceive', 'xQueuePeek', 'xQueueReceiveFromISR', 'xQueuePeekFromISR', 'uxQueueMessagesWaiting', 'uxQueueSpacesAvailable', 'uxQueueMessagesWaitingFromISR', 'vQueueDelete', 'vQueueUnregisterQueue', 'uxQueueGetQueueNumber', 'vQueueSetQueueNumber', 'ucQueueGetQueueType', 'xQueueIsQueueEmptyFromISR', 'xQueueIsQueueFullFromISR', 'vQueueAddToRegistry', 'pcQueueGetName', 'vQueueWaitForMessageRestricted', 'xQueueCreateSet', 'xQueueAddToSet', 'xQueueRemoveFromSet', 'xQueueSelectFromSet', 'xQueueSelectFromSetFromISR', 'xTimerCreateTimerTask', 'prvTimerTask', 'xTimerCreate', 'xTimerCreateStatic', 'xTimerGenericCommand', 'xTimerGetTimerDaemonTaskHandle', 'xTimerGetPeriod', 'vTimerSetReloadMode', 'uxTimerGetReloadMode', 'xTimerGetExpiryTime', 'pcTimerGetName', 'xTimerIsTimerActive', 'pvTimerGetTimerID', 'vTimerSetTimerID', 'xTimerPendFunctionCallFromISR', 'xTimerPendFunctionCall', 'uxTimerGetTimerNumber', 'vTimerSetTimerNumber', 'xEventGroupCreateStatic', 'xEventGroupCreate', 'xEventGroupSync', 'xEventGroupSetBits', 'xEventGroupWaitBits', 'xEventGroupClearBits', 'xEventGroupClearBitsFromISR', 'vEventGroupClearBitsCallback', 'xEventGroupGetBitsFromISR', 'vEventGroupDelete', 'vEventGroupSetBitsCallback', 'xEventGroupSetBitsFromISR', 'uxEventGroupGetNumber', 'vEventGroupSetNumber', 'pvPortMalloc', 'vPortFree', 'vPortInitialiseBlocks', 'xPortGetFreeHeapSize', 'case_prog', 'printf', 'main_blinky', 'prvQueueReceiveTask', 'prvQueueSendTask', 'bnch_marking_init', 'curr_stamp', 'mystrlen', 'mymemcmp']
+[]
+[]
+vQueueAddToRegistry  calls or touches: 
+['vAssertCalled', 'xQueueRegistry']
+vQueueDelete  calls or touches: 
+['vQueueUnregisterQueue', 'vAssertCalled', 'vQueueUnregisterQueue', 'vPortFree']
+xEventGroupSetBitsFromISR  calls or touches: 
+['xTimerPendFunctionCallFromISR']
+xQueueRemoveFromSet  calls or touches: 
+['vPortEnterCritical', 'vPortExitCritical']
+vTaskSuspend  calls or touches: 
+['vPortEnterCritical', 'uxListRemove', 'uxListRemove', 'vListInsertEnd', 'vPortExitCritical', 'vPortEnterCritical', 'vPortExitCritical', 'vAssertCalled', 'pendSV', 'vAssertCalled', 'uxSchedulerSuspended', 'pxCurrentTCB', 'xSuspendedTaskList', 'pxReadyTasksLists', 'pxDelayedTaskList', 'uxCurrentNumberOfTasks', 'uxTopReadyPriority', 'xSchedulerRunning']
+[]
+vEventGroupClearBitsCallback  calls or touches: 
+['vAssertCalled', 'vAssertCalled', 'vPortEnterCritical', 'vPortExitCritical']
+uxTaskPriorityGet  calls or touches: 
+['vPortEnterCritical', 'vPortExitCritical', 'pxCurrentTCB']
+xTaskCatchUpTicks  calls or touches: 
+['vAssertCalled', 'xTaskResumeAll', 'xPendedTicks', 'uxSchedulerSuspended']
+vTaskPlaceOnEventList  calls or touches: 
+['vAssertCalled', 'vListInsert', 'uxListRemove', 'vListInsertEnd', 'vListInsert', 'vListInsert', 'pxCurrentTCB', 'xNextTaskUnblockTime', 'pxDelayedTaskList', 'xTickCount', 'pxOverflowDelayedTaskList']
+xQueueCreateMutex  calls or touches: 
+['pvPortMalloc', 'vPortEnterCritical', 'vListInitialise', 'vListInitialise', 'vPortExitCritical', 'xQueueGenericSend']
+xQueueTakeMutexRecursive  calls or touches: 
+['vAssertCalled', 'xTaskGetCurrentTaskHandle', 'xQueueSemaphoreTake']
+[]
+prvUnlockQueue  calls or touches: 
+['vPortEnterCritical', 'prvNotifyQueueSetContainer', 'vTaskMissedYield', 'xTaskRemoveFromEventList', 'vTaskMissedYield', 'vPortExitCritical', 'vPortEnterCritical', 'xTaskRemoveFromEventList', 'vTaskMissedYield', 'vPortExitCritical']
+case_prog  calls or touches: 
+['printf', 'printf', '.str.40', '.str.1.41']
+xTimerPendFunctionCall  calls or touches: 
+['vAssertCalled', 'xQueueGenericSend', 'xTimerQueue']
+[]
+xTimerCreateTimerTask  calls or touches: 
+['vPortEnterCritical', 'vListInitialise', 'vListInitialise', 'xQueueGenericCreateStatic', 'vQueueAddToRegistry', 'vPortExitCritical', 'vApplicationGetTimerTaskMemory', 'xTaskCreateStatic', 'vAssertCalled', '.str.33', 'xTimerQueue', 'prvCheckForValidListAndQueue.xStaticTimerQueue', 'prvCheckForValidListAndQueue.ucStaticTimerQueueStorage', '.str.1.32']
+xQueuePeekFromISR  calls or touches: 
+['vAssertCalled', 'vAssertCalled', 'vAssertCalled', 'vPortValidateInterruptPriority']
+[]
+[]
+xTaskCreate  calls or touches: 
+['pvPortMalloc', 'pvPortMalloc', 'vPortFree', 'prvInitialiseNewTask', 'prvAddNewTaskToReadyList']
+vTaskSwitchContext  calls or touches: 
+['vAssertCalled', 'uxSchedulerSuspended', 'pxReadyTasksLists', 'uxTopReadyPriority']
+xTaskGetSchedulerState  calls or touches: 
+['uxSchedulerSuspended', 'xSchedulerRunning']
+[]
+[]
+xPortGetFreeHeapSize  calls or touches: 
+['xNextFreeByte']
+[]
+[]
+vTaskRemoveFromUnorderedEventList  calls or touches: 
+['vAssertCalled', 'vAssertCalled', 'uxListRemove', 'uxListRemove', 'vListInsertEnd', 'uxSchedulerSuspended', 'pxCurrentTCB', 'pxReadyTasksLists', 'uxTopReadyPriority']
+[]
+vPortValidateInterruptPriority  calls or touches: 
+['vAssertCalled', 'vAssertCalled', 'ulMaxPRIGROUPValue', 'ucMaxSysCallPriority']
+***********
+{'xTimerGetTimerDaemonTaskHandle': ['vAssertCalled', 'xTimerTaskHandle'], 'xTaskRemoveFromEventList': ['vAssertCalled', 'uxListRemove', 'uxListRemove', 'vListInsertEnd', 'vListInsertEnd', 'uxSchedulerSuspended', 'pxCurrentTCB', 'pxReadyTasksLists', 'uxTopReadyPriority'], 'write_number': ['.str', '.str.9', '.str.8', '.str.7', '.str.6', '.str.5', '.str.4', '.str.3', '.str.2', '.str.1'], 'xTaskGenericNotifyWait': ['vAssertCalled', 'vPortEnterCritical', 'uxListRemove', 'vListInsertEnd', 'vListInsert', 'vListInsert', 'pendSV', 'vPortExitCritical', 'vPortEnterCritical', 'vPortExitCritical', 'pxCurrentTCB', 'xNextTaskUnblockTime', 'pxDelayedTaskList', 'xTickCount', 'pxOverflowDelayedTaskList'], 'vTaskSetTimeOutState': ['vAssertCalled', 'vPortEnterCritical', 'vPortExitCritical', 'xTickCount', 'xNumOfOverflows'], 'vEventGroupSetBitsCallback': ['xEventGroupSetBits'], 'prvSampleTimeNow': ['xTaskGetTickCount', 'uxListRemove', 'vListInsert', 'prvSampleTimeNow.xLastTime', 'pxOverflowTimerList', 'pxCurrentTimerList'], 'uxTaskResetEventItemValue': ['pxCurrentTCB'], 'llvm.va_end': [], 'vEventGroupSetNumber': [], '_fstat': [], 'xTimerGenericCommand': ['vAssertCalled', 'xTaskGetSchedulerState', 'xQueueGenericSend', 'xQueueGenericSend', 'xQueueGenericSendFromISR', 'xTimerQueue'], 'xQueueGenericReset': ['vAssertCalled', 'vPortEnterCritical', 'xTaskRemoveFromEventList', 'pendSV', 'vListInitialise', 'vListInitialise', 'vPortExitCritical'], 'uxTaskGetNumberOfTasks': ['uxCurrentNumberOfTasks'], 'pcTimerGetName': ['vAssertCalled'], 'xTaskAbortDelay': ['vPortEnterCritical', 'vPortExitCritical', 'vAssertCalled', 'vAssertCalled', 'vPortEnterCritical', 'vPortExitCritical', 'uxListRemove', 'vPortEnterCritical', 'uxListRemove', 'vPortExitCritical', 'vListInsertEnd', 'xTaskResumeAll', 'uxSchedulerSuspended', 'pxCurrentTCB', 'xSuspendedTaskList', 'pxReadyTasksLists', 'pxDelayedTaskList', 'pxOverflowDelayedTaskList', 'uxTopReadyPriority'], 'mystrlen': [], 'vTaskGetInfo': ['xTaskResumeAll', 'vPortEnterCritical', 'vPortExitCritical', 'uxSchedulerSuspended', 'pxCurrentTCB', 'xSuspendedTaskList', 'pxDelayedTaskList', 'xTasksWaitingTermination', 'pxOverflowDelayedTaskList'], 'vTaskResume': ['vAssertCalled', 'vPortEnterCritical', 'uxListRemove', 'vListInsertEnd', 'pendSV', 'vPortExitCritical', 'pxCurrentTCB', 'xSuspendedTaskList', 'pxReadyTasksLists', 'uxTopReadyPriority'], 'prvTimerTask': ['vTaskSuspendAll', 'prvSampleTimeNow', 'xTaskResumeAll', 'uxListRemove', 'vListInsert', 'vListInsert', 'vQueueWaitForMessageRestricted', 'xTaskResumeAll', 'pendSV', 'xTaskResumeAll', 'xQueueReceive', 'uxListRemove', 'prvSampleTimeNow', 'vListInsert', 'vListInsert', 'vListInsert', 'vListInsert', 'vAssertCalled', 'vListInsert', 'vListInsert', 'vPortFree', 'xTimerQueue', 'pxOverflowTimerList', 'pxCurrentTimerList'], 'vApplicationMallocFailedHook': [], '_sbrk': ['heap_end', '_heap_bottom', '_heap_top'], 'uxTaskPriorityGetFromISR': ['vPortValidateInterruptPriority', 'pxCurrentTCB'], 'xQueueGenericSend': ['vAssertCalled', 'vAssertCalled', 'vAssertCalled', 'xTaskGetSchedulerState', 'vAssertCalled', 'vPortEnterCritical', 'vPortEnterCritical', 'xTaskPriorityDisinherit', 'prvNotifyQueueSetContainer', 'pendSV', 'xTaskRemoveFromEventList', 'pendSV', 'pendSV', 'vPortExitCritical', 'vPortExitCritical', 'vTaskInternalSetTimeOutState', 'vPortExitCritical', 'vTaskSuspendAll', 'vPortEnterCritical', 'vPortExitCritical', 'xTaskCheckForTimeOut', 'vPortEnterCritical', 'vPortExitCritical', 'vTaskPlaceOnEventList', 'prvUnlockQueue', 'xTaskResumeAll', 'pendSV', 'prvUnlockQueue', 'xTaskResumeAll', 'prvUnlockQueue', 'xTaskResumeAll'], 'xPortPendSVHandler': [], 'xQueueCreateSet': ['xQueueGenericCreate'], 'xTaskGenericNotify': ['vAssertCalled', 'vAssertCalled', 'vPortEnterCritical', 'vAssertCalled', 'uxListRemove', 'vListInsertEnd', 'vAssertCalled', 'pendSV', 'vPortExitCritical', 'pxCurrentTCB', 'pxReadyTasksLists', 'xTickCount', 'uxTopReadyPriority'], 'xQueueReceiveFromISR': ['vAssertCalled', 'vAssertCalled', 'vPortValidateInterruptPriority', 'xTaskRemoveFromEventList', 'vAssertCalled'], 'main': ['main_blinky'], 'vTaskPlaceOnEventListRestricted': ['vAssertCalled', 'vListInsertEnd', 'uxListRemove', 'vListInsert', 'vListInsert', 'uxListRemove', 'vListInsertEnd', 'pxCurrentTCB', 'xNextTaskUnblockTime', 'pxDelayedTaskList', 'xTickCount', 'pxOverflowDelayedTaskList'], 'vTaskPriorityDisinheritAfterTimeout': ['vAssertCalled', 'vAssertCalled', 'uxListRemove', 'vListInsertEnd', 'pxCurrentTCB', 'pxReadyTasksLists', 'uxTopReadyPriority'], 'vApplicationGetIdleTaskMemory': ['vApplicationGetIdleTaskMemory.uxIdleTaskStack'], 'vApplicationGetTimerTaskMemory': ['uxTimerTaskStack'], 'uart_init': [], 'vListInsert': [], 'xTimerCreate': ['pvPortMalloc', 'prvInitialiseNewTimer'], 'uxTaskGetStackHighWaterMark': ['pxCurrentTCB'], 'xTaskGenericNotifyStateClear': ['vAssertCalled', 'vPortEnterCritical', 'vPortExitCritical', 'pxCurrentTCB'], 'prvQueueSendTask': ['xTaskGetTickCount', 'xTaskDelayUntil', 'xQueueGenericSend', 'xQueue'], 'xTaskDelayUntil': ['vAssertCalled', 'vAssertCalled', 'vAssertCalled', 'uxListRemove', 'vListInsert', 'vListInsert', 'xTaskResumeAll', 'pendSV', 'uxSchedulerSuspended', 'pxCurrentTCB', 'xNextTaskUnblockTime', 'pxDelayedTaskList', 'xTickCount', 'pxOverflowDelayedTaskList'], '_write': [], 'vTaskPlaceOnUnorderedEventList': ['vAssertCalled', 'vAssertCalled', 'vListInsertEnd', 'uxListRemove', 'vListInsertEnd', 'vListInsert', 'vListInsert', 'uxSchedulerSuspended', 'pxCurrentTCB', 'xNextTaskUnblockTime', 'pxDelayedTaskList', 'xTickCount', 'pxOverflowDelayedTaskList'], 'xQueuePeek': ['vAssertCalled', 'vAssertCalled', 'xTaskGetSchedulerState', 'vAssertCalled', 'vPortEnterCritical', 'xTaskRemoveFromEventList', 'pendSV', 'vPortExitCritical', 'vPortExitCritical', 'vTaskInternalSetTimeOutState', 'vPortExitCritical', 'vTaskSuspendAll', 'vPortEnterCritical', 'vPortExitCritical', 'xTaskCheckForTimeOut', 'vPortEnterCritical', 'vPortExitCritical', 'vTaskPlaceOnEventList', 'prvUnlockQueue', 'xTaskResumeAll', 'pendSV', 'prvUnlockQueue', 'xTaskResumeAll', 'prvUnlockQueue', 'xTaskResumeAll', 'vPortEnterCritical', 'vPortExitCritical'], 'vTaskDelete': ['vPortEnterCritical', 'uxListRemove', 'uxListRemove', 'vListInsertEnd', 'vPortFree', 'vPortFree', 'vPortFree', 'vAssertCalled', 'vPortExitCritical', 'vAssertCalled', 'pendSV', 'uxSchedulerSuspended', 'uxDeletedTasksWaitingCleanUp', 'pxCurrentTCB', 'pxDelayedTaskList', 'uxTaskNumber', 'uxCurrentNumberOfTasks', 'xSchedulerRunning'], 'xQueueCreateCountingSemaphore': ['vAssertCalled', 'vAssertCalled', 'xQueueGenericCreate'], 'llvm.umul.with.overflow.i32': [], 'uxQueueSpacesAvailable': ['vAssertCalled', 'vPortEnterCritical', 'vPortExitCritical'], 'xTaskCreateStatic': ['vAssertCalled', 'vAssertCalled', 'vAssertCalled', 'prvInitialiseNewTask', 'prvAddNewTaskToReadyList'], 'uxTaskGetTaskNumber': [], 'xQueueCreateCountingSemaphoreStatic': ['vAssertCalled', 'vAssertCalled', 'xQueueGenericCreateStatic'], 'xTaskGetTickCount': ['xTickCount'], 'pcQueueGetName': ['vAssertCalled', 'xQueueRegistry'], 'uxTimerGetReloadMode': ['vAssertCalled', 'vPortEnterCritical', 'vPortExitCritical'], 'vPortExitCritical': ['vAssertCalled', 'uxCriticalNesting'], 'pendSV': [], 'vQueueWaitForMessageRestricted': ['vPortEnterCritical', 'vPortExitCritical', 'vTaskPlaceOnEventListRestricted', 'prvUnlockQueue'], 'xQueueGiveMutexRecursive': ['vAssertCalled', 'xTaskGetCurrentTaskHandle', 'xQueueGenericSend'], 'xQueueGiveFromISR': ['vAssertCalled', 'vAssertCalled', 'vAssertCalled', 'vPortValidateInterruptPriority', 'prvNotifyQueueSetContainer', 'xTaskRemoveFromEventList', 'vAssertCalled'], 'uxEventGroupGetNumber': [], 'vTaskPrioritySet': ['vAssertCalled', 'vPortEnterCritical', 'uxListRemove', 'vListInsertEnd', 'pendSV', 'vPortExitCritical', 'pxCurrentTCB', 'pxReadyTasksLists', 'uxTopReadyPriority'], 'llvm.va_start': [], 'prvInitialiseNewTimer': ['vAssertCalled', 'vPortEnterCritical', 'vListInitialise', 'vListInitialise', 'xQueueGenericCreateStatic', 'vQueueAddToRegistry', 'vPortExitCritical', 'vListInitialiseItem', 'xTimerQueue', 'prvCheckForValidListAndQueue.xStaticTimerQueue', 'prvCheckForValidListAndQueue.ucStaticTimerQueueStorage', '.str.1.32'], 'xQueueGetMutexHolder': ['vAssertCalled', 'vPortEnterCritical', 'vPortExitCritical'], 'vTimerSetTimerID': ['vAssertCalled', 'vPortEnterCritical', 'vPortExitCritical'], 'llvm.memcpy.p0i8.p0i8.i32': [], 'xTaskResumeFromISR': ['vPortValidateInterruptPriority', 'vAssertCalled', 'vPortValidateInterruptPriority', 'vAssertCalled', 'uxListRemove', 'vListInsertEnd', 'vListInsertEnd', 'uxSchedulerSuspended', 'pxCurrentTCB', 'xSuspendedTaskList', 'pxReadyTasksLists', 'uxTopReadyPriority'], 'vApplicationStackOverflowHook': [], 'ulTaskGenericNotifyTake': ['vAssertCalled', 'vPortEnterCritical', 'uxListRemove', 'vListInsertEnd', 'vListInsert', 'vListInsert', 'pendSV', 'vPortExitCritical', 'vPortEnterCritical', 'vPortExitCritical', 'pxCurrentTCB', 'xNextTaskUnblockTime', 'pxDelayedTaskList', 'xTickCount', 'pxOverflowDelayedTaskList'], 'xEventGroupClearBitsFromISR': ['xTimerPendFunctionCallFromISR'], 'pvTaskIncrementMutexHeldCount': ['pxCurrentTCB'], 'vTaskStartScheduler': ['vApplicationGetIdleTaskMemory', 'vAssertCalled', 'vAssertCalled', 'vAssertCalled', 'prvInitialiseNewTask', 'prvAddNewTaskToReadyList', 'xTimerCreateTimerTask', 'xPortStartScheduler', 'vAssertCalled', '.str.19'], 'vAssertCalled': ['vPortEnterCritical', 'vPortExitCritical'], 'xTaskPriorityInherit': ['uxListRemove', 'vListInsertEnd', 'pxCurrentTCB', 'pxReadyTasksLists', 'uxTopReadyPriority'], 'vTaskDelay': ['vAssertCalled', 'uxListRemove', 'vListInsert', 'vListInsert', 'xTaskResumeAll', 'pendSV', 'uxSchedulerSuspended', 'pxCurrentTCB', 'xNextTaskUnblockTime', 'pxDelayedTaskList', 'xTickCount', 'pxOverflowDelayedTaskList'], 'xTaskResumeAll': ['vAssertCalled', 'vPortEnterCritical', 'uxListRemove', 'uxListRemove', 'vListInsertEnd', 'xTaskIncrementTick', 'pendSV', 'vPortExitCritical', 'xPendedTicks', 'uxSchedulerSuspended', 'pxCurrentTCB', 'xYieldPending', 'pxReadyTasksLists', 'pxDelayedTaskList', 'xPendingReadyList', 'uxCurrentNumberOfTasks', 'uxTopReadyPriority'], '_start': ['uart_init', 'curr_stamp', 'curr_stamp', 'exit'], 'vPortEndScheduler': ['vAssertCalled', 'uxCriticalNesting'], 'xTaskGetHandle': ['strlen', 'vAssertCalled', 'prvSearchForNameWithinSingleList', 'prvSearchForNameWithinSingleList', 'prvSearchForNameWithinSingleList', 'prvSearchForNameWithinSingleList', 'prvSearchForNameWithinSingleList', 'xTaskResumeAll', 'uxSchedulerSuspended', 'xSuspendedTaskList', 'pxReadyTasksLists', 'pxDelayedTaskList', 'xTasksWaitingTermination', 'pxOverflowDelayedTaskList'], 'xQueueSemaphoreTake': ['vAssertCalled', 'vAssertCalled', 'xTaskGetSchedulerState', 'vAssertCalled', 'vPortEnterCritical', 'pvTaskIncrementMutexHeldCount', 'xTaskRemoveFromEventList', 'pendSV', 'vPortExitCritical', 'vAssertCalled', 'vPortExitCritical', 'vTaskInternalSetTimeOutState', 'vPortExitCritical', 'vTaskSuspendAll', 'vPortEnterCritical', 'vPortExitCritical', 'xTaskCheckForTimeOut', 'vPortEnterCritical', 'vPortExitCritical', 'vPortEnterCritical', 'xTaskPriorityInherit', 'vPortExitCritical', 'vTaskPlaceOnEventList', 'prvUnlockQueue', 'xTaskResumeAll', 'pendSV', 'prvUnlockQueue', 'xTaskResumeAll', 'prvUnlockQueue', 'xTaskResumeAll', 'vPortEnterCritical', 'vPortExitCritical', 'vPortEnterCritical', 'vTaskPriorityDisinheritAfterTimeout', 'vPortExitCritical'], 'xQueueGenericSendFromISR': ['vAssertCalled', 'vAssertCalled', 'vAssertCalled', 'vPortValidateInterruptPriority', 'xTaskPriorityDisinherit', 'prvNotifyQueueSetContainer', 'xTaskRemoveFromEventList', 'vAssertCalled'], 'xEventGroupGetBitsFromISR': [], 'vTaskMissedYield': [], 'vTaskSuspendAll': ['uxSchedulerSuspended'], 'exit': [], 'prvSearchForNameWithinSingleList': [], 'pxPortInitialiseStack': [], 'prvGetRegistersFromStack': [], 'xQueueGetMutexHolderFromISR': ['vAssertCalled'], 'ucQueueGetQueueType': [], 'xTaskGetTickCountFromISR': ['vPortValidateInterruptPriority', 'xTickCount'], 'xTimerGetPeriod': ['vAssertCalled'], 'xTaskGenericNotifyFromISR': ['vAssertCalled', 'vAssertCalled', 'vPortValidateInterruptPriority', 'vAssertCalled', 'vAssertCalled', 'uxListRemove', 'vListInsertEnd', 'vListInsertEnd', 'uxSchedulerSuspended', 'pxCurrentTCB', 'pxReadyTasksLists', 'xTickCount', 'uxTopReadyPriority'], 'xEventGroupSetBits': ['vAssertCalled', 'vAssertCalled', 'vTaskSuspendAll', 'vTaskRemoveFromUnorderedEventList', 'xTaskResumeAll'], 'uxQueueMessagesWaiting': ['vAssertCalled', 'vPortEnterCritical', 'vPortExitCritical'], 'xQueueSelectFromSetFromISR': ['xQueueReceiveFromISR'], 'mymemcmp': [], 'vListInitialiseItem': [], 'prvAddNewTaskToReadyList': ['vPortEnterCritical', 'vListInitialise', 'vListInitialise', 'vListInitialise', 'vListInitialise', 'vListInitialise', 'vListInitialise', 'vListInitialise', 'vListInitialise', 'vListInitialise', 'vListInitialise', 'vListInitialise', 'vListInitialise', 'vListInitialise', 'vListInitialise', 'vListInitialise', 'vListInsertEnd', 'vPortExitCritical', 'pendSV', 'pxCurrentTCB', 'pxReadyTasksLists', 'uxTaskNumber', 'uxCurrentNumberOfTasks', 'uxTopReadyPriority', 'xSchedulerRunning'], 'eTaskGetState': ['vAssertCalled', 'vPortEnterCritical', 'vPortExitCritical', 'pxCurrentTCB', 'xSuspendedTaskList', 'pxDelayedTaskList', 'xTasksWaitingTermination', 'pxOverflowDelayedTaskList'], 'xTaskPriorityDisinherit': ['vAssertCalled', 'vAssertCalled', 'uxListRemove', 'vListInsertEnd', 'pxCurrentTCB', 'pxReadyTasksLists', 'uxTopReadyPriority'], 'xEventGroupCreateStatic': ['vAssertCalled', 'vAssertCalled', 'vListInitialise'], 'vTimerSetTimerNumber': [], '_read': [], 'xQueueGenericCreate': ['vAssertCalled', 'vAssertCalled', 'vAssertCalled', 'pvPortMalloc', 'vPortEnterCritical', 'vListInitialise', 'vListInitialise', 'vPortExitCritical'], 'pvTimerGetTimerID': ['vAssertCalled', 'vPortEnterCritical', 'vPortExitCritical'], 'vPortSetupTimerInterrupt': [], '_reset': ['_edata', '_ebss'], 'xTimerGetExpiryTime': ['vAssertCalled'], 'xTaskIncrementTick': ['vAssertCalled', 'uxListRemove', 'uxListRemove', 'vListInsertEnd', 'vApplicationTickHook', 'vApplicationTickHook', 'xPendedTicks', 'uxSchedulerSuspended', 'pxCurrentTCB', 'xYieldPending', 'xNextTaskUnblockTime', 'pxReadyTasksLists', 'pxDelayedTaskList', 'xTickCount', 'xNumOfOverflows', 'pxOverflowDelayedTaskList', 'uxTopReadyPriority'], 'llvm.memset.p0i8.i32': [], 'xTaskGetCurrentTaskHandle': ['pxCurrentTCB'], 'uxTaskGetSystemState': ['xTaskResumeAll', 'xTaskResumeAll', 'uxSchedulerSuspended', 'pxCurrentTCB', 'xSuspendedTaskList', 'pxReadyTasksLists', 'pxDelayedTaskList', 'xTasksWaitingTermination', 'uxCurrentNumberOfTasks', 'pxOverflowDelayedTaskList'], 'prvNotifyQueueSetContainer': ['vAssertCalled', 'vAssertCalled', 'xTaskPriorityDisinherit', 'xTaskRemoveFromEventList', 'vAssertCalled'], 'xEventGroupCreate': ['pvPortMalloc', 'vListInitialise'], 'vTaskInternalSetTimeOutState': ['xTickCount', 'xNumOfOverflows'], 'xEventGroupSync': ['vAssertCalled', 'vAssertCalled', 'xTaskGetSchedulerState', 'vAssertCalled', 'vTaskSuspendAll', 'xEventGroupSetBits', 'xTaskResumeAll', 'vTaskPlaceOnUnorderedEventList', 'xTaskResumeAll', 'pendSV', 'uxTaskResetEventItemValue', 'vPortEnterCritical', 'vPortExitCritical'], 'uxQueueMessagesWaitingFromISR': ['vAssertCalled'], 'main_blinky': ['xQueueGenericCreate', 'xTaskCreate', 'xTaskCreate', 'vTaskStartScheduler', '.str.2.44', '.str.3.45'], 'printf': [], 'llvm.lifetime.start.p0i8': [], 'bnch_marking_init': [], 'ulTaskGenericNotifyValueClear': ['vPortEnterCritical', 'vPortExitCritical', 'pxCurrentTCB'], 'vListInitialise': [], 'uxTimerGetTimerNumber': [], 'xPortStartScheduler': ['vPortSetupTimerInterrupt', 'prvPortStartFirstTask', 'vTaskSwitchContext', 'vAssertCalled', 'uxCriticalNesting'], 'prvQueueReceiveTask': ['xQueueReceive', '_write', 'curr_stamp', 'vTaskDelay', 'curr_stamp', '.str.4.46', 'ulRxEvents', 'xQueue'], 'xQueueIsQueueFullFromISR': ['vAssertCalled'], 'prvIdleTask': ['vPortEnterCritical', 'uxListRemove', 'vPortExitCritical', 'vPortFree', 'vPortFree', 'vPortFree', 'vAssertCalled', 'pendSV', 'vApplicationIdleHook', 'uxDeletedTasksWaitingCleanUp', 'pxReadyTasksLists', 'xTasksWaitingTermination', 'uxCurrentNumberOfTasks'], 'Default_Handler6': [], 'Default_Handler4': [], 'Default_Handler5': [], 'Default_Handler2': [], 'Default_Handler3': [], 'xTimerPendFunctionCallFromISR': ['xQueueGenericSendFromISR', 'xTimerQueue'], 'pcTaskGetName': ['vAssertCalled', 'pxCurrentTCB'], 'pvPortMalloc': ['vTaskSuspendAll', 'xTaskResumeAll', 'xTaskResumeAll', 'vApplicationMallocFailedHook', 'ucHeap', 'pvPortMalloc.pucAlignedHeap', 'xNextFreeByte'], 'xQueueSelectFromSet': ['xQueueReceive'], 'vTaskGenericNotifyGiveFromISR': ['vAssertCalled', 'vAssertCalled', 'vPortValidateInterruptPriority', 'vAssertCalled', 'uxListRemove', 'vListInsertEnd', 'vListInsertEnd', 'uxSchedulerSuspended', 'pxCurrentTCB', 'pxReadyTasksLists', 'uxTopReadyPriority'], 'xEventGroupClearBits': ['vAssertCalled', 'vAssertCalled', 'vPortEnterCritical', 'vPortExitCritical'], 'xTimerCreateStatic': ['vAssertCalled', 'vAssertCalled', 'prvInitialiseNewTimer'], 'vLoggingPrintf': ['vprintf'], 'xTaskCheckForTimeOut': ['vAssertCalled', 'vAssertCalled', 'vPortEnterCritical', 'vPortExitCritical', 'pxCurrentTCB', 'xTickCount', 'xNumOfOverflows'], 'xQueueGenericCreateStatic': ['vAssertCalled', 'vAssertCalled', 'vAssertCalled', 'vAssertCalled', 'vAssertCalled', 'vPortEnterCritical', 'vListInitialise', 'vListInitialise', 'vPortExitCritical'], 'vTaskEndScheduler': ['vPortEndScheduler'], 'xTimerIsTimerActive': ['vAssertCalled', 'vPortEnterCritical', 'vPortExitCritical'], 'xEventGroupWaitBits': ['vAssertCalled', 'vAssertCalled', 'vAssertCalled', 'xTaskGetSchedulerState', 'vAssertCalled', 'vTaskSuspendAll', 'xTaskResumeAll', 'vTaskPlaceOnUnorderedEventList', 'xTaskResumeAll', 'pendSV', 'uxTaskResetEventItemValue', 'vPortEnterCritical', 'vPortExitCritical'], 'vPortFree': [], 'prvInitialiseNewTask': ['vAssertCalled', 'vListInitialiseItem', 'vListInitialiseItem', 'pxPortInitialiseStack'], 'xQueueIsQueueEmptyFromISR': ['vAssertCalled'], 'uxTaskGetStackHighWaterMark2': ['pxCurrentTCB'], 'vQueueUnregisterQueue': ['vAssertCalled', 'xQueueRegistry'], 'xQueueReceive': ['vAssertCalled', 'vAssertCalled', 'xTaskGetSchedulerState', 'vAssertCalled', 'vPortEnterCritical', 'xTaskRemoveFromEventList', 'pendSV', 'vPortExitCritical', 'vPortExitCritical', 'vTaskInternalSetTimeOutState', 'vPortExitCritical', 'vTaskSuspendAll', 'vPortEnterCritical', 'vPortExitCritical', 'xTaskCheckForTimeOut', 'vPortEnterCritical', 'vPortExitCritical', 'vTaskPlaceOnEventList', 'prvUnlockQueue', 'xTaskResumeAll', 'pendSV', 'prvUnlockQueue', 'xTaskResumeAll', 'prvUnlockQueue', 'xTaskResumeAll', 'vPortEnterCritical', 'vPortExitCritical'], 'xTaskGetIdleTaskHandle': ['vAssertCalled', 'xIdleTaskHandle'], 'vPortEnterCritical': ['vAssertCalled', 'uxCriticalNesting'], 'uxQueueGetQueueNumber': [], 'llvm.lifetime.end.p0i8': [], 'xPortSysTickHandler': ['xTaskIncrementTick'], 'vEventGroupDelete': ['vAssertCalled', 'vTaskSuspendAll', 'vAssertCalled', 'vTaskRemoveFromUnorderedEventList', 'vPortFree', 'xTaskResumeAll'], 'vTimerSetReloadMode': ['vAssertCalled', 'vPortEnterCritical', 'vPortExitCritical'], 'prvTaskExitError': ['vAssertCalled', 'uxCriticalNesting'], 'vTaskSetTaskNumber': [], 'curr_stamp': ['xTaskGetTickCount'], 'xQueueCreateMutexStatic': ['xQueueGenericCreateStatic', 'xQueueGenericSend'], 'xQueueAddToSet': ['vPortEnterCritical', 'vPortExitCritical'], 'vprintf': [], 'null': ['Reset_Handler', 'Default_Handler', 'Default_Handler2', 'Default_Handler3', 'Default_Handler4', 'Default_Handler5', 'Default_Handler6', '_reset', 'llvm.lifetime.start.p0i8', 'llvm.lifetime.end.p0i8', 'prvGetRegistersFromStack', '_start', 'exit', 'uart_init', '_fstat', '_read', 'write_number', '_write', '_sbrk', 'main', 'vApplicationMallocFailedHook', 'vApplicationStackOverflowHook', 'vApplicationIdleHook', 'vApplicationTickHook', 'vAssertCalled', 'vLoggingPrintf', 'llvm.va_start', 'vprintf', 'llvm.va_end', 'vApplicationGetIdleTaskMemory', 'vApplicationGetTimerTaskMemory', 'pxPortInitialiseStack', 'prvTaskExitError', 'vPortSVCHandler', 'Function', 'xPortStartScheduler', 'vPortSetupTimerInterrupt', 'vPortEndScheduler', 'vPortEnterCritical', 'vPortExitCritical', 'xPortPendSVHandler', 'pendSV', 'xPortSysTickHandler', 'vPortValidateInterruptPriority', 'vTaskSwitchContext', 'xTaskCreateStatic', 'llvm.memset.p0i8.i32', 'xTaskCreate', 'vTaskDelete', 'xTaskDelayUntil', 'xTaskResumeAll', 'xTaskIncrementTick', 'vTaskSuspendAll', 'vTaskDelay', 'eTaskGetState', 'uxTaskPriorityGet', 'uxTaskPriorityGetFromISR', 'vTaskPrioritySet', 'vTaskSuspend', 'vTaskResume', 'xTaskResumeFromISR', 'vTaskStartScheduler', 'prvIdleTask', 'vTaskEndScheduler', 'xTaskGetTickCount', 'xTaskGetTickCountFromISR', 'uxTaskGetNumberOfTasks', 'pcTaskGetName', 'xTaskGetHandle', 'strlen', 'uxTaskGetSystemState', 'xTaskGetIdleTaskHandle', 'xTaskCatchUpTicks', 'xTaskAbortDelay', 'vTaskPlaceOnEventList', 'vTaskPlaceOnUnorderedEventList', 'vTaskPlaceOnEventListRestricted', 'xTaskRemoveFromEventList', 'vTaskRemoveFromUnorderedEventList', 'vTaskSetTimeOutState', 'vTaskInternalSetTimeOutState', 'xTaskCheckForTimeOut', 'vTaskMissedYield', 'uxTaskGetTaskNumber', 'vTaskSetTaskNumber', 'vTaskGetInfo', 'uxTaskGetStackHighWaterMark2', 'uxTaskGetStackHighWaterMark', 'xTaskGetCurrentTaskHandle', 'xTaskGetSchedulerState', 'xTaskPriorityInherit', 'xTaskPriorityDisinherit', 'vTaskPriorityDisinheritAfterTimeout', 'uxTaskResetEventItemValue', 'pvTaskIncrementMutexHeldCount', 'ulTaskGenericNotifyTake', 'xTaskGenericNotifyWait', 'xTaskGenericNotify', 'xTaskGenericNotifyFromISR', 'vTaskGenericNotifyGiveFromISR', 'xTaskGenericNotifyStateClear', 'ulTaskGenericNotifyValueClear', 'vListInitialise', 'vListInitialiseItem', 'vListInsertEnd', 'vListInsert', 'uxListRemove', 'xQueueGenericReset', 'xQueueGenericCreateStatic', 'xQueueGenericCreate', 'llvm.umul.with.overflow.i32', 'xQueueCreateMutex', 'xQueueGenericSend', 'llvm.memcpy.p0i8.p0i8.i32', 'xQueueCreateMutexStatic', 'xQueueGetMutexHolder', 'xQueueGetMutexHolderFromISR', 'xQueueGiveMutexRecursive', 'xQueueTakeMutexRecursive', 'xQueueSemaphoreTake', 'xQueueCreateCountingSemaphoreStatic', 'xQueueCreateCountingSemaphore', 'xQueueGenericSendFromISR', 'xQueueGiveFromISR', 'xQueueReceive', 'xQueuePeek', 'xQueueReceiveFromISR', 'xQueuePeekFromISR', 'uxQueueMessagesWaiting', 'uxQueueSpacesAvailable', 'uxQueueMessagesWaitingFromISR', 'vQueueDelete', 'vQueueUnregisterQueue', 'uxQueueGetQueueNumber', 'vQueueSetQueueNumber', 'ucQueueGetQueueType', 'xQueueIsQueueEmptyFromISR', 'xQueueIsQueueFullFromISR', 'vQueueAddToRegistry', 'pcQueueGetName', 'vQueueWaitForMessageRestricted', 'xQueueCreateSet', 'xQueueAddToSet', 'xQueueRemoveFromSet', 'xQueueSelectFromSet', 'xQueueSelectFromSetFromISR', 'xTimerCreateTimerTask', 'prvTimerTask', 'xTimerCreate', 'xTimerCreateStatic', 'xTimerGenericCommand', 'xTimerGetTimerDaemonTaskHandle', 'xTimerGetPeriod', 'vTimerSetReloadMode', 'uxTimerGetReloadMode', 'xTimerGetExpiryTime', 'pcTimerGetName', 'xTimerIsTimerActive', 'pvTimerGetTimerID', 'vTimerSetTimerID', 'xTimerPendFunctionCallFromISR', 'xTimerPendFunctionCall', 'uxTimerGetTimerNumber', 'vTimerSetTimerNumber', 'xEventGroupCreateStatic', 'xEventGroupCreate', 'xEventGroupSync', 'xEventGroupSetBits', 'xEventGroupWaitBits', 'xEventGroupClearBits', 'xEventGroupClearBitsFromISR', 'vEventGroupClearBitsCallback', 'xEventGroupGetBitsFromISR', 'vEventGroupDelete', 'vEventGroupSetBitsCallback', 'xEventGroupSetBitsFromISR', 'uxEventGroupGetNumber', 'vEventGroupSetNumber', 'pvPortMalloc', 'vPortFree', 'vPortInitialiseBlocks', 'xPortGetFreeHeapSize', 'case_prog', 'printf', 'main_blinky', 'prvQueueReceiveTask', 'prvQueueSendTask', 'bnch_marking_init', 'curr_stamp', 'mystrlen', 'mymemcmp'], 'strlen': [], 'Function': [], 'vQueueAddToRegistry': ['vAssertCalled', 'xQueueRegistry'], 'vQueueDelete': ['vQueueUnregisterQueue', 'vAssertCalled', 'vQueueUnregisterQueue', 'vPortFree'], 'xEventGroupSetBitsFromISR': ['xTimerPendFunctionCallFromISR'], 'xQueueRemoveFromSet': ['vPortEnterCritical', 'vPortExitCritical'], 'vTaskSuspend': ['vPortEnterCritical', 'uxListRemove', 'uxListRemove', 'vListInsertEnd', 'vPortExitCritical', 'vPortEnterCritical', 'vPortExitCritical', 'vAssertCalled', 'pendSV', 'vAssertCalled', 'uxSchedulerSuspended', 'pxCurrentTCB', 'xSuspendedTaskList', 'pxReadyTasksLists', 'pxDelayedTaskList', 'uxCurrentNumberOfTasks', 'uxTopReadyPriority', 'xSchedulerRunning'], 'Default_Handler': [], 'vEventGroupClearBitsCallback': ['vAssertCalled', 'vAssertCalled', 'vPortEnterCritical', 'vPortExitCritical'], 'uxTaskPriorityGet': ['vPortEnterCritical', 'vPortExitCritical', 'pxCurrentTCB'], 'xTaskCatchUpTicks': ['vAssertCalled', 'xTaskResumeAll', 'xPendedTicks', 'uxSchedulerSuspended'], 'vTaskPlaceOnEventList': ['vAssertCalled', 'vListInsert', 'uxListRemove', 'vListInsertEnd', 'vListInsert', 'vListInsert', 'pxCurrentTCB', 'xNextTaskUnblockTime', 'pxDelayedTaskList', 'xTickCount', 'pxOverflowDelayedTaskList'], 'xQueueCreateMutex': ['pvPortMalloc', 'vPortEnterCritical', 'vListInitialise', 'vListInitialise', 'vPortExitCritical', 'xQueueGenericSend'], 'xQueueTakeMutexRecursive': ['vAssertCalled', 'xTaskGetCurrentTaskHandle', 'xQueueSemaphoreTake'], 'vPortInitialiseBlocks': [], 'prvUnlockQueue': ['vPortEnterCritical', 'prvNotifyQueueSetContainer', 'vTaskMissedYield', 'xTaskRemoveFromEventList', 'vTaskMissedYield', 'vPortExitCritical', 'vPortEnterCritical', 'xTaskRemoveFromEventList', 'vTaskMissedYield', 'vPortExitCritical'], 'case_prog': ['printf', 'printf', '.str.40', '.str.1.41'], 'xTimerPendFunctionCall': ['vAssertCalled', 'xQueueGenericSend', 'xTimerQueue'], 'uxListRemove': [], 'xTimerCreateTimerTask': ['vPortEnterCritical', 'vListInitialise', 'vListInitialise', 'xQueueGenericCreateStatic', 'vQueueAddToRegistry', 'vPortExitCritical', 'vApplicationGetTimerTaskMemory', 'xTaskCreateStatic', 'vAssertCalled', '.str.33', 'xTimerQueue', 'prvCheckForValidListAndQueue.xStaticTimerQueue', 'prvCheckForValidListAndQueue.ucStaticTimerQueueStorage', '.str.1.32'], 'xQueuePeekFromISR': ['vAssertCalled', 'vAssertCalled', 'vAssertCalled', 'vPortValidateInterruptPriority'], 'prvPortStartFirstTask': [], 'vApplicationIdleHook': [], 'xTaskCreate': ['pvPortMalloc', 'pvPortMalloc', 'vPortFree', 'prvInitialiseNewTask', 'prvAddNewTaskToReadyList'], 'vTaskSwitchContext': ['vAssertCalled', 'uxSchedulerSuspended', 'pxReadyTasksLists', 'uxTopReadyPriority'], 'xTaskGetSchedulerState': ['uxSchedulerSuspended', 'xSchedulerRunning'], 'Reset_Handler': [], 'vPortSVCHandler': [], 'xPortGetFreeHeapSize': ['xNextFreeByte'], 'vQueueSetQueueNumber': [], 'vApplicationTickHook': [], 'vTaskRemoveFromUnorderedEventList': ['vAssertCalled', 'vAssertCalled', 'uxListRemove', 'uxListRemove', 'vListInsertEnd', 'uxSchedulerSuspended', 'pxCurrentTCB', 'pxReadyTasksLists', 'uxTopReadyPriority'], 'vListInsertEnd': [], 'vPortValidateInterruptPriority': ['vAssertCalled', 'vAssertCalled', 'ulMaxPRIGROUPValue', 'ucMaxSysCallPriority']}
