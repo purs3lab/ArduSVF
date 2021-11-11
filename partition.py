@@ -6,6 +6,14 @@ data ={}
 cfg = {} #This remains the CFG
 compartments=[]
 compartmentMap={}
+
+def addToCompartment(func, compart):
+		compart.append(func)
+		compartmentMap[func] = compart
+
+# If for a PDG edge different nodes have different colors
+# make a new compartment that is the superset of all small colors
+# .
 def paint():
 	global funcs
 	global data
@@ -20,33 +28,39 @@ def paint():
 			if obj in compartmentMap:
 				if compartmentMap[obj] not in colors:
 					colors.append(compartmentMap[obj])
+			else:
+				#If an object in PDG has not been seen before we can safely put it in any of the color.
+				if len(colors) > 0:
+					compartment = colors[0]
+					addToCompartment(obj, compartment)
+					
 
-		print("Different colors: ")
-		print colors
+		if len(colors)>1:
+#		print("Different colors: ")
+#print colors
 		#Repaint
 #print("Different Compartments before in the colored compart:")
 #		print(colors)
-		compartment = []
-		for color in colors:
-			for obj in color:
-				oldCompartment = compartmentMap[obj]
-				compartmentMap[obj] = compartment
-				compartment.append(obj)
-				oldCompartment.remove(obj)
-				if len(oldCompartment) == 0:
-					compartments.remove(oldCompartment)
+			compartment = []
+			for color in colors:
+				for obj in color:
+					oldCompartment = compartmentMap[obj]
+					compartmentMap[obj] = compartment
+					compartment.append(obj)
+					oldCompartment.remove(obj)
+					if len(oldCompartment) == 0:
+						compartments.remove(oldCompartment)
 #		print("Merged Compartment")
 #		print(compartment)
 
-		print("After merge: ")
-		print(compartment)
-		compartments.append(compartment)
-		print("Lets see what we have in paint: ")
-		print(compartments)
+#		print("After merge: ")
+#print(compartment)
+			compartments.append(compartment)
+#		print("Lets see what we have in paint: ")
+#		print(compartments)
 
-def addToCompartment(func, compart):
-		compart.append(func)
-		compartmentMap[func] = compart
+# If all the nodes in PDG that are connected are not of same color
+# spread the color. That is increase the size of the compartment.
 def spreadPaint():
 	global funcs
 	global data
@@ -154,11 +168,14 @@ def main(argv):
 #		print(funcs[func])
 
 	######################
-	#Find the leaves in the function
+	#Find the leaves in the function and data 
 	leaves = []
 	for func in funcs:
 		if (len(funcs[func]) ==0):
 			leaves.append(func)
+	for obj in data: 
+		if (len(data[obj]) == 1):
+			leaves.append(data[obj][0])
 	i =0
 	for func in funcs:
 		if func not in leaves:
@@ -166,6 +183,7 @@ def main(argv):
 		for val in funcs[func]:
 			if val not in leaves:
 				i+=1
+
 #print(func + "  calls or touches: ")
 #print(funcs[func])
 	print("Leaf Compartments:" +str(len(leaves)))
@@ -223,18 +241,6 @@ def main(argv):
 					compartmentMap[val] = compartment
 				compartments.append(compartment)
 				
-#	print(funcs)
-	j=0
-	for compartment in compartments:
-		j+= len(compartment)
-	unused =0
-	for func in funcs:
-		if func not in compartmentMap:
-			unused +=1
-		for val in funcs[func]:
-			if val not in compartmentMap:
-				unused +=1
-	print(compartments)
 	print("After Pair merge")
 	print("Merged Compartments:" +str(j))
 	print("Loose Functions:" + str(objCount - j))
@@ -242,56 +248,21 @@ def main(argv):
 
 	########
 	# Coloring
-	i =0 
-	for func in funcs:
-		colors=[]
-		if func in compartmentMap:
-			colors.append(compartmentMap[func])
-		for obj in funcs[func]:
-			if obj in compartmentMap:
-				if compartmentMap[obj] not in colors:
-					colors.append(compartmentMap)
-
-		#Repaint
-		compartment = []
-		for color in colors:
-			for obj in color:
-				oldCompartment = compartmentMap[obj] 
-				compartmentMap[obj] = compartment
-				compartment.append(obj)
-				oldCompartment.remove(obj)
-				if len(oldCompartment) == 0:
-					compartments.remove(oldCompartment)
-
-		compartments.append(compartment)
-		if len(colors) > 1:
-			i +=1
-#			print(func) 
-#			print("has multiple compartments:")
-#			print(len(colors))
-
-	print("Total mixed compartments:" +str(i))
-	print("#######Print Compartments after coloring#######")
-	i =0
-	for func in funcs:
-		colors=[]
-		if func in compartmentMap:
-			colors.append(compartmentMap[func])
-		for obj in funcs[func]:
-			if obj in compartmentMap:
-				if compartmentMap[obj] not in colors:
-					colors.append(compartmentMap)
-
-		if len(colors) > 1:
-			i+=1
-#print(func)
-#			print("has multiple compartments:")
-#			print(len(colors))
-	print("Total mixed compartments:" +str(i))
-
+	print("Before paint")
+#	print(compartmentMap['xTimerCreateTimerTask'])
+	print(compartmentMap['.str'])
+	paint()
+	print("paint")
+#	print(compartmentMap['xTimerCreateTimerTask'])
+	print(compartmentMap['.str'])
+	spreadPaint()
+	print("spreadPaint")
 	paint()
 	spreadPaint()
-	print(compartments)
+	print(compartmentMap['xTimerCreateTimerTask'])
+	print(funcs['xTimerCreateTimerTask'])
+	print(compartmentMap['.str'])
+#print(compartments)
 #paint()
 #	spreadPaint()
 #	paint()
@@ -299,8 +270,23 @@ def main(argv):
 	for compartment in compartments:
 		j+= len(compartment)
 	print("EndOfTheScript")
+#print(compartments)
 	print("Compartments:" +str(j))
 	print("Loose Functions:" + str(objCount - j))
+
+	print("Still lost:")
+	for func in funcs:
+		if func not in compartmentMap:
+			print func
+		for obj in funcs[func]:
+			if obj not in compartmentMap:
+				print(obj)
+	for func in funcs:
+		if func not in compartmentMap:
+			print func
+	for var in data:
+		if var not in compartmentMap:
+			print var
 #	print(compartments)
 #print(funcs)
 	
