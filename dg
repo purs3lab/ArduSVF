@@ -1,4 +1,3 @@
-*********************************
 isr_vector
 Used By:
 ****************
@@ -7,9 +6,11 @@ Used By:
 ****************
 _sidata
 Used By:
+_reset
 ****************
 _sdata
 Used By:
+_reset
 ****************
 _edata
 Used By:
@@ -17,6 +18,7 @@ _reset
 ****************
 _sbss
 Used By:
+_reset
 ****************
 _ebss
 Used By:
@@ -80,6 +82,7 @@ vApplicationGetTimerTaskMemory
 ****************
 vApplicationGetIdleTaskMemory.xIdleTaskTCB
 Used By:
+vApplicationGetIdleTaskMemory
 ****************
 vApplicationGetIdleTaskMemory.uxIdleTaskStack
 Used By:
@@ -87,6 +90,7 @@ vApplicationGetIdleTaskMemory
 ****************
 vApplicationGetTimerTaskMemory.xTimerTaskTCB
 Used By:
+vApplicationGetTimerTaskMemory
 ****************
 uxCriticalNesting
 Used By:
@@ -98,10 +102,12 @@ vPortExitCritical
 ****************
 ucMaxSysCallPriority
 Used By:
+xPortStartScheduler
 vPortValidateInterruptPriority
 ****************
 ulMaxPRIGROUPValue
 Used By:
+xPortStartScheduler
 vPortValidateInterruptPriority
 ****************
 pxCurrentTCB
@@ -109,6 +115,7 @@ Used By:
 xTaskIncrementTick
 vTaskDelay
 eTaskGetState
+vTaskSwitchContext
 xTaskPriorityInherit
 xTaskPriorityDisinherit
 vTaskPriorityDisinheritAfterTimeout
@@ -147,10 +154,9 @@ xTaskGenericNotifyFromISR
 ****************
 uxTopUsedPriority
 Used By:
+vTaskStartScheduler
 ****************
 llvm.used
-Used By:
-****************
 uxSchedulerSuspended
 Used By:
 xTaskIncrementTick
@@ -177,7 +183,16 @@ xTaskGenericNotifyFromISR
 xYieldPending
 Used By:
 xTaskIncrementTick
+vTaskSwitchContext
 xTaskResumeAll
+vTaskGenericNotifyGiveFromISR
+vTaskSuspend
+xTaskResumeFromISR
+xTaskAbortDelay
+xTaskRemoveFromEventList
+vTaskRemoveFromUnorderedEventList
+vTaskMissedYield
+xTaskGenericNotifyFromISR
 ****************
 uxTopReadyPriority
 Used By:
@@ -234,17 +249,26 @@ uxTaskGetSystemState
 ****************
 xDelayedTaskList1
 Used By:
+prvAddNewTaskToReadyList
 ****************
 xDelayedTaskList2
 Used By:
+prvAddNewTaskToReadyList
 ****************
 xPendingReadyList
 Used By:
+prvAddNewTaskToReadyList
 xTaskResumeAll
+vTaskGenericNotifyGiveFromISR
+xTaskResumeFromISR
+xTaskRemoveFromEventList
+xTaskGenericNotifyFromISR
 ****************
 xTasksWaitingTermination
 Used By:
 eTaskGetState
+prvAddNewTaskToReadyList
+vTaskDelete
 prvIdleTask
 xTaskGetHandle
 uxTaskGetSystemState
@@ -253,12 +277,18 @@ vTaskGetInfo
 xSuspendedTaskList
 Used By:
 eTaskGetState
+ulTaskGenericNotifyTake
+xTaskGenericNotifyWait
+prvAddNewTaskToReadyList
 vTaskSuspend
 vTaskResume
 xTaskResumeFromISR
 xTaskGetHandle
 uxTaskGetSystemState
 xTaskAbortDelay
+vTaskPlaceOnEventList
+vTaskPlaceOnUnorderedEventList
+vTaskPlaceOnEventListRestricted
 vTaskGetInfo
 ****************
 pxDelayedTaskList
@@ -268,6 +298,7 @@ vTaskDelay
 eTaskGetState
 ulTaskGenericNotifyTake
 xTaskGenericNotifyWait
+prvAddNewTaskToReadyList
 vTaskDelete
 xTaskDelayUntil
 xTaskResumeAll
@@ -287,6 +318,7 @@ vTaskDelay
 eTaskGetState
 ulTaskGenericNotifyTake
 xTaskGenericNotifyWait
+prvAddNewTaskToReadyList
 xTaskDelayUntil
 xTaskGetHandle
 uxTaskGetSystemState
@@ -301,6 +333,8 @@ Used By:
 prvAddNewTaskToReadyList
 vTaskDelete
 vTaskSuspend
+vTaskStartScheduler
+vTaskEndScheduler
 xTaskGetSchedulerState
 ****************
 uxTaskNumber
@@ -319,7 +353,11 @@ xTaskIncrementTick
 vTaskDelay
 ulTaskGenericNotifyTake
 xTaskGenericNotifyWait
+vTaskDelete
 xTaskDelayUntil
+xTaskResumeAll
+vTaskSuspend
+vTaskStartScheduler
 vTaskPlaceOnEventList
 vTaskPlaceOnUnorderedEventList
 vTaskPlaceOnEventListRestricted
@@ -332,6 +370,7 @@ ulTaskGenericNotifyTake
 xTaskGenericNotifyWait
 xTaskGenericNotify
 xTaskDelayUntil
+vTaskStartScheduler
 xTaskGetTickCount
 xTaskGetTickCountFromISR
 vTaskPlaceOnEventList
@@ -361,6 +400,7 @@ vTaskStartScheduler
 ****************
 xIdleTaskHandle
 Used By:
+vTaskStartScheduler
 xTaskGetIdleTaskHandle
 ****************
 xQueueRegistry
@@ -380,19 +420,27 @@ xTimerPendFunctionCall
 ****************
 xActiveTimerList1
 Used By:
+xTimerCreateTimerTask
+prvInitialiseNewTimer
 ****************
 xActiveTimerList2
 Used By:
+xTimerCreateTimerTask
+prvInitialiseNewTimer
 ****************
 pxCurrentTimerList
 Used By:
+xTimerCreateTimerTask
 prvTimerTask
 prvSampleTimeNow
+prvInitialiseNewTimer
 ****************
 pxOverflowTimerList
 Used By:
+xTimerCreateTimerTask
 prvTimerTask
 prvSampleTimeNow
+prvInitialiseNewTimer
 ****************
 prvCheckForValidListAndQueue.ucStaticTimerQueueStorage
 Used By:
@@ -415,6 +463,7 @@ xTimerCreateTimerTask
 ****************
 xTimerTaskHandle
 Used By:
+xTimerCreateTimerTask
 xTimerGetTimerDaemonTaskHandle
 ****************
 prvSampleTimeNow.xLastTime
@@ -432,6 +481,7 @@ pvPortMalloc
 xNextFreeByte
 Used By:
 pvPortMalloc
+vPortInitialiseBlocks
 xPortGetFreeHeapSize
 ****************
 ulRxEvents
@@ -448,6 +498,7 @@ case_prog
 ****************
 xQueue
 Used By:
+main_blinky
 prvQueueReceiveTask
 prvQueueSendTask
 ****************

@@ -7,9 +7,65 @@ cfg = {} #This remains the CFG
 compartments=[]
 compartmentMap={}
 
-def addToCompartment(func, compart):
-		compart.append(func)
-		compartmentMap[func] = compart
+def newCompartment():
+		compartment = []
+		compartments.append(compartment)
+		return compartment
+
+def addToCompartment(func, compartment):
+		global compartmentMap
+		if func in compartmentMap:
+			oldCompartment = compartmentMap[func]
+			compartmentMap[func] = compartment
+			compartment.append(func)
+			oldCompartment.remove(func)
+			if len(oldCompartment) == 0:
+				compartments.remove(oldCompartment)
+		else:
+			compartment.append(func)
+			compartmentMap[func] = compartment
+
+def mergeComponentsExcept(tCompartments):
+	global funcs
+	global data
+	global PDG
+	global compartments
+	global compartmentMap
+	comp = newCompartment()
+	objlist =[]
+	for compartment in list(compartments):
+		if compartment not in tCompartments:
+			for obj in list(compartment):
+				addToCompartment(obj, comp)
+
+
+def assignLooseFunctions(): 
+	global funcs
+	global data
+	global PDG
+	global compartments
+	global compartmentMap
+	compartment = newCompartment()	
+	for func in funcs:
+		if func not in compartmentMap:
+			addToCompartment(func, compartment)
+		for obj in funcs[func]:
+			if obj not in compartmentMap:
+				addToCompartment(obj, compartment)
+	
+def threadComp(threads):
+	global funcs
+	global data
+	global PDG
+	global compartments
+	global compartmentMap
+	#Create thread compartments if haven't done already
+	for thread in threads:
+		if thread not in compartmentMap:
+			compartment = newCompartment()
+			addToCompartment(thread, compartment)
+#for obj in funcs[thread]:
+#				addToCompartment(obj, compartment)
 
 # If for a PDG edge different nodes have different colors
 # make a new compartment that is the superset of all small colors
@@ -41,23 +97,60 @@ def paint():
 		#Repaint
 #print("Different Compartments before in the colored compart:")
 #		print(colors)
-			compartment = []
-			for color in colors:
-				for obj in color:
-					oldCompartment = compartmentMap[obj]
-					compartmentMap[obj] = compartment
-					compartment.append(obj)
-					oldCompartment.remove(obj)
-					if len(oldCompartment) == 0:
-						compartments.remove(oldCompartment)
-#		print("Merged Compartment")
-#		print(compartment)
+			policy = "cherrypick" #while painting cherry pick the minimum set of objects for consistent coloring
+			policy = "submerge" # while painting pick everything 
+			if policy == "cherrypick":
+				compartment = []
+				for color in colors:
+					for obj in color:
+						if "main" in obj:
+							print(color)
+						oldCompartment = compartmentMap[obj]
+						compartmentMap[obj] = compartment
+						compartment.append(obj)
+						oldCompartment.remove(obj)
+						if len(oldCompartment) == 0:
+							compartments.remove(oldCompartment)
+				compartments.append(compartment)
+			if policy == "submerge":
+				compartment = []
+				for color in colors:
+					oldCompartment = color
+					for obj in color: 
+						compartmentMap[obj] = compartment
+						compartment.append(obj)
+					compartments.remove(oldCompartment)
+				compartments.append(compartment)
 
-#		print("After merge: ")
-#print(compartment)
-			compartments.append(compartment)
-#		print("Lets see what we have in paint: ")
-#		print(compartments)
+#Increase compartments size but not take any object from other compartments
+def expandComponentsX(tCompartments):
+	global funcs
+	global data
+	global PDG
+	global compartments
+	global compartmentMap
+	for comp in tCompartments:
+		print comp
+		for obj in comp:
+			if obj in funcs:
+				for ptsTo in funcs[obj]:
+					if ptsTo in compartmentMap:
+						if compartmentMap[ptsTo] in tCompartments:
+							continue
+						else: 
+							addToCompartment(ptsTo,comp)
+					else:
+						addToCompartment(ptsTo,comp)
+			elif obj in data:
+					for user in data[obj]:
+						if user in compartmentMap:
+							if compartmentMap[user] in tCompartments:
+								continue
+							else:
+								addToCompartment(user,comp)
+						else:
+							addToCompartment(user,comp)
+	
 
 # If all the nodes in PDG that are connected are not of same color
 # spread the color. That is increase the size of the compartment.
@@ -81,8 +174,59 @@ def spreadPaint():
 				if val not in compartmentMap:
 					compartment.append(val)
 					compartmentMap[val] = compartment
-		
 
+def printStats():
+	global funcs
+	global data
+	global PDG
+	global compartments
+	global compartmentMap
+	print("**********Printing stats******")
+	objCount =0
+	for func in funcs:
+		objCount +=1
+	for var in data:
+		objCount +=1
+	print("Total Objects:" +str(objCount))
+	printCompartments =False
+	j = len(compartments)
+	if printCompartments:
+		for compartment in compartments:
+			print(compartment)
+	coloredObj =0
+	for compartment in compartments:
+		coloredObj += len(compartment)
+
+	print("Compartments:" +str(j))
+	print("Loose Functions:" + str(objCount - coloredObj))
+
+def printLooseFunctions():
+	global funcs
+	global data
+	global PDG
+	global compartments
+	global compartmentMap
+	printLoseObjects = True
+	if printLoseObjects:
+		for func in funcs:
+			if func not in compartmentMap:
+				print("**********Lost Function ***********")
+				print func
+			for obj in funcs[func]:
+				if obj not in compartmentMap:
+					print("************Lost Object ***********")
+					print(obj)
+		for func in funcs:
+			if func not in compartmentMap:
+				print("**********Lost Function ***********")
+				print func
+		for var in data:
+			if var not in compartmentMap:
+				print("************Lost Object ***********")
+				print var
+ffmap = {}
+files = {}
+import os
 def main(argv):
 	cfg = ''
 	dfg = ''
@@ -101,11 +245,26 @@ def main(argv):
 			print 'test.py -i <inputfile> -o <outputfile>'
 			sys.exit()
 		elif opt in ("-c", "--cfile"):
-			cfg = arg
+			bc = arg
 		elif opt in ("-d", "--dfile"):
 			dfg = arg
-	print 'CFG file is "', cfg
-	print 'DFG file is "', dfg
+
+	cfg = "./cg"
+	cmd = "opt  --print-callgraph " + bc +" 2> cg"
+	os.system(cmd)
+
+	ffmapFile = "./ffmap"
+	with open(ffmapFile) as f:
+		lines = f.readlines()
+        for line in lines:
+			line = line.replace("\n","")
+			[func, fileN] = line.split("##")
+			ffmap[func] = fileN
+
+	for func in ffmap:
+		if ffmap[func] not in files:
+			files[ffmap[func]] = []
+		files[ffmap[func]].append(func)
 
 	curr = "null"
 	funcs[curr] = []
@@ -119,7 +278,10 @@ def main(argv):
 				funcs[curr] = []
 			if("calls function " in line):
 				if (len(line.split('\'')) == 3):
-					funcs[curr].append(line.split('\'')[1])
+					if line.split('\'')[1] not in funcs[curr]:
+						funcs[curr].append(line.split('\'')[1])
+
+	funcs.pop("null", None)
 
 	#At this point we have the CFG, since we use the ADT move the CFG to cfg
 	cfg = funcs
@@ -137,11 +299,12 @@ def main(argv):
 				obj = line
 				data[obj] = []
 				consume =0
-			if("*********" in line):
+				continue
+			if("***" in line):
 				consume=1
 				obj = ""
 			if obj:
-				if ("Used By" in line):
+				if ("Used By:" in line):
 					continue
 				data[obj].append(line)
 	
@@ -150,6 +313,12 @@ def main(argv):
 		for obj in data:
 			if func in data[obj]:
 				funcs[func].append(obj)
+	
+	for d in data:
+		for fun in data[d]:
+			if fun not in funcs:
+				funcs[fun] = []
+
 
 	objCount =0
 	for func in funcs:
@@ -192,9 +361,8 @@ def main(argv):
 	##############################
 	# Initialize compartments with dominator nodes - Leaf with dominator nodes
 	for leaf in leaves:
-		compartment = [leaf]
-		compartments.append(compartment)
-		compartmentMap[leaf] = compartment
+		compartment = newCompartment()
+		addToCompartment(leaf, compartment)
 	
 	for func in funcs:
 #print(len(funcs[func]))
@@ -205,24 +373,10 @@ def main(argv):
 		if len(funcs[func]) ==1 and funcs[func][0] in leaves:
 			for compartment in compartments:
 				if(funcs[func] in compartment):
-						print("Mergerd")
 						compartment.append(funcs[func])
 						compartmentMap[funcs[func]] = compartment
-	j=0
-	for compartment in compartments:
-		j+= len(compartment)
-	unused =0
-	for func in funcs:
-		if func not in compartmentMap:
-			unused +=1
-		for val in funcs[func]:
-			if val not in compartmentMap:
-			   unused +=1
-	print(compartments)
 	print("After dominator merge")
-	print("Merged Compartments:" +str(j))
-	print("Loose Functions:" + str(objCount - j))
-	print("***********")
+	printStats()
 
 	###################
 	# Pair-Merge
@@ -242,62 +396,58 @@ def main(argv):
 				compartments.append(compartment)
 				
 	print("After Pair merge")
-	print("Merged Compartments:" +str(j))
-	print("Loose Functions:" + str(objCount - j))
-	print("***********")
+	printStats()
 
-	########
-	# Coloring
-	print("Before paint")
-#	print(compartmentMap['xTimerCreateTimerTask'])
-	print(compartmentMap['.str'])
-	paint()
-	print("paint")
-#	print(compartmentMap['xTimerCreateTimerTask'])
-	print(compartmentMap['.str'])
-	spreadPaint()
-	print("spreadPaint")
-	paint()
-	spreadPaint()
-	print(compartmentMap['xTimerCreateTimerTask'])
-	print(funcs['xTimerCreateTimerTask'])
-	print(compartmentMap['.str'])
-#print(compartments)
-#paint()
-#	spreadPaint()
-#	paint()
-	j=0
-	for compartment in compartments:
-		j+= len(compartment)
-	print("EndOfTheScript")
-#print(compartments)
-	print("Compartments:" +str(j))
-	print("Loose Functions:" + str(objCount - j))
+	policy = "coloring"
+#policy = "thread"
+	policy = "component"
+	threads = ["prvQueueReceiveTask", "prvQueueSendTask"]
+	if policy == "coloring":
+		paint()
+		spreadPaint()
+	elif policy == "thread":
+		threadComp(threads)
+		tCompartments = []
+		for thread in threads:
+			tCompartments.append(compartmentMap[thread])
+		printStats()
+		expandComponentsX(tCompartments)
+		assignLooseFunctions()
+		mergeComponentsExcept(tCompartments)
+#expandComponentsX(tCompartments)
+		printStats()
 
-	print("Still lost:")
+	elif policy == "component":
+		for f in files:
+			comp = newCompartment()
+			for func in files[f]:
+				addToCompartment(func, comp)
+				if func in funcs:
+					for obj in funcs[func]:
+						addToCompartment(obj, comp)
+			print f
+			print comp
+		
+
+	printStats()
+	printThread = False
+	if printThread:
+		for thread in threads:
+			print(compartmentMap[thread])
+	l=[]
+	for comp in compartments:
+		l += comp
+	s =set(l)
+	obj=[]
 	for func in funcs:
-		if func not in compartmentMap:
-			print func
-		for obj in funcs[func]:
-			if obj not in compartmentMap:
-				print(obj)
-	for func in funcs:
-		if func not in compartmentMap:
-			print func
-	for var in data:
-		if var not in compartmentMap:
-			print var
+		obj.append(func)
+	for d in data:
+		obj.append(d)
+	printLooseFunctions()
 #	print(compartments)
-#print(funcs)
+	import pdb; pdb.set_trace();
 	
 
 #print(colors)
-				
-				
-
-
-
-	
-
 if __name__ == "__main__":
 	main(sys.argv[1:])

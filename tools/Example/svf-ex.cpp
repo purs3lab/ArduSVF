@@ -1357,6 +1357,14 @@ int i=0;
 vector<Value *> seen;
 #define MAX_DEPTH 10000
 void getFunctionfromUse(User * muse, vector<Function *>& users, int depth) {
+		if (auto inst = dyn_cast<llvm::Instruction>(muse)) {
+				auto func = inst->getFunction();
+                        if(func)
+                            users.push_back(func);
+                        else {
+                            cout<<"Function not null"<<endl;
+                        }
+		}
 		for(auto user: muse->users()) {
 				if (vContains(seen, user))
                         return;
@@ -1466,12 +1474,18 @@ int compartmentalize() {
 #if 01
 
 	map<Value *, vector<Value *>> PDG; // Function-> Global/Functions
+	ofstream dfg;
+        dfg.open("./dg");
     for (auto G = svfModule->global_begin(), E = svfModule->global_end(); G != E; ++G) {
 		auto glob = &*G;
-		cout<<(*glob)->getName().str() <<endl;
+		dfg<<(*glob)->getName().str() <<endl;
+		if ((*glob)->getName().str() == "llvm.used") 
+				continue;
 
 		vector<Function *> funcs;
 		for (auto user: (*glob)->users()) {
+//				if ((*glob)->getName().str() == "xDelayedTaskList2")
+//						user->dump();
 				getFunctionfromUse(user, funcs, 0);
 #if 0
 				//user->dump();
@@ -1519,13 +1533,13 @@ int compartmentalize() {
 						PDG[user].push_back(*glob);
 #endif 
 		}
-		cout<<"Used By:"<<endl;
+		dfg<<"Used By:"<<endl;
 		set<Function *> s( funcs.begin(), funcs.end() );
 		funcs.assign( s.begin(), s.end() );
 		for (auto func: funcs) {
-				cout<<func->getName().str()<<endl;
+				dfg<<func->getName().str()<<endl;
 		}
-		cout<<"****************"<<endl;
+		dfg<<"****************"<<endl;
 #if 0
 		for (auto node: PDG) {
 			cout<<"Function:"; node.first->dump();
@@ -1548,6 +1562,59 @@ int compartmentalize() {
 #endif
 	}
 #endif 
+	 dfg.close();
+
+	ofstream ffmap;
+    ffmap.open("./ffmap");
+	for (SVFModule::llvm_iterator F = svfModule->llvmFunBegin(), E = svfModule->llvmFunEnd(); F != E; ++F)
+    {
+		auto fun = *F;
+		if (fun->isIntrinsic ()) {
+				ffmap<<fun->getName().str()<<"##" << "intrinsic"<<endl;
+				continue;
+		}
+		int found = 0;
+//		fun->getDebugLoc();
+		for (auto bb=fun->begin();bb!=fun->end(); bb++) {
+				if (found==1)
+						break;
+                for (auto stmt =bb->begin();stmt!=bb->end(); stmt++) {
+						auto &debugInfo = stmt->getDebugLoc();
+						if (debugInfo) {
+                 		  ffmap<<fun->getName().str()<<"##" <<debugInfo->getFilename().str() <<endl;
+						  found =1;
+						  break;
+                		}
+				}
+		}
+		if (found ==0) {
+				ffmap<<fun->getName().str()<<"##" << "external"<<endl;
+				cout<<fun->getName().str()<< " is defined externally" <<endl;
+		}
+#if 0
+		if (fun->isIntrinsic () || fun->hasExternalLinkage()) {
+				continue;
+		}
+		if (fun->getName().str().find("llvm.lifetime") != std::string::npos)
+				continue;
+		auto bb = fun->begin();
+		if (true) {
+			auto ins = bb->begin();
+			if (true) {
+				auto &debugInfo = ins->getDebugLoc();
+				if (debugInfo) {
+         		   ffmap<<fun->getName().str()<<"##" <<debugInfo->getFilename().str() <<endl;
+        		}
+			}
+			else {
+				cout << "no ins for" << fun->getName().str() <<endl;
+			}
+		}
+		else {
+			cout << "no bb for "<< fun->getName().str() <<endl;
+		}
+#endif 
+	}
 	updateBC();
 	return 0;
 }
