@@ -38,7 +38,10 @@ def mergeComponentsExcept(tCompartments):
 			for obj in list(compartment):
 				addToCompartment(obj, comp)
 
-
+def mergeCompartments(compartment1, compartment2):
+	for fun in list(compartment2):
+		addToCompartment(fun, compartment1)
+	
 def assignLooseFunctions(): 
 	global funcs
 	global data
@@ -226,6 +229,9 @@ def printLooseFunctions():
 				print var
 ffmap = {}
 files = {}
+fdmap = {}
+dfmap = {}
+dfmapCoarse = {}
 import os
 def main(argv):
 	cfg = ''
@@ -256,7 +262,7 @@ def main(argv):
 	ffmapFile = "./ffmap"
 	with open(ffmapFile) as f:
 		lines = f.readlines()
-        for line in lines:
+		for line in lines:
 			line = line.replace("\n","")
 			[func, fileN] = line.split("##")
 			ffmap[func] = fileN
@@ -265,6 +271,34 @@ def main(argv):
 		if ffmap[func] not in files:
 			files[ffmap[func]] = []
 		files[ffmap[func]].append(func)
+
+	fdmapFile = "./fdmap"
+	with open(fdmapFile) as f:
+		lines = f.readlines()
+		for line in lines:
+			line = line.replace("\n", "")
+			[func,dev] = line.split("##")
+			if func in fdmap:
+				fdmap[func].append(dev)
+			else:
+				fdmap[func] =[dev]
+
+#dfmap = {v: k for k, v in fdmap.items()} #Only works for 1-1
+	
+	for f in fdmap:
+		for addr in fdmap[f]:
+			if addr in dfmap:
+				dfmap[addr].append(f)
+			else:
+				dfmap[addr] = [f]
+
+	for addr in dfmap:
+		base = int(addr, 0) & 0xFFFFF000
+		if base in dfmapCoarse:
+			dfmapCoarse[base] = dfmapCoarse[base]  + dfmap[addr]
+		else:
+			dfmapCoarse[base] = dfmap[addr]
+
 
 	curr = "null"
 	funcs[curr] = []
@@ -397,8 +431,9 @@ def main(argv):
 				
 	print("After Pair merge")
 	printStats()
+	FreeRTOSComp = ["Task", "Queue", "Stream", "Semaphore", "Timer", "Event", "Port"]
 
-	policy = "coloring"
+	policy = "device"
 #policy = "thread"
 	policy = "component"
 	threads = ["prvQueueReceiveTask", "prvQueueSendTask"]
@@ -418,6 +453,34 @@ def main(argv):
 		printStats()
 
 	elif policy == "component":
+		rtos = "FreeRTOS"
+		if rtos == "FreeRTOS":
+			cCompartments = []
+			for fcomp in FreeRTOSComp:
+				comp =  newCompartment()
+				
+				for func in funcs:
+					if fcomp in func:
+						addToCompartment(func, comp)
+				if len(comp) == 0:
+					compartments.remove(comp)
+				else:
+					cCompartments.append(comp)
+					
+			expandComponentsX(cCompartments)
+			assignLooseFunctions()
+			mergeComponentsExcept(cCompartments)
+				
+		else:
+			for f in files:
+				comp = newCompartment()
+				for func in files[f]:
+					addToCompartment(func, comp)
+					if func in funcs:
+						for obj in funcs[func]:
+							addToCompartment(obj, comp)
+	
+	elif policy == "device":
 		for f in files:
 			comp = newCompartment()
 			for func in files[f]:
@@ -425,9 +488,13 @@ def main(argv):
 				if func in funcs:
 					for obj in funcs[func]:
 						addToCompartment(obj, comp)
-			print f
-			print comp
-		
+		for dev in dfmapCoarse:
+			compartment = compartmentMap[dfmapCoarse[dev][0]]
+			for funcs in dfmapCoarse[dev]:
+				if compartment != compartmentMap[funcs]:
+					print("****Different Maps*******")
+					mergeCompartments(compartment, compartmentMap[funcs])
+				
 
 	printStats()
 	printThread = False
@@ -445,7 +512,7 @@ def main(argv):
 		obj.append(d)
 	printLooseFunctions()
 #	print(compartments)
-	import pdb; pdb.set_trace();
+#import pdb; pdb.set_trace();
 	
 
 #print(colors)

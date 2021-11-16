@@ -1615,6 +1615,39 @@ int compartmentalize() {
 		}
 #endif 
 	}
+	ofstream fdmap;
+    fdmap.open("./fdmap");
+	for (SVFModule::llvm_iterator F = svfModule->llvmFunBegin(), E = svfModule->llvmFunEnd(); F != E; ++F)
+    {
+        auto fun = *F;
+        for (auto bb=fun->begin();bb!=fun->end();bb++) {
+                for (auto stmt =bb->begin();stmt!=bb->end(); stmt++) {
+                        /* Iterate all operands and see if there is inttoptr */
+                        for (auto op : stmt->operand_values()) {
+                                if (auto cast= dyn_cast<llvm::Instruction>(op)) {
+//                                      cout<< "********************************************"<<endl;
+                                }
+                                /* Harcoded pointers might appear as Constant Expressions */
+                                if (auto cast= dyn_cast<llvm::ConstantExpr>(op)) {
+                                        /* Get the thing as an instruction */
+                                        if (auto inttoptr = dyn_cast<llvm::IntToPtrInst>(cast->getAsInstruction())) {
+                                                if (auto ptsTo = dyn_cast<llvm::ConstantInt>(inttoptr->getOperand(0))) {
+                                                    auto addr = *ptsTo->getValue().getRawData();
+                                                    if (addr == 0 || addr ==0xFFFFFFFF) {
+                                                            /* These values could be error codes or a weird
+                                                             way to make a nullptr */
+                                                            continue;
+                                                    }
+													fdmap << fun->getName().str() << "##";
+                          							fdmap << std::hex <<"0x"<<*ptsTo->getValue().getRawData() <<endl;
+                                                }
+                                        }
+								}
+                        }
+                }
+        }
+    }
+	fdmap.close();
 	updateBC();
 	return 0;
 }
