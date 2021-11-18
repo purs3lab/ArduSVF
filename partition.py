@@ -40,6 +40,7 @@ def mergeComponentsExcept(tCompartments):
 
 def mergeCompartments(compartment1, compartment2):
 	for fun in list(compartment2):
+		print (fun)
 		addToCompartment(fun, compartment1)
 	
 def assignLooseFunctions(): 
@@ -101,7 +102,7 @@ def paint():
 #print("Different Compartments before in the colored compart:")
 #		print(colors)
 			policy = "cherrypick" #while painting cherry pick the minimum set of objects for consistent coloring
-			policy = "submerge" # while painting pick everything 
+#policy = "submerge" # while painting pick everything 
 			if policy == "cherrypick":
 				compartment = []
 				for color in colors:
@@ -188,8 +189,11 @@ def printStats():
 	objCount =0
 	for func in funcs:
 		objCount +=1
+	funcount = objCount
+	print("Total Functions: "+ str(objCount))
 	for var in data:
 		objCount +=1
+	print("Total Variables: " + str(objCount - funcount))
 	print("Total Objects:" +str(objCount))
 	printCompartments =False
 	j = len(compartments)
@@ -199,6 +203,7 @@ def printStats():
 	coloredObj =0
 	for compartment in compartments:
 		coloredObj += len(compartment)
+	
 
 	print("Compartments:" +str(j))
 	print("Loose Functions:" + str(objCount - coloredObj))
@@ -209,7 +214,7 @@ def printLooseFunctions():
 	global PDG
 	global compartments
 	global compartmentMap
-	printLoseObjects = True
+	printLoseObjects = False
 	if printLoseObjects:
 		for func in funcs:
 			if func not in compartmentMap:
@@ -410,7 +415,6 @@ def main(argv):
 						compartment.append(funcs[func])
 						compartmentMap[funcs[func]] = compartment
 	print("After dominator merge")
-	printStats()
 
 	###################
 	# Pair-Merge
@@ -430,12 +434,11 @@ def main(argv):
 				compartments.append(compartment)
 				
 	print("After Pair merge")
-	printStats()
 	FreeRTOSComp = ["Task", "Queue", "Stream", "Semaphore", "Timer", "Event", "Port"]
 
 	policy = "device"
 #policy = "thread"
-	policy = "component"
+#policy = "component"
 	threads = ["prvQueueReceiveTask", "prvQueueSendTask"]
 	if policy == "coloring":
 		paint()
@@ -445,15 +448,13 @@ def main(argv):
 		tCompartments = []
 		for thread in threads:
 			tCompartments.append(compartmentMap[thread])
-		printStats()
 		expandComponentsX(tCompartments)
 		assignLooseFunctions()
 		mergeComponentsExcept(tCompartments)
 #expandComponentsX(tCompartments)
-		printStats()
 
 	elif policy == "component":
-		rtos = "FreeRTOS"
+		rtos = ""
 		if rtos == "FreeRTOS":
 			cCompartments = []
 			for fcomp in FreeRTOSComp:
@@ -490,12 +491,11 @@ def main(argv):
 						addToCompartment(obj, comp)
 		for dev in dfmapCoarse:
 			compartment = compartmentMap[dfmapCoarse[dev][0]]
-			for funcs in dfmapCoarse[dev]:
-				if compartment != compartmentMap[funcs]:
+			for funcL in dfmapCoarse[dev]:
+				if compartment != compartmentMap[funcL]:
 					print("****Different Maps*******")
-					mergeCompartments(compartment, compartmentMap[funcs])
+					mergeCompartments(compartment, compartmentMap[funcL])
 				
-
 	printStats()
 	printThread = False
 	if printThread:
