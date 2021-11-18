@@ -3,1365 +3,2047 @@ This is inadvisable as it may cause display problems. If
 you REALLY want to taste LLVM bitcode first-hand, you
 can force output with the `-f' option.
 
-Call graph node <<null function>><<0x55fdbddd8920>>  #uses=0
-  CS<None> calls function 'Reset_Handler'
-  CS<None> calls function 'Default_Handler'
-  CS<None> calls function 'Default_Handler2'
-  CS<None> calls function 'Default_Handler3'
-  CS<None> calls function 'Default_Handler4'
-  CS<None> calls function 'Default_Handler5'
-  CS<None> calls function 'Default_Handler6'
-  CS<None> calls function '_reset'
+Call graph node <<null function>><<0x555db60d3740>>  #uses=0
+  CS<None> calls function '_OffsetAbsSyms'
+  CS<None> calls function 'blink0'
+  CS<None> calls function 'blink'
+  CS<None> calls function 'timing_start'
   CS<None> calls function 'llvm.lifetime.start.p0i8'
+  CS<None> calls function 'k_malloc'
+  CS<None> calls function 'k_queue_append'
+  CS<None> calls function 'z_impl_k_sleep'
   CS<None> calls function 'llvm.lifetime.end.p0i8'
-  CS<None> calls function 'prvGetRegistersFromStack'
-  CS<None> calls function '_start'
-  CS<None> calls function 'exit'
-  CS<None> calls function 'uart_init'
-  CS<None> calls function '_fstat'
-  CS<None> calls function '_read'
-  CS<None> calls function 'write_number'
-  CS<None> calls function '_write'
-  CS<None> calls function '_sbrk'
-  CS<None> calls function 'main'
-  CS<None> calls function 'vApplicationMallocFailedHook'
-  CS<None> calls function 'vApplicationStackOverflowHook'
-  CS<None> calls function 'vApplicationIdleHook'
-  CS<None> calls function 'vApplicationTickHook'
-  CS<None> calls function 'vAssertCalled'
-  CS<None> calls function 'vLoggingPrintf'
+  CS<None> calls function 'blink1'
+  CS<None> calls function 'uart_out'
+  CS<None> calls function 'z_impl_k_queue_get'
+  CS<None> calls function 'k_free'
+  CS<None> calls function 'arm_mps2_init'
+  CS<None> calls function 'arch_printk_char_out'
+  CS<None> calls function 'cbprintf'
   CS<None> calls function 'llvm.va_start'
-  CS<None> calls function 'vprintf'
+  CS<None> calls function 'cbvprintf'
   CS<None> calls function 'llvm.va_end'
-  CS<None> calls function 'vApplicationGetIdleTaskMemory'
-  CS<None> calls function 'vApplicationGetTimerTaskMemory'
-  CS<None> calls function 'pxPortInitialiseStack'
-  CS<None> calls function 'prvTaskExitError'
-  CS<None> calls function 'vPortSVCHandler'
-  CS<None> calls function 'Function'
-  CS<None> calls function 'xPortStartScheduler'
-  CS<None> calls function 'vPortSetupTimerInterrupt'
-  CS<None> calls function 'vPortEndScheduler'
-  CS<None> calls function 'vPortEnterCritical'
-  CS<None> calls function 'vPortExitCritical'
-  CS<None> calls function 'xPortPendSVHandler'
-  CS<None> calls function 'pendSV'
-  CS<None> calls function 'xPortSysTickHandler'
-  CS<None> calls function 'vPortValidateInterruptPriority'
-  CS<None> calls function 'vTaskSwitchContext'
-  CS<None> calls function 'xTaskCreateStatic'
   CS<None> calls function 'llvm.memset.p0i8.i32'
-  CS<None> calls function 'xTaskCreate'
-  CS<None> calls function 'vTaskDelete'
-  CS<None> calls function 'xTaskDelayUntil'
-  CS<None> calls function 'xTaskResumeAll'
-  CS<None> calls function 'xTaskIncrementTick'
-  CS<None> calls function 'vTaskSuspendAll'
-  CS<None> calls function 'vTaskDelay'
-  CS<None> calls function 'eTaskGetState'
-  CS<None> calls function 'uxTaskPriorityGet'
-  CS<None> calls function 'uxTaskPriorityGetFromISR'
-  CS<None> calls function 'vTaskPrioritySet'
-  CS<None> calls function 'vTaskSuspend'
-  CS<None> calls function 'vTaskResume'
-  CS<None> calls function 'xTaskResumeFromISR'
-  CS<None> calls function 'vTaskStartScheduler'
-  CS<None> calls function 'prvIdleTask'
-  CS<None> calls function 'vTaskEndScheduler'
-  CS<None> calls function 'xTaskGetTickCount'
-  CS<None> calls function 'xTaskGetTickCountFromISR'
-  CS<None> calls function 'uxTaskGetNumberOfTasks'
-  CS<None> calls function 'pcTaskGetName'
-  CS<None> calls function 'xTaskGetHandle'
-  CS<None> calls function 'strlen'
-  CS<None> calls function 'uxTaskGetSystemState'
-  CS<None> calls function 'xTaskGetIdleTaskHandle'
-  CS<None> calls function 'xTaskCatchUpTicks'
-  CS<None> calls function 'xTaskAbortDelay'
-  CS<None> calls function 'vTaskPlaceOnEventList'
-  CS<None> calls function 'vTaskPlaceOnUnorderedEventList'
-  CS<None> calls function 'vTaskPlaceOnEventListRestricted'
-  CS<None> calls function 'xTaskRemoveFromEventList'
-  CS<None> calls function 'vTaskRemoveFromUnorderedEventList'
-  CS<None> calls function 'vTaskSetTimeOutState'
-  CS<None> calls function 'vTaskInternalSetTimeOutState'
-  CS<None> calls function 'xTaskCheckForTimeOut'
-  CS<None> calls function 'vTaskMissedYield'
-  CS<None> calls function 'uxTaskGetTaskNumber'
-  CS<None> calls function 'vTaskSetTaskNumber'
-  CS<None> calls function 'vTaskGetInfo'
-  CS<None> calls function 'uxTaskGetStackHighWaterMark2'
-  CS<None> calls function 'uxTaskGetStackHighWaterMark'
-  CS<None> calls function 'xTaskGetCurrentTaskHandle'
-  CS<None> calls function 'xTaskGetSchedulerState'
-  CS<None> calls function 'xTaskPriorityInherit'
-  CS<None> calls function 'xTaskPriorityDisinherit'
-  CS<None> calls function 'vTaskPriorityDisinheritAfterTimeout'
-  CS<None> calls function 'uxTaskResetEventItemValue'
-  CS<None> calls function 'pvTaskIncrementMutexHeldCount'
-  CS<None> calls function 'ulTaskGenericNotifyTake'
-  CS<None> calls function 'xTaskGenericNotifyWait'
-  CS<None> calls function 'xTaskGenericNotify'
-  CS<None> calls function 'xTaskGenericNotifyFromISR'
-  CS<None> calls function 'vTaskGenericNotifyGiveFromISR'
-  CS<None> calls function 'xTaskGenericNotifyStateClear'
-  CS<None> calls function 'ulTaskGenericNotifyValueClear'
-  CS<None> calls function 'vListInitialise'
-  CS<None> calls function 'vListInitialiseItem'
-  CS<None> calls function 'vListInsertEnd'
-  CS<None> calls function 'vListInsert'
-  CS<None> calls function 'uxListRemove'
-  CS<None> calls function 'xQueueGenericReset'
-  CS<None> calls function 'xQueueGenericCreateStatic'
-  CS<None> calls function 'xQueueGenericCreate'
-  CS<None> calls function 'llvm.umul.with.overflow.i32'
-  CS<None> calls function 'xQueueCreateMutex'
-  CS<None> calls function 'xQueueGenericSend'
+  CS<None> calls function 'cbvprintf_package'
+  CS<None> calls function 'printk'
+  CS<None> calls function 'assert_post_action'
+  CS<None> calls function 'char_out'
+  CS<None> calls function 'cbprintf_package'
+  CS<None> calls function 'cbpprintf'
+  CS<None> calls function 'cbprintf_fsc_package'
+  CS<None> calls function 'crc32_c'
+  CS<None> calls function 'crc32_ieee'
+  CS<None> calls function 'crc32_ieee_update'
+  CS<None> calls function 'crc16'
+  CS<None> calls function 'crc16_ccitt'
+  CS<None> calls function 'crc16_itu_t'
+  CS<None> calls function 'llvm.bswap.i16'
+  CS<None> calls function 'crc8_ccitt'
+  CS<None> calls function 'crc8'
+  CS<None> calls function 'crc7_be'
+  CS<None> calls function 'u8_to_dec'
+  CS<None> calls function 'z_get_fd_obj'
+  CS<None> calls function 'z_impl_z_errno'
+  CS<None> calls function 'z_get_fd_obj_and_vtable'
+  CS<None> calls function 'z_reserve_fd'
+  CS<None> calls function 'z_impl_k_mutex_lock'
+  CS<None> calls function 'z_impl_k_mutex_init'
+  CS<None> calls function 'z_impl_k_mutex_unlock'
+  CS<None> calls function 'z_finalize_fd'
+  CS<None> calls function 'z_free_fd'
+  CS<None> calls function 'z_alloc_fd'
+  CS<None> calls function 'char2hex'
+  CS<None> calls function 'hex2char'
+  CS<None> calls function 'bin2hex'
+  CS<None> calls function 'hex2bin'
+  CS<None> calls function 'sys_notify_validate'
+  CS<None> calls function 'sys_notify_finalize'
+  CS<None> calls function '__printk_hook_install'
+  CS<None> calls function '__printk_get_hook'
+  CS<None> calls function 'vprintk'
+  CS<None> calls function 'z_impl_k_str_out'
+  CS<None> calls function 'snprintk'
+  CS<None> calls function 'str_out'
+  CS<None> calls function 'vsnprintk'
+  CS<None> calls function 'onoff_manager_init'
+  CS<None> calls function 'llvm.memset.p0i8.i64'
   CS<None> calls function 'llvm.memcpy.p0i8.p0i8.i32'
-  CS<None> calls function 'xQueueCreateMutexStatic'
-  CS<None> calls function 'xQueueGetMutexHolder'
-  CS<None> calls function 'xQueueGetMutexHolderFromISR'
-  CS<None> calls function 'xQueueGiveMutexRecursive'
-  CS<None> calls function 'xQueueTakeMutexRecursive'
-  CS<None> calls function 'xQueueSemaphoreTake'
-  CS<None> calls function 'xQueueCreateCountingSemaphoreStatic'
-  CS<None> calls function 'xQueueCreateCountingSemaphore'
-  CS<None> calls function 'xQueueGenericSendFromISR'
-  CS<None> calls function 'xQueueGiveFromISR'
-  CS<None> calls function 'xQueueReceive'
-  CS<None> calls function 'xQueuePeek'
-  CS<None> calls function 'xQueueReceiveFromISR'
-  CS<None> calls function 'xQueuePeekFromISR'
-  CS<None> calls function 'uxQueueMessagesWaiting'
-  CS<None> calls function 'uxQueueSpacesAvailable'
-  CS<None> calls function 'uxQueueMessagesWaitingFromISR'
-  CS<None> calls function 'vQueueDelete'
-  CS<None> calls function 'vQueueUnregisterQueue'
-  CS<None> calls function 'uxQueueGetQueueNumber'
-  CS<None> calls function 'vQueueSetQueueNumber'
-  CS<None> calls function 'ucQueueGetQueueType'
-  CS<None> calls function 'xQueueIsQueueEmptyFromISR'
-  CS<None> calls function 'xQueueIsQueueFullFromISR'
-  CS<None> calls function 'vQueueAddToRegistry'
-  CS<None> calls function 'pcQueueGetName'
-  CS<None> calls function 'vQueueWaitForMessageRestricted'
-  CS<None> calls function 'xQueueCreateSet'
-  CS<None> calls function 'xQueueAddToSet'
-  CS<None> calls function 'xQueueRemoveFromSet'
-  CS<None> calls function 'xQueueSelectFromSet'
-  CS<None> calls function 'xQueueSelectFromSetFromISR'
-  CS<None> calls function 'xTimerCreateTimerTask'
-  CS<None> calls function 'prvTimerTask'
-  CS<None> calls function 'xTimerCreate'
-  CS<None> calls function 'xTimerCreateStatic'
-  CS<None> calls function 'xTimerGenericCommand'
-  CS<None> calls function 'xTimerGetTimerDaemonTaskHandle'
-  CS<None> calls function 'xTimerGetPeriod'
-  CS<None> calls function 'vTimerSetReloadMode'
-  CS<None> calls function 'uxTimerGetReloadMode'
-  CS<None> calls function 'xTimerGetExpiryTime'
-  CS<None> calls function 'pcTimerGetName'
-  CS<None> calls function 'xTimerIsTimerActive'
-  CS<None> calls function 'pvTimerGetTimerID'
-  CS<None> calls function 'vTimerSetTimerID'
-  CS<None> calls function 'xTimerPendFunctionCallFromISR'
-  CS<None> calls function 'xTimerPendFunctionCall'
-  CS<None> calls function 'uxTimerGetTimerNumber'
-  CS<None> calls function 'vTimerSetTimerNumber'
-  CS<None> calls function 'xEventGroupCreateStatic'
-  CS<None> calls function 'xEventGroupCreate'
-  CS<None> calls function 'xEventGroupSync'
-  CS<None> calls function 'xEventGroupSetBits'
-  CS<None> calls function 'xEventGroupWaitBits'
-  CS<None> calls function 'xEventGroupClearBits'
-  CS<None> calls function 'xEventGroupClearBitsFromISR'
-  CS<None> calls function 'vEventGroupClearBitsCallback'
-  CS<None> calls function 'xEventGroupGetBitsFromISR'
-  CS<None> calls function 'vEventGroupDelete'
-  CS<None> calls function 'vEventGroupSetBitsCallback'
-  CS<None> calls function 'xEventGroupSetBitsFromISR'
-  CS<None> calls function 'uxEventGroupGetNumber'
-  CS<None> calls function 'vEventGroupSetNumber'
-  CS<None> calls function 'pvPortMalloc'
-  CS<None> calls function 'vPortFree'
-  CS<None> calls function 'vPortInitialiseBlocks'
-  CS<None> calls function 'xPortGetFreeHeapSize'
-  CS<None> calls function 'case_prog'
+  CS<None> calls function 'onoff_request'
+  CS<None> calls function 'z_spin_lock_valid'
+  CS<None> calls function 'z_spin_lock_set_owner'
+  CS<None> calls function 'z_spin_unlock_valid'
+  CS<None> calls function 'transition_complete'
+  CS<None> calls function 'onoff_release'
+  CS<None> calls function 'onoff_reset'
+  CS<None> calls function 'onoff_cancel'
+  CS<None> calls function 'onoff_monitor_register'
+  CS<None> calls function 'onoff_monitor_unregister'
+  CS<None> calls function 'onoff_sync_lock'
+  CS<None> calls function 'onoff_sync_finalize'
+  CS<None> calls function 'z_rb_get_minmax'
+  CS<None> calls function 'rb_insert'
+  CS<None> calls function 'llvm.stacksave'
+  CS<None> calls function 'llvm.stackrestore'
+  CS<None> calls function 'rb_remove'
+  CS<None> calls function 'z_rb_walk'
+  CS<None> calls function 'z_rb_child'
+  CS<None> calls function 'z_rb_is_black'
+  CS<None> calls function 'rb_contains'
+  CS<None> calls function 'z_rb_foreach_next'
+  CS<None> calls function 'sys_sem_init'
+  CS<None> calls function 'z_impl_k_sem_init'
+  CS<None> calls function 'sys_sem_give'
+  CS<None> calls function 'z_impl_k_sem_give'
+  CS<None> calls function 'sys_sem_take'
+  CS<None> calls function 'z_impl_k_sem_take'
+  CS<None> calls function 'sys_sem_count_get'
+  CS<None> calls function 'z_thread_entry'
+  CS<None> calls function 'z_impl_z_current_get'
+  CS<None> calls function 'timeutil_timegm64'
+  CS<None> calls function 'timeutil_timegm'
+  CS<None> calls function 'timeutil_sync_state_update'
+  CS<None> calls function 'timeutil_sync_state_set_skew'
+  CS<None> calls function 'timeutil_sync_estimate_skew'
+  CS<None> calls function 'timeutil_sync_ref_from_local'
+  CS<None> calls function 'timeutil_sync_local_from_ref'
+  CS<None> calls function 'timeutil_sync_skew_to_ppb'
+  CS<None> calls function 'sys_heap_free'
+  CS<None> calls function 'llvm.ctlz.i32'
+  CS<None> calls function 'sys_heap_alloc'
+  CS<None> calls function 'llvm.cttz.i32'
+  CS<None> calls function 'sys_heap_aligned_alloc'
+  CS<None> calls function 'llvm.ctpop.i32'
+  CS<None> calls function 'sys_heap_aligned_realloc'
+  CS<None> calls function 'sys_heap_init'
+  CS<None> calls function 'sys_heap_validate'
+  CS<None> calls function 'sys_heap_stress'
+  CS<None> calls function 'heap_print_info'
+  CS<None> calls function 'sys_heap_print_info'
+  CS<None> calls function 'sys_bitarray_set_bit'
+  CS<None> calls function 'sys_bitarray_clear_bit'
+  CS<None> calls function 'sys_bitarray_test_bit'
+  CS<None> calls function 'sys_bitarray_test_and_set_bit'
+  CS<None> calls function 'sys_bitarray_test_and_clear_bit'
+  CS<None> calls function 'sys_bitarray_alloc'
+  CS<None> calls function 'sys_bitarray_free'
+  CS<None> calls function 'sys_bitarray_is_region_set'
+  CS<None> calls function 'sys_bitarray_is_region_cleared'
+  CS<None> calls function 'sys_bitarray_set_region'
+  CS<None> calls function 'sys_bitarray_clear_region'
+  CS<None> calls function 'sys_reboot'
+  CS<None> calls function 'arch_cpu_idle'
+  CS<None> calls function '_ConfigAbsSyms'
+  CS<None> calls function 'wakeup_cpu1'
+  CS<None> calls function 'sse_200_platform_get_cpu_id'
+  CS<None> calls function 'sys_trace_isr_enter'
+  CS<None> calls function 'sys_trace_isr_exit'
+  CS<None> calls function 'sys_trace_isr_exit_to_scheduler'
+  CS<None> calls function 'sys_trace_idle'
+  CS<None> calls function 'arch_timing_init'
+  CS<None> calls function 'arch_timing_start'
+  CS<None> calls function 'arch_timing_stop'
+  CS<None> calls function 'arch_timing_counter_get'
+  CS<None> calls function 'arch_timing_cycles_get'
+  CS<None> calls function 'arch_timing_freq_get'
+  CS<None> calls function 'arch_timing_cycles_to_ns'
+  CS<None> calls function 'arch_timing_cycles_to_ns_avg'
+  CS<None> calls function 'arch_timing_freq_get_mhz'
+  CS<None> calls function 'z_arm_fatal_error'
+  CS<None> calls function 'z_fatal_error'
+  CS<None> calls function 'z_do_kernel_oops'
+  CS<None> calls function 'arch_syscall_oops'
+  CS<None> calls function 'arch_irq_enable'
+  CS<None> calls function 'arch_irq_disable'
+  CS<None> calls function 'arch_irq_is_enabled'
+  CS<None> calls function 'z_arm_irq_priority_set'
+  CS<None> calls function 'z_irq_spurious'
+  CS<None> calls function 'z_arm_nmi_init'
+  CS<None> calls function 'DefaultHandler'
+  CS<None> calls function 'z_SysNmiOnReset'
+  CS<None> calls function 'z_NmiHandlerSet'
+  CS<None> calls function 'z_arm_nmi'
+  CS<None> calls function 'z_arm_int_exit'
+  CS<None> calls function 'z_arm_prep_c'
+  CS<None> calls function 'z_bss_zero'
+  CS<None> calls function 'z_data_copy'
+  CS<None> calls function 'z_cstart'
+  CS<None> calls function 'arch_swap'
+  CS<None> calls function '__aeabi_memclr4'
+  CS<None> calls function '__aeabi_memclr8'
+  CS<None> calls function '_fini'
+  CS<None> calls function 'arch_new_thread'
+  CS<None> calls function 'arch_switch_to_main_thread'
+  CS<None> calls function 'z_arm_fault'
+  CS<None> calls function 'z_arm_fault_init'
+  CS<None> calls function 'z_arm_save_fp_context'
+  CS<None> calls function 'z_arm_restore_fp_context'
+  CS<None> calls function 'z_arm_interrupt_init'
+  CS<None> calls function 'sys_arch_reboot'
+  CS<None> calls function 'z_arm_clear_arm_mpu_config'
+  CS<None> calls function 'z_impl_k_thread_abort'
+  CS<None> calls function 'z_thread_abort'
+  CS<None> calls function 'z_arm_configure_static_mpu_regions'
+  CS<None> calls function 'arm_core_mpu_configure_static_mpu_regions'
+  CS<None> calls function 'z_arm_configure_dynamic_mpu_regions'
+  CS<None> calls function 'arm_core_mpu_configure_dynamic_mpu_regions'
+  CS<None> calls function 'arm_core_mpu_enable'
+  CS<None> calls function 'arm_core_mpu_disable'
+  CS<None> calls function 'z_arm_mpu_init'
+  CS<None> calls function 'abort'
+  CS<None> calls function 'atoi'
+  CS<None> calls function 'strtol'
+  CS<None> calls function 'strtoul'
+  CS<None> calls function 'malloc'
+  CS<None> calls function 'free'
+  CS<None> calls function 'realloc'
+  CS<None> calls function 'calloc'
+  CS<None> calls function 'llvm.umul.with.overflow.i32'
+  CS<None> calls function 'reallocarray'
+  CS<None> calls function 'bsearch'
+  CS<None> calls function '_exit'
+  CS<None> calls function 'strncasecmp'
+  CS<None> calls function 'strstr'
+  CS<None> calls function 'strlen'
+  CS<None> calls function 'strncmp'
+  CS<None> calls function 'strcpy'
+  CS<None> calls function 'strncpy'
+  CS<None> calls function 'strchr'
+  CS<None> calls function 'strrchr'
+  CS<None> calls function 'strnlen'
+  CS<None> calls function 'strcmp'
+  CS<None> calls function 'strtok_r'
+  CS<None> calls function 'strcat'
+  CS<None> calls function 'llvm.experimental.noalias.scope.decl'
+  CS<None> calls function 'strncat'
+  CS<None> calls function 'memcmp'
+  CS<None> calls function 'memmove'
+  CS<None> calls function 'memcpy'
+  CS<None> calls function 'memset'
+  CS<None> calls function 'memchr'
+  CS<None> calls function 'strspn'
+  CS<None> calls function 'strcspn'
+  CS<None> calls function '__stdout_hook_install'
+  CS<None> calls function '_stdout_hook_default'
+  CS<None> calls function 'z_impl_zephyr_fputc'
+  CS<None> calls function 'fputc'
+  CS<None> calls function 'fputs'
+  CS<None> calls function 'fwrite'
+  CS<None> calls function 'z_impl_zephyr_fwrite'
+  CS<None> calls function 'puts'
+  CS<None> calls function 'snprintf'
+  CS<None> calls function 'sprintf_out'
+  CS<None> calls function 'sprintf'
+  CS<None> calls function 'vsnprintf'
+  CS<None> calls function 'vsprintf'
+  CS<None> calls function 'fprintf'
+  CS<None> calls function 'vfprintf'
   CS<None> calls function 'printf'
-  CS<None> calls function 'main_blinky'
-  CS<None> calls function 'prvQueueReceiveTask'
-  CS<None> calls function 'prvQueueSendTask'
-  CS<None> calls function 'bnch_marking_init'
-  CS<None> calls function 'curr_stamp'
-  CS<None> calls function 'mystrlen'
-  CS<None> calls function 'mymemcmp'
+  CS<None> calls function 'vprintf'
+  CS<None> calls function 'gmtime_r'
+  CS<None> calls function 'gmtime'
+  CS<None> calls function 'nanosleep'
+  CS<None> calls function 'z_impl_k_usleep'
+  CS<None> calls function 'arm_mps2_pinmux_init'
+  CS<None> calls function 'uart_console_init'
+  CS<None> calls function 'z_device_ready'
+  CS<None> calls function 'console_out'
+  CS<None> calls function 'gpio_cmsdk_ahb_config'
+  CS<None> calls function 'gpio_cmsdk_ahb_port_get_raw'
+  CS<None> calls function 'gpio_cmsdk_ahb_port_set_masked_raw'
+  CS<None> calls function 'gpio_cmsdk_ahb_port_set_bits_raw'
+  CS<None> calls function 'gpio_cmsdk_ahb_port_clear_bits_raw'
+  CS<None> calls function 'gpio_cmsdk_ahb_port_toggle_bits'
+  CS<None> calls function 'gpio_cmsdk_ahb_pin_interrupt_configure'
+  CS<None> calls function 'gpio_cmsdk_ahb_manage_callback'
+  CS<None> calls function 'gpio_cmsdk_port_0_config_func'
+  CS<None> calls function 'gpio_cmsdk_port_1_config_func'
+  CS<None> calls function 'gpio_cmsdk_port_2_config_func'
+  CS<None> calls function 'gpio_cmsdk_port_3_config_func'
+  CS<None> calls function 'gpio_cmsdk_ahb_isr'
+  CS<None> calls function 'gpio_cmsdk_ahb_init'
+  CS<None> calls function 'gpio_mmio32_config'
+  CS<None> calls function 'gpio_mmio32_port_get_raw'
+  CS<None> calls function 'gpio_mmio32_port_set_masked_raw'
+  CS<None> calls function 'gpio_mmio32_port_set_bits_raw'
+  CS<None> calls function 'gpio_mmio32_port_clear_bits_raw'
+  CS<None> calls function 'gpio_mmio32_port_toggle_bits'
+  CS<None> calls function 'gpio_mmio32_pin_interrupt_configure'
+  CS<None> calls function 'gpio_mmio32_init'
+  CS<None> calls function 'i2c_sbcon_configure'
+  CS<None> calls function 'i2c_sbcon_transfer'
+  CS<None> calls function 'i2c_bitbang_transfer'
+  CS<None> calls function 'i2c_bitbang_configure'
+  CS<None> calls function 'i2c_sbcon_init'
+  CS<None> calls function 'i2c_bitbang_init'
+  CS<None> calls function 'i2c_sbcon_set_scl'
+  CS<None> calls function 'i2c_sbcon_set_sda'
+  CS<None> calls function 'i2c_sbcon_get_sda'
+  CS<None> calls function 'i2c_dump_msgs'
+  CS<None> calls function 'i2c_bitbang_recover_bus'
+  CS<None> calls function 'wdog_cmsdk_apb_setup'
+  CS<None> calls function 'wdog_cmsdk_apb_disable'
+  CS<None> calls function 'wdog_cmsdk_apb_install_timeout'
+  CS<None> calls function 'wdog_cmsdk_apb_feed'
+  CS<None> calls function 'wdog_cmsdk_apb_init'
+  CS<None> calls function 'wdog_cmsdk_apb_isr'
+  CS<None> calls function 'uart_cmsdk_apb_poll_in'
+  CS<None> calls function 'uart_cmsdk_apb_poll_out'
+  CS<None> calls function 'uart_cmsdk_apb_fifo_fill'
+  CS<None> calls function 'uart_cmsdk_apb_fifo_read'
+  CS<None> calls function 'uart_cmsdk_apb_irq_tx_enable'
+  CS<None> calls function 'uart_cmsdk_apb_irq_tx_disable'
+  CS<None> calls function 'uart_cmsdk_apb_irq_tx_ready'
+  CS<None> calls function 'uart_cmsdk_apb_irq_rx_enable'
+  CS<None> calls function 'uart_cmsdk_apb_irq_rx_disable'
+  CS<None> calls function 'uart_cmsdk_apb_irq_tx_complete'
+  CS<None> calls function 'uart_cmsdk_apb_irq_rx_ready'
+  CS<None> calls function 'uart_cmsdk_apb_irq_err_enable'
+  CS<None> calls function 'uart_cmsdk_apb_irq_err_disable'
+  CS<None> calls function 'uart_cmsdk_apb_irq_is_pending'
+  CS<None> calls function 'uart_cmsdk_apb_irq_update'
+  CS<None> calls function 'uart_cmsdk_apb_irq_callback_set'
+  CS<None> calls function 'uart_cmsdk_apb_irq_config_func_0'
+  CS<None> calls function 'uart_cmsdk_apb_irq_config_func_1'
+  CS<None> calls function 'uart_cmsdk_apb_irq_config_func_2'
+  CS<None> calls function 'uart_cmsdk_apb_irq_config_func_3'
+  CS<None> calls function 'uart_cmsdk_apb_irq_config_func_4'
+  CS<None> calls function 'uart_cmsdk_apb_isr'
+  CS<None> calls function 'uart_cmsdk_apb_init'
+  CS<None> calls function 'sys_clock_driver_init'
+  CS<None> calls function 'sys_clock_device_ctrl'
+  CS<None> calls function 'sys_clock_isr'
+  CS<None> calls function 'sys_clock_announce'
+  CS<None> calls function 'sys_clock_set_timeout'
+  CS<None> calls function 'sys_clock_elapsed'
+  CS<None> calls function 'sys_clock_cycle_get_32'
+  CS<None> calls function 'sys_clock_idle_exit'
+  CS<None> calls function 'sys_clock_disable'
+  CS<None> calls function '_isr_wrapper'
 
-Call graph node for function: 'Default_Handler'<<0x55fdbdda19c0>>  #uses=1
-  CS<0x55fdbddfa800> calls external node
+Call graph node for function: 'DefaultHandler'<<0x555db6076750>>  #uses=1
+  CS<0x555db63bc6c0> calls function 'printk'
+  CS<0x555db63bc760> calls function 'sys_reboot'
 
-Call graph node for function: 'Default_Handler2'<<0x55fdbdda1a40>>  #uses=1
-  CS<0x55fdbddeabe0> calls external node
+Call graph node for function: '_ConfigAbsSyms'<<0x555db66dbe10>>  #uses=1
+  CS<0x555db61d7e60> calls external node
+  CS<0x555db61d7ee0> calls external node
+  CS<0x555db61d7f90> calls external node
+  CS<0x555db61d8040> calls external node
+  CS<0x555db61d80f0> calls external node
+  CS<0x555db61d81a0> calls external node
+  CS<0x555db61d8250> calls external node
+  CS<0x555db61d8300> calls external node
+  CS<0x555db61d83b0> calls external node
+  CS<0x555db61d8460> calls external node
+  CS<0x555db61d8510> calls external node
+  CS<0x555db61d85c0> calls external node
+  CS<0x555db61d8670> calls external node
+  CS<0x555db61d8720> calls external node
+  CS<0x555db61d87d0> calls external node
+  CS<0x555db61d8880> calls external node
+  CS<0x555db61d8930> calls external node
+  CS<0x555db61d89e0> calls external node
+  CS<0x555db61d8a90> calls external node
+  CS<0x555db61d8b40> calls external node
+  CS<0x555db61d8bf0> calls external node
+  CS<0x555db61d8ca0> calls external node
+  CS<0x555db61d8d50> calls external node
+  CS<0x555db61d8e00> calls external node
+  CS<0x555db61d8eb0> calls external node
+  CS<0x555db61d8f60> calls external node
+  CS<0x555db61d9010> calls external node
+  CS<0x555db61d90c0> calls external node
+  CS<0x555db61d9170> calls external node
+  CS<0x555db61d9220> calls external node
+  CS<0x555db61d92d0> calls external node
+  CS<0x555db61d9380> calls external node
+  CS<0x555db61d9430> calls external node
+  CS<0x555db61d94e0> calls external node
+  CS<0x555db61d9590> calls external node
+  CS<0x555db61d9640> calls external node
+  CS<0x555db61d96f0> calls external node
+  CS<0x555db61d97a0> calls external node
+  CS<0x555db61d9850> calls external node
+  CS<0x555db61d9900> calls external node
+  CS<0x555db61d99b0> calls external node
+  CS<0x555db61d9a60> calls external node
+  CS<0x555db61d9b10> calls external node
+  CS<0x555db61d9bc0> calls external node
+  CS<0x555db61d9c70> calls external node
+  CS<0x555db61d9d20> calls external node
+  CS<0x555db61d9dd0> calls external node
+  CS<0x555db61d9e80> calls external node
+  CS<0x555db61d9f30> calls external node
+  CS<0x555db61d9fe0> calls external node
+  CS<0x555db61da090> calls external node
+  CS<0x555db61da140> calls external node
+  CS<0x555db61da1f0> calls external node
+  CS<0x555db61da2a0> calls external node
+  CS<0x555db61da350> calls external node
+  CS<0x555db61da400> calls external node
+  CS<0x555db61da4b0> calls external node
+  CS<0x555db61da560> calls external node
+  CS<0x555db61da610> calls external node
+  CS<0x555db61da6c0> calls external node
+  CS<0x555db61da770> calls external node
+  CS<0x555db61da820> calls external node
+  CS<0x555db61da8d0> calls external node
+  CS<0x555db61da980> calls external node
+  CS<0x555db61daa30> calls external node
+  CS<0x555db61daae0> calls external node
+  CS<0x555db61dab90> calls external node
+  CS<0x555db61dac40> calls external node
+  CS<0x555db61dacf0> calls external node
+  CS<0x555db61dada0> calls external node
+  CS<0x555db61dae50> calls external node
+  CS<0x555db61daf00> calls external node
+  CS<0x555db61dafb0> calls external node
+  CS<0x555db61db060> calls external node
+  CS<0x555db61db110> calls external node
+  CS<0x555db61db1c0> calls external node
+  CS<0x555db657bdc0> calls external node
+  CS<0x555db657be40> calls external node
+  CS<0x555db657bec0> calls external node
+  CS<0x555db657bf70> calls external node
+  CS<0x555db657c020> calls external node
+  CS<0x555db657c0d0> calls external node
+  CS<0x555db657c180> calls external node
+  CS<0x555db657c230> calls external node
+  CS<0x555db657c2e0> calls external node
+  CS<0x555db657c390> calls external node
+  CS<0x555db657c440> calls external node
+  CS<0x555db657c4f0> calls external node
+  CS<0x555db657c5a0> calls external node
+  CS<0x555db657c650> calls external node
+  CS<0x555db657c700> calls external node
+  CS<0x555db657c7b0> calls external node
+  CS<0x555db657c860> calls external node
+  CS<0x555db657c910> calls external node
+  CS<0x555db657c9c0> calls external node
+  CS<0x555db657ca70> calls external node
+  CS<0x555db657cb20> calls external node
+  CS<0x555db657cbd0> calls external node
+  CS<0x555db657cc80> calls external node
+  CS<0x555db657cd30> calls external node
+  CS<0x555db657cde0> calls external node
+  CS<0x555db657ce90> calls external node
+  CS<0x555db657cf40> calls external node
+  CS<0x555db657cff0> calls external node
+  CS<0x555db657d0a0> calls external node
+  CS<0x555db657d150> calls external node
+  CS<0x555db657d200> calls external node
+  CS<0x555db657d2b0> calls external node
+  CS<0x555db657d360> calls external node
+  CS<0x555db657d410> calls external node
+  CS<0x555db657d4c0> calls external node
+  CS<0x555db657d570> calls external node
+  CS<0x555db657d620> calls external node
+  CS<0x555db657d6d0> calls external node
+  CS<0x555db657d780> calls external node
+  CS<0x555db657d830> calls external node
+  CS<0x555db657d8e0> calls external node
+  CS<0x555db657d990> calls external node
+  CS<0x555db657da40> calls external node
+  CS<0x555db657daf0> calls external node
+  CS<0x555db657dba0> calls external node
+  CS<0x555db657dc50> calls external node
+  CS<0x555db657dd00> calls external node
+  CS<0x555db657ddb0> calls external node
+  CS<0x555db657de60> calls external node
+  CS<0x555db657df10> calls external node
+  CS<0x555db657dfc0> calls external node
+  CS<0x555db657e070> calls external node
+  CS<0x555db657e120> calls external node
+  CS<0x555db657e1d0> calls external node
+  CS<0x555db657e280> calls external node
+  CS<0x555db657e330> calls external node
+  CS<0x555db657e3e0> calls external node
+  CS<0x555db657e490> calls external node
+  CS<0x555db657e540> calls external node
+  CS<0x555db657e5f0> calls external node
+  CS<0x555db657e6a0> calls external node
+  CS<0x555db657e750> calls external node
+  CS<0x555db657e800> calls external node
+  CS<0x555db657e8b0> calls external node
+  CS<0x555db657e960> calls external node
+  CS<0x555db657ea10> calls external node
+  CS<0x555db657eac0> calls external node
+  CS<0x555db657eb70> calls external node
+  CS<0x555db657ec20> calls external node
+  CS<0x555db657ecd0> calls external node
+  CS<0x555db657ed80> calls external node
+  CS<0x555db657ee30> calls external node
+  CS<0x555db657eee0> calls external node
+  CS<0x555db657ef90> calls external node
+  CS<0x555db657f040> calls external node
+  CS<0x555db657f0f0> calls external node
+  CS<0x555db657f1a0> calls external node
+  CS<0x555db657f250> calls external node
+  CS<0x555db657f300> calls external node
+  CS<0x555db657f3b0> calls external node
+  CS<0x555db657f460> calls external node
+  CS<0x555db657f510> calls external node
+  CS<0x555db657f5c0> calls external node
+  CS<0x555db657f670> calls external node
+  CS<0x555db657f720> calls external node
+  CS<0x555db657f7d0> calls external node
+  CS<0x555db657f880> calls external node
+  CS<0x555db657f930> calls external node
+  CS<0x555db657f9e0> calls external node
+  CS<0x555db657fa90> calls external node
+  CS<0x555db657fb40> calls external node
+  CS<0x555db657fbf0> calls external node
+  CS<0x555db657fca0> calls external node
+  CS<0x555db657fd50> calls external node
+  CS<0x555db657fe00> calls external node
+  CS<0x555db657feb0> calls external node
+  CS<0x555db657ff60> calls external node
+  CS<0x555db6580010> calls external node
+  CS<0x555db65800c0> calls external node
+  CS<0x555db6580170> calls external node
+  CS<0x555db6580220> calls external node
+  CS<0x555db65802d0> calls external node
+  CS<0x555db6580380> calls external node
+  CS<0x555db6580430> calls external node
+  CS<0x555db65804e0> calls external node
+  CS<0x555db6580590> calls external node
+  CS<0x555db6580640> calls external node
+  CS<0x555db65806f0> calls external node
+  CS<0x555db65807a0> calls external node
+  CS<0x555db6580850> calls external node
+  CS<0x555db6580900> calls external node
+  CS<0x555db65809b0> calls external node
+  CS<0x555db6580a60> calls external node
+  CS<0x555db6580b10> calls external node
+  CS<0x555db6580bc0> calls external node
+  CS<0x555db6580c70> calls external node
 
-Call graph node for function: 'Default_Handler3'<<0x55fdbdda57d0>>  #uses=1
+Call graph node for function: '_OffsetAbsSyms'<<0x555db60d3800>>  #uses=1
+  CS<0x555db61fa2f0> calls external node
+  CS<0x555db61fa390> calls external node
+  CS<0x555db61fa430> calls external node
+  CS<0x555db61fa4d0> calls external node
+  CS<0x555db61fa570> calls external node
+  CS<0x555db61fa610> calls external node
+  CS<0x555db61fa6b0> calls external node
+  CS<0x555db61fa750> calls external node
+  CS<0x555db61fa7f0> calls external node
+  CS<0x555db61fa890> calls external node
+  CS<0x555db61fa930> calls external node
+  CS<0x555db61fa9d0> calls external node
+  CS<0x555db61faa70> calls external node
+  CS<0x555db61fab10> calls external node
+  CS<0x555db61fabb0> calls external node
+  CS<0x555db61fac50> calls external node
+  CS<0x555db61facf0> calls external node
+  CS<0x555db61fad90> calls external node
+  CS<0x555db61fae30> calls external node
+  CS<0x555db61ec750> calls external node
+  CS<0x555db61ec7f0> calls external node
+  CS<0x555db61ec890> calls external node
+  CS<0x555db61ec930> calls external node
+  CS<0x555db61ec9d0> calls external node
+  CS<0x555db61eca70> calls external node
+  CS<0x555db61ecb10> calls external node
+  CS<0x555db61ecbb0> calls external node
+  CS<0x555db61ecc50> calls external node
+  CS<0x555db61eccf0> calls external node
+  CS<0x555db61ecd90> calls external node
+  CS<0x555db61ece30> calls external node
+  CS<0x555db61eced0> calls external node
+  CS<0x555db61ecf70> calls external node
+  CS<0x555db61ed010> calls external node
+  CS<0x555db61ed0b0> calls external node
+  CS<0x555db61ed150> calls external node
+  CS<0x555db61ed1f0> calls external node
+  CS<0x555db61ed290> calls external node
+  CS<0x555db61ed330> calls external node
+  CS<0x555db61ed3d0> calls external node
+  CS<0x555db61ed470> calls external node
+  CS<0x555db61ed540> calls external node
+  CS<0x555db61ed610> calls external node
+  CS<0x555db61ed6e0> calls external node
+  CS<0x555db61ed7b0> calls external node
+  CS<0x555db61ed880> calls external node
+  CS<0x555db61ed950> calls external node
+  CS<0x555db61eda20> calls external node
+  CS<0x555db61edf00> calls external node
 
-Call graph node for function: 'Default_Handler4'<<0x55fdbdda5850>>  #uses=1
+Call graph node for function: '__NVIC_SystemReset'<<0x555db60624f0>>  #uses=1
+  CS<0x555db659dae0> calls external node
+  CS<0x555db659dde0> calls external node
+  CS<0x555db659df30> calls external node
 
-Call graph node for function: 'Default_Handler5'<<0x55fdbdda58d0>>  #uses=1
+Call graph node for function: '__aeabi_memclr4'<<0x555db6061d60>>  #uses=1
+  CS<0x555db63bfb30> calls function 'memset'
 
-Call graph node for function: 'Default_Handler6'<<0x55fdbdda5950>>  #uses=1
+Call graph node for function: '__aeabi_memclr8'<<0x555db6061e90>>  #uses=1
+  CS<0x555db63c0410> calls function 'memset'
 
-Call graph node for function: 'Function'<<0x55fdbdd8e4e0>>  #uses=1
+Call graph node for function: '__printk_get_hook'<<0x555db6072e30>>  #uses=1
 
-Call graph node for function: 'Reset_Handler'<<0x55fdbddd89e0>>  #uses=1
-  CS<0x55fdbddf5640> calls external node
-  CS<0x55fdbddf7580> calls external node
-  CS<0x55fdbddf7600> calls external node
-  CS<0x55fdbddf7680> calls external node
+Call graph node for function: '__printk_hook_install'<<0x555db6072db0>>  #uses=2
 
-Call graph node for function: '_fstat'<<0x55fdbdda6090>>  #uses=1
+Call graph node for function: '__stdout_hook_install'<<0x555db6066a70>>  #uses=2
 
-Call graph node for function: '_read'<<0x55fdbdda6110>>  #uses=1
+Call graph node for function: '_check_fd'<<0x555db66d5a60>>  #uses=2
+  CS<0x555db62ca8e0> calls external node
+  CS<0x555db62ca990> calls function 'z_impl_z_errno'
+  CS<0x555db62cb110> calls external node
+  CS<0x555db62cb1c0> calls function 'z_impl_z_errno'
 
-Call graph node for function: '_reset'<<0x55fdbdda59d0>>  #uses=1
+Call graph node for function: '_exit'<<0x555db60660e0>>  #uses=1
+  CS<0x555db65c9f20> calls function 'printk'
 
-Call graph node for function: '_sbrk'<<0x55fdbdda4000>>  #uses=1
+Call graph node for function: '_fini'<<0x555db6061f40>>  #uses=1
 
-Call graph node for function: '_start'<<0x55fdbdda5e60>>  #uses=1
-  CS<0x55fdbde237f0> calls function 'uart_init'
-  CS<0x55fdbde23870> calls external node
-  CS<0x55fdbde23920> calls function 'curr_stamp'
-  CS<0x55fdbde240f0> calls function 'curr_stamp'
-  CS<0x55fdbde242a0> calls external node
-  CS<0x55fdbde30560> calls function 'exit'
-
-Call graph node for function: '_write'<<0x55fdbdda3f80>>  #uses=2
-
-Call graph node for function: 'bnch_marking_init'<<0x55fdbdd934b0>>  #uses=1
-
-Call graph node for function: 'case_prog'<<0x55fdbdd92f70>>  #uses=1
-  CS<0x55fdbe088b70> calls function 'printf'
-  CS<0x55fdbe088db0> calls function 'printf'
-
-Call graph node for function: 'curr_stamp'<<0x55fdbdda5f90>>  #uses=5
-  CS<0x55fdbe0915b0> calls function 'xTaskGetTickCount'
-
-Call graph node for function: 'eTaskGetState'<<0x55fdbdf07650>>  #uses=1
-  CS<0x55fdbde61b10> calls function 'vAssertCalled'
-  CS<0x55fdbde61e40> calls function 'vPortEnterCritical'
-  CS<0x55fdbdddb230> calls function 'vPortExitCritical'
-
-Call graph node for function: 'exit'<<0x55fdbdda6010>>  #uses=2
-  CS<0x55fdbde317a0> calls external node
-
-Call graph node for function: 'llvm.lifetime.end.p0i8'<<0x55fdbdda5d60>>  #uses=1
-
-Call graph node for function: 'llvm.lifetime.start.p0i8'<<0x55fdbdda5a50>>  #uses=1
-
-Call graph node for function: 'llvm.memcpy.p0i8.p0i8.i32'<<0x55fdbde09290>>  #uses=1
-
-Call graph node for function: 'llvm.memset.p0i8.i32'<<0x55fdbdf06650>>  #uses=1
-
-Call graph node for function: 'llvm.umul.with.overflow.i32'<<0x55fdbdde0360>>  #uses=1
-
-Call graph node for function: 'llvm.va_end'<<0x55fdbdda4890>>  #uses=1
-
-Call graph node for function: 'llvm.va_start'<<0x55fdbdda47e0>>  #uses=1
-
-Call graph node for function: 'main'<<0x55fdbdda4080>>  #uses=1
-  CS<0x55fdbde3ea60> calls external node
-  CS<0x55fdbde3eb00> calls external node
-  CS<0x55fdbde3ebd0> calls external node
-  CS<0x55fdbde3ec80> calls function 'main_blinky'
-  CS<0x55fdbde3ed50> calls external node
-
-Call graph node for function: 'main_blinky'<<0x55fdbdda4130>>  #uses=2
-  CS<0x55fdbe089710> calls function 'xQueueGenericCreate'
-  CS<0x55fdbe089a50> calls function 'xTaskCreate'
-  CS<0x55fdbe089bc0> calls function 'xTaskCreate'
-  CS<0x55fdbe089c70> calls function 'vTaskStartScheduler'
-
-Call graph node for function: 'mymemcmp'<<0x55fdbdd935b0>>  #uses=1
-
-Call graph node for function: 'mystrlen'<<0x55fdbdd93530>>  #uses=1
-
-Call graph node for function: 'pcQueueGetName'<<0x55fdbdde4410>>  #uses=1
-  CS<0x55fdbe017af0> calls function 'vAssertCalled'
-
-Call graph node for function: 'pcTaskGetName'<<0x55fdbdd8da40>>  #uses=1
-  CS<0x55fdbdecae30> calls function 'vAssertCalled'
-
-Call graph node for function: 'pcTimerGetName'<<0x55fdbde07870>>  #uses=1
-  CS<0x55fdbe055ab0> calls function 'vAssertCalled'
-
-Call graph node for function: 'pendSV'<<0x55fdbdda3d80>>  #uses=27
-
-Call graph node for function: 'printf'<<0x55fdbdd92ff0>>  #uses=3
+Call graph node for function: '_isr_wrapper'<<0x555db60e9a30>>  #uses=1
   CS<None> calls external node
 
-Call graph node for function: 'prvAddNewTaskToReadyList'<<0x55fdbdf05bf0>>  #uses=3
-  CS<0x55fdbde469b0> calls function 'vPortEnterCritical'
-  CS<0x55fdbde473a0> calls function 'vListInitialise'
-  CS<0x55fdbde47630> calls function 'vListInitialise'
-  CS<0x55fdbde47890> calls function 'vListInitialise'
-  CS<0x55fdbde47930> calls function 'vListInitialise'
-  CS<0x55fdbde73780> calls function 'vListInitialise'
-  CS<0x55fdbde739e0> calls function 'vListInitialise'
-  CS<0x55fdbde73c40> calls function 'vListInitialise'
-  CS<0x55fdbde73ea0> calls function 'vListInitialise'
-  CS<0x55fdbde74100> calls function 'vListInitialise'
-  CS<0x55fdbde74360> calls function 'vListInitialise'
-  CS<0x55fdbde74510> calls function 'vListInitialise'
-  CS<0x55fdbde745e0> calls function 'vListInitialise'
-  CS<0x55fdbde746b0> calls function 'vListInitialise'
-  CS<0x55fdbde74780> calls function 'vListInitialise'
-  CS<0x55fdbde74850> calls function 'vListInitialise'
-  CS<0x55fdbde75d90> calls function 'vListInsertEnd'
-  CS<0x55fdbde75e10> calls function 'vPortExitCritical'
-  CS<0x55fdbde76540> calls function 'pendSV'
-  CS<0x55fdbde765f0> calls external node
-  CS<0x55fdbde76670> calls external node
+Call graph node for function: '_stdout_hook_default'<<0x555db6066af0>>  #uses=1
 
-Call graph node for function: 'prvGetRegistersFromStack'<<0x55fdbdda5de0>>  #uses=1
+Call graph node for function: 'abort'<<0x555db6065980>>  #uses=1
+  CS<0x555db65b4c20> calls function 'printk'
+  CS<0x555db65b4ce0> calls external node
 
-Call graph node for function: 'prvIdleTask'<<0x55fdbde06280>>  #uses=1
-  CS<0x55fdbdec6990> calls function 'vPortEnterCritical'
-  CS<0x55fdbdec6ed0> calls function 'uxListRemove'
-  CS<0x55fdbdec7300> calls function 'vPortExitCritical'
-  CS<0x55fdbdec7840> calls function 'vPortFree'
-  CS<0x55fdbdec79b0> calls function 'vPortFree'
-  CS<0x55fdbdec7bc0> calls function 'vPortFree'
-  CS<0x55fdbdec7d10> calls function 'vAssertCalled'
-  CS<0x55fdbdec8220> calls function 'pendSV'
-  CS<0x55fdbdec82d0> calls external node
-  CS<0x55fdbdec8350> calls external node
-  CS<0x55fdbdec8470> calls function 'vApplicationIdleHook'
+Call graph node for function: 'alloc_chunk'<<0x555db66d86f0>>  #uses=2
+  CS<0x555db643f4a0> calls function 'free_list_remove_bidx'
+  CS<0x555db64406f0> calls function 'free_list_remove_bidx'
 
-Call graph node for function: 'prvInitialiseNewTask'<<0x55fdbdf05b70>>  #uses=3
-  CS<0x55fdbde671c0> calls function 'vAssertCalled'
-  CS<0x55fdbde67a40> calls function 'vListInitialiseItem'
-  CS<0x55fdbde67c00> calls function 'vListInitialiseItem'
-  CS<0x55fdbde68890> calls function 'pxPortInitialiseStack'
-
-Call graph node for function: 'prvInitialiseNewTimer'<<0x55fdbde06fb0>>  #uses=2
-  CS<0x55fdbe047100> calls function 'vAssertCalled'
-  CS<0x55fdbe0471f0> calls function 'vPortEnterCritical'
-  CS<0x55fdbe047500> calls function 'vListInitialise'
-  CS<0x55fdbe0475d0> calls function 'vListInitialise'
-  CS<0x55fdbe0478a0> calls function 'xQueueGenericCreateStatic'
-  CS<0x55fdbe047bf0> calls function 'vQueueAddToRegistry'
-  CS<0x55fdbe047d40> calls function 'vPortExitCritical'
-  CS<0x55fdbe0485c0> calls function 'vListInitialiseItem'
-
-Call graph node for function: 'prvNotifyQueueSetContainer'<<0x55fdbdde0780>>  #uses=4
-  CS<0x55fdbdfbd4a0> calls function 'vAssertCalled'
-  CS<0x55fdbdfbd990> calls function 'vAssertCalled'
-  CS<0x55fdbdfbeec0> calls function 'xTaskPriorityDisinherit'
-  CS<0x55fdbdfc0740> calls function 'xTaskRemoveFromEventList'
-  CS<0x55fdbdfc0a00> calls function 'vAssertCalled'
-
-Call graph node for function: 'prvPortStartFirstTask'<<0x55fdbdd8e690>>  #uses=1
-  CS<0x55fdbde2e6c0> calls external node
-
-Call graph node for function: 'prvQueueReceiveTask'<<0x55fdbdd931b0>>  #uses=1
-  CS<0x55fdbe08c4b0> calls function 'xQueueReceive'
-  CS<0x55fdbe08ca50> calls function '_write'
-  CS<0x55fdbe08cd60> calls function 'curr_stamp'
-  CS<0x55fdbe08d3d0> calls function 'vTaskDelay'
-  CS<0x55fdbe08d640> calls external node
-  CS<0x55fdbe08d710> calls external node
-  CS<0x55fdbe08d860> calls function 'curr_stamp'
-
-Call graph node for function: 'prvQueueSendTask'<<0x55fdbdd93430>>  #uses=1
-  CS<0x55fdbe08f9c0> calls function 'xTaskGetTickCount'
-  CS<0x55fdbe08fe30> calls function 'xTaskDelayUntil'
-  CS<0x55fdbe090110> calls function 'xQueueGenericSend'
-
-Call graph node for function: 'prvSampleTimeNow'<<0x55fdbde06710>>  #uses=2
-  CS<0x55fdbe03f590> calls function 'xTaskGetTickCount'
-  CS<0x55fdbe0406d0> calls function 'uxListRemove'
-  CS<0x55fdbe041d30> calls function 'vListInsert'
-  CS<0x55fdbe042180> calls external node
-  CS<0x55fdbe042dc0> calls external node
-
-Call graph node for function: 'prvSearchForNameWithinSingleList'<<0x55fdbdd8dc80>>  #uses=5
-
-Call graph node for function: 'prvTaskExitError'<<0x55fdbdd8d940>>  #uses=1
-  CS<0x55fdbde49010> calls function 'vAssertCalled'
-  CS<0x55fdbde49120> calls external node
-
-Call graph node for function: 'prvTimerTask'<<0x55fdbde06690>>  #uses=1
-  CS<0x55fdbe02f0a0> calls function 'vTaskSuspendAll'
-  CS<0x55fdbe02f2b0> calls function 'prvSampleTimeNow'
-  CS<0x55fdbe02f990> calls function 'xTaskResumeAll'
-  CS<0x55fdbe030240> calls function 'uxListRemove'
-  CS<0x55fdbe031ce0> calls function 'vListInsert'
-  CS<0x55fdbe0321a0> calls function 'vListInsert'
-  CS<0x55fdbe032540> calls external node
-  CS<0x55fdbe0329a0> calls external node
-  CS<0x55fdbe033370> calls function 'vQueueWaitForMessageRestricted'
-  CS<0x55fdbe033420> calls function 'xTaskResumeAll'
-  CS<0x55fdbe033670> calls function 'pendSV'
-  CS<0x55fdbe033720> calls external node
-  CS<0x55fdbe0337a0> calls external node
-  CS<0x55fdbe0338c0> calls function 'xTaskResumeAll'
-  CS<0x55fdbe033f90> calls function 'xQueueReceive'
-  CS<0x55fdbe034780> calls external node
-  CS<0x55fdbe035020> calls function 'uxListRemove'
-  CS<0x55fdbe0352d0> calls function 'prvSampleTimeNow'
-  CS<0x55fdbe036b70> calls function 'vListInsert'
-  CS<0x55fdbe037030> calls function 'vListInsert'
-  CS<0x55fdbe038840> calls function 'vListInsert'
-  CS<0x55fdbe038d00> calls function 'vListInsert'
-  CS<0x55fdbe0390a0> calls external node
-  CS<0x55fdbe039540> calls external node
-  CS<0x55fdbe03a080> calls function 'vAssertCalled'
-  CS<0x55fdbe03b080> calls function 'vListInsert'
-  CS<0x55fdbe03b280> calls function 'vListInsert'
-  CS<0x55fdbe03b820> calls function 'vPortFree'
-
-Call graph node for function: 'prvUnlockQueue'<<0x55fdbdd8e350>>  #uses=13
-  CS<0x55fdbdfc3280> calls function 'vPortEnterCritical'
-  CS<0x55fdbdfc3e10> calls function 'prvNotifyQueueSetContainer'
-  CS<0x55fdbdfc4060> calls function 'vTaskMissedYield'
-  CS<0x55fdbdfc43b0> calls function 'xTaskRemoveFromEventList'
-  CS<0x55fdbdfc4600> calls function 'vTaskMissedYield'
-  CS<0x55fdbdfc4af0> calls function 'vPortExitCritical'
-  CS<0x55fdbdfc4ba0> calls function 'vPortEnterCritical'
-  CS<0x55fdbdfc55a0> calls function 'xTaskRemoveFromEventList'
-  CS<0x55fdbdfc57f0> calls function 'vTaskMissedYield'
-  CS<0x55fdbdfc5ce0> calls function 'vPortExitCritical'
-
-Call graph node for function: 'pvPortMalloc'<<0x55fdbdf06750>>  #uses=7
-  CS<0x55fdbe084a80> calls function 'vTaskSuspendAll'
-  CS<0x55fdbe085600> calls function 'xTaskResumeAll'
-  CS<0x55fdbe085990> calls function 'xTaskResumeAll'
-  CS<0x55fdbe085b80> calls function 'vApplicationMallocFailedHook'
-
-Call graph node for function: 'pvTaskIncrementMutexHeldCount'<<0x55fdbde08f90>>  #uses=2
-
-Call graph node for function: 'pvTimerGetTimerID'<<0x55fdbdd91940>>  #uses=1
-  CS<0x55fdbe057b50> calls function 'vAssertCalled'
-  CS<0x55fdbe057c40> calls function 'vPortEnterCritical'
-  CS<0x55fdbe057f60> calls function 'vPortExitCritical'
-
-Call graph node for function: 'pxPortInitialiseStack'<<0x55fdbdd8d8c0>>  #uses=2
-
-Call graph node for function: 'strlen'<<0x55fdbdd8db70>>  #uses=2
+Call graph node for function: 'arch_cpu_idle'<<0x555db66dbd90>>  #uses=2
   CS<None> calls external node
 
-Call graph node for function: 'uart_init'<<0x55fdbdda5ee0>>  #uses=2
+Call graph node for function: 'arch_irq_disable'<<0x555db6076490>>  #uses=1
+  CS<0x555db63b8410> calls external node
+  CS<0x555db63b84c0> calls external node
 
-Call graph node for function: 'ucQueueGetQueueType'<<0x55fdbdde4180>>  #uses=1
+Call graph node for function: 'arch_irq_enable'<<0x555db60763e0>>  #uses=15
+  CS<0x555db63b6290> calls external node
+  CS<0x555db63b6730> calls external node
 
-Call graph node for function: 'ulTaskGenericNotifyTake'<<0x55fdbde09010>>  #uses=1
-  CS<0x55fdbde1d4f0> calls function 'vAssertCalled'
-  CS<0x55fdbde1d5e0> calls function 'vPortEnterCritical'
-  CS<0x55fdbdf67c70> calls function 'uxListRemove'
-  CS<0x55fdbdf68090> calls function 'vListInsertEnd'
-  CS<0x55fdbdf689a0> calls function 'vListInsert'
-  CS<0x55fdbdf68d60> calls function 'vListInsert'
-  CS<0x55fdbdf691b0> calls function 'pendSV'
-  CS<0x55fdbdf69260> calls external node
-  CS<0x55fdbdf692e0> calls external node
-  CS<0x55fdbdf69400> calls function 'vPortExitCritical'
-  CS<0x55fdbdf694b0> calls function 'vPortEnterCritical'
-  CS<0x55fdbdf6a430> calls function 'vPortExitCritical'
+Call graph node for function: 'arch_irq_is_enabled'<<0x555db6076570>>  #uses=1
 
-Call graph node for function: 'ulTaskGenericNotifyValueClear'<<0x55fdbdddfb30>>  #uses=1
-  CS<0x55fdbdf87720> calls function 'vPortEnterCritical'
-  CS<0x55fdbdf87ce0> calls function 'vPortExitCritical'
+Call graph node for function: 'arch_new_thread'<<0x555db6061fc0>>  #uses=1
 
-Call graph node for function: 'uxEventGroupGetNumber'<<0x55fdbdd92d40>>  #uses=1
+Call graph node for function: 'arch_printk_char_out'<<0x555db6074720>>  #uses=1
 
-Call graph node for function: 'uxListRemove'<<0x55fdbdf068d0>>  #uses=36
+Call graph node for function: 'arch_swap'<<0x555db6061cb0>>  #uses=1
+  CS<0x555db63befb0> calls external node
 
-Call graph node for function: 'uxQueueGetQueueNumber'<<0x55fdbdde4080>>  #uses=1
+Call graph node for function: 'arch_switch_to_main_thread'<<0x555db6062040>>  #uses=1
+  CS<0x555db6388ec0> calls external node
 
-Call graph node for function: 'uxQueueMessagesWaiting'<<0x55fdbdde3d20>>  #uses=1
-  CS<0x55fdbdf28f90> calls function 'vAssertCalled'
-  CS<0x55fdbdf29080> calls function 'vPortEnterCritical'
-  CS<0x55fdbdf293a0> calls function 'vPortExitCritical'
+Call graph node for function: 'arch_syscall_oops'<<0x555db6076330>>  #uses=1
+  CS<0x555db63b52e0> calls function 'z_arm_fatal_error'
 
-Call graph node for function: 'uxQueueMessagesWaitingFromISR'<<0x55fdbdde3e50>>  #uses=1
-  CS<0x55fdbdf2b1a0> calls function 'vAssertCalled'
+Call graph node for function: 'arch_timing_counter_get'<<0x555db605e640>>  #uses=3
+  CS<0x555db63af3e0> calls function 'sys_clock_cycle_get_32'
 
-Call graph node for function: 'uxQueueSpacesAvailable'<<0x55fdbdde2150>>  #uses=1
-  CS<0x55fdbdf29f80> calls function 'vAssertCalled'
-  CS<0x55fdbdf2a070> calls function 'vPortEnterCritical'
-  CS<0x55fdbdf2a5b0> calls function 'vPortExitCritical'
+Call graph node for function: 'arch_timing_cycles_get'<<0x555db6075ea0>>  #uses=1
 
-Call graph node for function: 'uxTaskGetNumberOfTasks'<<0x55fdbdd8d9c0>>  #uses=1
+Call graph node for function: 'arch_timing_cycles_to_ns'<<0x555db6075fa0>>  #uses=1
 
-Call graph node for function: 'uxTaskGetStackHighWaterMark'<<0x55fdbde08a50>>  #uses=1
+Call graph node for function: 'arch_timing_cycles_to_ns_avg'<<0x555db6076020>>  #uses=1
 
-Call graph node for function: 'uxTaskGetStackHighWaterMark2'<<0x55fdbde089d0>>  #uses=1
+Call graph node for function: 'arch_timing_freq_get'<<0x555db6075f20>>  #uses=1
 
-Call graph node for function: 'uxTaskGetSystemState'<<0x55fdbdd8df90>>  #uses=1
-  CS<0x55fdbdee9470> calls external node
-  CS<0x55fdbdf08e90> calls external node
-  CS<0x55fdbdf093c0> calls function 'xTaskResumeAll'
-  CS<0x55fdbdf0b3a0> calls function 'xTaskResumeAll'
+Call graph node for function: 'arch_timing_freq_get_mhz'<<0x555db60760a0>>  #uses=1
 
-Call graph node for function: 'uxTaskGetTaskNumber'<<0x55fdbde087a0>>  #uses=1
+Call graph node for function: 'arch_timing_init'<<0x555db6075ca0>>  #uses=1
 
-Call graph node for function: 'uxTaskPriorityGet'<<0x55fdbdf076d0>>  #uses=1
-  CS<0x55fdbdddd330> calls function 'vPortEnterCritical'
-  CS<0x55fdbdddd9b0> calls function 'vPortExitCritical'
+Call graph node for function: 'arch_timing_start'<<0x555db6075d20>>  #uses=1
 
-Call graph node for function: 'uxTaskPriorityGetFromISR'<<0x55fdbdf07750>>  #uses=1
-  CS<0x55fdbddde060> calls function 'vPortValidateInterruptPriority'
-  CS<0x55fdbddde130> calls external node
-  CS<0x55fdbdea8df0> calls external node
+Call graph node for function: 'arch_timing_stop'<<0x555db6075da0>>  #uses=1
 
-Call graph node for function: 'uxTaskResetEventItemValue'<<0x55fdbde08f10>>  #uses=3
+Call graph node for function: 'arm_core_mpu_configure_dynamic_mpu_regions'<<0x555db6062ac0>>  #uses=2
+  CS<0x555db65aed50> calls function 'mpu_configure_regions'
+  CS<0x555db65afc10> calls function 'printk'
+  CS<0x555db65afd70> calls function 'printk'
+  CS<0x555db65afe30> calls function 'assert_post_action'
+
+Call graph node for function: 'arm_core_mpu_configure_static_mpu_regions'<<0x555db60627d0>>  #uses=2
+  CS<0x555db65a3130> calls function 'mpu_configure_regions'
+  CS<0x555db65a3640> calls function 'printk'
+  CS<0x555db65a37a0> calls function 'printk'
+  CS<0x555db65a3860> calls function 'assert_post_action'
+
+Call graph node for function: 'arm_core_mpu_disable'<<0x555db6062ca0>>  #uses=1
+  CS<0x555db65b0b60> calls external node
 
-Call graph node for function: 'uxTimerGetReloadMode'<<0x55fdbde076c0>>  #uses=1
-  CS<0x55fdbe053b50> calls function 'vAssertCalled'
-  CS<0x55fdbe053c40> calls function 'vPortEnterCritical'
-  CS<0x55fdbe054120> calls function 'vPortExitCritical'
+Call graph node for function: 'arm_core_mpu_enable'<<0x555db6062c20>>  #uses=1
+  CS<0x555db65b0700> calls external node
+  CS<0x555db65b07b0> calls external node
+
+Call graph node for function: 'arm_mps2_init'<<0x555db60745f0>>  #uses=1
+  CS<0x555db6200e70> calls function 'z_arm_nmi_init'
+
+Call graph node for function: 'arm_mps2_pinmux_init'<<0x555db612aca0>>  #uses=1
+
+Call graph node for function: 'assert_post_action'<<0x555db605e4c0>>  #uses=96
+  CS<0x555db624ad50> calls external node
 
-Call graph node for function: 'uxTimerGetTimerNumber'<<0x55fdbdd91cd0>>  #uses=1
+Call graph node for function: 'atoi'<<0x555db6065a00>>  #uses=1
 
-Call graph node for function: 'vApplicationGetIdleTaskMemory'<<0x55fdbdda4910>>  #uses=2
+Call graph node for function: 'bin2hex'<<0x555db6072b50>>  #uses=1
 
-Call graph node for function: 'vApplicationGetTimerTaskMemory'<<0x55fdbdd8d840>>  #uses=2
+Call graph node for function: 'blink'<<0x555db6071a40>>  #uses=3
+  CS<0x555db61f1710> calls function 'timing_start'
+  CS<0x555db61f2740> calls function 'k_malloc'
+  CS<0x555db6167620> calls function 'printk'
+  CS<0x555db61f2b10> calls function 'assert_post_action'
+  CS<0x555db61f2c60> calls function 'memcpy'
+  CS<0x555db61f2d50> calls function 'k_queue_append'
+  CS<0x555db61f2e00> calls function 'arch_timing_counter_get'
+  CS<0x555db61f36e0> calls function 'printk'
+  CS<0x555db61f3ab0> calls external node
+  CS<0x555db61f3b80> calls function 'z_impl_k_sleep'
+  CS<0x555db61f3c30> calls function 'arch_timing_counter_get'
 
-Call graph node for function: 'vApplicationIdleHook'<<0x55fdbdda4430>>  #uses=2
+Call graph node for function: 'blink0'<<0x555db60719c0>>  #uses=1
+  CS<0x555db61ee1d0> calls function 'blink'
 
-Call graph node for function: 'vApplicationMallocFailedHook'<<0x55fdbdda4300>>  #uses=2
-  CS<0x55fdbde3f8b0> calls external node
+Call graph node for function: 'blink1'<<0x555db6074360>>  #uses=1
+  CS<0x555db61f44c0> calls function 'blink'
 
-Call graph node for function: 'vApplicationStackOverflowHook'<<0x55fdbdda4380>>  #uses=1
-  CS<0x55fdbde2fe90> calls external node
+Call graph node for function: 'bsearch'<<0x555db6066060>>  #uses=1
+  CS<0x555db65c8810> calls external node
 
-Call graph node for function: 'vApplicationTickHook'<<0x55fdbdda44b0>>  #uses=3
+Call graph node for function: 'calloc'<<0x555db6065e80>>  #uses=1
+  CS<0x555db65c4c90> calls external node
+  CS<0x555db65c4d40> calls function 'z_impl_z_errno'
+  CS<0x555db65c5140> calls external node
+  CS<0x555db65c51f0> calls function 'z_impl_z_errno'
 
-Call graph node for function: 'vAssertCalled'<<0x55fdbdda4530>>  #uses=157
-  CS<0x55fdbde42e50> calls function 'vPortEnterCritical'
-  CS<0x55fdbde430d0> calls function 'vPortExitCritical'
+Call graph node for function: 'cbpprintf'<<0x555db66d63c0>>  #uses=1
+  CS<0x555db623b4b0> calls function 'strlen'
+  CS<0x555db6250c90> calls function 'cbvprintf'
 
-Call graph node for function: 'vEventGroupClearBitsCallback'<<0x55fdbdd928a0>>  #uses=1
-  CS<0x55fdbe07b2d0> calls function 'vAssertCalled'
-  CS<0x55fdbe07b560> calls function 'vAssertCalled'
-  CS<0x55fdbe07b810> calls function 'vPortEnterCritical'
-  CS<0x55fdbe07bcc0> calls function 'vPortExitCritical'
+Call graph node for function: 'cbprintf'<<0x555db60747a0>>  #uses=1
+  CS<0x555db6203a80> calls function 'cbvprintf'
+
+Call graph node for function: 'cbprintf_fsc_package'<<0x555db66d6470>>  #uses=1
+  CS<0x555db629c410> calls function 'memcpy'
+  CS<0x555db629cb80> calls function 'memcpy'
+  CS<0x555db629df80> calls function 'strlen'
+  CS<0x555db629e990> calls function 'memcpy'
+
+Call graph node for function: 'cbprintf_package'<<0x555db66d6310>>  #uses=1
+  CS<0x555db608f770> calls function 'cbvprintf_package'
 
-Call graph node for function: 'vEventGroupDelete'<<0x55fdbdd92a80>>  #uses=1
-  CS<0x55fdbe07e780> calls function 'vAssertCalled'
-  CS<0x55fdbe07ea90> calls function 'vTaskSuspendAll'
-  CS<0x55fdbe07f300> calls function 'vAssertCalled'
-  CS<0x55fdbe07f530> calls function 'vTaskRemoveFromUnorderedEventList'
-  CS<0x55fdbe07fb50> calls function 'vPortFree'
-  CS<0x55fdbe07fca0> calls function 'xTaskResumeAll'
-
-Call graph node for function: 'vEventGroupSetBitsCallback'<<0x55fdbdd92c10>>  #uses=1
-  CS<0x55fdbe0809e0> calls function 'xEventGroupSetBits'
-
-Call graph node for function: 'vEventGroupSetNumber'<<0x55fdbdd92dc0>>  #uses=1
-
-Call graph node for function: 'vListInitialise'<<0x55fdbdf05e40>>  #uses=30
-
-Call graph node for function: 'vListInitialiseItem'<<0x55fdbdf05dc0>>  #uses=4
-
-Call graph node for function: 'vListInsert'<<0x55fdbdf06b20>>  #uses=25
-
-Call graph node for function: 'vListInsertEnd'<<0x55fdbdf060c0>>  #uses=29
-
-Call graph node for function: 'vLoggingPrintf'<<0x55fdbdda46e0>>  #uses=1
-  CS<0x55fdbde44350> calls function 'vprintf'
-
-Call graph node for function: 'vPortEndScheduler'<<0x55fdbdda3bc0>>  #uses=2
-  CS<0x55fdbde2eb20> calls function 'vAssertCalled'
-
-Call graph node for function: 'vPortEnterCritical'<<0x55fdbdda45b0>>  #uses=66
-  CS<0x55fdbde2f3b0> calls external node
-  CS<0x55fdbde2f970> calls function 'vAssertCalled'
-
-Call graph node for function: 'vPortExitCritical'<<0x55fdbdda4660>>  #uses=73
-  CS<0x55fdbde55c80> calls function 'vAssertCalled'
-  CS<0x55fdbde56200> calls external node
-
-Call graph node for function: 'vPortFree'<<0x55fdbdf067d0>>  #uses=11
-
-Call graph node for function: 'vPortInitialiseBlocks'<<0x55fdbdd92e70>>  #uses=1
-
-Call graph node for function: 'vPortSVCHandler'<<0x55fdbdd8e460>>  #uses=1
-  CS<0x55fdbde22040> calls external node
-
-Call graph node for function: 'vPortSetupTimerInterrupt'<<0x55fdbdd8e5e0>>  #uses=2
-
-Call graph node for function: 'vPortValidateInterruptPriority'<<0x55fdbdda3ef0>>  #uses=11
-  CS<0x55fdbde59730> calls external node
-  CS<0x55fdbde59e40> calls function 'vAssertCalled'
-  CS<0x55fdbde5a240> calls function 'vAssertCalled'
-
-Call graph node for function: 'vQueueAddToRegistry'<<0x55fdbdde4360>>  #uses=3
-  CS<0x55fdbe00bd80> calls function 'vAssertCalled'
-
-Call graph node for function: 'vQueueDelete'<<0x55fdbdde3ed0>>  #uses=1
-  CS<0x55fdbdf2c0f0> calls function 'vQueueUnregisterQueue'
-  CS<0x55fdbdf2c210> calls function 'vAssertCalled'
-  CS<0x55fdbdf2c2b0> calls function 'vQueueUnregisterQueue'
-  CS<0x55fdbdf2c760> calls function 'vPortFree'
-
-Call graph node for function: 'vQueueSetQueueNumber'<<0x55fdbdde4100>>  #uses=1
-
-Call graph node for function: 'vQueueUnregisterQueue'<<0x55fdbdde3f50>>  #uses=3
-  CS<0x55fdbdf2e800> calls function 'vAssertCalled'
-
-Call graph node for function: 'vQueueWaitForMessageRestricted'<<0x55fdbdde44c0>>  #uses=2
-  CS<0x55fdbe01e5c0> calls function 'vPortEnterCritical'
-  CS<0x55fdbe01ee40> calls function 'vPortExitCritical'
-  CS<0x55fdbe01f310> calls function 'vTaskPlaceOnEventListRestricted'
-  CS<0x55fdbe01f480> calls function 'prvUnlockQueue'
-
-Call graph node for function: 'vTaskDelay'<<0x55fdbdf071c0>>  #uses=2
-  CS<0x55fdbde9ed20> calls function 'vAssertCalled'
-  CS<0x55fdbde9efd0> calls external node
-  CS<0x55fdbde9f730> calls function 'uxListRemove'
-  CS<0x55fdbde9ffa0> calls function 'vListInsert'
-  CS<0x55fdbdddaad0> calls function 'vListInsert'
-  CS<0x55fdbde601c0> calls function 'xTaskResumeAll'
-  CS<0x55fdbde605d0> calls function 'pendSV'
-  CS<0x55fdbde60680> calls external node
-  CS<0x55fdbde60700> calls external node
-
-Call graph node for function: 'vTaskDelete'<<0x55fdbdf06850>>  #uses=1
-  CS<0x55fdbde7b240> calls function 'vPortEnterCritical'
-  CS<0x55fdbde7b7c0> calls function 'uxListRemove'
-  CS<0x55fdbde7bc70> calls function 'uxListRemove'
-  CS<0x55fdbde7c200> calls function 'vListInsertEnd'
-  CS<0x55fdbde7cbe0> calls function 'vPortFree'
-  CS<0x55fdbde7cd50> calls function 'vPortFree'
-  CS<0x55fdbde7cf60> calls function 'vPortFree'
-  CS<0x55fdbde7d0b0> calls function 'vAssertCalled'
-  CS<0x55fdbde7dac0> calls function 'vPortExitCritical'
-  CS<0x55fdbde7e200> calls function 'vAssertCalled'
-  CS<0x55fdbde7e2f0> calls function 'pendSV'
-  CS<0x55fdbde7e3a0> calls external node
-  CS<0x55fdbde7e420> calls external node
-
-Call graph node for function: 'vTaskEndScheduler'<<0x55fdbde06590>>  #uses=1
-  CS<0x55fdbdec8fb0> calls external node
-  CS<0x55fdbdec9030> calls function 'vPortEndScheduler'
-
-Call graph node for function: 'vTaskGenericNotifyGiveFromISR'<<0x55fdbdddf7a0>>  #uses=1
-  CS<0x55fdbdf80e60> calls function 'vAssertCalled'
-  CS<0x55fdbdf810f0> calls function 'vAssertCalled'
-  CS<0x55fdbdf811e0> calls function 'vPortValidateInterruptPriority'
-  CS<0x55fdbdf813c0> calls external node
-  CS<0x55fdbdf822e0> calls function 'vAssertCalled'
-  CS<0x55fdbdf82720> calls function 'uxListRemove'
-  CS<0x55fdbdf82d70> calls function 'vListInsertEnd'
-  CS<0x55fdbdf82ed0> calls function 'vListInsertEnd'
-  CS<0x55fdbdf83cd0> calls external node
-
-Call graph node for function: 'vTaskGetInfo'<<0x55fdbde088a0>>  #uses=1
-  CS<0x55fdbdf4c9d0> calls external node
-  CS<0x55fdbdf4cf00> calls function 'xTaskResumeAll'
-  CS<0x55fdbdf4d290> calls function 'vPortEnterCritical'
-  CS<0x55fdbdf4d8d0> calls function 'vPortExitCritical'
-
-Call graph node for function: 'vTaskInternalSetTimeOutState'<<0x55fdbde08570>>  #uses=5
-
-Call graph node for function: 'vTaskMissedYield'<<0x55fdbde08720>>  #uses=4
-
-Call graph node for function: 'vTaskPlaceOnEventList'<<0x55fdbde07d30>>  #uses=5
-  CS<0x55fdbdea69a0> calls function 'vAssertCalled'
-  CS<0x55fdbdea6c60> calls function 'vListInsert'
-  CS<0x55fdbdea7480> calls function 'uxListRemove'
-  CS<0x55fdbdea78a0> calls function 'vListInsertEnd'
-  CS<0x55fdbdea81b0> calls function 'vListInsert'
-  CS<0x55fdbde91c50> calls function 'vListInsert'
-
-Call graph node for function: 'vTaskPlaceOnEventListRestricted'<<0x55fdbde07f80>>  #uses=2
-  CS<0x55fdbde975f0> calls function 'vAssertCalled'
-  CS<0x55fdbde978b0> calls function 'vListInsertEnd'
-  CS<0x55fdbde98350> calls function 'uxListRemove'
-  CS<0x55fdbde98bc0> calls function 'vListInsert'
-  CS<0x55fdbde98f80> calls function 'vListInsert'
-  CS<0x55fdbdf3a910> calls function 'uxListRemove'
-  CS<0x55fdbdf3ab90> calls function 'vListInsertEnd'
-
-Call graph node for function: 'vTaskPlaceOnUnorderedEventList'<<0x55fdbde07db0>>  #uses=3
-  CS<0x55fdbde93700> calls function 'vAssertCalled'
-  CS<0x55fdbde93a00> calls function 'vAssertCalled'
-  CS<0x55fdbde93f60> calls function 'vListInsertEnd'
-  CS<0x55fdbde94780> calls function 'uxListRemove'
-  CS<0x55fdbde94ba0> calls function 'vListInsertEnd'
-  CS<0x55fdbde954b0> calls function 'vListInsert'
-  CS<0x55fdbde95870> calls function 'vListInsert'
-
-Call graph node for function: 'vTaskPriorityDisinheritAfterTimeout'<<0x55fdbde08de0>>  #uses=2
-  CS<0x55fdbdf60380> calls function 'vAssertCalled'
-  CS<0x55fdbdf60fd0> calls function 'vAssertCalled'
-  CS<0x55fdbdf61d30> calls function 'uxListRemove'
-  CS<0x55fdbdf622c0> calls function 'vListInsertEnd'
-
-Call graph node for function: 'vTaskPrioritySet'<<0x55fdbdf078e0>>  #uses=1
-  CS<0x55fdbdeab610> calls function 'vAssertCalled'
-  CS<0x55fdbdeab870> calls function 'vPortEnterCritical'
-  CS<0x55fdbdeadc00> calls function 'uxListRemove'
-  CS<0x55fdbdeae190> calls function 'vListInsertEnd'
-  CS<0x55fdbdeae390> calls function 'pendSV'
-  CS<0x55fdbdeae440> calls external node
-  CS<0x55fdbdeae4c0> calls external node
-  CS<0x55fdbdeae5e0> calls function 'vPortExitCritical'
-
-Call graph node for function: 'vTaskRemoveFromUnorderedEventList'<<0x55fdbde08320>>  #uses=3
-  CS<0x55fdbdf3f4c0> calls function 'vAssertCalled'
-  CS<0x55fdbdf3fc40> calls function 'vAssertCalled'
-  CS<0x55fdbdf3fd50> calls function 'uxListRemove'
-  CS<0x55fdbdf3ff10> calls function 'uxListRemove'
-  CS<0x55fdbdf40560> calls function 'vListInsertEnd'
-
-Call graph node for function: 'vTaskResume'<<0x55fdbde05a10>>  #uses=1
-  CS<0x55fdbdeb7b20> calls function 'vAssertCalled'
-  CS<0x55fdbdeb7ec0> calls function 'vPortEnterCritical'
-  CS<0x55fdbdeb89c0> calls function 'uxListRemove'
-  CS<0x55fdbdeb9010> calls function 'vListInsertEnd'
-  CS<0x55fdbdeb94d0> calls function 'pendSV'
-  CS<0x55fdbdeb9580> calls external node
-  CS<0x55fdbdeb9600> calls external node
-  CS<0x55fdbdeb9720> calls function 'vPortExitCritical'
-
-Call graph node for function: 'vTaskSetTaskNumber'<<0x55fdbde08820>>  #uses=1
-
-Call graph node for function: 'vTaskSetTimeOutState'<<0x55fdbde084f0>>  #uses=1
-  CS<0x55fdbdf417c0> calls function 'vAssertCalled'
-  CS<0x55fdbdf418b0> calls function 'vPortEnterCritical'
-  CS<0x55fdbdf41e00> calls function 'vPortExitCritical'
-
-Call graph node for function: 'vTaskStartScheduler'<<0x55fdbde05ef0>>  #uses=2
-  CS<0x55fdbdec15c0> calls function 'vApplicationGetIdleTaskMemory'
-  CS<0x55fdbdec24d0> calls function 'vAssertCalled'
-  CS<0x55fdbdec2760> calls function 'vAssertCalled'
-  CS<0x55fdbdec2d90> calls function 'vAssertCalled'
-  CS<0x55fdbdec38c0> calls function 'prvInitialiseNewTask'
-  CS<0x55fdbdec3990> calls function 'prvAddNewTaskToReadyList'
-  CS<0x55fdbdec43c0> calls function 'xTimerCreateTimerTask'
-  CS<0x55fdbdec46c0> calls external node
-  CS<0x55fdbdec4af0> calls function 'xPortStartScheduler'
-  CS<0x55fdbdec4c40> calls function 'vAssertCalled'
-
-Call graph node for function: 'vTaskSuspend'<<0x55fdbde055b0>>  #uses=1
-  CS<0x55fdbdeb0bb0> calls function 'vPortEnterCritical'
-  CS<0x55fdbdeb1080> calls function 'uxListRemove'
-  CS<0x55fdbdeb1530> calls function 'uxListRemove'
-  CS<0x55fdbdeb16c0> calls function 'vListInsertEnd'
-  CS<0x55fdbdeb1fd0> calls function 'vPortExitCritical'
-  CS<0x55fdbdeb22c0> calls function 'vPortEnterCritical'
-  CS<0x55fdbdeb2c60> calls function 'vPortExitCritical'
-  CS<0x55fdbdeb3440> calls function 'vAssertCalled'
-  CS<0x55fdbdeb3530> calls function 'pendSV'
-  CS<0x55fdbdeb35e0> calls external node
-  CS<0x55fdbdeb3660> calls external node
-  CS<0x55fdbdeb4760> calls function 'vAssertCalled'
-
-Call graph node for function: 'vTaskSuspendAll'<<0x55fdbdf07140>>  #uses=11
-  CS<0x55fdbde9d920> calls external node
-
-Call graph node for function: 'vTaskSwitchContext'<<0x55fdbdd8e770>>  #uses=2
-  CS<0x55fdbde5b790> calls function 'vAssertCalled'
-
-Call graph node for function: 'vTimerSetReloadMode'<<0x55fdbde07610>>  #uses=1
-  CS<0x55fdbe0524c0> calls function 'vAssertCalled'
-  CS<0x55fdbe0525b0> calls function 'vPortEnterCritical'
-  CS<0x55fdbe052e70> calls function 'vPortExitCritical'
-
-Call graph node for function: 'vTimerSetTimerID'<<0x55fdbdd91a70>>  #uses=1
-  CS<0x55fdbe058d20> calls function 'vAssertCalled'
-  CS<0x55fdbe058e10> calls function 'vPortEnterCritical'
-  CS<0x55fdbe059070> calls function 'vPortExitCritical'
-
-Call graph node for function: 'vTimerSetTimerNumber'<<0x55fdbdd91d50>>  #uses=1
-
-Call graph node for function: 'vprintf'<<0x55fdbdda4760>>  #uses=2
+Call graph node for function: 'cbvprintf'<<0x555db6074820>>  #uses=15
+  CS<0x555db62183f0> calls external node
+  CS<0x555db6236060> calls external node
+  CS<0x555db6236af0> calls external node
+  CS<0x555db62372b0> calls function 'strnlen'
+  CS<0x555db621b680> calls function 'strlen'
+  CS<0x555db6221e20> calls function 'encode_uint'
+  CS<0x555db623c2c0> calls function 'encode_uint'
+  CS<0x555db62408a0> calls external node
+  CS<0x555db6241b60> calls external node
+  CS<0x555db6242790> calls external node
+  CS<0x555db6243310> calls external node
+  CS<0x555db6243e80> calls external node
+  CS<0x555db6244d70> calls external node
+  CS<0x555db62463d0> calls external node
+  CS<0x555db6247430> calls external node
+
+Call graph node for function: 'cbvprintf_package'<<0x555db66d5f20>>  #uses=2
+  CS<0x555db6272460> calls function 'printk'
+  CS<0x555db6272530> calls function 'printk'
+  CS<0x555db62725f0> calls function 'assert_post_action'
+  CS<0x555db6272a60> calls function 'printk'
+  CS<0x555db6272b30> calls function 'printk'
+  CS<0x555db6272bf0> calls function 'assert_post_action'
+  CS<0x555db6273a90> calls function 'strlen'
+  CS<0x555db6276800> calls function 'printk'
+  CS<0x555db62768f0> calls function 'printk'
+  CS<0x555db62769b0> calls function 'assert_post_action'
+  CS<0x555db6278390> calls function 'printk'
+  CS<0x555db6278460> calls function 'printk'
+  CS<0x555db6278520> calls function 'assert_post_action'
+  CS<0x555db627dad0> calls function 'strlen'
+  CS<0x555db627e3b0> calls function 'memcpy'
+
+Call graph node for function: 'char2hex'<<0x555db6072a50>>  #uses=1
+
+Call graph node for function: 'char_out'<<0x555db66d6260>>  #uses=1
+  CS<0x555db624bbd0> calls external node
+
+Call graph node for function: 'console_out'<<0x555db612ae50>>  #uses=1
+  CS<0x555db6641fd0> calls external node
+  CS<0x555db6642620> calls external node
+  CS<0x555db6642aa0> calls external node
+  CS<0x555db6643060> calls external node
+
+Call graph node for function: 'crc16'<<0x555db66d66d0>>  #uses=1
+
+Call graph node for function: 'crc16_ccitt'<<0x555db65ac270>>  #uses=1
+
+Call graph node for function: 'crc16_itu_t'<<0x555db65ac2f0>>  #uses=1
+
+Call graph node for function: 'crc32_c'<<0x555db66d6550>>  #uses=1
+
+Call graph node for function: 'crc32_ieee'<<0x555db66d65d0>>  #uses=1
+  CS<0x555db61fea30> calls function 'crc32_ieee_update'
+
+Call graph node for function: 'crc32_ieee_update'<<0x555db66d6650>>  #uses=2
+
+Call graph node for function: 'crc7_be'<<0x555db66d58e0>>  #uses=1
+
+Call graph node for function: 'crc8'<<0x555db66d5860>>  #uses=1
+
+Call graph node for function: 'crc8_ccitt'<<0x555db66d57e0>>  #uses=1
+
+Call graph node for function: 'elapsed'<<0x555db6060bd0>>  #uses=4
+
+Call graph node for function: 'encode_uint'<<0x555db66d5da0>>  #uses=2
+
+Call graph node for function: 'find_and_stack'<<0x555db62326d0>>  #uses=2
+  CS<0x555db63749d0> calls external node
+
+Call graph node for function: 'fprintf'<<0x555db612a6d0>>  #uses=1
+  CS<0x555db63e32c0> calls function 'cbvprintf'
+
+Call graph node for function: 'fputc'<<0x555db6066c20>>  #uses=1
+  CS<0x555db66029f0> calls external node
+  CS<0x555db6602fc0> calls external node
+
+Call graph node for function: 'fputs'<<0x555db6066d30>>  #uses=2
+  CS<0x555db6604710> calls function 'strlen'
+  CS<0x555db66051b0> calls external node
+  CS<0x555db6606490> calls external node
+
+Call graph node for function: 'free'<<0x555db6065d20>>  #uses=1
+
+Call graph node for function: 'free_chunk'<<0x555db66d8220>>  #uses=2
+  CS<0x555db631ea40> calls function 'free_list_remove'
+  CS<0x555db6320200> calls function 'merge_chunks'
+  CS<0x555db64018b0> calls function 'free_list_remove'
+  CS<0x555db6402b80> calls function 'merge_chunks'
+  CS<0x555db6404160> calls function 'free_list_add'
+
+Call graph node for function: 'free_list_add'<<0x555db66d83a0>>  #uses=6
+
+Call graph node for function: 'free_list_remove'<<0x555db66d82a0>>  #uses=3
+  CS<0x555db64092d0> calls function 'free_list_remove_bidx'
+
+Call graph node for function: 'free_list_remove_bidx'<<0x555db66d8570>>  #uses=3
+
+Call graph node for function: 'fwrite'<<0x555db612a100>>  #uses=1
+  CS<0x555db66088e0> calls external node
+  CS<0x555db6608a10> calls function 'z_impl_zephyr_fwrite'
+
+Call graph node for function: 'gmtime'<<0x555db612aa10>>  #uses=1
+  CS<0x555db66346f0> calls function 'gmtime_r'
+
+Call graph node for function: 'gmtime_r'<<0x555db612a990>>  #uses=2
+
+Call graph node for function: 'gpio_cmsdk_ahb_config'<<0x555db612afb0>>  #uses=1
+
+Call graph node for function: 'gpio_cmsdk_ahb_init'<<0x555db612b9b0>>  #uses=1
+  CS<0x555db6664230> calls external node
+
+Call graph node for function: 'gpio_cmsdk_ahb_isr'<<0x555db612b8d0>>  #uses=1
+  CS<0x555db6662020> calls function 'printk'
+  CS<0x555db66620f0> calls function 'printk'
+  CS<0x555db66621b0> calls function 'assert_post_action'
+  CS<0x555db6662660> calls external node
+
+Call graph node for function: 'gpio_cmsdk_ahb_manage_callback'<<0x555db612b330>>  #uses=1
+  CS<0x555db6655420> calls function 'printk'
+  CS<0x555db66554f0> calls function 'printk'
+  CS<0x555db66555b0> calls function 'assert_post_action'
+  CS<0x555db66559f0> calls function 'printk'
+  CS<0x555db6655ac0> calls function 'printk'
+  CS<0x555db6655b80> calls function 'assert_post_action'
+
+Call graph node for function: 'gpio_cmsdk_ahb_pin_interrupt_configure'<<0x555db612b2b0>>  #uses=1
+
+Call graph node for function: 'gpio_cmsdk_ahb_port_clear_bits_raw'<<0x555db612b1b0>>  #uses=1
+
+Call graph node for function: 'gpio_cmsdk_ahb_port_get_raw'<<0x555db612b030>>  #uses=1
+
+Call graph node for function: 'gpio_cmsdk_ahb_port_set_bits_raw'<<0x555db612b130>>  #uses=1
+
+Call graph node for function: 'gpio_cmsdk_ahb_port_set_masked_raw'<<0x555db612b0b0>>  #uses=1
+
+Call graph node for function: 'gpio_cmsdk_ahb_port_toggle_bits'<<0x555db612b230>>  #uses=1
+
+Call graph node for function: 'gpio_cmsdk_port_0_config_func'<<0x555db612b5b0>>  #uses=1
+  CS<0x555db665c670> calls function 'z_arm_irq_priority_set'
+  CS<0x555db665c740> calls function 'arch_irq_enable'
+
+Call graph node for function: 'gpio_cmsdk_port_1_config_func'<<0x555db612b630>>  #uses=1
+  CS<0x555db665d5a0> calls function 'z_arm_irq_priority_set'
+  CS<0x555db665d670> calls function 'arch_irq_enable'
+
+Call graph node for function: 'gpio_cmsdk_port_2_config_func'<<0x555db612b710>>  #uses=1
+  CS<0x555db665dbc0> calls function 'z_arm_irq_priority_set'
+  CS<0x555db665dc90> calls function 'arch_irq_enable'
+
+Call graph node for function: 'gpio_cmsdk_port_3_config_func'<<0x555db612b7f0>>  #uses=1
+  CS<0x555db665e1e0> calls function 'z_arm_irq_priority_set'
+  CS<0x555db665e2b0> calls function 'arch_irq_enable'
+
+Call graph node for function: 'gpio_mmio32_config'<<0x555db6130a40>>  #uses=1
+  CS<0x555db66668c0> calls external node
+  CS<0x555db6667b20> calls external node
+
+Call graph node for function: 'gpio_mmio32_init'<<0x555db6130f70>>  #uses=1
+
+Call graph node for function: 'gpio_mmio32_pin_interrupt_configure'<<0x555db6130ef0>>  #uses=1
+
+Call graph node for function: 'gpio_mmio32_port_clear_bits_raw'<<0x555db6130d30>>  #uses=1
+  CS<0x555db666fda0> calls external node
+  CS<0x555db66705f0> calls external node
+
+Call graph node for function: 'gpio_mmio32_port_get_raw'<<0x555db6130af0>>  #uses=1
+
+Call graph node for function: 'gpio_mmio32_port_set_bits_raw'<<0x555db6130c50>>  #uses=1
+  CS<0x555db666dbf0> calls external node
+  CS<0x555db666e380> calls external node
+
+Call graph node for function: 'gpio_mmio32_port_set_masked_raw'<<0x555db6130b70>>  #uses=1
+  CS<0x555db666b780> calls external node
+  CS<0x555db666c090> calls external node
+
+Call graph node for function: 'gpio_mmio32_port_toggle_bits'<<0x555db6130e10>>  #uses=1
+  CS<0x555db6672030> calls external node
+  CS<0x555db66727c0> calls external node
+
+Call graph node for function: 'heap_print_info'<<0x555db66d97c0>>  #uses=2
+  CS<0x555db64e4f30> calls function 'printk'
+  CS<0x555db64e5000> calls function 'printk'
+  CS<0x555db64e9ab0> calls function 'printk'
+  CS<0x555db64e9fe0> calls function 'printk'
+  CS<0x555db64f6960> calls function 'printk'
+  CS<0x555db64f7e90> calls function 'printk'
+
+Call graph node for function: 'hex2bin'<<0x555db6072bd0>>  #uses=1
+
+Call graph node for function: 'hex2char'<<0x555db6072ad0>>  #uses=1
+
+Call graph node for function: 'i2c_bitbang_configure'<<0x555db6131070>>  #uses=2
+
+Call graph node for function: 'i2c_bitbang_init'<<0x555db605f300>>  #uses=2
+
+Call graph node for function: 'i2c_bitbang_recover_bus'<<0x555db605f580>>  #uses=1
+  CS<0x555db669f530> calls function 'i2c_start'
+  CS<0x555db669f8e0> calls function 'i2c_write_bit'
+  CS<0x555db669fcc0> calls function 'i2c_repeated_start'
+  CS<0x555db669fd90> calls function 'i2c_stop'
+  CS<0x555db66a0390> calls external node
+
+Call graph node for function: 'i2c_bitbang_transfer'<<0x555db6131170>>  #uses=2
+  CS<0x555db667a1d0> calls external node
+  CS<0x555db667ab80> calls function 'i2c_stop'
+  CS<0x555db667b030> calls function 'i2c_start'
+  CS<0x555db667b530> calls function 'i2c_repeated_start'
+  CS<0x555db667c030> calls function 'i2c_write_byte'
+  CS<0x555db667d530> calls function 'i2c_read_bit'
+  CS<0x555db667de70> calls function 'i2c_write_bit'
+  CS<0x555db667e5f0> calls function 'i2c_write_byte'
+  CS<0x555db667ef10> calls function 'i2c_stop'
+
+Call graph node for function: 'i2c_dump_msgs'<<0x555db605f500>>  #uses=1
+
+Call graph node for function: 'i2c_read_bit'<<0x555db61316b0>>  #uses=2
+  CS<0x555db6690140> calls external node
+  CS<0x555db66906c0> calls external node
+  CS<0x555db6690a00> calls function 'sys_clock_cycle_get_32'
+  CS<0x555db6690c00> calls function 'sys_clock_cycle_get_32'
+  CS<0x555db66912b0> calls external node
+  CS<0x555db6691940> calls external node
+  CS<0x555db6691c80> calls function 'sys_clock_cycle_get_32'
+  CS<0x555db6691e80> calls function 'sys_clock_cycle_get_32'
+
+Call graph node for function: 'i2c_repeated_start'<<0x555db6131460>>  #uses=2
+  CS<0x555db668ba20> calls external node
+  CS<0x555db668bfa0> calls external node
+  CS<0x555db668c2e0> calls function 'sys_clock_cycle_get_32'
+  CS<0x555db668c4e0> calls function 'sys_clock_cycle_get_32'
+  CS<0x555db668ca50> calls function 'sys_clock_cycle_get_32'
+  CS<0x555db668cc50> calls function 'sys_clock_cycle_get_32'
+  CS<0x555db668cf50> calls function 'i2c_start'
+
+Call graph node for function: 'i2c_sbcon_configure'<<0x555db6130ff0>>  #uses=1
+  CS<0x555db6675570> calls function 'i2c_bitbang_configure'
+
+Call graph node for function: 'i2c_sbcon_get_sda'<<0x555db605f480>>  #uses=1
+
+Call graph node for function: 'i2c_sbcon_init'<<0x555db605f280>>  #uses=1
+  CS<0x555db66985e0> calls function 'i2c_bitbang_init'
+
+Call graph node for function: 'i2c_sbcon_set_scl'<<0x555db605f380>>  #uses=1
+
+Call graph node for function: 'i2c_sbcon_set_sda'<<0x555db605f400>>  #uses=1
+
+Call graph node for function: 'i2c_sbcon_transfer'<<0x555db61310f0>>  #uses=1
+  CS<0x555db66768a0> calls function 'i2c_bitbang_transfer'
+
+Call graph node for function: 'i2c_start'<<0x555db6131330>>  #uses=3
+  CS<0x555db6686910> calls external node
+  CS<0x555db6687030> calls external node
+  CS<0x555db6687370> calls function 'sys_clock_cycle_get_32'
+  CS<0x555db6687570> calls function 'sys_clock_cycle_get_32'
+  CS<0x555db6687d20> calls external node
+  CS<0x555db6687f80> calls function 'sys_clock_cycle_get_32'
+  CS<0x555db6688180> calls function 'sys_clock_cycle_get_32'
+  CS<0x555db6688930> calls external node
+  CS<0x555db6688c70> calls function 'sys_clock_cycle_get_32'
+  CS<0x555db6688e70> calls function 'sys_clock_cycle_get_32'
+  CS<0x555db6689620> calls external node
+  CS<0x555db6689960> calls function 'sys_clock_cycle_get_32'
+  CS<0x555db6689b60> calls function 'sys_clock_cycle_get_32'
+
+Call graph node for function: 'i2c_stop'<<0x555db6131250>>  #uses=3
+  CS<0x555db6681e30> calls external node
+  CS<0x555db66821a0> calls function 'sys_clock_cycle_get_32'
+  CS<0x555db66823d0> calls function 'sys_clock_cycle_get_32'
+  CS<0x555db6682ad0> calls external node
+  CS<0x555db6682e10> calls function 'sys_clock_cycle_get_32'
+  CS<0x555db6683010> calls function 'sys_clock_cycle_get_32'
+  CS<0x555db66834a0> calls function 'sys_clock_cycle_get_32'
+  CS<0x555db66836a0> calls function 'sys_clock_cycle_get_32'
+  CS<0x555db6683e50> calls external node
+  CS<0x555db66840b0> calls function 'sys_clock_cycle_get_32'
+  CS<0x555db66842b0> calls function 'sys_clock_cycle_get_32'
+
+Call graph node for function: 'i2c_write_bit'<<0x555db6131730>>  #uses=3
+  CS<0x555db6693da0> calls external node
+  CS<0x555db6694320> calls external node
+  CS<0x555db6694660> calls function 'sys_clock_cycle_get_32'
+  CS<0x555db6694860> calls function 'sys_clock_cycle_get_32'
+  CS<0x555db6695010> calls external node
+  CS<0x555db6695350> calls function 'sys_clock_cycle_get_32'
+  CS<0x555db6695550> calls function 'sys_clock_cycle_get_32'
+
+Call graph node for function: 'i2c_write_byte'<<0x555db61314e0>>  #uses=2
+  CS<0x555db668e370> calls function 'i2c_write_bit'
+  CS<0x555db668e790> calls function 'i2c_read_bit'
+
+Call graph node for function: 'in_bounds'<<0x555db66d95b0>>  #uses=4
+
+Call graph node for function: 'is_region_set_clear'<<0x555db66db3b0>>  #uses=2
+  CS<0x555db6543410> calls external node
+  CS<0x555db65437b0> calls function 'z_spin_lock_valid'
+  CS<0x555db65439c0> calls function 'printk'
+  CS<0x555db6543ab0> calls function 'printk'
+  CS<0x555db6543b70> calls function 'assert_post_action'
+  CS<0x555db6543e40> calls function 'z_spin_lock_set_owner'
+  CS<0x555db6544350> calls function 'printk'
+  CS<0x555db6544440> calls function 'assert_post_action'
+  CS<0x555db6544c10> calls function 'match_region'
+  CS<0x555db65452e0> calls function 'z_spin_unlock_valid'
+  CS<0x555db65454f0> calls function 'printk'
+  CS<0x555db65455e0> calls function 'printk'
+  CS<0x555db65456a0> calls function 'assert_post_action'
+  CS<0x555db6545cd0> calls external node
+
+Call graph node for function: 'k_current_get'<<0x555db66d77a0>>  #uses=1
+  CS<0x555db63c23b0> calls external node
+  CS<0x555db63c2430> calls function 'z_impl_z_current_get'
+
+Call graph node for function: 'k_free'<<0x555db6074540>>  #uses=2
   CS<None> calls external node
 
-Call graph node for function: 'write_number'<<0x55fdbdda39f0>>  #uses=1
-
-Call graph node for function: 'xEventGroupClearBits'<<0x55fdbdd927a0>>  #uses=1
-  CS<0x55fdbe078cb0> calls function 'vAssertCalled'
-  CS<0x55fdbe078f40> calls function 'vAssertCalled'
-  CS<0x55fdbe079030> calls function 'vPortEnterCritical'
-  CS<0x55fdbe079560> calls function 'vPortExitCritical'
-
-Call graph node for function: 'xEventGroupClearBitsFromISR'<<0x55fdbdd92820>>  #uses=1
-  CS<0x55fdbe07a240> calls function 'xTimerPendFunctionCallFromISR'
-
-Call graph node for function: 'xEventGroupCreate'<<0x55fdbdd91f60>>  #uses=1
-  CS<0x55fdbe061a60> calls function 'pvPortMalloc'
-  CS<0x55fdbe061fa0> calls function 'vListInitialise'
-
-Call graph node for function: 'xEventGroupCreateStatic'<<0x55fdbdd91dd0>>  #uses=1
-  CS<0x55fdbe05fda0> calls function 'vAssertCalled'
-  CS<0x55fdbe060400> calls function 'vAssertCalled'
-  CS<0x55fdbe060b00> calls function 'vListInitialise'
-
-Call graph node for function: 'xEventGroupGetBitsFromISR'<<0x55fdbdd92a00>>  #uses=1
-  CS<0x55fdbe07d0e0> calls external node
-  CS<0x55fdbe07d8c0> calls external node
-
-Call graph node for function: 'xEventGroupSetBits'<<0x55fdbdd922c0>>  #uses=3
-  CS<0x55fdbe06b460> calls function 'vAssertCalled'
-  CS<0x55fdbe06b6f0> calls function 'vAssertCalled'
-  CS<0x55fdbe06bb80> calls function 'vTaskSuspendAll'
-  CS<0x55fdbe06dfd0> calls function 'vTaskRemoveFromUnorderedEventList'
-  CS<0x55fdbe06e940> calls function 'xTaskResumeAll'
-
-Call graph node for function: 'xEventGroupSetBitsFromISR'<<0x55fdbdd92c90>>  #uses=1
-  CS<0x55fdbe0817c0> calls function 'xTimerPendFunctionCallFromISR'
-
-Call graph node for function: 'xEventGroupSync'<<0x55fdbdd91fe0>>  #uses=1
-  CS<0x55fdbe064c40> calls function 'vAssertCalled'
-  CS<0x55fdbe064ed0> calls function 'vAssertCalled'
-  CS<0x55fdbe064fc0> calls function 'xTaskGetSchedulerState'
-  CS<0x55fdbe065300> calls function 'vAssertCalled'
-  CS<0x55fdbe0653f0> calls function 'vTaskSuspendAll'
-  CS<0x55fdbe065750> calls function 'xEventGroupSetBits'
-  CS<0x55fdbe0666e0> calls function 'xTaskResumeAll'
-  CS<0x55fdbe066b80> calls function 'vTaskPlaceOnUnorderedEventList'
-  CS<0x55fdbe066ed0> calls function 'xTaskResumeAll'
-  CS<0x55fdbe0671a0> calls function 'pendSV'
-  CS<0x55fdbe067250> calls external node
-  CS<0x55fdbe0672d0> calls external node
-  CS<0x55fdbe0673f0> calls function 'uxTaskResetEventItemValue'
-  CS<0x55fdbe0677e0> calls function 'vPortEnterCritical'
-  CS<0x55fdbe067f20> calls function 'vPortExitCritical'
-
-Call graph node for function: 'xEventGroupWaitBits'<<0x55fdbdd92340>>  #uses=1
-  CS<0x55fdbe0724d0> calls function 'vAssertCalled'
-  CS<0x55fdbe0726f0> calls function 'vAssertCalled'
-  CS<0x55fdbe072980> calls function 'vAssertCalled'
-  CS<0x55fdbe072a70> calls function 'xTaskGetSchedulerState'
-  CS<0x55fdbe072db0> calls function 'vAssertCalled'
-  CS<0x55fdbe072ea0> calls function 'vTaskSuspendAll'
-  CS<0x55fdbe074620> calls function 'xTaskResumeAll'
-  CS<0x55fdbe074f90> calls function 'vTaskPlaceOnUnorderedEventList'
-  CS<0x55fdbe0752e0> calls function 'xTaskResumeAll'
-  CS<0x55fdbe0755b0> calls function 'pendSV'
-  CS<0x55fdbe075660> calls external node
-  CS<0x55fdbe0756e0> calls external node
-  CS<0x55fdbe075800> calls function 'uxTaskResetEventItemValue'
-  CS<0x55fdbe075bf0> calls function 'vPortEnterCritical'
-  CS<0x55fdbe0769f0> calls function 'vPortExitCritical'
-
-Call graph node for function: 'xPortGetFreeHeapSize'<<0x55fdbdd92ef0>>  #uses=1
-
-Call graph node for function: 'xPortPendSVHandler'<<0x55fdbdda3d00>>  #uses=1
-  CS<0x55fdbde57e20> calls external node
-
-Call graph node for function: 'xPortStartScheduler'<<0x55fdbdd8e560>>  #uses=2
-  CS<0x55fdbde4eb10> calls function 'vPortSetupTimerInterrupt'
-  CS<0x55fdbde4ec80> calls function 'prvPortStartFirstTask'
-  CS<0x55fdbde4ed30> calls function 'vTaskSwitchContext'
-  CS<0x55fdbde4f320> calls function 'vAssertCalled'
-  CS<0x55fdbde4f430> calls external node
-
-Call graph node for function: 'xPortSysTickHandler'<<0x55fdbdda3e00>>  #uses=1
-  CS<0x55fdbde58740> calls external node
-  CS<0x55fdbde587c0> calls function 'xTaskIncrementTick'
-  CS<0x55fdbde58be0> calls external node
-
-Call graph node for function: 'xQueueAddToSet'<<0x55fdbdde46a0>>  #uses=1
-  CS<0x55fdbe020c50> calls function 'vPortEnterCritical'
-  CS<0x55fdbe0216d0> calls function 'vPortExitCritical'
-
-Call graph node for function: 'xQueueCreateCountingSemaphore'<<0x55fdbdde1d70>>  #uses=1
-  CS<0x55fdbdfdfa70> calls function 'vAssertCalled'
-  CS<0x55fdbdfdfd00> calls function 'vAssertCalled'
-  CS<0x55fdbdfdfe50> calls function 'xQueueGenericCreate'
-
-Call graph node for function: 'xQueueCreateCountingSemaphoreStatic'<<0x55fdbdde1cf0>>  #uses=1
-  CS<0x55fdbdfdd8c0> calls function 'vAssertCalled'
-  CS<0x55fdbdfddb50> calls function 'vAssertCalled'
-  CS<0x55fdbddb2300> calls function 'xQueueGenericCreateStatic'
-
-Call graph node for function: 'xQueueCreateMutex'<<0x55fdbdde03e0>>  #uses=1
-  CS<0x55fdbdfa73b0> calls function 'pvPortMalloc'
-  CS<0x55fdbdfa8a10> calls function 'vPortEnterCritical'
-  CS<0x55fdbdfa9d00> calls function 'vListInitialise'
-  CS<0x55fdbdfa9f10> calls function 'vListInitialise'
-  CS<0x55fdbdfa9fc0> calls function 'vPortExitCritical'
-  CS<0x55fdbdfaacf0> calls function 'xQueueGenericSend'
-
-Call graph node for function: 'xQueueCreateMutexStatic'<<0x55fdbde09460>>  #uses=1
-  CS<0x55fdbddb2b40> calls function 'xQueueGenericCreateStatic'
-  CS<0x55fdbdfc7e10> calls function 'xQueueGenericSend'
-
-Call graph node for function: 'xQueueCreateSet'<<0x55fdbdde4620>>  #uses=1
-  CS<0x55fdbe01ffc0> calls function 'xQueueGenericCreate'
-
-Call graph node for function: 'xQueueGenericCreate'<<0x55fdbdde02e0>>  #uses=4
-  CS<0x55fdbde51ef0> calls function 'vAssertCalled'
-  CS<0x55fdbde525c0> calls function 'vAssertCalled'
-  CS<0x55fdbde528e0> calls function 'vAssertCalled'
-  CS<0x55fdbde529f0> calls function 'pvPortMalloc'
-  CS<0x55fdbdfa3de0> calls function 'vPortEnterCritical'
-  CS<0x55fdbdfa50a0> calls function 'vListInitialise'
-  CS<0x55fdbdfa52b0> calls function 'vListInitialise'
-  CS<0x55fdbdfa5360> calls function 'vPortExitCritical'
-
-Call graph node for function: 'xQueueGenericCreateStatic'<<0x55fdbdddffd0>>  #uses=5
-  CS<0x55fdbdf996c0> calls function 'vAssertCalled'
-  CS<0x55fdbdf99950> calls function 'vAssertCalled'
-  CS<0x55fdbdf99d00> calls function 'vAssertCalled'
-  CS<0x55fdbdf9a0b0> calls function 'vAssertCalled'
-  CS<0x55fdbdf9a710> calls function 'vAssertCalled'
-  CS<0x55fdbdf9be10> calls function 'vPortEnterCritical'
-  CS<0x55fdbdf9d1c0> calls function 'vListInitialise'
-  CS<0x55fdbdf9d410> calls function 'vListInitialise'
-  CS<0x55fdbdf9d4c0> calls function 'vPortExitCritical'
-
-Call graph node for function: 'xQueueGenericReset'<<0x55fdbdddfbb0>>  #uses=1
-  CS<0x55fdbded3b70> calls function 'vAssertCalled'
-  CS<0x55fdbded3c60> calls function 'vPortEnterCritical'
-  CS<0x55fdbded5500> calls function 'xTaskRemoveFromEventList'
-  CS<0x55fdbded5750> calls function 'pendSV'
-  CS<0x55fdbded5800> calls external node
-  CS<0x55fdbded5880> calls external node
-  CS<0x55fdbded5ab0> calls function 'vListInitialise'
-  CS<0x55fdbded5c70> calls function 'vListInitialise'
-  CS<0x55fdbded5d90> calls function 'vPortExitCritical'
-
-Call graph node for function: 'xQueueGenericSend'<<0x55fdbdde05b0>>  #uses=8
-  CS<0x55fdbdfaf950> calls function 'vAssertCalled'
-  CS<0x55fdbdfafe50> calls function 'vAssertCalled'
-  CS<0x55fdbdfb0350> calls function 'vAssertCalled'
-  CS<0x55fdbdfb0440> calls function 'xTaskGetSchedulerState'
-  CS<0x55fdbdfb0860> calls function 'vAssertCalled'
-  CS<0x55fdbdfb0f30> calls function 'vPortEnterCritical'
-  CS<0x55fdbdfb1ea0> calls function 'vPortEnterCritical'
-  CS<0x55fdbdfb2ea0> calls function 'xTaskPriorityDisinherit'
-  CS<0x55fdbdfb5d20> calls function 'prvNotifyQueueSetContainer'
-  CS<0x55fdbdfb5f70> calls function 'pendSV'
-  CS<0x55fdbdfb6020> calls external node
-  CS<0x55fdbdfb60a0> calls external node
-  CS<0x55fdbdfb6570> calls function 'xTaskRemoveFromEventList'
-  CS<0x55fdbdfb67c0> calls function 'pendSV'
-  CS<0x55fdbdfb6870> calls external node
-  CS<0x55fdbdfb68f0> calls external node
-  CS<0x55fdbdfb6bb0> calls function 'pendSV'
-  CS<0x55fdbdfb6c60> calls external node
-  CS<0x55fdbdfb6ce0> calls external node
-  CS<0x55fdbdfb6e00> calls function 'vPortExitCritical'
-  CS<0x55fdbdfb7270> calls function 'vPortExitCritical'
-  CS<0x55fdbdfb74c0> calls function 'vTaskInternalSetTimeOutState'
-  CS<0x55fdbdfb77d0> calls function 'vPortExitCritical'
-  CS<0x55fdbdfb7880> calls function 'vTaskSuspendAll'
-  CS<0x55fdbdfb7930> calls function 'vPortEnterCritical'
-  CS<0x55fdbdfb8030> calls function 'vPortExitCritical'
-  CS<0x55fdbdfb8200> calls function 'xTaskCheckForTimeOut'
-  CS<0x55fdbdfb8590> calls function 'vPortEnterCritical'
-  CS<0x55fdbdfb8980> calls function 'vPortExitCritical'
-  CS<0x55fdbdfb8cd0> calls function 'vTaskPlaceOnEventList'
-  CS<0x55fdbdfb8da0> calls function 'prvUnlockQueue'
-  CS<0x55fdbdfb8e50> calls function 'xTaskResumeAll'
-  CS<0x55fdbdfb90a0> calls function 'pendSV'
-  CS<0x55fdbdfb9150> calls external node
-  CS<0x55fdbdfb91d0> calls external node
-  CS<0x55fdbdfb9310> calls function 'prvUnlockQueue'
-  CS<0x55fdbdfb93c0> calls function 'xTaskResumeAll'
-  CS<0x55fdbdfb9500> calls function 'prvUnlockQueue'
-  CS<0x55fdbdfb95b0> calls function 'xTaskResumeAll'
-
-Call graph node for function: 'xQueueGenericSendFromISR'<<0x55fdbdde1ea0>>  #uses=3
-  CS<0x55fdbdfe2d50> calls function 'vAssertCalled'
-  CS<0x55fdbdfe3250> calls function 'vAssertCalled'
-  CS<0x55fdbdfe3750> calls function 'vAssertCalled'
-  CS<0x55fdbdfe3840> calls function 'vPortValidateInterruptPriority'
-  CS<0x55fdbdfe3910> calls external node
-  CS<0x55fdbdfe53b0> calls function 'xTaskPriorityDisinherit'
-  CS<0x55fdbdf34320> calls function 'prvNotifyQueueSetContainer'
-  CS<0x55fdbdf34ba0> calls function 'xTaskRemoveFromEventList'
-  CS<0x55fdbdf35070> calls function 'vAssertCalled'
-  CS<0x55fdbdf35a10> calls external node
-
-Call graph node for function: 'xQueueGetMutexHolder'<<0x55fdbdde0a90>>  #uses=1
-  CS<0x55fdbdeaa9b0> calls function 'vAssertCalled'
-  CS<0x55fdbdeaaaa0> calls function 'vPortEnterCritical'
-  CS<0x55fdbdfca7a0> calls function 'vPortExitCritical'
-
-Call graph node for function: 'xQueueGetMutexHolderFromISR'<<0x55fdbdde0b70>>  #uses=1
-  CS<0x55fdbdfcb4e0> calls function 'vAssertCalled'
-
-Call graph node for function: 'xQueueGiveFromISR'<<0x55fdbdde1fd0>>  #uses=1
-  CS<0x55fdbdf38b70> calls function 'vAssertCalled'
-  CS<0x55fdbdf38f30> calls function 'vAssertCalled'
-  CS<0x55fdbdf395d0> calls function 'vAssertCalled'
-  CS<0x55fdbdf396c0> calls function 'vPortValidateInterruptPriority'
-  CS<0x55fdbdf39790> calls external node
-  CS<0x55fdbdf0e8f0> calls function 'prvNotifyQueueSetContainer'
-  CS<0x55fdbdf0f170> calls function 'xTaskRemoveFromEventList'
-  CS<0x55fdbdf0f640> calls function 'vAssertCalled'
-  CS<0x55fdbdf0fe60> calls external node
-
-Call graph node for function: 'xQueueGiveMutexRecursive'<<0x55fdbdde0bf0>>  #uses=1
-  CS<0x55fdbdfcccb0> calls function 'vAssertCalled'
-  CS<0x55fdbdfccfa0> calls function 'xTaskGetCurrentTaskHandle'
-  CS<0x55fdbdfcd770> calls function 'xQueueGenericSend'
-
-Call graph node for function: 'xQueueIsQueueEmptyFromISR'<<0x55fdbdde4200>>  #uses=1
-  CS<0x55fdbe005eb0> calls function 'vAssertCalled'
-
-Call graph node for function: 'xQueueIsQueueFullFromISR'<<0x55fdbdde42b0>>  #uses=1
-  CS<0x55fdbe006ef0> calls function 'vAssertCalled'
-
-Call graph node for function: 'xQueuePeek'<<0x55fdbdde0f00>>  #uses=1
-  CS<0x55fdbdf1dd50> calls function 'vAssertCalled'
-  CS<0x55fdbdf1e250> calls function 'vAssertCalled'
-  CS<0x55fdbdf1e340> calls function 'xTaskGetSchedulerState'
-  CS<0x55fdbdecc6c0> calls function 'vAssertCalled'
-  CS<0x55fdbdecccc0> calls function 'vPortEnterCritical'
-  CS<0x55fdbdece650> calls function 'xTaskRemoveFromEventList'
-  CS<0x55fdbdece8a0> calls function 'pendSV'
-  CS<0x55fdbdece950> calls external node
-  CS<0x55fdbdece9d0> calls external node
-  CS<0x55fdbdeceaf0> calls function 'vPortExitCritical'
-  CS<0x55fdbdecef60> calls function 'vPortExitCritical'
-  CS<0x55fdbdecf1b0> calls function 'vTaskInternalSetTimeOutState'
-  CS<0x55fdbdecf4c0> calls function 'vPortExitCritical'
-  CS<0x55fdbdecf570> calls function 'vTaskSuspendAll'
-  CS<0x55fdbdecf620> calls function 'vPortEnterCritical'
-  CS<0x55fdbdecfd20> calls function 'vPortExitCritical'
-  CS<0x55fdbdecfef0> calls function 'xTaskCheckForTimeOut'
-  CS<0x55fdbded0250> calls function 'vPortEnterCritical'
-  CS<0x55fdbded0460> calls function 'vPortExitCritical'
-  CS<0x55fdbdffe370> calls function 'vTaskPlaceOnEventList'
-  CS<0x55fdbdffe440> calls function 'prvUnlockQueue'
-  CS<0x55fdbdffe4f0> calls function 'xTaskResumeAll'
-  CS<0x55fdbdffe740> calls function 'pendSV'
-  CS<0x55fdbdffe7f0> calls external node
-  CS<0x55fdbdffe870> calls external node
-  CS<0x55fdbdffe9b0> calls function 'prvUnlockQueue'
-  CS<0x55fdbdffea60> calls function 'xTaskResumeAll'
-  CS<0x55fdbdffeba0> calls function 'prvUnlockQueue'
-  CS<0x55fdbdffec50> calls function 'xTaskResumeAll'
-  CS<0x55fdbdffee10> calls function 'vPortEnterCritical'
-  CS<0x55fdbdfff100> calls function 'vPortExitCritical'
-
-Call graph node for function: 'xQueuePeekFromISR'<<0x55fdbdde20d0>>  #uses=1
-  CS<0x55fdbdf254a0> calls function 'vAssertCalled'
-  CS<0x55fdbdf259a0> calls function 'vAssertCalled'
-  CS<0x55fdbdf25d60> calls function 'vAssertCalled'
-  CS<0x55fdbdf25e50> calls function 'vPortValidateInterruptPriority'
-  CS<0x55fdbdf25f20> calls external node
-  CS<0x55fdbdf27e20> calls external node
-
-Call graph node for function: 'xQueueReceive'<<0x55fdbdde2ea0>>  #uses=4
-  CS<0x55fdbdf13bc0> calls function 'vAssertCalled'
-  CS<0x55fdbdf140c0> calls function 'vAssertCalled'
-  CS<0x55fdbdf141b0> calls function 'xTaskGetSchedulerState'
-  CS<0x55fdbdf145d0> calls function 'vAssertCalled'
-  CS<0x55fdbdf14bd0> calls function 'vPortEnterCritical'
-  CS<0x55fdbdf16630> calls function 'xTaskRemoveFromEventList'
-  CS<0x55fdbdf16880> calls function 'pendSV'
-  CS<0x55fdbdf16930> calls external node
-  CS<0x55fdbdf169b0> calls external node
-  CS<0x55fdbdf16ad0> calls function 'vPortExitCritical'
-  CS<0x55fdbdf16f40> calls function 'vPortExitCritical'
-  CS<0x55fdbdf17190> calls function 'vTaskInternalSetTimeOutState'
-  CS<0x55fdbdf174a0> calls function 'vPortExitCritical'
-  CS<0x55fdbdf17550> calls function 'vTaskSuspendAll'
-  CS<0x55fdbdf17600> calls function 'vPortEnterCritical'
-  CS<0x55fdbdf17d00> calls function 'vPortExitCritical'
-  CS<0x55fdbdf17ed0> calls function 'xTaskCheckForTimeOut'
-  CS<0x55fdbdf18230> calls function 'vPortEnterCritical'
-  CS<0x55fdbdf18520> calls function 'vPortExitCritical'
-  CS<0x55fdbdf18870> calls function 'vTaskPlaceOnEventList'
-  CS<0x55fdbdf18940> calls function 'prvUnlockQueue'
-  CS<0x55fdbdf189f0> calls function 'xTaskResumeAll'
-  CS<0x55fdbdf18c40> calls function 'pendSV'
-  CS<0x55fdbdf18cf0> calls external node
-  CS<0x55fdbdf18d70> calls external node
-  CS<0x55fdbdf18eb0> calls function 'prvUnlockQueue'
-  CS<0x55fdbdf18f60> calls function 'xTaskResumeAll'
-  CS<0x55fdbdf190a0> calls function 'prvUnlockQueue'
-  CS<0x55fdbdf19150> calls function 'xTaskResumeAll'
-  CS<0x55fdbdf19310> calls function 'vPortEnterCritical'
-  CS<0x55fdbdf19600> calls function 'vPortExitCritical'
-
-Call graph node for function: 'xQueueReceiveFromISR'<<0x55fdbdde2050>>  #uses=2
-  CS<0x55fdbdf1ff10> calls function 'vAssertCalled'
-  CS<0x55fdbdf20410> calls function 'vAssertCalled'
-  CS<0x55fdbdf20500> calls function 'vPortValidateInterruptPriority'
-  CS<0x55fdbdf205d0> calls external node
-  CS<0x55fdbdf22730> calls function 'xTaskRemoveFromEventList'
-  CS<0x55fdbdf22c00> calls function 'vAssertCalled'
-  CS<0x55fdbdf234f0> calls external node
-
-Call graph node for function: 'xQueueRemoveFromSet'<<0x55fdbdde4750>>  #uses=1
-  CS<0x55fdbe022b90> calls function 'vPortEnterCritical'
-  CS<0x55fdbe022d00> calls function 'vPortExitCritical'
-
-Call graph node for function: 'xQueueSelectFromSet'<<0x55fdbdde4830>>  #uses=1
-  CS<0x55fdbe0241f0> calls function 'xQueueReceive'
-
-Call graph node for function: 'xQueueSelectFromSetFromISR'<<0x55fdbdde48b0>>  #uses=1
-  CS<0x55fdbe025240> calls function 'xQueueReceiveFromISR'
-
-Call graph node for function: 'xQueueSemaphoreTake'<<0x55fdbdde0dd0>>  #uses=2
-  CS<0x55fdbdfd40d0> calls function 'vAssertCalled'
-  CS<0x55fdbdfd4490> calls function 'vAssertCalled'
-  CS<0x55fdbdfd4580> calls function 'xTaskGetSchedulerState'
-  CS<0x55fdbdfd49a0> calls function 'vAssertCalled'
-  CS<0x55fdbdfd5320> calls function 'vPortEnterCritical'
-  CS<0x55fdbdfd5b10> calls function 'pvTaskIncrementMutexHeldCount'
-  CS<0x55fdbdfd60d0> calls function 'xTaskRemoveFromEventList'
-  CS<0x55fdbdfd6320> calls function 'pendSV'
-  CS<0x55fdbdfd63d0> calls external node
-  CS<0x55fdbdfd6450> calls external node
-  CS<0x55fdbdfd6570> calls function 'vPortExitCritical'
-  CS<0x55fdbdfd6b80> calls function 'vAssertCalled'
-  CS<0x55fdbdfd6c70> calls function 'vPortExitCritical'
-  CS<0x55fdbdfd6ec0> calls function 'vTaskInternalSetTimeOutState'
-  CS<0x55fdbdfd71d0> calls function 'vPortExitCritical'
-  CS<0x55fdbdfd7280> calls function 'vTaskSuspendAll'
-  CS<0x55fdbdfd7330> calls function 'vPortEnterCritical'
-  CS<0x55fdbdfd7a30> calls function 'vPortExitCritical'
-  CS<0x55fdbdfd7c00> calls function 'xTaskCheckForTimeOut'
-  CS<0x55fdbdfd7f90> calls function 'vPortEnterCritical'
-  CS<0x55fdbdfd82b0> calls function 'vPortExitCritical'
-  CS<0x55fdbdfd8680> calls function 'vPortEnterCritical'
-  CS<0x55fdbdfd87f0> calls function 'xTaskPriorityInherit'
-  CS<0x55fdbdfd8980> calls function 'vPortExitCritical'
-  CS<0x55fdbdfd8e20> calls function 'vTaskPlaceOnEventList'
-  CS<0x55fdbdfd8ef0> calls function 'prvUnlockQueue'
-  CS<0x55fdbdfd8fa0> calls function 'xTaskResumeAll'
-  CS<0x55fdbdfd91f0> calls function 'pendSV'
-  CS<0x55fdbdfd92a0> calls external node
-  CS<0x55fdbdfd9320> calls external node
-  CS<0x55fdbdfd9460> calls function 'prvUnlockQueue'
-  CS<0x55fdbdfd9510> calls function 'xTaskResumeAll'
-  CS<0x55fdbdfd9650> calls function 'prvUnlockQueue'
-  CS<0x55fdbdfd9700> calls function 'xTaskResumeAll'
-  CS<0x55fdbdfd98c0> calls function 'vPortEnterCritical'
-  CS<0x55fdbdfd9bb0> calls function 'vPortExitCritical'
-  CS<0x55fdbdfd9ee0> calls function 'vPortEnterCritical'
-  CS<0x55fdbdfdad10> calls function 'vTaskPriorityDisinheritAfterTimeout'
-  CS<0x55fdbdfdadc0> calls function 'vPortExitCritical'
-
-Call graph node for function: 'xQueueTakeMutexRecursive'<<0x55fdbdde0d50>>  #uses=1
-  CS<0x55fdbdfcede0> calls function 'vAssertCalled'
-  CS<0x55fdbdfcf0d0> calls function 'xTaskGetCurrentTaskHandle'
-  CS<0x55fdbdfcf870> calls function 'xQueueSemaphoreTake'
-
-Call graph node for function: 'xTaskAbortDelay'<<0x55fdbdd8e220>>  #uses=1
-  CS<0x55fdbde8a8e0> calls external node
-  CS<0x55fdbde8adc0> calls function 'vPortEnterCritical'
-  CS<0x55fdbde8b3d0> calls function 'vPortExitCritical'
-  CS<0x55fdbde8c000> calls function 'vAssertCalled'
-  CS<0x55fdbde8c240> calls external node
-  CS<0x55fdbde8f8e0> calls function 'vAssertCalled'
-  CS<0x55fdbde8fbd0> calls function 'vPortEnterCritical'
-  CS<0x55fdbde90100> calls function 'vPortExitCritical'
-  CS<0x55fdbde90d90> calls function 'uxListRemove'
-  CS<0x55fdbde90e40> calls function 'vPortEnterCritical'
-  CS<0x55fdbde912f0> calls function 'uxListRemove'
-  CS<0x55fdbde915f0> calls function 'vPortExitCritical'
-  CS<0x55fdbdea4560> calls function 'vListInsertEnd'
-  CS<0x55fdbdea4c90> calls function 'xTaskResumeAll'
-
-Call graph node for function: 'xTaskCatchUpTicks'<<0x55fdbdd8e0c0>>  #uses=1
-  CS<0x55fdbde886d0> calls function 'vAssertCalled'
-  CS<0x55fdbde88980> calls external node
-  CS<0x55fdbde88bf0> calls function 'xTaskResumeAll'
-
-Call graph node for function: 'xTaskCheckForTimeOut'<<0x55fdbde085f0>>  #uses=5
-  CS<0x55fdbdf43d10> calls function 'vAssertCalled'
-  CS<0x55fdbdf43fa0> calls function 'vAssertCalled'
-  CS<0x55fdbdf44090> calls function 'vPortEnterCritical'
-  CS<0x55fdbdf46360> calls function 'vPortExitCritical'
-
-Call graph node for function: 'xTaskCreate'<<0x55fdbdf066d0>>  #uses=3
-  CS<0x55fdbde789c0> calls function 'pvPortMalloc'
-  CS<0x55fdbde78d70> calls function 'pvPortMalloc'
-  CS<0x55fdbde790f0> calls function 'vPortFree'
-  CS<0x55fdbde79800> calls function 'prvInitialiseNewTask'
-  CS<0x55fdbde798d0> calls function 'prvAddNewTaskToReadyList'
-
-Call graph node for function: 'xTaskCreateStatic'<<0x55fdbdf05a10>>  #uses=2
-  CS<0x55fdbde5ea30> calls function 'vAssertCalled'
-  CS<0x55fdbde5ecc0> calls function 'vAssertCalled'
-  CS<0x55fdbde5f320> calls function 'vAssertCalled'
-  CS<0x55fdbde5fee0> calls function 'prvInitialiseNewTask'
-  CS<0x55fdbde5ffb0> calls function 'prvAddNewTaskToReadyList'
-
-Call graph node for function: 'xTaskDelayUntil'<<0x55fdbdf06aa0>>  #uses=2
-  CS<0x55fdbde80a30> calls function 'vAssertCalled'
-  CS<0x55fdbde80cc0> calls function 'vAssertCalled'
-  CS<0x55fdbde80fc0> calls function 'vAssertCalled'
-  CS<0x55fdbde81270> calls external node
-  CS<0x55fdbde82ac0> calls function 'uxListRemove'
-  CS<0x55fdbde83360> calls function 'vListInsert'
-  CS<0x55fdbde83720> calls function 'vListInsert'
-  CS<0x55fdbde83c40> calls function 'xTaskResumeAll'
-  CS<0x55fdbde83fa0> calls function 'pendSV'
-  CS<0x55fdbde84050> calls external node
-  CS<0x55fdbde840d0> calls external node
-
-Call graph node for function: 'xTaskGenericNotify'<<0x55fdbdddf180>>  #uses=1
-  CS<0x55fdbdf73a00> calls function 'vAssertCalled'
-  CS<0x55fdbdf73c90> calls function 'vAssertCalled'
-  CS<0x55fdbdf73e90> calls function 'vPortEnterCritical'
-  CS<0x55fdbdf756b0> calls function 'vAssertCalled'
-  CS<0x55fdbdf75b30> calls function 'uxListRemove'
-  CS<0x55fdbdf76180> calls function 'vListInsertEnd'
-  CS<0x55fdbdf764f0> calls function 'vAssertCalled'
-  CS<0x55fdbdf76a20> calls function 'pendSV'
-  CS<0x55fdbdf76ad0> calls external node
-  CS<0x55fdbdf76b50> calls external node
-  CS<0x55fdbdf76d70> calls function 'vPortExitCritical'
-
-Call graph node for function: 'xTaskGenericNotifyFromISR'<<0x55fdbdddf490>>  #uses=1
-  CS<0x55fdbdf7a2a0> calls function 'vAssertCalled'
-  CS<0x55fdbdf7a530> calls function 'vAssertCalled'
-  CS<0x55fdbdf7a620> calls function 'vPortValidateInterruptPriority'
-  CS<0x55fdbdf7a800> calls external node
-  CS<0x55fdbdf7c4b0> calls function 'vAssertCalled'
-  CS<0x55fdbdf7cb10> calls function 'vAssertCalled'
-  CS<0x55fdbdf7cf50> calls function 'uxListRemove'
-  CS<0x55fdbdf7d5a0> calls function 'vListInsertEnd'
-  CS<0x55fdbdf7d700> calls function 'vListInsertEnd'
-  CS<0x55fdbdf7e600> calls external node
-
-Call graph node for function: 'xTaskGenericNotifyStateClear'<<0x55fdbdddfab0>>  #uses=1
-  CS<0x55fdbdf85520> calls function 'vAssertCalled'
-  CS<0x55fdbdf859d0> calls function 'vPortEnterCritical'
-  CS<0x55fdbdf861d0> calls function 'vPortExitCritical'
-
-Call graph node for function: 'xTaskGenericNotifyWait'<<0x55fdbdddee70>>  #uses=1
-  CS<0x55fdbdf6cb80> calls function 'vAssertCalled'
-  CS<0x55fdbdf6cc70> calls function 'vPortEnterCritical'
-  CS<0x55fdbdf6e000> calls function 'uxListRemove'
-  CS<0x55fdbdf6e420> calls function 'vListInsertEnd'
-  CS<0x55fdbdf6ed30> calls function 'vListInsert'
-  CS<0x55fdbdf6f0f0> calls function 'vListInsert'
-  CS<0x55fdbdf6f540> calls function 'pendSV'
-  CS<0x55fdbdf6f5f0> calls external node
-  CS<0x55fdbdf6f670> calls external node
-  CS<0x55fdbdf6f790> calls function 'vPortExitCritical'
-  CS<0x55fdbdf6f840> calls function 'vPortEnterCritical'
-  CS<0x55fdbdf70aa0> calls function 'vPortExitCritical'
-
-Call graph node for function: 'xTaskGetCurrentTaskHandle'<<0x55fdbde08ad0>>  #uses=3
-
-Call graph node for function: 'xTaskGetHandle'<<0x55fdbdd8daf0>>  #uses=1
-  CS<0x55fdbde4a620> calls function 'strlen'
-  CS<0x55fdbde4a840> calls function 'vAssertCalled'
-  CS<0x55fdbde4aaf0> calls external node
-  CS<0x55fdbde4b020> calls function 'prvSearchForNameWithinSingleList'
-  CS<0x55fdbde4b660> calls function 'prvSearchForNameWithinSingleList'
-  CS<0x55fdbde4ba70> calls function 'prvSearchForNameWithinSingleList'
-  CS<0x55fdbde4bde0> calls function 'prvSearchForNameWithinSingleList'
-  CS<0x55fdbde4c150> calls function 'prvSearchForNameWithinSingleList'
-  CS<0x55fdbded0730> calls function 'xTaskResumeAll'
-
-Call graph node for function: 'xTaskGetIdleTaskHandle'<<0x55fdbdd8e040>>  #uses=1
-  CS<0x55fdbde86ae0> calls function 'vAssertCalled'
-
-Call graph node for function: 'xTaskGetSchedulerState'<<0x55fdbde08b50>>  #uses=8
-
-Call graph node for function: 'xTaskGetTickCount'<<0x55fdbde06610>>  #uses=4
-
-Call graph node for function: 'xTaskGetTickCountFromISR'<<0x55fdbdf07960>>  #uses=1
-  CS<0x55fdbdec9ad0> calls function 'vPortValidateInterruptPriority'
-
-Call graph node for function: 'xTaskIncrementTick'<<0x55fdbdda3eb0>>  #uses=3
-  CS<0x55fdbde53aa0> calls function 'vAssertCalled'
-  CS<0x55fdbde99ff0> calls function 'uxListRemove'
-  CS<0x55fdbde9a4a0> calls function 'uxListRemove'
-  CS<0x55fdbde9ab90> calls function 'vListInsertEnd'
-  CS<0x55fdbde9b830> calls function 'vApplicationTickHook'
-  CS<0x55fdbde9bf00> calls function 'vApplicationTickHook'
-
-Call graph node for function: 'xTaskPriorityDisinherit'<<0x55fdbde08c50>>  #uses=4
-  CS<0x55fdbdf5c860> calls function 'vAssertCalled'
-  CS<0x55fdbdf5cc20> calls function 'vAssertCalled'
-  CS<0x55fdbdf5d5c0> calls function 'uxListRemove'
-  CS<0x55fdbdf5de70> calls function 'vListInsertEnd'
-
-Call graph node for function: 'xTaskPriorityInherit'<<0x55fdbde08bd0>>  #uses=2
-  CS<0x55fdbdf59b30> calls function 'uxListRemove'
-  CS<0x55fdbdf5a310> calls function 'vListInsertEnd'
-
-Call graph node for function: 'xTaskRemoveFromEventList'<<0x55fdbde08150>>  #uses=12
-  CS<0x55fdbdf3c710> calls function 'vAssertCalled'
-  CS<0x55fdbdf3c910> calls function 'uxListRemove'
-  CS<0x55fdbdf3cd10> calls function 'uxListRemove'
-  CS<0x55fdbdf3d360> calls function 'vListInsertEnd'
-  CS<0x55fdbdf3d4c0> calls function 'vListInsertEnd'
-
-Call graph node for function: 'xTaskResumeAll'<<0x55fdbdf06ba0>>  #uses=32
-  CS<0x55fdbde3b8c0> calls function 'vAssertCalled'
-  CS<0x55fdbde3b9b0> calls function 'vPortEnterCritical'
-  CS<0x55fdbde3c790> calls function 'uxListRemove'
-  CS<0x55fdbde3c950> calls function 'uxListRemove'
-  CS<0x55fdbde3cfa0> calls function 'vListInsertEnd'
-  CS<0x55fdbde8d530> calls function 'xTaskIncrementTick'
-  CS<0x55fdbde8e0a0> calls function 'pendSV'
-  CS<0x55fdbde8e150> calls external node
-  CS<0x55fdbde8e1d0> calls external node
-  CS<0x55fdbde8e4d0> calls function 'vPortExitCritical'
-
-Call graph node for function: 'xTaskResumeFromISR'<<0x55fdbde05a90>>  #uses=1
-  CS<0x55fdbdebb630> calls function 'vPortValidateInterruptPriority'
-  CS<0x55fdbdebb700> calls external node
-  CS<0x55fdbdebc2e0> calls function 'vAssertCalled'
-  CS<0x55fdbdebc360> calls function 'vPortValidateInterruptPriority'
-  CS<0x55fdbdebc400> calls external node
-  CS<0x55fdbdebcae0> calls function 'vAssertCalled'
-  CS<0x55fdbdebdc80> calls function 'uxListRemove'
-  CS<0x55fdbdebe210> calls function 'vListInsertEnd'
-  CS<0x55fdbdebe460> calls function 'vListInsertEnd'
-  CS<0x55fdbdebe9d0> calls external node
-
-Call graph node for function: 'xTimerCreate'<<0x55fdbde06f30>>  #uses=1
-  CS<0x55fdbe045270> calls function 'pvPortMalloc'
-  CS<0x55fdbddfa690> calls function 'prvInitialiseNewTimer'
-
-Call graph node for function: 'xTimerCreateStatic'<<0x55fdbde071e0>>  #uses=1
-  CS<0x55fdbdef6790> calls function 'vAssertCalled'
-  CS<0x55fdbdef6bb0> calls function 'vAssertCalled'
-  CS<0x55fdbdef71d0> calls function 'prvInitialiseNewTimer'
-
-Call graph node for function: 'xTimerCreateTimerTask'<<0x55fdbde05f70>>  #uses=2
-  CS<0x55fdbe026ea0> calls function 'vPortEnterCritical'
-  CS<0x55fdbe027060> calls function 'vListInitialise'
-  CS<0x55fdbe027130> calls function 'vListInitialise'
-  CS<0x55fdbddae6a0> calls function 'xQueueGenericCreateStatic'
-  CS<0x55fdbe027630> calls function 'vQueueAddToRegistry'
-  CS<0x55fdbe027780> calls function 'vPortExitCritical'
-  CS<0x55fdbe028620> calls function 'vApplicationGetTimerTaskMemory'
-  CS<0x55fdbe028c30> calls function 'xTaskCreateStatic'
-  CS<0x55fdbe029340> calls function 'vAssertCalled'
-
-Call graph node for function: 'xTimerGenericCommand'<<0x55fdbde07260>>  #uses=1
-  CS<0x55fdbdef9650> calls function 'vAssertCalled'
-  CS<0x55fdbdefa180> calls function 'xTaskGetSchedulerState'
-  CS<0x55fdbdefa4f0> calls function 'xQueueGenericSend'
-  CS<0x55fdbdefa810> calls function 'xQueueGenericSend'
-  CS<0x55fdbdefaa60> calls function 'xQueueGenericSendFromISR'
-
-Call graph node for function: 'xTimerGetExpiryTime'<<0x55fdbde077f0>>  #uses=1
-  CS<0x55fdbe054ce0> calls function 'vAssertCalled'
-
-Call graph node for function: 'xTimerGetPeriod'<<0x55fdbde07560>>  #uses=1
-  CS<0x55fdbdefc750> calls function 'vAssertCalled'
-
-Call graph node for function: 'xTimerGetTimerDaemonTaskHandle'<<0x55fdbde074e0>>  #uses=1
-  CS<0x55fdbdefbcb0> calls function 'vAssertCalled'
-
-Call graph node for function: 'xTimerIsTimerActive'<<0x55fdbde07920>>  #uses=1
-  CS<0x55fdbe056900> calls function 'vAssertCalled'
-  CS<0x55fdbe0569f0> calls function 'vPortEnterCritical'
-  CS<0x55fdbe056e70> calls function 'vPortExitCritical'
-
-Call graph node for function: 'xTimerPendFunctionCall'<<0x55fdbdd91c20>>  #uses=1
-  CS<0x55fdbe05c680> calls function 'vAssertCalled'
-  CS<0x55fdbe05d070> calls function 'xQueueGenericSend'
-
-Call graph node for function: 'xTimerPendFunctionCallFromISR'<<0x55fdbdd91ba0>>  #uses=3
-  CS<0x55fdbe05acd0> calls function 'xQueueGenericSendFromISR'
+Call graph node for function: 'k_malloc'<<0x555db605e310>>  #uses=2
+  CS<None> calls external node
+
+Call graph node for function: 'k_queue_append'<<0x555db605e5c0>>  #uses=2
+  CS<None> calls external node
+
+Call graph node for function: 'k_thread_abort'<<0x555db66d7880>>  #uses=1
+  CS<0x555db63c2b70> calls external node
+  CS<0x555db63c2c40> calls function 'z_impl_k_thread_abort'
+
+Call graph node for function: 'llvm.bswap.i16'<<0x555db66d5760>>  #uses=1
+
+Call graph node for function: 'llvm.ctlz.i32'<<0x555db66d85f0>>  #uses=1
+
+Call graph node for function: 'llvm.ctpop.i32'<<0x555db66d8e10>>  #uses=1
+
+Call graph node for function: 'llvm.cttz.i32'<<0x555db66d8820>>  #uses=1
+
+Call graph node for function: 'llvm.experimental.noalias.scope.decl'<<0x555db60666c0>>  #uses=1
+
+Call graph node for function: 'llvm.lifetime.end.p0i8'<<0x555db6074050>>  #uses=1
+
+Call graph node for function: 'llvm.lifetime.start.p0i8'<<0x555db605e740>>  #uses=1
+
+Call graph node for function: 'llvm.memcpy.p0i8.p0i8.i32'<<0x555db60732c0>>  #uses=1
+
+Call graph node for function: 'llvm.memset.p0i8.i32'<<0x555db66d5ea0>>  #uses=1
+
+Call graph node for function: 'llvm.memset.p0i8.i64'<<0x555db6073240>>  #uses=1
+
+Call graph node for function: 'llvm.stackrestore'<<0x555db6232850>>  #uses=1
+
+Call graph node for function: 'llvm.stacksave'<<0x555db62327d0>>  #uses=1
+
+Call graph node for function: 'llvm.umul.with.overflow.i32'<<0x555db6065f60>>  #uses=1
+
+Call graph node for function: 'llvm.va_end'<<0x555db66d5e20>>  #uses=1
+
+Call graph node for function: 'llvm.va_start'<<0x555db60748d0>>  #uses=1
+
+Call graph node for function: 'malloc'<<0x555db6065c40>>  #uses=1
+  CS<0x555db65c2700> calls external node
+  CS<0x555db65c27b0> calls function 'z_impl_z_errno'
+
+Call graph node for function: 'match_region'<<0x555db66dab60>>  #uses=3
+  CS<0x555db6521ee0> calls function 'setup_bundle_data'
+  CS<0x555db6526350> calls function 'printk'
+  CS<0x555db6526440> calls function 'assert_post_action'
+
+Call graph node for function: 'mem_manage_fault'<<0x555db60621a0>>  #uses=2
+  CS<0x555db6598b30> calls function 'printk'
+  CS<0x555db6598c00> calls function 'printk'
+  CS<0x555db6598cc0> calls function 'assert_post_action'
+
+Call graph node for function: 'memchr'<<0x555db60668c0>>  #uses=1
+
+Call graph node for function: 'memcmp'<<0x555db60667c0>>  #uses=1
+
+Call graph node for function: 'memcpy'<<0x555db605e540>>  #uses=8
+
+Call graph node for function: 'memmove'<<0x555db6066840>>  #uses=1
+
+Call graph node for function: 'memset'<<0x555db6061de0>>  #uses=3
+
+Call graph node for function: 'merge_chunks'<<0x555db66d8320>>  #uses=3
+
+Call graph node for function: 'mpu_configure_regions'<<0x555db6062880>>  #uses=2
+
+Call graph node for function: 'nanosleep'<<0x555db612aac0>>  #uses=1
+  CS<0x555db6637d80> calls external node
+  CS<0x555db6637e30> calls function 'z_impl_z_errno'
+  CS<0x555db6638610> calls external node
+  CS<0x555db66386c0> calls function 'z_impl_z_errno'
+  CS<0x555db663a600> calls external node
+  CS<0x555db663a6d0> calls function 'z_impl_k_sleep'
+  CS<0x555db663b640> calls external node
+  CS<0x555db663b710> calls function 'z_impl_k_usleep'
+
+Call graph node for function: 'onoff_cancel'<<0x555db65acce0>>  #uses=1
+  CS<0x555db633f730> calls external node
+  CS<0x555db633fad0> calls function 'z_spin_lock_valid'
+  CS<0x555db633fce0> calls function 'printk'
+  CS<0x555db633fdd0> calls function 'printk'
+  CS<0x555db633fe90> calls function 'assert_post_action'
+  CS<0x555db63401f0> calls function 'z_spin_lock_set_owner'
+  CS<0x555db6344e00> calls function 'printk'
+  CS<0x555db6344ef0> calls function 'assert_post_action'
+  CS<0x555db63453d0> calls function 'z_spin_unlock_valid'
+  CS<0x555db63455e0> calls function 'printk'
+  CS<0x555db63456d0> calls function 'printk'
+  CS<0x555db6345790> calls function 'assert_post_action'
+  CS<0x555db6345a90> calls external node
+
+Call graph node for function: 'onoff_manager_init'<<0x555db60731c0>>  #uses=1
+
+Call graph node for function: 'onoff_monitor_register'<<0x555db6230ec0>>  #uses=1
+  CS<0x555db63482b0> calls external node
+  CS<0x555db6348650> calls function 'z_spin_lock_valid'
+  CS<0x555db6348860> calls function 'printk'
+  CS<0x555db6348950> calls function 'printk'
+  CS<0x555db6348a10> calls function 'assert_post_action'
+  CS<0x555db6348d70> calls function 'z_spin_lock_set_owner'
+  CS<0x555db634acb0> calls function 'z_spin_unlock_valid'
+  CS<0x555db634aec0> calls function 'printk'
+  CS<0x555db634afb0> calls function 'printk'
+  CS<0x555db634b070> calls function 'assert_post_action'
+  CS<0x555db634b370> calls external node
+
+Call graph node for function: 'onoff_monitor_unregister'<<0x555db6231de0>>  #uses=1
+  CS<0x555db634db20> calls external node
+  CS<0x555db634dec0> calls function 'z_spin_lock_valid'
+  CS<0x555db634e0d0> calls function 'printk'
+  CS<0x555db634e1c0> calls function 'printk'
+  CS<0x555db634e280> calls function 'assert_post_action'
+  CS<0x555db634e5e0> calls function 'z_spin_lock_set_owner'
+  CS<0x555db6352dc0> calls function 'z_spin_unlock_valid'
+  CS<0x555db6352fd0> calls function 'printk'
+  CS<0x555db63530c0> calls function 'printk'
+  CS<0x555db6353180> calls function 'assert_post_action'
+  CS<0x555db6353480> calls external node
+
+Call graph node for function: 'onoff_release'<<0x555db6073790>>  #uses=1
+  CS<0x555db6332330> calls external node
+  CS<0x555db63326d0> calls function 'z_spin_lock_valid'
+  CS<0x555db63328e0> calls function 'printk'
+  CS<0x555db63329d0> calls function 'printk'
+  CS<0x555db6332a90> calls function 'assert_post_action'
+  CS<0x555db6332df0> calls function 'z_spin_lock_set_owner'
+  CS<0x555db6333970> calls function 'printk'
+  CS<0x555db6333a60> calls function 'assert_post_action'
+  CS<0x555db6334360> calls function 'process_event'
+  CS<0x555db6334760> calls function 'z_spin_unlock_valid'
+  CS<0x555db6334970> calls function 'printk'
+  CS<0x555db6334a60> calls function 'printk'
+  CS<0x555db6334b20> calls function 'assert_post_action'
+  CS<0x555db6334e20> calls external node
+
+Call graph node for function: 'onoff_request'<<0x555db6073340>>  #uses=1
+  CS<0x555db63008f0> calls function 'sys_notify_validate'
+  CS<0x555db6301440> calls external node
+  CS<0x555db6301870> calls function 'z_spin_lock_valid'
+  CS<0x555db6301a80> calls function 'printk'
+  CS<0x555db6301b70> calls function 'printk'
+  CS<0x555db6301c30> calls function 'assert_post_action'
+  CS<0x555db6301f90> calls function 'z_spin_lock_set_owner'
+  CS<0x555db6303250> calls function 'printk'
+  CS<0x555db6303340> calls function 'assert_post_action'
+  CS<0x555db6305a00> calls function 'process_event'
+  CS<0x555db6306030> calls function 'z_spin_unlock_valid'
+  CS<0x555db6306240> calls function 'printk'
+  CS<0x555db6306330> calls function 'printk'
+  CS<0x555db63063f0> calls function 'assert_post_action'
+  CS<0x555db6306720> calls external node
+  CS<0x555db6306d60> calls function 'sys_notify_finalize'
+  CS<0x555db63072c0> calls external node
+
+Call graph node for function: 'onoff_reset'<<0x555db65ac9d0>>  #uses=1
+  CS<0x555db63376b0> calls function 'sys_notify_validate'
+  CS<0x555db6338640> calls external node
+  CS<0x555db63389e0> calls function 'z_spin_lock_valid'
+  CS<0x555db6338bf0> calls function 'printk'
+  CS<0x555db6338ce0> calls function 'printk'
+  CS<0x555db6338da0> calls function 'assert_post_action'
+  CS<0x555db6339100> calls function 'z_spin_lock_set_owner'
+  CS<0x555db633bbf0> calls function 'process_event'
+  CS<0x555db633bfa0> calls function 'z_spin_unlock_valid'
+  CS<0x555db633c1b0> calls function 'printk'
+  CS<0x555db633c2a0> calls function 'printk'
+  CS<0x555db633c360> calls function 'assert_post_action'
+  CS<0x555db633c660> calls external node
+
+Call graph node for function: 'onoff_sync_finalize'<<0x555db6232170>>  #uses=1
+  CS<0x555db6358ca0> calls function 'z_spin_unlock_valid'
+  CS<0x555db6358eb0> calls function 'printk'
+  CS<0x555db6358fa0> calls function 'printk'
+  CS<0x555db6359060> calls function 'assert_post_action'
+  CS<0x555db63593f0> calls external node
+  CS<0x555db63597a0> calls function 'printk'
+  CS<0x555db6359890> calls function 'assert_post_action'
+  CS<0x555db6359e90> calls function 'sys_notify_finalize'
+  CS<0x555db635a3c0> calls external node
+
+Call graph node for function: 'onoff_sync_lock'<<0x555db62320f0>>  #uses=1
+  CS<0x555db6354de0> calls external node
+  CS<0x555db6355180> calls function 'z_spin_lock_valid'
+  CS<0x555db6355390> calls function 'printk'
+  CS<0x555db6355480> calls function 'printk'
+  CS<0x555db6355540> calls function 'assert_post_action'
+  CS<0x555db6355810> calls function 'z_spin_lock_set_owner'
+
+Call graph node for function: 'printf'<<0x555db612a830>>  #uses=1
+  CS<0x555db63e53f0> calls function 'cbvprintf'
+
+Call graph node for function: 'printk'<<0x555db605e390>>  #uses=175
+  CS<0x555db6284b40> calls function 'cbvprintf'
+
+Call graph node for function: 'process_event'<<0x555db6073650>>  #uses=4
+  CS<0x555db6312580> calls function 'process_recheck'
+  CS<0x555db6316600> calls function 'printk'
+  CS<0x555db63166f0> calls function 'assert_post_action'
+  CS<0x555db6316de0> calls function 'process_recheck'
+  CS<0x555db6317750> calls function 'process_recheck'
+  CS<0x555db6317c10> calls function 'printk'
+  CS<0x555db6317d00> calls function 'assert_post_action'
+  CS<0x555db6318010> calls function 'printk'
+  CS<0x555db6318100> calls function 'assert_post_action'
+  CS<0x555db6318700> calls function 'printk'
+  CS<0x555db63187f0> calls function 'assert_post_action'
+  CS<0x555db62951c0> calls function 'printk'
+  CS<0x555db62952b0> calls function 'assert_post_action'
+  CS<0x555db6295b60> calls function 'printk'
+  CS<0x555db6295c50> calls function 'assert_post_action'
+  CS<0x555db6295fd0> calls function 'printk'
+  CS<0x555db62960c0> calls function 'assert_post_action'
+  CS<0x555db62966b0> calls function 'printk'
+  CS<0x555db62967a0> calls function 'assert_post_action'
+  CS<0x555db6297020> calls function 'printk'
+  CS<0x555db6297110> calls function 'assert_post_action'
+  CS<0x555db62976e0> calls function 'printk'
+  CS<0x555db62977d0> calls function 'assert_post_action'
+  CS<0x555db6297dc0> calls function 'printk'
+  CS<0x555db6297eb0> calls function 'assert_post_action'
+  CS<0x555db62985c0> calls function 'printk'
+  CS<0x555db62986b0> calls function 'assert_post_action'
+  CS<0x555db6321dd0> calls function 'z_spin_unlock_valid'
+  CS<0x555db6321fe0> calls function 'printk'
+  CS<0x555db63220d0> calls function 'printk'
+  CS<0x555db6322190> calls function 'assert_post_action'
+  CS<0x555db6322490> calls external node
+  CS<0x555db6323ba0> calls external node
+  CS<0x555db63247e0> calls external node
+  CS<0x555db6325ee0> calls function 'sys_notify_finalize'
+  CS<0x555db6326670> calls external node
+  CS<0x555db6326ef0> calls external node
+  CS<0x555db6327170> calls external node
+  CS<0x555db6327510> calls function 'z_spin_lock_valid'
+  CS<0x555db6327720> calls function 'printk'
+  CS<0x555db6327810> calls function 'printk'
+  CS<0x555db63278d0> calls function 'assert_post_action'
+  CS<0x555db6327c30> calls function 'z_spin_lock_set_owner'
+  CS<0x555db6329d10> calls function 'z_spin_unlock_valid'
+  CS<0x555db6329f20> calls function 'printk'
+  CS<0x555db632a010> calls function 'printk'
+  CS<0x555db632a0d0> calls function 'assert_post_action'
+  CS<0x555db632a3d0> calls external node
+
+Call graph node for function: 'process_recheck'<<0x555db6076ec0>>  #uses=3
+
+Call graph node for function: 'puts'<<0x555db612a200>>  #uses=1
+  CS<0x555db660cb20> calls function 'fputs'
+  CS<0x555db660d1b0> calls external node
+  CS<0x555db660d510> calls external node
+
+Call graph node for function: 'rb_contains'<<0x555db6232bb0>>  #uses=1
+  CS<0x555db62a6820> calls external node
+
+Call graph node for function: 'rb_insert'<<0x555db6232650>>  #uses=1
+  CS<0x555db61397c0> calls function 'find_and_stack'
+  CS<0x555db6139e30> calls external node
+  CS<0x555db636e840> calls function 'rotate'
+  CS<0x555db636eae0> calls function 'rotate'
+
+Call graph node for function: 'rb_remove'<<0x555db62328d0>>  #uses=1
+  CS<0x555db6101ef0> calls function 'find_and_stack'
+  CS<0x555db6399e40> calls function 'rotate'
+  CS<0x555db63a1450> calls function 'rotate'
+  CS<0x555db63a4ef0> calls function 'rotate'
+  CS<0x555db63a93a0> calls function 'printk'
+  CS<0x555db63a9470> calls function 'printk'
+  CS<0x555db63a9530> calls function 'assert_post_action'
+
+Call graph node for function: 'realloc'<<0x555db6065da0>>  #uses=1
+  CS<0x555db65c36b0> calls external node
+  CS<0x555db65c3760> calls function 'z_impl_z_errno'
+
+Call graph node for function: 'reallocarray'<<0x555db6065fe0>>  #uses=1
+
+Call graph node for function: 'rotate'<<0x555db6232750>>  #uses=5
+
+Call graph node for function: 'set_clear_region'<<0x555db66db7f0>>  #uses=2
+  CS<0x555db6549820> calls external node
+  CS<0x555db6549bc0> calls function 'z_spin_lock_valid'
+  CS<0x555db6549dd0> calls function 'printk'
+  CS<0x555db6549ec0> calls function 'printk'
+  CS<0x555db6549f80> calls function 'assert_post_action'
+  CS<0x555db654a250> calls function 'z_spin_lock_set_owner'
+  CS<0x555db654a760> calls function 'printk'
+  CS<0x555db654a850> calls function 'assert_post_action'
+  CS<0x555db60818e0> calls function 'set_region'
+  CS<0x555db654b5b0> calls function 'z_spin_unlock_valid'
+  CS<0x555db654b7c0> calls function 'printk'
+  CS<0x555db654b8b0> calls function 'printk'
+  CS<0x555db654b970> calls function 'assert_post_action'
+  CS<0x555db654bfa0> calls external node
+
+Call graph node for function: 'set_region'<<0x555db66dae70>>  #uses=3
+
+Call graph node for function: 'setup_bundle_data'<<0x555db66daef0>>  #uses=1
+
+Call graph node for function: 'snprintf'<<0x555db612a3c0>>  #uses=1
+  CS<0x555db660f9b0> calls function 'cbvprintf'
+
+Call graph node for function: 'snprintk'<<0x555db6072fe0>>  #uses=1
+  CS<0x555db62f2610> calls function 'cbvprintf'
+
+Call graph node for function: 'split_chunks'<<0x555db66d87a0>>  #uses=5
+
+Call graph node for function: 'sprintf'<<0x555db612a4c0>>  #uses=1
+  CS<0x555db6612fd0> calls function 'cbvprintf'
+
+Call graph node for function: 'sprintf_out'<<0x555db612a440>>  #uses=1
+
+Call graph node for function: 'sse_200_platform_get_cpu_id'<<0x555db6075a20>>  #uses=1
+
+Call graph node for function: 'str_out'<<0x555db6073090>>  #uses=1
+
+Call graph node for function: 'strcat'<<0x555db6066640>>  #uses=1
+
+Call graph node for function: 'strchr'<<0x555db6066440>>  #uses=3
+
+Call graph node for function: 'strcmp'<<0x555db6066540>>  #uses=1
+
+Call graph node for function: 'strcpy'<<0x555db6066340>>  #uses=1
+
+Call graph node for function: 'strcspn'<<0x555db60669c0>>  #uses=1
+  CS<0x555db65ffcb0> calls function 'strchr'
+
+Call graph node for function: 'strlen'<<0x555db66d5d20>>  #uses=8
+
+Call graph node for function: 'strncasecmp'<<0x555db6066190>>  #uses=1
+
+Call graph node for function: 'strncat'<<0x555db6066740>>  #uses=1
+
+Call graph node for function: 'strncmp'<<0x555db60662c0>>  #uses=2
+
+Call graph node for function: 'strncpy'<<0x555db60663c0>>  #uses=1
+
+Call graph node for function: 'strnlen'<<0x555db66d5ca0>>  #uses=2
+
+Call graph node for function: 'strrchr'<<0x555db60664c0>>  #uses=1
+
+Call graph node for function: 'strspn'<<0x555db6066940>>  #uses=1
+  CS<0x555db65fcfa0> calls function 'strchr'
+
+Call graph node for function: 'strstr'<<0x555db6066210>>  #uses=1
+  CS<0x555db65d0020> calls function 'strlen'
+  CS<0x555db65d0c90> calls function 'strncmp'
+
+Call graph node for function: 'strtok_r'<<0x555db60665c0>>  #uses=1
+
+Call graph node for function: 'strtol'<<0x555db6065a80>>  #uses=1
+  CS<0x555db63f26a0> calls external node
+  CS<0x555db63f2750> calls function 'z_impl_z_errno'
+
+Call graph node for function: 'strtoul'<<0x555db6065b60>>  #uses=1
+  CS<0x555db63ff150> calls external node
+  CS<0x555db63ff200> calls function 'z_impl_z_errno'
+
+Call graph node for function: 'sys_arch_reboot'<<0x555db66dbd10>>  #uses=2
+  CS<0x555db659d1b0> calls function '__NVIC_SystemReset'
+
+Call graph node for function: 'sys_bitarray_alloc'<<0x555db66daae0>>  #uses=1
+  CS<0x555db6518c80> calls external node
+  CS<0x555db6519020> calls function 'z_spin_lock_valid'
+  CS<0x555db6519230> calls function 'printk'
+  CS<0x555db6519320> calls function 'printk'
+  CS<0x555db65193e0> calls function 'assert_post_action'
+  CS<0x555db65196b0> calls function 'z_spin_lock_set_owner'
+  CS<0x555db6519b30> calls function 'printk'
+  CS<0x555db6519c20> calls function 'assert_post_action'
+  CS<0x555db645ba10> calls function 'match_region'
+  CS<0x555db608dc50> calls function 'set_region'
+  CS<0x555db651d430> calls function 'z_spin_unlock_valid'
+  CS<0x555db651d640> calls function 'printk'
+  CS<0x555db651d730> calls function 'printk'
+  CS<0x555db651d7f0> calls function 'assert_post_action'
+  CS<0x555db651de20> calls external node
+
+Call graph node for function: 'sys_bitarray_clear_bit'<<0x555db66d9ea0>>  #uses=1
+  CS<0x555db6502b10> calls external node
+  CS<0x555db6502eb0> calls function 'z_spin_lock_valid'
+  CS<0x555db65030c0> calls function 'printk'
+  CS<0x555db65031b0> calls function 'printk'
+  CS<0x555db6503270> calls function 'assert_post_action'
+  CS<0x555db6503540> calls function 'z_spin_lock_set_owner'
+  CS<0x555db6503a50> calls function 'printk'
+  CS<0x555db6503b40> calls function 'assert_post_action'
+  CS<0x555db6504e30> calls function 'z_spin_unlock_valid'
+  CS<0x555db6505040> calls function 'printk'
+  CS<0x555db6505130> calls function 'printk'
+  CS<0x555db65051f0> calls function 'assert_post_action'
+  CS<0x555db6505820> calls external node
+
+Call graph node for function: 'sys_bitarray_clear_region'<<0x555db66dbb60>>  #uses=1
+  CS<0x555db654d1d0> calls function 'set_clear_region'
+
+Call graph node for function: 'sys_bitarray_free'<<0x555db66daf70>>  #uses=1
+  CS<0x555db653d640> calls external node
+  CS<0x555db653d9e0> calls function 'z_spin_lock_valid'
+  CS<0x555db653dbf0> calls function 'printk'
+  CS<0x555db653dce0> calls function 'printk'
+  CS<0x555db653dda0> calls function 'assert_post_action'
+  CS<0x555db653e070> calls function 'z_spin_lock_set_owner'
+  CS<0x555db653e580> calls function 'printk'
+  CS<0x555db653e670> calls function 'assert_post_action'
+  CS<0x555db653ee40> calls function 'match_region'
+  CS<0x555db6080d50> calls function 'set_region'
+  CS<0x555db653f650> calls function 'z_spin_unlock_valid'
+  CS<0x555db653f860> calls function 'printk'
+  CS<0x555db653f950> calls function 'printk'
+  CS<0x555db653fa10> calls function 'assert_post_action'
+  CS<0x555db6540040> calls external node
+
+Call graph node for function: 'sys_bitarray_is_region_cleared'<<0x555db66db6f0>>  #uses=1
+  CS<0x555db6547040> calls function 'is_region_set_clear'
+
+Call graph node for function: 'sys_bitarray_is_region_set'<<0x555db66db330>>  #uses=1
+  CS<0x555db65413b0> calls function 'is_region_set_clear'
+
+Call graph node for function: 'sys_bitarray_set_bit'<<0x555db66d9a10>>  #uses=1
+  CS<0x555db64fe2d0> calls external node
+  CS<0x555db64fe700> calls function 'z_spin_lock_valid'
+  CS<0x555db64fe910> calls function 'printk'
+  CS<0x555db64fea00> calls function 'printk'
+  CS<0x555db64feac0> calls function 'assert_post_action'
+  CS<0x555db64fed90> calls function 'z_spin_lock_set_owner'
+  CS<0x555db64ff2a0> calls function 'printk'
+  CS<0x555db64ff390> calls function 'assert_post_action'
+  CS<0x555db6500620> calls function 'z_spin_unlock_valid'
+  CS<0x555db6500830> calls function 'printk'
+  CS<0x555db6500920> calls function 'printk'
+  CS<0x555db65009e0> calls function 'assert_post_action'
+  CS<0x555db6501040> calls external node
+
+Call graph node for function: 'sys_bitarray_set_region'<<0x555db66db770>>  #uses=1
+  CS<0x555db6547bf0> calls function 'set_clear_region'
+
+Call graph node for function: 'sys_bitarray_test_and_clear_bit'<<0x555db66da7d0>>  #uses=1
+  CS<0x555db6512370> calls external node
+  CS<0x555db6512710> calls function 'z_spin_lock_valid'
+  CS<0x555db6512920> calls function 'printk'
+  CS<0x555db6512a10> calls function 'printk'
+  CS<0x555db6512ad0> calls function 'assert_post_action'
+  CS<0x555db6512da0> calls function 'z_spin_lock_set_owner'
+  CS<0x555db65132b0> calls function 'printk'
+  CS<0x555db65133a0> calls function 'assert_post_action'
+  CS<0x555db6514af0> calls function 'z_spin_unlock_valid'
+  CS<0x555db6514d00> calls function 'printk'
+  CS<0x555db6514df0> calls function 'printk'
+  CS<0x555db6514eb0> calls function 'assert_post_action'
+  CS<0x555db65154e0> calls external node
+
+Call graph node for function: 'sys_bitarray_test_and_set_bit'<<0x555db66da4c0>>  #uses=1
+  CS<0x555db650c3f0> calls external node
+  CS<0x555db650c790> calls function 'z_spin_lock_valid'
+  CS<0x555db650c9a0> calls function 'printk'
+  CS<0x555db650ca90> calls function 'printk'
+  CS<0x555db650cb50> calls function 'assert_post_action'
+  CS<0x555db650ce20> calls function 'z_spin_lock_set_owner'
+  CS<0x555db650d330> calls function 'printk'
+  CS<0x555db650d420> calls function 'assert_post_action'
+  CS<0x555db650eab0> calls function 'z_spin_unlock_valid'
+  CS<0x555db650ecc0> calls function 'printk'
+  CS<0x555db650edb0> calls function 'printk'
+  CS<0x555db650ee70> calls function 'assert_post_action'
+  CS<0x555db650f4a0> calls external node
+
+Call graph node for function: 'sys_bitarray_test_bit'<<0x555db66da1b0>>  #uses=1
+  CS<0x555db6507660> calls external node
+  CS<0x555db6507a00> calls function 'z_spin_lock_valid'
+  CS<0x555db6507c10> calls function 'printk'
+  CS<0x555db6507d00> calls function 'printk'
+  CS<0x555db6507dc0> calls function 'assert_post_action'
+  CS<0x555db6508090> calls function 'z_spin_lock_set_owner'
+  CS<0x555db65085a0> calls function 'printk'
+  CS<0x555db6508690> calls function 'assert_post_action'
+  CS<0x555db6509b60> calls function 'z_spin_unlock_valid'
+  CS<0x555db6509d70> calls function 'printk'
+  CS<0x555db6509e60> calls function 'printk'
+  CS<0x555db6509f20> calls function 'assert_post_action'
+  CS<0x555db650a550> calls external node
+
+Call graph node for function: 'sys_clock_announce'<<0x555db6060c80>>  #uses=2
+  CS<None> calls external node
+
+Call graph node for function: 'sys_clock_cycle_get_32'<<0x555db6075e20>>  #uses=30
+  CS<0x555db66d0fd0> calls external node
+  CS<0x555db66d1310> calls function 'z_spin_lock_valid'
+  CS<0x555db66d1520> calls function 'printk'
+  CS<0x555db66d1610> calls function 'printk'
+  CS<0x555db66d16d0> calls function 'assert_post_action'
+  CS<0x555db66d19a0> calls function 'z_spin_lock_set_owner'
+  CS<0x555db66d1b90> calls function 'elapsed'
+  CS<0x555db66d2000> calls function 'z_spin_unlock_valid'
+  CS<0x555db66d2210> calls function 'printk'
+  CS<0x555db66d2300> calls function 'printk'
+  CS<0x555db66d23c0> calls function 'assert_post_action'
+  CS<0x555db66d2b90> calls external node
+
+Call graph node for function: 'sys_clock_device_ctrl'<<0x555db6060ad0>>  #uses=1
+
+Call graph node for function: 'sys_clock_disable'<<0x555db66dbc90>>  #uses=2
+
+Call graph node for function: 'sys_clock_driver_init'<<0x555db6060a50>>  #uses=1
+
+Call graph node for function: 'sys_clock_elapsed'<<0x555db60612f0>>  #uses=1
+  CS<0x555db66ce7f0> calls external node
+  CS<0x555db66ceb30> calls function 'z_spin_lock_valid'
+  CS<0x555db66cec90> calls function 'printk'
+  CS<0x555db66ced80> calls function 'printk'
+  CS<0x555db66cee40> calls function 'assert_post_action'
+  CS<0x555db66cf110> calls function 'z_spin_lock_set_owner'
+  CS<0x555db66cf300> calls function 'elapsed'
+  CS<0x555db66cf810> calls function 'z_spin_unlock_valid'
+  CS<0x555db66cfa20> calls function 'printk'
+  CS<0x555db66cfb10> calls function 'printk'
+  CS<0x555db66cfbd0> calls function 'assert_post_action'
+  CS<0x555db66d0460> calls external node
+
+Call graph node for function: 'sys_clock_idle_exit'<<0x555db6061890>>  #uses=1
+
+Call graph node for function: 'sys_clock_isr'<<0x555db6060b50>>  #uses=1
+  CS<0x555db66c3fd0> calls function 'elapsed'
+  CS<0x555db66c4900> calls function 'sys_clock_announce'
+  CS<0x555db66c49b0> calls function 'z_arm_int_exit'
+
+Call graph node for function: 'sys_clock_set_timeout'<<0x555db6060db0>>  #uses=1
+  CS<0x555db66c93a0> calls external node
+  CS<0x555db66c97d0> calls function 'z_spin_lock_valid'
+  CS<0x555db66c99e0> calls function 'printk'
+  CS<0x555db66c9ad0> calls function 'printk'
+  CS<0x555db66c9b90> calls function 'assert_post_action'
+  CS<0x555db66c9ef0> calls function 'z_spin_lock_set_owner'
+  CS<0x555db66ca0b0> calls function 'elapsed'
+  CS<0x555db66cc9e0> calls function 'z_spin_unlock_valid'
+  CS<0x555db66ccbf0> calls function 'printk'
+  CS<0x555db66ccce0> calls function 'printk'
+  CS<0x555db66ccda0> calls function 'assert_post_action'
+  CS<0x555db66cd0d0> calls external node
+
+Call graph node for function: 'sys_heap_aligned_alloc'<<0x555db66d88a0>>  #uses=3
+  CS<0x555db64525f0> calls function 'sys_heap_alloc'
+  CS<0x555db6452f50> calls function 'printk'
+  CS<0x555db6453020> calls function 'printk'
+  CS<0x555db64530e0> calls function 'assert_post_action'
+  CS<0x555db6454600> calls function 'alloc_chunk'
+  CS<0x555db6457100> calls function 'split_chunks'
+  CS<0x555db64571f0> calls function 'free_list_add'
+  CS<0x555db6458ca0> calls function 'split_chunks'
+  CS<0x555db6458d90> calls function 'free_list_add'
+
+Call graph node for function: 'sys_heap_aligned_realloc'<<0x555db66d8e90>>  #uses=1
+  CS<0x555db645f820> calls function 'sys_heap_aligned_alloc'
+  CS<0x555db645fb50> calls function 'sys_heap_free'
+  CS<0x555db645fff0> calls function 'printk'
+  CS<0x555db64600c0> calls function 'printk'
+  CS<0x555db6460180> calls function 'assert_post_action'
+  CS<0x555db6466720> calls function 'split_chunks'
+  CS<0x555db64679d0> calls function 'free_chunk'
+  CS<0x555db646b3b0> calls function 'free_list_remove'
+  CS<0x555db646cb20> calls function 'split_chunks'
+  CS<0x555db646cc10> calls function 'free_list_add'
+  CS<0x555db646cdc0> calls function 'merge_chunks'
+  CS<0x555db646e090> calls function 'sys_heap_aligned_alloc'
+  CS<0x555db6470370> calls function 'memcpy'
+  CS<0x555db6470460> calls function 'sys_heap_free'
+
+Call graph node for function: 'sys_heap_alloc'<<0x555db66d8670>>  #uses=2
+  CS<0x555db64357f0> calls function 'alloc_chunk'
+  CS<0x555db6437260> calls function 'split_chunks'
+  CS<0x555db6437350> calls function 'free_list_add'
+
+Call graph node for function: 'sys_heap_free'<<0x555db66d7fa0>>  #uses=3
+  CS<0x555db62dea40> calls function 'printk'
+  CS<0x555db62deb30> calls function 'printk'
+  CS<0x555db62debf0> calls function 'assert_post_action'
+  CS<0x555db62e2160> calls function 'printk'
+  CS<0x555db62e2250> calls function 'printk'
+  CS<0x555db62e2310> calls function 'assert_post_action'
+  CS<0x555db62e3770> calls function 'free_chunk'
+
+Call graph node for function: 'sys_heap_init'<<0x555db66d91a0>>  #uses=1
+  CS<0x555db6476f50> calls function 'printk'
+  CS<0x555db6477020> calls function 'printk'
+  CS<0x555db64770e0> calls function 'assert_post_action'
+  CS<0x555db6478240> calls function 'printk'
+  CS<0x555db6478310> calls function 'printk'
+  CS<0x555db64783d0> calls function 'assert_post_action'
+  CS<0x555db647aad0> calls function 'printk'
+  CS<0x555db647aba0> calls function 'printk'
+  CS<0x555db647ac60> calls function 'assert_post_action'
+  CS<0x555db6489150> calls function 'free_list_add'
+
+Call graph node for function: 'sys_heap_print_info'<<0x555db66d9990>>  #uses=1
+  CS<0x555db64fc910> calls function 'heap_print_info'
+
+Call graph node for function: 'sys_heap_stress'<<0x555db66d9690>>  #uses=1
+  CS<0x555db64d8bb0> calls function 'printk'
+  CS<0x555db64d8c80> calls function 'printk'
+  CS<0x555db64d8d40> calls function 'assert_post_action'
+  CS<0x555db64dada0> calls external node
+  CS<0x555db64dd0f0> calls external node
+
+Call graph node for function: 'sys_heap_validate'<<0x555db66d94b0>>  #uses=1
+  CS<0x555db6493280> calls function 'valid_chunk'
+  CS<0x555db6497950> calls function 'valid_chunk'
+
+Call graph node for function: 'sys_notify_finalize'<<0x555db6072cd0>>  #uses=4
+  CS<0x555db62ed180> calls function 'printk'
+  CS<0x555db62ed270> calls function 'assert_post_action'
+  CS<0x555db62ed570> calls external node
+
+Call graph node for function: 'sys_notify_validate'<<0x555db6072c50>>  #uses=3
+
+Call graph node for function: 'sys_reboot'<<0x555db66dbbe0>>  #uses=3
+  CS<0x555db654de70> calls external node
+  CS<0x555db654e170> calls function 'sys_clock_disable'
+  CS<0x555db654e240> calls function 'sys_arch_reboot'
+  CS<0x555db654e310> calls function 'printk'
+  CS<0x555db654e460> calls function 'arch_cpu_idle'
+
+Call graph node for function: 'sys_sem_count_get'<<0x555db66d7640>>  #uses=1
+  CS<0x555db6293410> calls external node
+
+Call graph node for function: 'sys_sem_give'<<0x555db6230fe0>>  #uses=1
+  CS<0x555db6290d70> calls external node
+  CS<0x555db6290e40> calls function 'z_impl_k_sem_give'
+
+Call graph node for function: 'sys_sem_init'<<0x555db6073810>>  #uses=1
+  CS<0x555db628fff0> calls external node
+  CS<0x555db6290100> calls function 'z_impl_k_sem_init'
+
+Call graph node for function: 'sys_sem_take'<<0x555db66d74e0>>  #uses=1
+  CS<0x555db62921d0> calls external node
+  CS<0x555db62922c0> calls function 'z_impl_k_sem_take'
+
+Call graph node for function: 'sys_trace_idle'<<0x555db6075c20>>  #uses=1
+
+Call graph node for function: 'sys_trace_isr_enter'<<0x555db6075aa0>>  #uses=1
+
+Call graph node for function: 'sys_trace_isr_exit'<<0x555db6075b20>>  #uses=1
+
+Call graph node for function: 'sys_trace_isr_exit_to_scheduler'<<0x555db6075ba0>>  #uses=1
+
+Call graph node for function: 'timeutil_sync_estimate_skew'<<0x555db66d7da0>>  #uses=1
+
+Call graph node for function: 'timeutil_sync_local_from_ref'<<0x555db66d7ea0>>  #uses=1
+
+Call graph node for function: 'timeutil_sync_ref_from_local'<<0x555db66d7e20>>  #uses=1
+
+Call graph node for function: 'timeutil_sync_skew_to_ppb'<<0x555db66d7f20>>  #uses=1
+
+Call graph node for function: 'timeutil_sync_state_set_skew'<<0x555db66d7d20>>  #uses=1
+
+Call graph node for function: 'timeutil_sync_state_update'<<0x555db66d7ca0>>  #uses=1
+
+Call graph node for function: 'timeutil_timegm'<<0x555db66d7ae0>>  #uses=1
+  CS<0x555db63c8990> calls function 'timeutil_timegm64'
+  CS<0x555db63c8c60> calls external node
+  CS<0x555db63c8d10> calls function 'z_impl_z_errno'
+
+Call graph node for function: 'timeutil_timegm64'<<0x555db66d7a60>>  #uses=2
+
+Call graph node for function: 'timing_start'<<0x555db605e290>>  #uses=2
+  CS<None> calls external node
+
+Call graph node for function: 'transition_complete'<<0x555db6073710>>  #uses=1
+  CS<0x555db632fe20> calls external node
+  CS<0x555db63301c0> calls function 'z_spin_lock_valid'
+  CS<0x555db63303d0> calls function 'printk'
+  CS<0x555db63304c0> calls function 'printk'
+  CS<0x555db6330580> calls function 'assert_post_action'
+  CS<0x555db63308e0> calls function 'z_spin_lock_set_owner'
+  CS<0x555db6330d90> calls function 'process_event'
+
+Call graph node for function: 'u8_to_dec'<<0x555db66d5960>>  #uses=1
+
+Call graph node for function: 'uart_cmsdk_apb_fifo_fill'<<0x555db605fb80>>  #uses=1
+
+Call graph node for function: 'uart_cmsdk_apb_fifo_read'<<0x555db605fc00>>  #uses=1
+
+Call graph node for function: 'uart_cmsdk_apb_init'<<0x555db60609a0>>  #uses=1
+  CS<0x555db66bfab0> calls external node
+
+Call graph node for function: 'uart_cmsdk_apb_irq_callback_set'<<0x555db60602b0>>  #uses=1
+
+Call graph node for function: 'uart_cmsdk_apb_irq_config_func_0'<<0x555db6060330>>  #uses=1
+  CS<0x555db66ba0f0> calls function 'z_arm_irq_priority_set'
+  CS<0x555db66ba1c0> calls function 'arch_irq_enable'
+  CS<0x555db66ba2d0> calls function 'z_arm_irq_priority_set'
+  CS<0x555db66ba3a0> calls function 'arch_irq_enable'
+
+Call graph node for function: 'uart_cmsdk_apb_irq_config_func_1'<<0x555db6060460>>  #uses=1
+  CS<0x555db66ba960> calls function 'z_arm_irq_priority_set'
+  CS<0x555db66baa30> calls function 'arch_irq_enable'
+  CS<0x555db66bab40> calls function 'z_arm_irq_priority_set'
+  CS<0x555db66bac10> calls function 'arch_irq_enable'
+
+Call graph node for function: 'uart_cmsdk_apb_irq_config_func_2'<<0x555db6060590>>  #uses=1
+  CS<0x555db66bb1d0> calls function 'z_arm_irq_priority_set'
+  CS<0x555db66bb2a0> calls function 'arch_irq_enable'
+  CS<0x555db66bb3b0> calls function 'z_arm_irq_priority_set'
+  CS<0x555db66bb480> calls function 'arch_irq_enable'
+
+Call graph node for function: 'uart_cmsdk_apb_irq_config_func_3'<<0x555db60606c0>>  #uses=1
+  CS<0x555db66bba40> calls function 'z_arm_irq_priority_set'
+  CS<0x555db66bbb10> calls function 'arch_irq_enable'
+  CS<0x555db66bbc20> calls function 'z_arm_irq_priority_set'
+  CS<0x555db66bbcf0> calls function 'arch_irq_enable'
+
+Call graph node for function: 'uart_cmsdk_apb_irq_config_func_4'<<0x555db60607f0>>  #uses=1
+  CS<0x555db66bc2b0> calls function 'z_arm_irq_priority_set'
+  CS<0x555db66bc380> calls function 'arch_irq_enable'
+  CS<0x555db66bc490> calls function 'z_arm_irq_priority_set'
+  CS<0x555db66bc560> calls function 'arch_irq_enable'
+
+Call graph node for function: 'uart_cmsdk_apb_irq_err_disable'<<0x555db6060130>>  #uses=1
+
+Call graph node for function: 'uart_cmsdk_apb_irq_err_enable'<<0x555db60600b0>>  #uses=1
+
+Call graph node for function: 'uart_cmsdk_apb_irq_is_pending'<<0x555db60601b0>>  #uses=1
+
+Call graph node for function: 'uart_cmsdk_apb_irq_rx_disable'<<0x555db605ff30>>  #uses=1
+
+Call graph node for function: 'uart_cmsdk_apb_irq_rx_enable'<<0x555db605feb0>>  #uses=1
+
+Call graph node for function: 'uart_cmsdk_apb_irq_rx_ready'<<0x555db6060030>>  #uses=1
+
+Call graph node for function: 'uart_cmsdk_apb_irq_tx_complete'<<0x555db605ffb0>>  #uses=1
+
+Call graph node for function: 'uart_cmsdk_apb_irq_tx_disable'<<0x555db605fdb0>>  #uses=1
+
+Call graph node for function: 'uart_cmsdk_apb_irq_tx_enable'<<0x555db605fc80>>  #uses=1
+  CS<0x555db66b1960> calls external node
+  CS<0x555db66b2630> calls external node
+  CS<0x555db66b2b30> calls external node
+
+Call graph node for function: 'uart_cmsdk_apb_irq_tx_ready'<<0x555db605fe30>>  #uses=1
+
+Call graph node for function: 'uart_cmsdk_apb_irq_update'<<0x555db6060230>>  #uses=1
+
+Call graph node for function: 'uart_cmsdk_apb_isr'<<0x555db6060920>>  #uses=1
+  CS<0x555db66bd2d0> calls external node
+
+Call graph node for function: 'uart_cmsdk_apb_poll_in'<<0x555db605fa80>>  #uses=1
+
+Call graph node for function: 'uart_cmsdk_apb_poll_out'<<0x555db605fb00>>  #uses=1
+
+Call graph node for function: 'uart_console_init'<<0x555db612ad20>>  #uses=1
+  CS<0x555db663f2f0> calls external node
+  CS<0x555db663f640> calls function 'z_device_ready'
+  CS<0x555db663f7f0> calls function '__stdout_hook_install'
+  CS<0x555db663f8c0> calls function '__printk_hook_install'
+
+Call graph node for function: 'uart_out'<<0x555db6074410>>  #uses=1
+  CS<0x555db6200450> calls external node
+  CS<0x555db6200540> calls function 'z_impl_k_queue_get'
+  CS<0x555db6200890> calls function 'k_free'
+
+Call graph node for function: 'valid_chunk'<<0x555db66d9530>>  #uses=2
+  CS<0x555db64baa00> calls function 'in_bounds'
+  CS<0x555db64c8fb0> calls function 'in_bounds'
+  CS<0x555db64c9ca0> calls function 'in_bounds'
+  CS<0x555db64cae30> calls function 'in_bounds'
+
+Call graph node for function: 'vfprintf'<<0x555db612a780>>  #uses=1
+  CS<0x555db63e4320> calls function 'cbvprintf'
+
+Call graph node for function: 'vprintf'<<0x555db612a8e0>>  #uses=1
+  CS<0x555db63e6140> calls function 'cbvprintf'
+
+Call graph node for function: 'vprintk'<<0x555db6072eb0>>  #uses=1
+  CS<0x555db62eec90> calls function 'cbvprintf'
+
+Call graph node for function: 'vsnprintf'<<0x555db612a570>>  #uses=1
+  CS<0x555db63e02f0> calls function 'cbvprintf'
+
+Call graph node for function: 'vsnprintk'<<0x555db6073110>>  #uses=1
+  CS<0x555db62142e0> calls function 'cbvprintf'
+
+Call graph node for function: 'vsprintf'<<0x555db612a620>>  #uses=1
+  CS<0x555db63e1c40> calls function 'cbvprintf'
+
+Call graph node for function: 'wakeup_cpu1'<<0x555db60759a0>>  #uses=1
+
+Call graph node for function: 'wdog_cmsdk_apb_disable'<<0x555db605f7d0>>  #uses=1
+
+Call graph node for function: 'wdog_cmsdk_apb_feed'<<0x555db605f8d0>>  #uses=1
+
+Call graph node for function: 'wdog_cmsdk_apb_init'<<0x555db605f950>>  #uses=1
+  CS<0x555db63d6c30> calls function 'z_NmiHandlerSet'
+
+Call graph node for function: 'wdog_cmsdk_apb_install_timeout'<<0x555db605f850>>  #uses=1
+
+Call graph node for function: 'wdog_cmsdk_apb_isr'<<0x555db605f9d0>>  #uses=1
+  CS<0x555db63d78d0> calls function 'printk'
+  CS<0x555db63d79a0> calls function 'sys_reboot'
+  CS<0x555db63d7d70> calls external node
+
+Call graph node for function: 'wdog_cmsdk_apb_setup'<<0x555db605f750>>  #uses=1
+
+Call graph node for function: 'z_NmiHandlerSet'<<0x555db6076880>>  #uses=2
+
+Call graph node for function: 'z_SysNmiOnReset'<<0x555db6076800>>  #uses=1
+  CS<None> calls external node
+
+Call graph node for function: 'z_alloc_fd'<<0x555db60729a0>>  #uses=1
+  CS<0x555db62d76f0> calls function 'z_reserve_fd'
+  CS<0x555db62d7ab0> calls function 'z_finalize_fd'
+
+Call graph node for function: 'z_arm_clear_arm_mpu_config'<<0x555db6062650>>  #uses=1
+
+Call graph node for function: 'z_arm_configure_dynamic_mpu_regions'<<0x555db6062a40>>  #uses=1
+  CS<0x555db65ad3f0> calls function 'arm_core_mpu_configure_dynamic_mpu_regions'
+
+Call graph node for function: 'z_arm_configure_static_mpu_regions'<<0x555db6062750>>  #uses=1
+  CS<0x555db65a1430> calls function 'arm_core_mpu_configure_static_mpu_regions'
+
+Call graph node for function: 'z_arm_fatal_error'<<0x555db6076120>>  #uses=4
+  CS<0x555db65530c0> calls function 'z_fatal_error'
+
+Call graph node for function: 'z_arm_fault'<<0x555db60620f0>>  #uses=1
+  CS<0x555db638f3b0> calls external node
+  CS<0x555db6388270> calls function 'printk'
+  CS<0x555db63907b0> calls function 'printk'
+  CS<0x555db6390870> calls function 'assert_post_action'
+  CS<0x555db6392df0> calls function 'mem_manage_fault'
+  CS<0x555db6590ef0> calls function 'printk'
+  CS<0x555db6590f90> calls function 'printk'
+  CS<0x555db6591050> calls function 'assert_post_action'
+  CS<0x555db65911c0> calls function 'printk'
+  CS<0x555db6591290> calls function 'printk'
+  CS<0x555db6591350> calls function 'assert_post_action'
+  CS<0x555db6591480> calls function 'mem_manage_fault'
+  CS<0x555db6593980> calls function 'memcpy'
+  CS<0x555db6594660> calls function 'z_arm_fatal_error'
+
+Call graph node for function: 'z_arm_fault_init'<<0x555db6062370>>  #uses=1
+
+Call graph node for function: 'z_arm_int_exit'<<0x555db60769b0>>  #uses=3
+  CS<None> calls external node
+
+Call graph node for function: 'z_arm_interrupt_init'<<0x555db6061b50>>  #uses=2
+
+Call graph node for function: 'z_arm_irq_priority_set'<<0x555db60765f0>>  #uses=15
+  CS<0x555db63bab10> calls function 'printk'
+  CS<0x555db63bac40> calls function 'printk'
+  CS<0x555db63bad00> calls function 'assert_post_action'
+
+Call graph node for function: 'z_arm_mpu_init'<<0x555db6065560>>  #uses=1
+  CS<0x555db65b1fd0> calls function 'printk'
+  CS<0x555db65b00b0> calls function 'printk'
+  CS<0x555db65b20c0> calls function 'assert_post_action'
+  CS<0x555db65b21e0> calls external node
+  CS<0x555db65b3810> calls external node
+  CS<0x555db65b38c0> calls external node
+  CS<0x555db65b3c90> calls function 'printk'
+  CS<0x555db65b3d60> calls function 'printk'
+  CS<0x555db65b3e20> calls function 'assert_post_action'
+
+Call graph node for function: 'z_arm_nmi'<<0x555db6076900>>  #uses=1
+  CS<0x555db63bd160> calls external node
+  CS<0x555db63bd1e0> calls function 'z_arm_int_exit'
+
+Call graph node for function: 'z_arm_nmi_init'<<0x555db6074670>>  #uses=2
+
+Call graph node for function: 'z_arm_prep_c'<<0x555db6076a90>>  #uses=1
+  CS<0x555db63bdaf0> calls external node
+  CS<0x555db63bdb70> calls external node
+  CS<0x555db63bdbf0> calls function 'z_bss_zero'
+  CS<0x555db63bdca0> calls function 'z_data_copy'
+  CS<0x555db63bdd50> calls function 'z_arm_interrupt_init'
+  CS<0x555db63bde00> calls function 'z_cstart'
+
+Call graph node for function: 'z_arm_restore_fp_context'<<0x555db6062470>>  #uses=1
+
+Call graph node for function: 'z_arm_save_fp_context'<<0x555db60623f0>>  #uses=1
+
+Call graph node for function: 'z_bss_zero'<<0x555db60619a0>>  #uses=2
+  CS<None> calls external node
+
+Call graph node for function: 'z_cstart'<<0x555db6061bd0>>  #uses=2
+  CS<None> calls external node
+
+Call graph node for function: 'z_data_copy'<<0x555db6061ad0>>  #uses=2
+  CS<None> calls external node
+
+Call graph node for function: 'z_device_ready'<<0x555db612add0>>  #uses=2
+  CS<None> calls external node
+
+Call graph node for function: 'z_do_kernel_oops'<<0x555db6076280>>  #uses=1
+  CS<0x555db63b4260> calls function 'z_fatal_error'
+
+Call graph node for function: 'z_fatal_error'<<0x555db60761a0>>  #uses=3
+  CS<None> calls external node
+
+Call graph node for function: 'z_fdtable_call_ioctl'<<0x555db6072870>>  #uses=1
+  CS<0x555db62d4340> calls external node
+
+Call graph node for function: 'z_finalize_fd'<<0x555db66d5bd0>>  #uses=2
+  CS<0x555db62d2b60> calls function 'z_fdtable_call_ioctl'
+
+Call graph node for function: 'z_free_fd'<<0x555db6072920>>  #uses=1
+
+Call graph node for function: 'z_get_fd_obj'<<0x555db66d59e0>>  #uses=1
+  CS<0x555db62c8da0> calls function '_check_fd'
+  CS<0x555db62c95f0> calls external node
+  CS<0x555db62c96a0> calls function 'z_impl_z_errno'
+
+Call graph node for function: 'z_get_fd_obj_and_vtable'<<0x555db65ace30>>  #uses=1
+  CS<0x555db62cc430> calls function '_check_fd'
+
+Call graph node for function: 'z_impl_k_mutex_init'<<0x555db65ad0c0>>  #uses=2
+  CS<None> calls external node
+
+Call graph node for function: 'z_impl_k_mutex_lock'<<0x555db65acf90>>  #uses=2
+  CS<None> calls external node
+
+Call graph node for function: 'z_impl_k_mutex_unlock'<<0x555db65ad140>>  #uses=2
+  CS<None> calls external node
+
+Call graph node for function: 'z_impl_k_queue_get'<<0x555db60744c0>>  #uses=2
+  CS<None> calls external node
+
+Call graph node for function: 'z_impl_k_sem_give'<<0x555db6231090>>  #uses=2
+  CS<None> calls external node
+
+Call graph node for function: 'z_impl_k_sem_init'<<0x555db6230f00>>  #uses=2
+  CS<None> calls external node
+
+Call graph node for function: 'z_impl_k_sem_take'<<0x555db66d7560>>  #uses=2
+  CS<None> calls external node
+
+Call graph node for function: 'z_impl_k_sleep'<<0x555db605e6c0>>  #uses=3
+  CS<None> calls external node
+
+Call graph node for function: 'z_impl_k_str_out'<<0x555db6072f30>>  #uses=1
+  CS<0x555db62f0050> calls external node
+
+Call graph node for function: 'z_impl_k_thread_abort'<<0x555db66d7980>>  #uses=2
+  CS<0x555db65a0840> calls external node
+  CS<0x555db65a0e50> calls function 'z_thread_abort'
+
+Call graph node for function: 'z_impl_k_usleep'<<0x555db612ac20>>  #uses=2
+  CS<None> calls external node
+
+Call graph node for function: 'z_impl_z_current_get'<<0x555db66d7900>>  #uses=2
+  CS<None> calls external node
+
+Call graph node for function: 'z_impl_z_errno'<<0x555db66d5ae0>>  #uses=14
+  CS<None> calls external node
+
+Call graph node for function: 'z_impl_zephyr_fputc'<<0x555db6066b70>>  #uses=1
+  CS<0x555db6601d40> calls external node
+
+Call graph node for function: 'z_impl_zephyr_fwrite'<<0x555db612a180>>  #uses=2
+  CS<0x555db660af10> calls external node
+
+Call graph node for function: 'z_irq_spurious'<<0x555db60766d0>>  #uses=1
+  CS<0x555db63bbfb0> calls function 'z_arm_fatal_error'
+
+Call graph node for function: 'z_rb_child'<<0x555db6232ab0>>  #uses=1
+
+Call graph node for function: 'z_rb_foreach_next'<<0x555db6232c30>>  #uses=1
+
+Call graph node for function: 'z_rb_get_minmax'<<0x555db62325d0>>  #uses=1
+
+Call graph node for function: 'z_rb_is_black'<<0x555db6232b30>>  #uses=1
+
+Call graph node for function: 'z_rb_walk'<<0x555db6232a30>>  #uses=2
+  CS<0x555db62a20a0> calls function 'z_rb_walk'
+  CS<0x555db62a2190> calls external node
+
+Call graph node for function: 'z_reserve_fd'<<0x555db65acee0>>  #uses=2
+  CS<0x555db62cef60> calls external node
+  CS<0x555db62cf050> calls function 'z_impl_k_mutex_lock'
+  CS<0x555db62cfb60> calls external node
+  CS<0x555db62cfc10> calls function 'z_impl_z_errno'
+  CS<0x555db62d0bf0> calls external node
+  CS<0x555db62d0cc0> calls function 'z_impl_k_mutex_init'
+  CS<0x555db62d1000> calls external node
+  CS<0x555db62d10d0> calls function 'z_impl_k_mutex_unlock'
+
+Call graph node for function: 'z_spin_lock_set_owner'<<0x555db6076e10>>  #uses=22
+  CS<None> calls external node
+
+Call graph node for function: 'z_spin_lock_valid'<<0x555db6076b90>>  #uses=22
+  CS<None> calls external node
+
+Call graph node for function: 'z_spin_unlock_valid'<<0x555db60736d0>>  #uses=22
+  CS<None> calls external node
+
+Call graph node for function: 'z_thread_abort'<<0x555db60626d0>>  #uses=2
+  CS<None> calls external node
+
+Call graph node for function: 'z_thread_entry'<<0x555db66d76f0>>  #uses=1
+  CS<0x555db63c1bb0> calls external node
+  CS<0x555db63c1c60> calls function 'k_current_get'
+  CS<0x555db63c1d30> calls function 'k_thread_abort'
 

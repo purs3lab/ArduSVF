@@ -40,7 +40,6 @@ def mergeComponentsExcept(tCompartments):
 
 def mergeCompartments(compartment1, compartment2):
 	for fun in list(compartment2):
-		print (fun)
 		addToCompartment(fun, compartment1)
 	
 def assignLooseFunctions(): 
@@ -214,16 +213,8 @@ def printLooseFunctions():
 	global PDG
 	global compartments
 	global compartmentMap
-	printLoseObjects = False
+	printLoseObjects = True
 	if printLoseObjects:
-		for func in funcs:
-			if func not in compartmentMap:
-				print("**********Lost Function ***********")
-				print func
-			for obj in funcs[func]:
-				if obj not in compartmentMap:
-					print("************Lost Object ***********")
-					print(obj)
 		for func in funcs:
 			if func not in compartmentMap:
 				print("**********Lost Function ***********")
@@ -232,12 +223,20 @@ def printLooseFunctions():
 			if var not in compartmentMap:
 				print("************Lost Object ***********")
 				print var
+				print(data[var])
 ffmap = {}
 files = {}
 fdmap = {}
 dfmap = {}
 dfmapCoarse = {}
 import os
+def compCheck():
+	print("*******COMPCHECKSTART********")
+	for comp in compartments:
+		if "z_rb_walk" in comp:
+			print comp
+	print("*******COMPCHECKEND********")
+
 def main(argv):
 	cfg = ''
 	dfg = ''
@@ -348,15 +347,19 @@ def main(argv):
 				data[obj].append(line)
 	
 	#Let's get the DDG from our graph. 
-	for func in funcs: 
-		for obj in data:
-			if func in data[obj]:
-				funcs[func].append(obj)
-	
 	for d in data:
 		for fun in data[d]:
 			if fun not in funcs:
 				funcs[fun] = []
+	for func in funcs: 
+		for obj in data:
+			if func in data[obj]:
+				funcs[func].append(obj)
+
+	for func in ffmap:
+		if func not in funcs:
+			funcs[func] = []
+	
 
 
 	objCount =0
@@ -426,12 +429,11 @@ def main(argv):
 					break;
 				iter+=1
 			if iter==len(funcs[func]):
-				compartment = [func]
-				compartmentMap[func] = compartment
+				compartment = newCompartment()
+				addToCompartment(func, compartment)
 				for val in funcs[func]:
-					compartment.append(val)
-					compartmentMap[val] = compartment
-				compartments.append(compartment)
+					addToCompartment(val, compartment)
+
 				
 	print("After Pair merge")
 	FreeRTOSComp = ["Task", "Queue", "Stream", "Semaphore", "Timer", "Event", "Port"]
@@ -489,30 +491,60 @@ def main(argv):
 				if func in funcs:
 					for obj in funcs[func]:
 						addToCompartment(obj, comp)
+				else:
+					print (func +"not found in anything")
 		for dev in dfmapCoarse:
 			compartment = compartmentMap[dfmapCoarse[dev][0]]
 			for funcL in dfmapCoarse[dev]:
 				if compartment != compartmentMap[funcL]:
-					print("****Different Maps*******")
 					mergeCompartments(compartment, compartmentMap[funcL])
+	
+
+	#Assign Objects in unsed compartment
+	unusedComp = newCompartment()
+	for func in funcs:
+			if func not in compartmentMap:
+				addToCompartment(func, unusedComp)
+				
+	for var in data:
+		if var not in compartmentMap:
+			addToCompartment(var, unusedComp)
 				
 	printStats()
+	debugPrint = False
 	printThread = False
-	if printThread:
-		for thread in threads:
-			print(compartmentMap[thread])
-	l=[]
-	for comp in compartments:
-		l += comp
-	s =set(l)
-	obj=[]
-	for func in funcs:
-		obj.append(func)
-	for d in data:
-		obj.append(d)
+
+	if debugPrint:
+		if printThread:
+			for thread in threads:
+				print(compartmentMap[thread])
+		l=[]
+		for comp in compartments:
+			l += comp
+		s =set(l)
+		for func in funcs:
+			if func in funcs[func]:
+				print("Recursive call for :" +func)
+
+		seen = []
+		for obj in l:
+			if obj in seen:
+				print("Duplicate: ****")
+				print(obj)
+			else:
+				seen.append(obj)
+
+		obj=[]
+		for func in funcs:
+			obj.append(func)
+		for d in data:
+			obj.append(d)
+		sobj = set(obj)
+		print("Objects in compartmenst but not in the original data: ")
+		print(s - sobj)
 	printLooseFunctions()
 #	print(compartments)
-#import pdb; pdb.set_trace();
+	import pdb; pdb.set_trace();
 	
 
 #print(colors)

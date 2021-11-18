@@ -31,8 +31,8 @@ ll:
 update:
 	cp ./temp.bc /home/arslan/projects/LBC/FreeRTOS/FreeRTOS/Demo/CORTEX_M3_MPS2_QEMU_GCC/build/RTOSDemo.axf.bc 
 
-runp:
+runpf:
 	./partition.py -c /home/arslan/projects/LBC/FreeRTOS/FreeRTOS/Demo/CORTEX_M3_MPS2_QEMU_GCC/build/RTOSDemo.axf.bc -d ./dg 
 
-pz:
+runp:
 	./partition.py -c /home/arslan/zephyrproject/zephyr/build2/build/zephyr/zephyr.elf.bc -d ./dg
