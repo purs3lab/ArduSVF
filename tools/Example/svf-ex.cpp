@@ -1419,7 +1419,9 @@ void getFunctionfromUse(User * muse, vector<Function *>& users, int depth) {
 				}
 		}
 }
-int compartmentalize() {
+int compartmentalize(char * argv[]) {
+	ofstream debug;
+    debug.open("./rtmk.log");
 #if 0 
 	//Code for replacing instructions for ARM interrupt disabling. 
 	for (SVFModule::llvm_iterator F = svfModule->llvmFunBegin(), E = svfModule->llvmFunEnd(); F != E; ++F)
@@ -1648,6 +1650,103 @@ int compartmentalize() {
         }
     }
 	fdmap.close();
+#define ZEPHYR
+#ifdef ZEPHYR
+	ofstream threads;
+    threads.open("./threads");
+	/* Get static threads for Zephyr */
+	for (auto G = svfModule->global_begin(), E = svfModule->global_end(); G != E; ++G) {
+        auto glob = &*G;
+        if ((*glob)->getName().str().find("_k_thread_data_") != std::string::npos) {
+				cout << (*glob)->getName().str() <<endl;
+				auto init = (*glob)->getInitializer();
+				if (auto cast = dyn_cast<llvm::User>(init->getOperand(3))) {
+					threads<< cast->getOperand(0)->getName().str() << endl;
+				}
+		}
+	}
+#endif
+
+
+	//Create compartments
+	string cmd = "./partition.py -c ";
+	cmd += argv[InputFilename.getPosition()];
+	cmd += " -d ./dg";
+	//system("./partition.py -c " + argv[InputFilename.getPosition()] + " ./dg "); // myfile.sh should be chmod +x
+	system(cmd.c_str());
+
+	std::ifstream infile("./.policy");
+	std::string line;
+	int compartmentID = 0;
+	map<int,vector<string>> compartments;
+	map<string, int>compartmentMap;
+	while (std::getline(infile, line))
+	{
+		vector <string> tokens;
+		char *token = strtok((char *)line.c_str(), ",");
+		while (token != NULL)
+	    {
+			string str(token);
+			char chars[] = "[]'' ";
+
+	   		for (unsigned int i = 0; i < strlen(chars); ++i)
+   			{
+      			// you need include <algorithm> to use general algorithms like std::remove()
+		        str.erase (std::remove(str.begin(), str.end(), chars[i]), str.end());
+   			}
+			tokens.push_back(str);
+			compartmentMap[str] = compartmentID;
+			token = strtok(NULL, ",");
+	    }
+		compartments[compartmentID] = tokens;
+		compartmentID++;
+	}
+#ifdef DEBUG
+	for(const auto& elem : compartments) {
+			 std::cout << elem.first << ":";
+			 for (const auto &mem: elem.second) {
+					 cout<<mem<<endl;
+			 }
+	}
+#endif
+
+	//Partition global 
+	for (auto G = svfModule->global_begin(), E = svfModule->global_end(); G != E; ++G) {
+        auto glob = &*G;
+	 	// Code to change sections
+        //if (auto go= dyn_cast<llvm::GlobalObject>(*glob)) {
+        if (auto go= dyn_cast<llvm::GlobalVariable> (*glob)) {
+				string rtmksec= "rtmk";
+				if (go->getSection().str().find(rtmksec) != std::string::npos) {
+						continue;
+				}
+				debug<<go->getName().str()<<":"<<endl;
+				debug<<"moved from "<<go->getSection().str()<< " to ";
+				auto compartmentID = compartmentMap[go->getName().str()]; 
+                //StringRef s = ".object_section" + std::to_string(compartmentID);
+				StringRef s = ".osection" + std::to_string(compartmentID);
+				//string st = ".object_section" + std::to_string(compartmentID);
+				//cout<<st<<endl;
+                go->setSection(s);
+				debug<<go->getSection().str()<<endl;
+        }
+	}
+
+	for (SVFModule::llvm_iterator F = svfModule->llvmFunBegin(), E = svfModule->llvmFunEnd(); F != E; ++F) {
+		auto fun = *F;
+		string rtmksec= "rtmk";
+        if (fun->getSection().str().find(rtmksec) != std::string::npos) {
+        	continue;
+        }
+		debug<<fun->getName().str()<<":" <<endl;
+		debug<<"moved from "<<fun->getSection().str()<< " to ";
+		auto compartmentID = compartmentMap[fun->getName().str()];
+		StringRef s = ".csection" + std::to_string(compartmentID);
+		fun->setSection(s);
+        debug<<fun->getSection().str()<<endl;
+	}
+
+
 	updateBC();
 	return 0;
 }
@@ -1655,7 +1754,7 @@ int main(int argc, char ** argv) {
 	int error_value = 0;
 	parseArguments(argc,argv);
 	buildPTA();
-	compartmentalize();
+	compartmentalize(argv);
 	return 0;
 	//error_value = testPass();
 	/* First check task-kernel voilations */

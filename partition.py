@@ -6,6 +6,7 @@ data ={}
 cfg = {} #This remains the CFG
 compartments=[]
 compartmentMap={}
+policy = "thread"
 
 def newCompartment():
 		compartment = []
@@ -115,7 +116,7 @@ def paint():
 						if len(oldCompartment) == 0:
 							compartments.remove(oldCompartment)
 				compartments.append(compartment)
-			if policy == "submerge":
+			elif policy == "submerge":
 				compartment = []
 				for color in colors:
 					oldCompartment = color
@@ -184,6 +185,7 @@ def printStats():
 	global PDG
 	global compartments
 	global compartmentMap
+	global policy
 	print("**********Printing stats******")
 	objCount =0
 	for func in funcs:
@@ -196,6 +198,19 @@ def printStats():
 	print("Total Objects:" +str(objCount))
 	printCompartments =False
 	j = len(compartments)
+	original_stdout = sys.stdout
+	with open(policy+"_policy", 'w') as f:
+			sys.stdout = f
+			for compartment in compartments:
+				print(compartment)
+			sys.stdout = original_stdout
+
+	with open(".policy", 'w') as f:
+            sys.stdout = f
+            for compartment in compartments:
+                print(compartment)
+            sys.stdout = original_stdout
+
 	if printCompartments:
 		for compartment in compartments:
 			print(compartment)
@@ -206,6 +221,7 @@ def printStats():
 
 	print("Compartments:" +str(j))
 	print("Loose Functions:" + str(objCount - coloredObj))
+
 
 def printLooseFunctions():
 	global funcs
@@ -245,6 +261,7 @@ def main(argv):
 	global PDG
 	global compartments
 	global compartmentMap
+	global policy 
 	try:
 		opts, args = getopt.getopt(argv,"hc:d:",["cfile=","dfile="])
 	except getopt.GetoptError:
@@ -437,11 +454,97 @@ def main(argv):
 				
 	print("After Pair merge")
 	FreeRTOSComp = ["Task", "Queue", "Stream", "Semaphore", "Timer", "Event", "Port"]
+	ZephyrComp = ["audio_codec_", "dmic_", "i2s_", 
+	"sys_notify_",
+	"bt_", 
+	"cipher_",
+	"device_",
+	"display_",
+	"edac_",
+	"fs_",
+	"k_thread_",
+	"k_work_", 
+	"irq_",
+	"k_poll_",
+	"k_sem_",
+	"k_mutex_",
+	"k_condvar_",
+	"k_event_",
+	"k_queue_",
+	"k_fifo_",
+	"k_lifo_",
+	"k_stack_",
+	"k_msgq_",
+	"k_mbox_",
+	"k_pipe_",
+	"k_heap_",
+	"k_mem_slab_",
+	"k_timer_",
+	"log_",
+	"k_mem_",
+	"shared_multi_",
+	"modbus_",
+	"dns_",
+	"sntp_",
+	"net_trickle_",
+	"net_",
+	"adc_",
+	"counter_",
+	"clock_",
+	"dac_",
+	"dma_",
+	"ec_",
+	"dma_",
+	"eeprom_",
+	"entropy_",
+	"flash_",
+	"gna_",
+	"gpio_",
+	"hwinfo_",
+	"i2c_",
+	"ipm_",
+	"kscan_",
+	"led_",
+	"mbox_",
+	"pinmux_",
+	"pwm_",
+	"ps2_",
+	"peci_",
+	"regulator_",
+	"maxim_ds3231_",
+	"sensor_",
+	"spi_",
+	"uart_",
+	"mdio_",
+	"wdt_",
+	"video_",
+	"espi_",
+	"usb_",
+	"shell_",
+	"nvs_",
+	"stream_flash_",
+	"flash_",
+	"fcb_"
+	]
+#k_ prequel for threading
 
 	policy = "device"
 #policy = "thread"
-#policy = "component"
+	policy = "device"
 	threads = ["prvQueueReceiveTask", "prvQueueSendTask"]
+
+	#For Zephyr
+	threads = "./threads"
+	with open(threads) as f:
+		threads = f.readlines()
+	i =0
+	for thread in threads:
+		threads[i] = thread.replace("\n","")
+		i +=1
+
+
+	policy = "file"
+
 	if policy == "coloring":
 		paint()
 		spreadPaint()
@@ -456,10 +559,12 @@ def main(argv):
 #expandComponentsX(tCompartments)
 
 	elif policy == "component":
-		rtos = ""
-		if rtos == "FreeRTOS":
+		dexpert = FreeRTOSComp
+		dexpert = ZephyrComp
+		dexpert = []
+		if not len(dexpert) == 0:
 			cCompartments = []
-			for fcomp in FreeRTOSComp:
+			for fcomp in dexpert:
 				comp =  newCompartment()
 				
 				for func in funcs:
@@ -469,7 +574,7 @@ def main(argv):
 					compartments.remove(comp)
 				else:
 					cCompartments.append(comp)
-					
+			
 			expandComponentsX(cCompartments)
 			assignLooseFunctions()
 			mergeComponentsExcept(cCompartments)
@@ -481,6 +586,17 @@ def main(argv):
 					addToCompartment(func, comp)
 					if func in funcs:
 						for obj in funcs[func]:
+							addToCompartment(obj, comp)
+	elif policy == "file":
+		for f in files:
+			comp = newCompartment()
+			for func in files[f]:
+				addToCompartment(func, comp)
+				if func in funcs:
+					for obj in funcs[func]:
+						if obj not in ffmap:
+							addToCompartment(obj, comp)
+						elif ffmap[obj] == ffmap[func]:
 							addToCompartment(obj, comp)
 	
 	elif policy == "device":
@@ -509,6 +625,9 @@ def main(argv):
 	for var in data:
 		if var not in compartmentMap:
 			addToCompartment(var, unusedComp)
+
+	if len(unusedComp) == 0:
+		compartments.remove(unusedComp)
 				
 	printStats()
 	debugPrint = False
@@ -544,7 +663,7 @@ def main(argv):
 		print(s - sobj)
 	printLooseFunctions()
 #	print(compartments)
-	import pdb; pdb.set_trace();
+#import pdb; pdb.set_trace();
 	
 
 #print(colors)
