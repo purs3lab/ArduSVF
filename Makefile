@@ -45,3 +45,6 @@ runp:
 
 ld:
 	./setupLD.py -n 9
+
+verif:
+	./checkMPUReq.py -i /home/arslan/stm32_discovery_arm_gcc/blinky/sizeinfo
