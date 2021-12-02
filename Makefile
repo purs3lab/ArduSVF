@@ -1,5 +1,6 @@
 all:
 	./make.sh
+	llvm-dis ./temp.bc
 
 run: FORCE
 	./run
@@ -16,6 +17,7 @@ runz: dev.map FORCE
 
 runf: FORCE
 	./run3
+	cp ./temp.bc  /home/arslan/stm32_discovery_arm_gcc/blinky/temp.bc
 
 FORCE:
 
@@ -44,7 +46,7 @@ runp:
 	./partition.py -c /home/arslan/zephyrproject/zephyr/build2/build/zephyr/zephyr.elf.bc -d ./dg
 
 ld:
-	./setupLD.py -n 9
+	./setupLD.py -n 6 -l /home/arslan/stm32_discovery_arm_gcc/blinky/stm32_flash.overlay -c /home/arslan/stm32_discovery_arm_gcc/blinky/./autogen_data.c 
 
 verif:
-	./checkMPUReq.py -i /home/arslan/stm32_discovery_arm_gcc/blinky/sizeinfo
+	./checkMPUReq.py -i /home/arslan/stm32_discovery_arm_gcc/blinky/sizeinfo -l /home/arslan/stm32_discovery_arm_gcc/blinky/stm32_flash.overlay -c /home/arslan/stm32_discovery_arm_gcc/blinky/./autogen_data.c 

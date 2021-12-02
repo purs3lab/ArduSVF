@@ -48,6 +48,8 @@
 #include "llvm/IR/InstrTypes.h"
 #include "llvm/IR/GlobalObject.h"
 #include "llvm/IR/Type.h"
+#include "llvm/IR/Module.h"
+#include "llvm/Transforms/Utils/BasicBlockUtils.h"
 #include <iostream>
 #include <fstream>
 
@@ -1745,6 +1747,82 @@ int compartmentalize(char * argv[]) {
 		fun->setSection(s);
         debug<<fun->getSection().str()<<endl;
 	}
+
+
+	for (SVFModule::llvm_iterator F = svfModule->llvmFunBegin(), E = svfModule->llvmFunEnd(); F != E; ++F) {
+        auto fun = *F;
+        string rtmksec= "rtmk";
+        if (fun->getSection().str().find(rtmksec) != std::string::npos) {
+            continue;
+        }
+		for (auto bb=fun->begin();bb!=fun->end();bb++) {
+                for (auto stmt =bb->begin();stmt!=bb->end(); stmt++) {
+						auto callerID  = compartmentMap[fun->getName().str()];
+						if (auto ci= dyn_cast<llvm::CallInst> (stmt)) {
+								auto callee = ci->getCalledFunction (); 
+								if (callee) {
+									auto calleeID = compartmentMap[callee->getName().str()];
+	                                if (callerID == calleeID)
+                                        continue;
+									string llvm = "llvm";
+									if (callee->getName().str().find(llvm) != std::string::npos) continue;
+									IRBuilder<> Builder(stmt->getParent());
+									BasicBlock::iterator it(stmt);it--;
+									//Builder.SetInsertPoint(stmt->getNextNode()->getPrevNode());
+									switch (ci->arg_size()) {
+											case 0: {
+													string funcName;
+													if (callee->getReturnType()->isVoidTy()) {
+														funcName = "xcall_arg0";
+													} else if (callee->getReturnType()->isIntegerTy()) {
+														funcName = "icall_arg0";
+													}
+													auto func = ll_mod->getFunction(funcName);
+													auto func_type = func->getFunctionType();
+													auto f = ll_mod->getOrInsertFunction (funcName, func_type); //FuncCallee
+													int compID = compartmentMap[callee->getName().str()];
+													auto new_inst = Builder.CreateCall(f,{ConstantInt::get(func->getContext(),
+                                                                                        llvm::APInt(32, compID, false)), callee});
+													new_inst->dump();
+													//ci->setCalledFunction(f);
+	//												llvm::Value* constValue = llvm::ConstantInt::get( llvmContext , llvm::APInt( node->someInt() ));
+//													llvm::Value* constValue = llvm::ConstantInt::get( func->getContext(), llvm::APInt(32, compartmentMap[callee->getName().str()], false));
+//													ci->setArgOperand (0, constValue);
+//													ci->setArgOperand (0 + 1, callee);
+//													ci->setCalledOperand(new_inst->getCalledOperand());
+													//ci->dump();
+//													new_inst->removeFromParent();
+//													auto ci_new= CallInst::Create(f,{ConstantInt::get(func->getContext(),
+  //                                                                                      llvm::APInt(32, compartmentMap[callee->getName().str()], false)), callee});
+													//ci_new->dump();
+													stmt++;
+													new_inst->removeFromParent();
+													ReplaceInstWithInst(ci, new_inst);
+													//new_inst->eraseFromParent();
+
+
+													//stmt->eraseFromParent();
+													//new_inst->dump();
+													break;
+													}
+											default:
+													cerr<<"Pass incomplete"<<endl;
+													break;
+									}
+									//ci->dump();
+									//cerr<<ci->arg_size()<<endl;
+								}
+								else {
+										/* Indirect calls */
+										cerr<<"Indirect Call"<<endl;
+										//ci->dump();
+										//cerr<<ci->arg_size()<<endl;
+								}
+						}
+				}
+		}
+
+    }
 
 
 	updateBC();
