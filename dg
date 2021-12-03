@@ -26,3 +26,19 @@ comp_info
 Used By:
 switch_view
 ****************
+code_base
+Used By:
+init_mpu
+****************
+code_size
+Used By:
+init_mpu
+****************
+data_base
+Used By:
+init_mpu
+****************
+data_size
+Used By:
+init_mpu
+****************

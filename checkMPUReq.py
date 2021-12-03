@@ -84,8 +84,8 @@ def updateSize(codesections):
 					print ("Updating size from" + str(size) + " to " + str(sizePad))
 					codesections[csec][0] = sizePad
 
-def printSortedAndFixupSections(sections):
-	lc = -1
+def printSortedAndFixupSections(sections, start):
+	lc = start
 	for elem in sorted(sections):
 		print(elem + ":")
 		print(sections[elem])
@@ -126,10 +126,29 @@ def main(argv):
 	outputFile = overlay.replace("overlay","ld")
 	outFile = open(outputFile, "w")
 	secinfo = {}
+	init = []
+	rtmkCode = []
+	rtmkData = []
+	FLASH_BASE = 0x8000000
+	RAM_BASE = 0x20000000
 	with open(inputfile) as f:
 			lines = f.readlines()
 			for line in lines:
 				line = line.replace("\n","")
+				
+				if ".rtmkcode" in line:
+					for word in line.split(" "):
+							word = unicode(word, "utf-8")
+							if word.isdecimal():
+									num = int(word)
+									rtmkCode.append(num)
+				if ".rtmkdata" in line:
+					for word in line.split(" "):
+							word = unicode(word, "utf-8")
+							if word.isdecimal():
+									num = int(word)
+									rtmkData.append(num)
+
 				if "csection" in line or "osection" in line:
 					secinfo[line.split(" ")[0]] = []
 					for word in line.split(" "):
@@ -155,9 +174,14 @@ def main(argv):
 		else:
 		 	datasections[section] = [size, base]
 
-
-	printSortedAndFixupSections(codesections)
-	printSortedAndFixupSections(datasections)
+	lumpText = [rtmkCode[0]+rtmkCode[1] - FLASH_BASE, FLASH_BASE]
+	printSortedAndFixupSections(codesections, fixup(lumpText))
+	print("LumpTexzt:************")
+	print(lumpText)
+	lumpData = [rtmkData[0]+rtmkData[1] - RAM_BASE, RAM_BASE]
+	printSortedAndFixupSections(datasections, fixup(lumpData))
+	print("LumpData:*************")
+	print(lumpData)
 	
 
 	print("********************************")
@@ -174,16 +198,16 @@ def main(argv):
 					writeCodeSections(outFile, codesections)
 			else:
 					outFile.write(line)
-	prologue_string  = "RTMK_DATA \n static SEC_INFO comp_info[] = {"
+	prologue_string  = "#include <rtmk.h> \n RTMK_DATA \n  SEC_INFO comp_info[] = {"
 	#CodeStart,CodeSize,DataStart,DataSize
-	endstring = "};"
+	endstring = "}; \n"
 	f = open(configFile, "w")
 	f.write(prologue_string)
 	print(datasections)
 	i =0 
 	for section in sorted(codesections):
-			i +=1
 			dsection = section
+			f.write("/*"+ section + "*/")
 			dsection = ".o" + section[2:]
 			dsection = datasections[dsection]
 			csection = codesections[section]
@@ -198,9 +222,14 @@ def main(argv):
 			print(dsection[0])
 			f.write(sizeRegionMap[dsection[0]])
 			f.write("}")
+			i +=1
 			if i!= len(codesections):
 					f.write(",")
 	f.write(endstring)
+	f.write("int code_base= "+ str(FLASH_BASE) + ";\n");
+	f.write("int code_size= "+ str(sizeRegionMap[codesections[".csection0"][1] - FLASH_BASE]) +";\n")
+	f.write("int data_base= "+ str(RAM_BASE) + ";\n");
+	f.write("int data_size= "+ str(sizeRegionMap[datasections[".osection0"][1] - RAM_BASE]) + ";\n")
 
 
 
