@@ -358,7 +358,7 @@ void buildPTA() {
     //Create FlowSensitiveTBHC
     //FlowSensitiveTBHC fspta= FlowSensitiveTBHC(pag);
     static FlowSensitive fsptal = FlowSensitive(pag);
-#if 0 // TODO: 
+#if 01 // TODO: 
     fsptal.initialize();
     fsptal.analyze();
 	fspta = &fsptal;
@@ -1421,6 +1421,11 @@ void getFunctionfromUse(User * muse, vector<Function *>& users, int depth) {
 				}
 		}
 }
+map<Value *, Function *> function_pointers;
+
+int promoteXCall(CallInst * ci, Type * FunctionType, int compartmentID) {
+		return 0;
+}
 int compartmentalize(char * argv[]) {
 	ofstream debug;
     debug.open("./rtmk.log");
@@ -1748,6 +1753,23 @@ int compartmentalize(char * argv[]) {
         debug<<fun->getSection().str()<<endl;
 	}
 
+	/* Find all the address taken function pointers */
+	for (SVFModule::llvm_iterator F = svfModule->llvmFunBegin(), E = svfModule->llvmFunEnd(); F != E; ++F) { 
+		auto fun = *F;
+		for (auto bb=fun->begin();bb!=fun->end();bb++) {
+				for (auto stmt =bb->begin();stmt!=bb->end(); stmt++) { 
+						if (auto si = dyn_cast<llvm::StoreInst> (stmt)) {
+							if (auto fun_ptee = dyn_cast <llvm::Function> (si->getValueOperand ())){
+									cerr<<"Function Addr" <<endl;
+									cerr<< fun_ptee->getName().str() <<endl;
+									auto ptr = si->getPointerOperand ();
+									function_pointers[ptr] = fun_ptee;
+							}
+						}
+				}
+		}
+	}
+
 
 	for (SVFModule::llvm_iterator F = svfModule->llvmFunBegin(), E = svfModule->llvmFunEnd(); F != E; ++F) {
         auto fun = *F;
@@ -1784,37 +1806,58 @@ int compartmentalize(char * argv[]) {
 													auto new_inst = Builder.CreateCall(f,{ConstantInt::get(func->getContext(),
                                                                                         llvm::APInt(32, compID, false)), callee});
 													new_inst->dump();
-													//ci->setCalledFunction(f);
-	//												llvm::Value* constValue = llvm::ConstantInt::get( llvmContext , llvm::APInt( node->someInt() ));
-//													llvm::Value* constValue = llvm::ConstantInt::get( func->getContext(), llvm::APInt(32, compartmentMap[callee->getName().str()], false));
-//													ci->setArgOperand (0, constValue);
-//													ci->setArgOperand (0 + 1, callee);
-//													ci->setCalledOperand(new_inst->getCalledOperand());
-													//ci->dump();
-//													new_inst->removeFromParent();
-//													auto ci_new= CallInst::Create(f,{ConstantInt::get(func->getContext(),
-  //                                                                                      llvm::APInt(32, compartmentMap[callee->getName().str()], false)), callee});
-													//ci_new->dump();
 													stmt++;
 													new_inst->removeFromParent();
 													ReplaceInstWithInst(ci, new_inst);
-													//new_inst->eraseFromParent();
-
-
-													//stmt->eraseFromParent();
-													//new_inst->dump();
 													break;
 													}
 											default:
 													cerr<<"Pass incomplete"<<endl;
 													break;
 									}
-									//ci->dump();
-									//cerr<<ci->arg_size()<<endl;
 								}
 								else {
 										/* Indirect calls */
 										cerr<<"Indirect Call"<<endl;
+										vector<Function *> targets;
+										auto called = ci->getCalledOperand();
+										called->dump();
+										auto ptr = called;
+                                        if (auto li= dyn_cast<llvm::LoadInst>(called)) {
+                                        	ptr= li->getPointerOperand();
+                                        }
+										if(function_pointers.count(ptr)) {
+												cout<<"Direct Pointer Used"<<endl;
+												cerr<<function_pointers[ptr]->getName().str()<<endl;
+												/* Just one target, instrument based on function type */
+										} else {
+												cout<<"An alias pointer used"<<endl;
+												for(auto &pts: function_pointers) {
+														if (aliasQuery(fspta, ptr, pts.first)) {
+															cerr<<pts.second->getName().str()<<endl;
+															targets.push_back(pts.second);
+														}
+												}
+												//sort( targets.begin(), targets.end() );
+												//targets.erase( unique( targets.begin(), targets.end() ), targets.end() );
+												set<Function *> s( targets.begin(), targets.end() );
+												targets.assign( s.begin(), s.end() );
+												/* See if all targets are within the same compartment?? */
+												callerID = compartmentMap[fun->getName().str()];
+												map<int, int> calledComp;
+												for (auto &t: targets) {
+														calledComp[compartmentMap[t->getName().str()]] = 1;
+												}
+
+												if (calledComp.size() > 1) {
+													/* Instrument function for direct call */
+												} else {
+													/* Instrument call so that runtime figures the required compartment */
+
+												}
+
+										}
+
 										//ci->dump();
 										//cerr<<ci->arg_size()<<endl;
 								}
