@@ -3,7 +3,7 @@ This is inadvisable as it may cause display problems. If
 you REALLY want to taste LLVM bitcode first-hand, you
 can force output with the `-f' option.
 
-Call graph node <<null function>><<0x563931ab0780>>  #uses=0
+Call graph node <<null function>><<0x55e8b5a60500>>  #uses=0
   CS<None> calls function 'ms_delay'
   CS<None> calls function 'HardFault_Handler'
   CS<None> calls function 'main'
@@ -11,6 +11,8 @@ Call graph node <<null function>><<0x563931ab0780>>  #uses=0
   CS<None> calls function 'SystemInit'
   CS<None> calls function 'SystemCoreClockUpdate'
   CS<None> calls function 'tempFunc'
+  CS<None> calls function 'tempFunc2'
+  CS<None> calls function 'internal_compart'
   CS<None> calls function 'compart1'
   CS<None> calls function 'compart2'
   CS<None> calls function 'init_mpu'
@@ -20,60 +22,69 @@ Call graph node <<null function>><<0x563931ab0780>>  #uses=0
   CS<None> calls function 'xcall_arg0'
   CS<None> calls function 'icall_arg0'
 
-Call graph node for function: 'DebugMon_Handler'<<0x563931a846e0>>  #uses=1
-  CS<0x563931ad7c90> calls external node
+Call graph node for function: 'DebugMon_Handler'<<0x55e8b5a342f0>>  #uses=1
+  CS<0x55e8b5a8a650> calls external node
 
-Call graph node for function: 'HardFault_Handler'<<0x563931a839a0>>  #uses=1
+Call graph node for function: 'HardFault_Handler'<<0x55e8b5a606a0>>  #uses=1
 
-Call graph node for function: 'SetSysClock'<<0x563931a83e80>>  #uses=1
+Call graph node for function: 'SetSysClock'<<0x55e8b5a33990>>  #uses=1
 
-Call graph node for function: 'SystemCoreClockUpdate'<<0x563931a83f00>>  #uses=1
+Call graph node for function: 'SystemCoreClockUpdate'<<0x55e8b5a33a10>>  #uses=1
 
-Call graph node for function: 'SystemInit'<<0x563931a83cb0>>  #uses=1
-  CS<0x563931aa4c40> calls function 'SetSysClock'
+Call graph node for function: 'SystemInit'<<0x55e8b5a609b0>>  #uses=1
+  CS<0x55e8b5a550a0> calls function 'SetSysClock'
 
-Call graph node for function: '_init'<<0x563931a83c30>>  #uses=1
+Call graph node for function: '_init'<<0x55e8b5a60930>>  #uses=1
 
-Call graph node for function: 'compart1'<<0x563931a84000>>  #uses=1
-  CS<0x563931acbac0> calls external node
-  CS<0x563931acbcf0> calls function 'icall_arg0'
+Call graph node for function: 'compart1'<<0x55e8b5a33f00>>  #uses=1
+  CS<0x55e8b5a7ce50> calls external node
+  CS<0x55e8b5a7d160> calls external node
+  CS<0x55e8b5a7d520> calls external node
+  CS<0x55e8b5a7d770> calls external node
+  CS<0x55e8b5a7d9a0> calls function 'icall_arg0'
 
-Call graph node for function: 'compart2'<<0x563931a840b0>>  #uses=1
-  CS<0x563931acd740> calls function 'icall_arg0'
+Call graph node for function: 'compart2'<<0x55e8b5a33fb0>>  #uses=1
+  CS<0x55e8b5a7f4d0> calls function 'icall_arg0'
 
-Call graph node for function: 'icall_arg0'<<0x563931a83b00>>  #uses=4
-  CS<0x563931adafa0> calls function 'switch_view'
-  CS<0x563931adb2f0> calls external node
-  CS<0x563931adb4c0> calls function 'switch_view'
+Call graph node for function: 'icall_arg0'<<0x55e8b5a60800>>  #uses=4
+  CS<0x55e8b5a8d550> calls function 'switch_view'
+  CS<0x55e8b5a8d8a0> calls external node
+  CS<0x55e8b5a8da70> calls function 'switch_view'
 
-Call graph node for function: 'init_mpu'<<0x563931a843c0>>  #uses=2
-  CS<0x563931ace6e0> calls external node
-  CS<0x563931ace790> calls external node
-  CS<0x563931ad0660> calls external node
-  CS<0x563931ad0710> calls external node
+Call graph node for function: 'init_mpu'<<0x55e8b5a34030>>  #uses=2
+  CS<0x55e8b5a80c70> calls external node
+  CS<0x55e8b5a80d20> calls external node
+  CS<0x55e8b5a823d0> calls external node
+  CS<0x55e8b5a82480> calls external node
 
-Call graph node for function: 'main'<<0x563931a83a80>>  #uses=1
-  CS<0x563931aba350> calls external node
-  CS<0x563931aba400> calls external node
-  CS<0x563931aba4f0> calls function 'icall_arg0'
+Call graph node for function: 'internal_compart'<<0x55e8b5a33bf0>>  #uses=1
 
-Call graph node for function: 'ms_delay'<<0x563931a838c0>>  #uses=1
-  CS<0x563931ab7ac0> calls external node
+Call graph node for function: 'main'<<0x55e8b5a60780>>  #uses=1
+  CS<0x55e8b5a6a710> calls external node
+  CS<0x55e8b5a6a7c0> calls external node
+  CS<0x55e8b5a6a8b0> calls function 'icall_arg0'
 
-Call graph node for function: 'rtmk_init'<<0x563931a844d0>>  #uses=1
-  CS<0x563931ad0bb0> calls function 'init_mpu'
-  CS<0x563931ad0c50> calls function 'switch_view'
+Call graph node for function: 'ms_delay'<<0x55e8b5a605c0>>  #uses=1
+  CS<0x55e8b5a67e60> calls external node
 
-Call graph node for function: 'switch_view'<<0x563931a84550>>  #uses=6
-  CS<0x563931ad1710> calls external node
-  CS<0x563931ad1790> calls external node
-  CS<0x563931abba30> calls external node
-  CS<0x563931abbae0> calls external node
+Call graph node for function: 'rtmk_init'<<0x55e8b5a340e0>>  #uses=1
+  CS<0x55e8b5a82940> calls function 'init_mpu'
+  CS<0x55e8b5a829e0> calls function 'switch_view'
 
-Call graph node for function: 'tempFunc'<<0x563931a83f80>>  #uses=1
+Call graph node for function: 'switch_view'<<0x55e8b5a34160>>  #uses=6
+  CS<0x55e8b5a74d30> calls external node
+  CS<0x55e8b5a74db0> calls external node
+  CS<0x55e8b5a86870> calls external node
+  CS<0x55e8b5a86920> calls external node
 
-Call graph node for function: 'xcall_arg0'<<0x563931a84760>>  #uses=1
-  CS<0x563931ad96f0> calls function 'switch_view'
-  CS<0x563931ad98d0> calls external node
-  CS<0x563931ad9a10> calls function 'switch_view'
+Call graph node for function: 'tempFunc'<<0x55e8b5a33a90>>  #uses=1
+  CS<0x55e8b5a7a7e0> calls external node
+
+Call graph node for function: 'tempFunc2'<<0x55e8b5a33b40>>  #uses=1
+  CS<0x55e8b5a7af90> calls external node
+
+Call graph node for function: 'xcall_arg0'<<0x55e8b5a34370>>  #uses=1
+  CS<0x55e8b5a8b8a0> calls function 'switch_view'
+  CS<0x55e8b5a8ba80> calls external node
+  CS<0x55e8b5a8bbc0> calls function 'switch_view'
 

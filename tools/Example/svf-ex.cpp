@@ -1763,7 +1763,9 @@ int compartmentalize(char * argv[]) {
 									cerr<<"Function Addr" <<endl;
 									cerr<< fun_ptee->getName().str() <<endl;
 									auto ptr = si->getPointerOperand ();
-									function_pointers[ptr] = fun_ptee;
+									//function_pointers[ptr] = fun_ptee;
+									//function_pointers[si] = fun_ptee;
+									function_pointers[fun_ptee] = fun_ptee;
 							}
 						}
 				}
@@ -1826,14 +1828,18 @@ int compartmentalize(char * argv[]) {
                                         if (auto li= dyn_cast<llvm::LoadInst>(called)) {
                                         	ptr= li->getPointerOperand();
                                         }
-										if(function_pointers.count(ptr)) {
+//										if(function_pointers.count(ptr)) {
+										if (false) {
 												cout<<"Direct Pointer Used"<<endl;
 												cerr<<function_pointers[ptr]->getName().str()<<endl;
 												/* Just one target, instrument based on function type */
 										} else {
 												cout<<"An alias pointer used"<<endl;
+												ptr = called;
+												ptr->dump();
 												for(auto &pts: function_pointers) {
 														if (aliasQuery(fspta, ptr, pts.first)) {
+															cerr<<"Target Found:";
 															cerr<<pts.second->getName().str()<<endl;
 															targets.push_back(pts.second);
 														}
@@ -1849,11 +1855,16 @@ int compartmentalize(char * argv[]) {
 														calledComp[compartmentMap[t->getName().str()]] = 1;
 												}
 
-												if (calledComp.size() > 1) {
+												if (calledComp.size() == 0) {
+														/* Could not determine anything */
+														cerr<<"Zero Target"<<endl;
+												}
+												else if (calledComp.size() == 1) {
 													/* Instrument function for direct call */
+													cerr<<"Only1 targets"<<endl;
 												} else {
 													/* Instrument call so that runtime figures the required compartment */
-
+													cerr<<"Multiple target"<<endl; //Specialize
 												}
 
 										}
