@@ -45,16 +45,18 @@ def writeCodeSections(cpatch, csections):
 def writeDataSections(dpatch, dsections):
 	i =0
 	for section in sorted(dsections):
-				dpatch.write("  .osection"+str(i) +" : \n")
+				dpatch.write("  .osection"+str(i) +" : AT ( _sidata  + compartLMA)\n")
 				dpatch.write("  {\n")
 				dpatch.write("	. = "+ str(dsections[section][1])+";\n")
 				dpatch.write("	_sosection" +str(i) +" = .;\n")
 				dpatch.write("	*(.osection"+str(i)+"*)\n")
 				dpatch.write("	. = "+ str(dsections[section][0] + dsections[section][1])+";\n")
 				dpatch.write("	_eosection" +str(i) +" = .;\n")
-#				dpatch.write("  }  > RAM AT > FLASH \n")
 				dpatch.write("  }  > RAM \n")
+#				dpatch.write("  }  > RAM \n")
+				dpatch.write("compartLMA = compartLMA + SIZEOF(.osection"+str(i) +"); \n")
 				i += 1
+	dpatch.write("_edata = .; \n")
 
 
 def fixup(section):
