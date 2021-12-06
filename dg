@@ -14,17 +14,10 @@ arr2
 Used By:
 compart2
 ****************
-counter
-Used By:
-DebugMon_Handler
-****************
-current
-Used By:
-switch_view
-****************
 comp_info
 Used By:
 switch_view
+getCompartmentFromAddr
 ****************
 code_base
 Used By:
@@ -41,4 +34,12 @@ init_mpu
 data_size
 Used By:
 init_mpu
+****************
+counter
+Used By:
+DebugMon_Handler
+****************
+current
+Used By:
+switch_view
 ****************

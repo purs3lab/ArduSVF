@@ -1422,65 +1422,153 @@ void getFunctionfromUse(User * muse, vector<Function *>& users, int depth) {
 		}
 }
 map<Value *, Function *> function_pointers;
-
-int promoteXCall(CallInst * ci, Type * FunctionType, int compartmentID) {
-		return 0;
-}
-int compartmentalize(char * argv[]) {
-	ofstream debug;
-    debug.open("./rtmk.log");
-#if 0 
+void downgradeISRControl() {
+#if 0
 	//Code for replacing instructions for ARM interrupt disabling. 
-	for (SVFModule::llvm_iterator F = svfModule->llvmFunBegin(), E = svfModule->llvmFunEnd(); F != E; ++F)
+    for (SVFModule::llvm_iterator F = svfModule->llvmFunBegin(), E = svfModule->llvmFunEnd(); F != E; ++F)
     {
         auto fun = *F;
         //if (fun->getName().str() == "__NVIC_SetPriority.201") {
         if (fun->getName().str() == "main"){
-        	for (auto bb=fun->begin();bb!=fun->end();bb++) {
-					 for (auto stmt =bb->begin();stmt!=bb->end(); stmt++) {
-							 if (auto ci= dyn_cast<llvm::CallInst> (stmt)) {
-									//ci->dump();
-									auto f = ci->getCalledFunction();
-									if (f){
-											//
-											cerr<<"Function not NULL"<<endl;
-									}
-									else 
-											cerr<<"Function was NULL" <<endl;
-									if (ci->isInlineAsm())
-									{
-											cerr<<"Tis inline asm" <<endl;
-											for (auto op : stmt->operand_values()) {
-													if (auto asmcode = dyn_cast<llvm::InlineAsm> (op))
-													{
-														cerr<<"asm code found"<<endl;
-														asmcode->dump();
-														auto found = asmcode->getAsmString().find("cpsid");
-														if (found!=std::string::npos)
-																cerr<<"Found Interrupt Disable" <<endl;
-    													auto str = asmcode->getAsmString();
+            for (auto bb=fun->begin();bb!=fun->end();bb++) {
+                     for (auto stmt =bb->begin();stmt!=bb->end(); stmt++) {
+                             if (auto ci= dyn_cast<llvm::CallInst> (stmt)) {
+                                    //ci->dump();
+                                    auto f = ci->getCalledFunction();
+                                    if (f){
+                                            //
+                                            cerr<<"Function not NULL"<<endl;
+                                    }
+                                    else 
+                                            cerr<<"Function was NULL" <<endl;
+                                    if (ci->isInlineAsm())
+                                    {
+                                            cerr<<"Tis inline asm" <<endl;
+                                            for (auto op : stmt->operand_values()) {
+                                                    if (auto asmcode = dyn_cast<llvm::InlineAsm> (op))
+                                                    {
+                                                        cerr<<"asm code found"<<endl;
+                                                        asmcode->dump();
+                                                        auto found = asmcode->getAsmString().find("cpsid");
+                                                        if (found!=std::string::npos)
+                                                                cerr<<"Found Interrupt Disable" <<endl;
+                                                        auto str = asmcode->getAsmString();
 #if 0
-														for (auto op : asmcode->operand_values()) {
-																cout <<"ASM Code OP:" <<endl;
-																op->dump();
-														}
+                                                        for (auto op : asmcode->operand_values()) {
+                                                                cout <<"ASM Code OP:" <<endl;
+                                                                op->dump();
+                                                        }
 #endif
-														string s = "cpsie if";
-														((string &) asmcode->getAsmString()) = s;
-//														str = "cpsie if";
-														cout <<"After update"<<endl;
-														cout<<asmcode->getAsmString();
+                                                        string s = "cpsie if";
+                                                        ((string &) asmcode->getAsmString()) = s;
+//                                                      str = "cpsie if";
+                                                        cout <<"After update"<<endl;
+                                                        cout<<asmcode->getAsmString();
 
-													}
-											}
-									}
-							 }
-					 }
-			}
-		}
-	}
-#endif 
-#if 01
+                                                    }
+                                            }
+                                    }
+                             }
+                     }
+            }
+        }
+    }
+#endif
+}
+map<int,vector<string>> compartments;
+map<string, int>compartmentMap;
+int promoteXCall(CallInst * ci, Function * callee, BasicBlock::iterator& stmt) {
+		//Builder.SetInsertPoint(stmt->getNextNode()->getPrevNode());
+		                            IRBuilder<> Builder(stmt->getParent());
+                                    BasicBlock::iterator it(stmt);it--;
+                                    switch (ci->arg_size()) {
+                                            case 0: {
+                                                    string funcName;
+                                                    if (ci->getType()->isVoidTy()) {
+                                                        funcName = "xcall_arg0";
+                                                    } else if (ci->getType()->isIntegerTy()) {
+                                                        funcName = "icall_arg0";
+                                                    }
+                                                    auto func = ll_mod->getFunction(funcName);
+                                                    auto func_type = func->getFunctionType();
+                                                    auto f = ll_mod->getOrInsertFunction (funcName, func_type); //FuncCallee
+                                                    int compID = compartmentMap[callee->getName().str()];
+                                                    auto new_inst = Builder.CreateCall(f,{ConstantInt::get(func->getContext(),
+                                                                                        llvm::APInt(32, compID, false)), callee});
+                                                    new_inst->dump();
+                                                    stmt++;
+                                                    new_inst->removeFromParent();
+                                                    ReplaceInstWithInst(ci, new_inst);
+                                                    break;
+                                                    }
+                                            default:
+                                                    cerr<<"Pass incomplete"<<endl;
+                                                    break;
+                                    }
+		return 0;
+}
+int promoteXCallNoCalee(CallInst * ci, BasicBlock::iterator& stmt, int compID) {
+		IRBuilder<> Builder(stmt->getParent());
+        BasicBlock::iterator it(stmt);it--;
+        //Builder.SetInsertPoint(stmt->getNextNode()->getPrevNode());
+                                    switch (ci->arg_size()) {
+                                            case 0: {
+                                                    string funcName;
+                                                    if (ci->getType()->isVoidTy()) {
+                                                        funcName = "xcall_arg0";
+                                                    } else if (ci->getType()->isIntegerTy()) {
+                                                        funcName = "icall_arg0";
+                                                    }
+                                                    auto func = ll_mod->getFunction(funcName);
+                                                    auto func_type = func->getFunctionType();
+                                                    auto f = ll_mod->getOrInsertFunction (funcName, func_type); //FuncCallee
+													auto callee = ci->getCalledOperand ();
+                                                    auto new_inst = Builder.CreateCall(f,{ConstantInt::get(func->getContext(),
+                                                                                        llvm::APInt(32, compID, false)), callee});
+                                                    new_inst->dump();
+                                                    stmt++;
+                                                    new_inst->removeFromParent();
+                                                    ReplaceInstWithInst(ci, new_inst);
+                                                    break;
+                                                    }
+                                            default:
+                                                    cerr<<"Pass incomplete"<<endl;
+                                                    break;
+                                    }
+        return 0;
+}
+int promoteXCallNoCaleeNoId(CallInst * ci, BasicBlock::iterator& stmt) {
+		IRBuilder<> Builder(stmt->getParent());
+        BasicBlock::iterator it(stmt);it--;
+        //Builder.SetInsertPoint(stmt->getNextNode()->getPrevNode());
+                                    switch (ci->arg_size()) {
+                                            case 0: {
+                                                    string funcName;
+                                                    if (ci->getType()->isVoidTy()) {
+                                                        funcName = "xcall_arg0_noid";
+                                                    } else if (ci->getType()->isIntegerTy()) {
+                                                        funcName = "icall_arg0_noid";
+                                                    }
+                                                    auto func = ll_mod->getFunction(funcName);
+                                                    auto func_type = func->getFunctionType();
+                                                    auto f = ll_mod->getOrInsertFunction (funcName, func_type); //FuncCallee
+													auto callee = ci->getCalledOperand ();
+                                                    auto new_inst = Builder.CreateCall(f,{ callee});
+                                                    new_inst->dump();
+                                                    stmt++;
+                                                    new_inst->removeFromParent();
+                                                    ReplaceInstWithInst(ci, new_inst);
+                                                    break;
+                                                    }
+                                            default:
+                                                    cerr<<"Pass incomplete"<<endl;
+                                                    break;
+                                    }
+        return 0;
+}
+int compartmentalize(char * argv[]) {
+	ofstream debug;
+    debug.open("./rtmk.log");
 
 	map<Value *, vector<Value *>> PDG; // Function-> Global/Functions
 	ofstream dfg;
@@ -1493,54 +1581,7 @@ int compartmentalize(char * argv[]) {
 
 		vector<Function *> funcs;
 		for (auto user: (*glob)->users()) {
-//				if ((*glob)->getName().str() == "xDelayedTaskList2")
-//						user->dump();
 				getFunctionfromUse(user, funcs, 0);
-#if 0
-				//user->dump();
-				if (auto inst = dyn_cast<llvm::Instruction>(user)) {
-						//Instruction user
-						for (auto user: inst->users()){ 
-							for(auto user1: user->users())
-								user1->dump();
-						}
-				}
-				else if (auto constVal = dyn_cast<llvm::Constant>(user)) {
-						if (auto constVal = dyn_cast<llvm::ConstantExpr>(user)) {
-						cerr<<"ConstantExpr Found"<<endl;
-//						cerr<<constVal->getAsInstruction()->getFunction()->getName().str();
-						//Find all users of the ConstantExpr Better to recurse.
-						for (auto user1: constVal->users()){
-								if(!user1) {
-										cerr<<"No users, wtf"<<endl;
-										continue;
-								}
-								if (auto inst = dyn_cast<llvm::Instruction>(user1)) {
-                				}
-								else {
-										cerr<<"Nested use is not an instruction"<<endl;
-								}
-						}
-#if 0
-						constVal->dump();
-						//constVal->getParent();
-						for (auto op: constVal->operand_values()) {
-								op->dump();
-						}
-#endif 
-						} else {
-							//	constVal->dump();
-								cerr<<"Not an expr"<<endl;
-						} 
-				}
-				else {
-						cerr<<"Not an instruction" <<endl;
-					//	cout<<(*glob)->getName().str() <<endl;
-						user->dump();
-				}
-				if(vContains(PDG[user], *glob))
-						PDG[user].push_back(*glob);
-#endif 
 		}
 		dfg<<"Used By:"<<endl;
 		set<Function *> s( funcs.begin(), funcs.end() );
@@ -1549,29 +1590,8 @@ int compartmentalize(char * argv[]) {
 				dfg<<func->getName().str()<<endl;
 		}
 		dfg<<"****************"<<endl;
-#if 0
-		for (auto node: PDG) {
-			cout<<"Function:"; node.first->dump();
-			for (auto pointTo: node.second){
-				pointTo->dump();
-			}
-		}
-#endif 
-
-
-#if 0
-		// Code to change sections 
-		//if (auto go= dyn_cast<llvm::GlobalObject>(*glob)) {
-		if (auto go= dyn_cast<llvm::GlobalVariable> (*glob)) {
-				cerr<<"We're good"<<endl;
-				cerr<<go->getSection().str()<<endl;
-				StringRef s = ".section1";
-				go->setSection(s);
-		}
-#endif
 	}
-#endif 
-	 dfg.close();
+	dfg.close();
 
 	ofstream ffmap;
     ffmap.open("./ffmap");
@@ -1583,7 +1603,6 @@ int compartmentalize(char * argv[]) {
 				continue;
 		}
 		int found = 0;
-//		fun->getDebugLoc();
 		for (auto bb=fun->begin();bb!=fun->end(); bb++) {
 				if (found==1)
 						break;
@@ -1600,29 +1619,6 @@ int compartmentalize(char * argv[]) {
 				ffmap<<fun->getName().str()<<"##" << "external"<<endl;
 				cout<<fun->getName().str()<< " is defined externally" <<endl;
 		}
-#if 0
-		if (fun->isIntrinsic () || fun->hasExternalLinkage()) {
-				continue;
-		}
-		if (fun->getName().str().find("llvm.lifetime") != std::string::npos)
-				continue;
-		auto bb = fun->begin();
-		if (true) {
-			auto ins = bb->begin();
-			if (true) {
-				auto &debugInfo = ins->getDebugLoc();
-				if (debugInfo) {
-         		   ffmap<<fun->getName().str()<<"##" <<debugInfo->getFilename().str() <<endl;
-        		}
-			}
-			else {
-				cout << "no ins for" << fun->getName().str() <<endl;
-			}
-		}
-		else {
-			cout << "no bb for "<< fun->getName().str() <<endl;
-		}
-#endif 
 	}
 	ofstream fdmap;
     fdmap.open("./fdmap");
@@ -1679,14 +1675,11 @@ int compartmentalize(char * argv[]) {
 	string cmd = "./partition.py -c ";
 	cmd += argv[InputFilename.getPosition()];
 	cmd += " -d ./dg";
-	//system("./partition.py -c " + argv[InputFilename.getPosition()] + " ./dg "); // myfile.sh should be chmod +x
 	system(cmd.c_str());
 
 	std::ifstream infile("./.policy");
 	std::string line;
 	int compartmentID = 0;
-	map<int,vector<string>> compartments;
-	map<string, int>compartmentMap;
 	while (std::getline(infile, line))
 	{
 		vector <string> tokens;
@@ -1727,6 +1720,10 @@ int compartmentalize(char * argv[]) {
 				if (go->getSection().str().find(rtmksec) != std::string::npos) {
 						continue;
 				}
+				string init= "init";
+				if (go->getSection().str().find(init) != std::string::npos) {
+                        continue;
+                }
 				debug<<go->getName().str()<<":"<<endl;
 				debug<<"moved from "<<go->getSection().str()<< " to ";
 				auto compartmentID = compartmentMap[go->getName().str()]; 
@@ -1745,6 +1742,11 @@ int compartmentalize(char * argv[]) {
         if (fun->getSection().str().find(rtmksec) != std::string::npos) {
         	continue;
         }
+		string init= "init";
+        if (fun->getSection().str().find(init) != std::string::npos) {
+            continue;
+        }
+
 		debug<<fun->getName().str()<<":" <<endl;
 		debug<<"moved from "<<fun->getSection().str()<< " to ";
 		auto compartmentID = compartmentMap[fun->getName().str()];
@@ -1779,44 +1781,29 @@ int compartmentalize(char * argv[]) {
         if (fun->getSection().str().find(rtmksec) != std::string::npos) {
             continue;
         }
+		string init= "init";
+        if (fun->getSection().str().find(init) != std::string::npos) {
+            continue;
+        }
+
 		for (auto bb=fun->begin();bb!=fun->end();bb++) {
                 for (auto stmt =bb->begin();stmt!=bb->end(); stmt++) {
 						auto callerID  = compartmentMap[fun->getName().str()];
 						if (auto ci= dyn_cast<llvm::CallInst> (stmt)) {
-								auto callee = ci->getCalledFunction (); 
+								if (ci->isInlineAsm ()) continue; /* TODO: Currently we don't cater to inline asm */
+								auto callee = ci->getCalledFunction ();
 								if (callee) {
 									auto calleeID = compartmentMap[callee->getName().str()];
+									/* See if this is a cross call */
 	                                if (callerID == calleeID)
                                         continue;
+									/* See if this is a debug call/intrinsic */
 									string llvm = "llvm";
 									if (callee->getName().str().find(llvm) != std::string::npos) continue;
 									IRBuilder<> Builder(stmt->getParent());
 									BasicBlock::iterator it(stmt);it--;
 									//Builder.SetInsertPoint(stmt->getNextNode()->getPrevNode());
-									switch (ci->arg_size()) {
-											case 0: {
-													string funcName;
-													if (callee->getReturnType()->isVoidTy()) {
-														funcName = "xcall_arg0";
-													} else if (callee->getReturnType()->isIntegerTy()) {
-														funcName = "icall_arg0";
-													}
-													auto func = ll_mod->getFunction(funcName);
-													auto func_type = func->getFunctionType();
-													auto f = ll_mod->getOrInsertFunction (funcName, func_type); //FuncCallee
-													int compID = compartmentMap[callee->getName().str()];
-													auto new_inst = Builder.CreateCall(f,{ConstantInt::get(func->getContext(),
-                                                                                        llvm::APInt(32, compID, false)), callee});
-													new_inst->dump();
-													stmt++;
-													new_inst->removeFromParent();
-													ReplaceInstWithInst(ci, new_inst);
-													break;
-													}
-											default:
-													cerr<<"Pass incomplete"<<endl;
-													break;
-									}
+									promoteXCall(ci, callee, stmt);
 								}
 								else {
 										/* Indirect calls */
@@ -1828,12 +1815,7 @@ int compartmentalize(char * argv[]) {
                                         if (auto li= dyn_cast<llvm::LoadInst>(called)) {
                                         	ptr= li->getPointerOperand();
                                         }
-//										if(function_pointers.count(ptr)) {
-										if (false) {
-												cout<<"Direct Pointer Used"<<endl;
-												cerr<<function_pointers[ptr]->getName().str()<<endl;
-												/* Just one target, instrument based on function type */
-										} else {
+										{
 												cout<<"An alias pointer used"<<endl;
 												ptr = called;
 												ptr->dump();
@@ -1844,33 +1826,34 @@ int compartmentalize(char * argv[]) {
 															targets.push_back(pts.second);
 														}
 												}
-												//sort( targets.begin(), targets.end() );
-												//targets.erase( unique( targets.begin(), targets.end() ), targets.end() );
 												set<Function *> s( targets.begin(), targets.end() );
 												targets.assign( s.begin(), s.end() );
 												/* See if all targets are within the same compartment?? */
 												callerID = compartmentMap[fun->getName().str()];
 												map<int, int> calledComp;
+												int onlyTargetCache = 0;
 												for (auto &t: targets) {
 														calledComp[compartmentMap[t->getName().str()]] = 1;
+														onlyTargetCache = compartmentMap[t->getName().str()];
 												}
 
 												if (calledComp.size() == 0) {
 														/* Could not determine anything */
 														cerr<<"Zero Target"<<endl;
+														promoteXCallNoCaleeNoId(ci, stmt);
 												}
 												else if (calledComp.size() == 1) {
 													/* Instrument function for direct call */
 													cerr<<"Only1 targets"<<endl;
+													promoteXCallNoCalee(ci, stmt, onlyTargetCache);
+
 												} else {
 													/* Instrument call so that runtime figures the required compartment */
 													cerr<<"Multiple target"<<endl; //Specialize
+													promoteXCallNoCaleeNoId(ci,stmt);
 												}
-
 										}
 
-										//ci->dump();
-										//cerr<<ci->arg_size()<<endl;
 								}
 						}
 				}

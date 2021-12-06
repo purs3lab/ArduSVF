@@ -223,6 +223,8 @@ def main(argv):
 			f.write(",")
 			print(dsection[0])
 			f.write(sizeRegionMap[dsection[0]])
+			f.write(",")
+			f.write(str(csection[0] + csection[1]))
 			f.write("}")
 			i +=1
 			if i!= len(codesections):
