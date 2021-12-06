@@ -3,7 +3,7 @@ This is inadvisable as it may cause display problems. If
 you REALLY want to taste LLVM bitcode first-hand, you
 can force output with the `-f' option.
 
-Call graph node <<null function>><<0x55653979a700>>  #uses=0
+Call graph node <<null function>><<0x5599f639f670>>  #uses=0
   CS<None> calls function 'ms_delay'
   CS<None> calls function 'HardFault_Handler'
   CS<None> calls function 'start_firmware'
@@ -25,81 +25,81 @@ Call graph node <<null function>><<0x55653979a700>>  #uses=0
   CS<None> calls function 'icall_arg0_noid'
   CS<None> calls function 'xcall_arg0_noid'
 
-Call graph node for function: 'DebugMon_Handler'<<0x55653976e510>>  #uses=1
-  CS<0x5565397c1670> calls external node
+Call graph node for function: 'DebugMon_Handler'<<0x5599f6373430>>  #uses=1
+  CS<0x5599f63c65d0> calls external node
 
-Call graph node for function: 'HardFault_Handler'<<0x55653979a8a0>>  #uses=1
+Call graph node for function: 'HardFault_Handler'<<0x5599f639f810>>  #uses=1
 
-Call graph node for function: 'SetSysClock'<<0x55653976db80>>  #uses=1
+Call graph node for function: 'SetSysClock'<<0x5599f6372ad0>>  #uses=1
 
-Call graph node for function: 'SystemCoreClockUpdate'<<0x55653976dc00>>  #uses=1
+Call graph node for function: 'SystemCoreClockUpdate'<<0x5599f6372b50>>  #uses=1
 
-Call graph node for function: 'SystemInit'<<0x55653976db00>>  #uses=1
-  CS<0x55653978f7b0> calls function 'SetSysClock'
+Call graph node for function: 'SystemInit'<<0x5599f6372a50>>  #uses=1
+  CS<0x5599f6394780> calls function 'SetSysClock'
 
-Call graph node for function: '_init'<<0x55653976d930>>  #uses=1
+Call graph node for function: '_init'<<0x5599f6372880>>  #uses=1
 
-Call graph node for function: 'compart1'<<0x55653979aa00>>  #uses=3
-  CS<0x5565397b58d0> calls external node
-  CS<0x5565397b5c90> calls external node
-  CS<0x5565397b5ee0> calls external node
-  CS<0x5565397b60d0> calls function 'compart2'
+Call graph node for function: 'compart1'<<0x5599f639f970>>  #uses=3
+  CS<0x5599f63ba860> calls external node
+  CS<0x5599f63bac20> calls external node
+  CS<0x5599f63bae70> calls external node
+  CS<0x5599f63bb060> calls function 'compart2'
 
-Call graph node for function: 'compart2'<<0x55653976e120>>  #uses=2
-  CS<0x5565397b7bc0> calls function 'compart1'
+Call graph node for function: 'compart2'<<0x5599f6373040>>  #uses=2
+  CS<0x5599f63bcb20> calls function 'compart1'
 
-Call graph node for function: 'getCompartmentFromAddr'<<0x556539771250>>  #uses=2
+Call graph node for function: 'getCompartmentFromAddr'<<0x5599f63737c0>>  #uses=2
 
-Call graph node for function: 'icall_arg0'<<0x55653976e6c0>>  #uses=2
-  CS<0x5565397c51d0> calls function 'switch_view'
-  CS<0x5565397c5520> calls external node
-  CS<0x5565397c56f0> calls function 'switch_view'
+Call graph node for function: 'icall_arg0'<<0x5599f6373610>>  #uses=2
+  CS<0x5599f63ca130> calls function 'switch_view'
+  CS<0x5599f63ca480> calls external node
+  CS<0x5599f63ca650> calls function 'switch_view'
 
-Call graph node for function: 'icall_arg0_noid'<<0x55653976e7f0>>  #uses=1
-  CS<0x5565397c6160> calls function 'getCompartmentFromAddr'
-  CS<0x5565397c62f0> calls function 'icall_arg0'
+Call graph node for function: 'icall_arg0_noid'<<0x5599f6373740>>  #uses=1
+  CS<0x5599f63cb0c0> calls function 'getCompartmentFromAddr'
+  CS<0x5599f63cb250> calls function 'icall_arg0'
 
-Call graph node for function: 'init_mpu'<<0x55653976e1a0>>  #uses=2
-  CS<0x5565397af960> calls external node
-  CS<0x5565397afa10> calls external node
-  CS<0x5565397ba6d0> calls external node
-  CS<0x5565397ba780> calls external node
+Call graph node for function: 'init_mpu'<<0x5599f63730c0>>  #uses=2
+  CS<0x5599f63b4960> calls external node
+  CS<0x5599f63b4a10> calls external node
+  CS<0x5599f63bf630> calls external node
+  CS<0x5599f63bf6e0> calls external node
 
-Call graph node for function: 'internal_compart'<<0x55653976e070>>  #uses=1
+Call graph node for function: 'internal_compart'<<0x5599f6372f90>>  #uses=1
 
-Call graph node for function: 'main'<<0x55653979aa80>>  #uses=1
-  CS<0x5565397a4f20> calls external node
-  CS<0x5565397a4fd0> calls external node
-  CS<0x5565397a5080> calls function 'start_firmware'
+Call graph node for function: 'main'<<0x5599f639f9f0>>  #uses=1
+  CS<0x5599f63a9f20> calls external node
+  CS<0x5599f63a9fd0> calls external node
+  CS<0x5599f63aa080> calls function 'start_firmware'
 
-Call graph node for function: 'ms_delay'<<0x55653979a7c0>>  #uses=1
-  CS<0x5565397a2260> calls external node
+Call graph node for function: 'ms_delay'<<0x5599f639f730>>  #uses=1
+  CS<0x5599f63a7260> calls external node
 
-Call graph node for function: 'rtmk_init'<<0x55653976e300>>  #uses=1
-  CS<0x5565397ad660> calls function 'init_mpu'
-  CS<0x5565397ad700> calls function 'switch_view'
+Call graph node for function: 'rtmk_init'<<0x5599f6373220>>  #uses=1
+  CS<0x5599f63b2640> calls function 'init_mpu'
+  CS<0x5599f63b26e0> calls function 'switch_view'
 
-Call graph node for function: 'start_firmware'<<0x55653979a980>>  #uses=2
-  CS<0x5565397a4710> calls function 'compart1'
+Call graph node for function: 'start_firmware'<<0x5599f639f8f0>>  #uses=2
+  CS<0x5599f63a9710> calls function 'compart1'
 
-Call graph node for function: 'switch_view'<<0x55653976e380>>  #uses=6
-  CS<0x5565397ae0c0> calls external node
-  CS<0x5565397ae140> calls external node
-  CS<0x5565397be4e0> calls external node
-  CS<0x5565397be590> calls external node
+Call graph node for function: 'switch_view'<<0x5599f63732a0>>  #uses=6
+  CS<0x5599f63b30a0> calls external node
+  CS<0x5599f63b3120> calls external node
+  CS<0x5599f63c3460> calls external node
+  CS<0x5599f63c3510> calls external node
 
-Call graph node for function: 'tempFunc'<<0x55653976dc80>>  #uses=1
-  CS<0x5565397b3390> calls external node
+Call graph node for function: 'tempFunc'<<0x5599f6372bd0>>  #uses=1
+  CS<0x5599f63b8390> calls external node
 
-Call graph node for function: 'tempFunc2'<<0x55653976dd30>>  #uses=1
-  CS<0x5565397b3b40> calls external node
+Call graph node for function: 'tempFunc2'<<0x5599f6372c50>>  #uses=1
+  CS<0x5599f63b8b40> calls external node
 
-Call graph node for function: 'xcall_arg0'<<0x55653976e590>>  #uses=2
-  CS<0x5565397c2bf0> calls function 'switch_view'
-  CS<0x5565397c2dd0> calls external node
-  CS<0x5565397c2f10> calls function 'switch_view'
+Call graph node for function: 'xcall_arg0'<<0x5599f63734b0>>  #uses=2
+  CS<0x5599f63c7b50> calls function 'switch_view'
+  CS<0x5599f63c7d30> calls external node
+  CS<0x5599f63c7e70> calls function 'switch_view'
 
-Call graph node for function: 'xcall_arg0_noid'<<0x5565397712d0>>  #uses=1
-  CS<0x5565397c96b0> calls function 'getCompartmentFromAddr'
-  CS<0x5565397c9840> calls function 'xcall_arg0'
+Call graph node for function: 'xcall_arg0_noid'<<0x5599f6376210>>  #uses=1
+  CS<0x5599f63ce610> calls function 'getCompartmentFromAddr'
+  CS<0x5599f63ce7a0> calls function 'xcall_arg0'
 

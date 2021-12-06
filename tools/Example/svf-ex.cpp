@@ -1820,6 +1820,7 @@ int compartmentalize(char * argv[]) {
 												ptr = called;
 												ptr->dump();
 												for(auto &pts: function_pointers) {
+														cerr<<"Comparing with:"; pts.first->dump();
 														if (aliasQuery(fspta, ptr, pts.first)) {
 															cerr<<"Target Found:";
 															cerr<<pts.second->getName().str()<<endl;
@@ -1845,7 +1846,8 @@ int compartmentalize(char * argv[]) {
 												else if (calledComp.size() == 1) {
 													/* Instrument function for direct call */
 													cerr<<"Only1 targets"<<endl;
-													promoteXCallNoCalee(ci, stmt, onlyTargetCache);
+													if (onlyTargetCache != callerID)
+														promoteXCallNoCalee(ci, stmt, onlyTargetCache);
 
 												} else {
 													/* Instrument call so that runtime figures the required compartment */
