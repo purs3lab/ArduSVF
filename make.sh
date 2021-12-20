@@ -1,2 +1,2 @@
 cd Debug-build/
-make svf-ex -j200 && cd ../ && ./run3
+make svf-ex -j200 && cd ../ && ./run4

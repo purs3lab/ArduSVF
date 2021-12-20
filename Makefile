@@ -19,6 +19,10 @@ runf: FORCE
 	./run3
 	cp ./temp.bc  /home/arslan/stm32_discovery_arm_gcc/blinky/temp.bc
 
+runfs: FORCE
+	./run4
+	cp ./temp.bc  ~/projects/LBC/FreeRTOS/FreeRTOS/Demo/CORTEX_M4F_STM32F407ZG-SK
+
 FORCE:
 
 test:

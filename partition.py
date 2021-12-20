@@ -543,7 +543,7 @@ def main(argv):
 		i +=1
 
 
-	policy = "file"
+	policy = "component"
 
 	if policy == "coloring":
 		paint()

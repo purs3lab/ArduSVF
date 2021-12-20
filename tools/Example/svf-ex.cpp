@@ -1488,7 +1488,11 @@ int promoteXCall(CallInst * ci, Function * callee, BasicBlock::iterator& stmt) {
                                                         funcName = "xcall_arg0";
                                                     } else if (ci->getType()->isIntegerTy()) {
                                                         funcName = "icall_arg0";
-                                                    }
+                                                    } else {
+														cerr<<"Pass incomplete" <<endl;
+														ci->dump();
+														return 0;
+													}
                                                     auto func = ll_mod->getFunction(funcName);
                                                     auto func_type = func->getFunctionType();
                                                     auto f = ll_mod->getOrInsertFunction (funcName, func_type); //FuncCallee
@@ -1501,8 +1505,63 @@ int promoteXCall(CallInst * ci, Function * callee, BasicBlock::iterator& stmt) {
                                                     ReplaceInstWithInst(ci, new_inst);
                                                     break;
                                                     }
+											case 1: {
+                                                    string funcName;
+													string ret;
+													string args;
+													Value *v = NULL;
+													Value *sizeInt = NULL;
+													auto arg = ci->getArgOperand(0);
+                                                    if (ci->getType()->isVoidTy()) {
+														ret = "x";
+                                                    } else if (ci->getType()->isIntegerTy()) {
+                                                        ret = "i";
+                                                    } else {
+                                                        cerr<<"Pass incomplete" <<endl;
+                                                        ci->dump();
+                                                        return 0;
+                                                    }
+													if (ci->getArgOperand(0)->getType()->isIntegerTy()) {
+														args = "i";
+														v = arg;
+														sizeInt = v;
+													} else if (ci->getArgOperand(0)->getType()->isPointerTy()) {
+														args = "p";
+														v = Builder.CreatePointerCast(arg, Type::getInt8PtrTy(arg->getContext()));
+
+	                                                    //Get Size
+    	                                                auto sizeP = Builder.CreateIntToPtr (ConstantInt::get(arg->getContext(),
+                                                                                        llvm::APInt(32, 0, false)), arg->getType());
+        	                                            auto size = Builder.CreateConstGEP1_32 (NULL, sizeP, 1);
+            	                                        sizeInt = Builder.CreatePtrToInt(size, Type::getInt32Ty(arg->getContext()));
+
+													} else {
+														cerr<<"Pass incomplete" <<endl;
+                                                        ci->dump();
+                                                        return 0;
+													}
+													funcName = ret + "call_arg1" + args;
+                                                    auto func = ll_mod->getFunction(funcName);
+                                                    auto func_type = func->getFunctionType();
+                                                    auto f = ll_mod->getOrInsertFunction (funcName, func_type); //FuncCallee
+                                                    int compID = compartmentMap[callee->getName().str()];
+													auto ccallee = Builder.CreatePointerCast(callee, Type::getInt8PtrTy(arg->getContext()));
+
+													
+
+													v->dump();
+													ccallee->dump();
+                                                    auto new_inst = Builder.CreateCall(f,{ConstantInt::get(func->getContext(),
+                                                                                        llvm::APInt(32, compID, false)), ccallee, v, sizeInt});
+                                                    new_inst->dump();
+                                                    stmt++;
+                                                    new_inst->removeFromParent();
+                                                    ReplaceInstWithInst(ci, new_inst);
+                                                    break;
+                                                    }
                                             default:
                                                     cerr<<"Pass incomplete"<<endl;
+													ci->dump();
                                                     break;
                                     }
 		return 0;

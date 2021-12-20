@@ -1,516 +1,271 @@
-isr_vector
-Used By:
-****************
-_estack
-Used By:
-****************
-_sidata
-Used By:
-_reset
-****************
-_sdata
-Used By:
-_reset
-****************
-_edata
-Used By:
-_reset
-****************
-_sbss
-Used By:
-_reset
-****************
-_ebss
-Used By:
-_reset
-****************
-.str
-Used By:
-write_number
-****************
-.str.1
-Used By:
-write_number
-****************
-.str.2
-Used By:
-write_number
-****************
-.str.3
-Used By:
-write_number
-****************
-.str.4
-Used By:
-write_number
-****************
-.str.5
-Used By:
-write_number
-****************
-.str.6
-Used By:
-write_number
-****************
-.str.7
-Used By:
-write_number
-****************
-.str.8
-Used By:
-write_number
-****************
-.str.9
-Used By:
-write_number
-****************
-heap_end
-Used By:
-_sbrk
-****************
-_heap_bottom
-Used By:
-_sbrk
-****************
-_heap_top
-Used By:
-_sbrk
-****************
-uxTimerTaskStack
-Used By:
-vApplicationGetTimerTaskMemory
-****************
-vApplicationGetIdleTaskMemory.xIdleTaskTCB
-Used By:
-vApplicationGetIdleTaskMemory
-****************
-vApplicationGetIdleTaskMemory.uxIdleTaskStack
-Used By:
-vApplicationGetIdleTaskMemory
-****************
-vApplicationGetTimerTaskMemory.xTimerTaskTCB
-Used By:
-vApplicationGetTimerTaskMemory
-****************
-uxCriticalNesting
-Used By:
-prvTaskExitError
-xPortStartScheduler
-vPortEndScheduler
-vPortEnterCritical
-vPortExitCritical
-****************
-ucMaxSysCallPriority
-Used By:
-xPortStartScheduler
-vPortValidateInterruptPriority
-****************
-ulMaxPRIGROUPValue
-Used By:
-xPortStartScheduler
-vPortValidateInterruptPriority
-****************
-pxCurrentTCB
-Used By:
-xTaskIncrementTick
-vTaskDelay
-eTaskGetState
-vTaskSwitchContext
-xTaskPriorityInherit
-xTaskPriorityDisinherit
-vTaskPriorityDisinheritAfterTimeout
-uxTaskResetEventItemValue
-pvTaskIncrementMutexHeldCount
-ulTaskGenericNotifyTake
-xTaskGenericNotifyWait
-xTaskGenericNotify
-prvAddNewTaskToReadyList
-vTaskDelete
-xTaskDelayUntil
-xTaskResumeAll
-vTaskGenericNotifyGiveFromISR
-xTaskGenericNotifyStateClear
-ulTaskGenericNotifyValueClear
-uxTaskPriorityGet
-uxTaskPriorityGetFromISR
-vTaskPrioritySet
-vTaskSuspend
-vTaskResume
-xTaskResumeFromISR
-pcTaskGetName
-uxTaskGetSystemState
-xTaskAbortDelay
-vTaskPlaceOnEventList
-vTaskPlaceOnUnorderedEventList
-vTaskPlaceOnEventListRestricted
-xTaskRemoveFromEventList
-vTaskRemoveFromUnorderedEventList
-xTaskCheckForTimeOut
-vTaskGetInfo
-uxTaskGetStackHighWaterMark2
-uxTaskGetStackHighWaterMark
-xTaskGetCurrentTaskHandle
-xTaskGenericNotifyFromISR
-****************
-uxTopUsedPriority
-Used By:
-vTaskStartScheduler
-****************
-llvm.used
-uxSchedulerSuspended
-Used By:
-xTaskIncrementTick
-vTaskSuspendAll
-vTaskDelay
-vTaskSwitchContext
-vTaskDelete
-xTaskDelayUntil
-xTaskResumeAll
-vTaskGenericNotifyGiveFromISR
-vTaskSuspend
-xTaskResumeFromISR
-xTaskGetHandle
-uxTaskGetSystemState
-xTaskCatchUpTicks
-xTaskAbortDelay
-vTaskPlaceOnUnorderedEventList
-xTaskRemoveFromEventList
-vTaskRemoveFromUnorderedEventList
-vTaskGetInfo
-xTaskGetSchedulerState
-xTaskGenericNotifyFromISR
-****************
-xYieldPending
-Used By:
-xTaskIncrementTick
-vTaskSwitchContext
-xTaskResumeAll
-vTaskGenericNotifyGiveFromISR
-vTaskSuspend
-xTaskResumeFromISR
-xTaskAbortDelay
-xTaskRemoveFromEventList
-vTaskRemoveFromUnorderedEventList
-vTaskMissedYield
-xTaskGenericNotifyFromISR
-****************
-uxTopReadyPriority
-Used By:
-xTaskIncrementTick
-vTaskSwitchContext
-xTaskPriorityInherit
-xTaskPriorityDisinherit
-vTaskPriorityDisinheritAfterTimeout
-xTaskGenericNotify
-prvAddNewTaskToReadyList
-xTaskResumeAll
-vTaskGenericNotifyGiveFromISR
-vTaskPrioritySet
-vTaskSuspend
-vTaskResume
-xTaskResumeFromISR
-xTaskAbortDelay
-xTaskRemoveFromEventList
-vTaskRemoveFromUnorderedEventList
-xTaskGenericNotifyFromISR
-****************
-pxReadyTasksLists
-Used By:
-xTaskIncrementTick
-vTaskSwitchContext
-xTaskPriorityInherit
-xTaskPriorityDisinherit
-vTaskPriorityDisinheritAfterTimeout
-xTaskGenericNotify
-prvAddNewTaskToReadyList
-xTaskResumeAll
-vTaskGenericNotifyGiveFromISR
-vTaskPrioritySet
-vTaskSuspend
-vTaskResume
-xTaskResumeFromISR
-prvIdleTask
-xTaskGetHandle
-uxTaskGetSystemState
-xTaskAbortDelay
-xTaskRemoveFromEventList
-vTaskRemoveFromUnorderedEventList
-xTaskGenericNotifyFromISR
-****************
-uxCurrentNumberOfTasks
-Used By:
-prvAddNewTaskToReadyList
-vTaskDelete
-xTaskResumeAll
-vTaskSuspend
-prvIdleTask
-uxTaskGetNumberOfTasks
-uxTaskGetSystemState
-****************
-xDelayedTaskList1
-Used By:
-prvAddNewTaskToReadyList
-****************
-xDelayedTaskList2
-Used By:
-prvAddNewTaskToReadyList
-****************
-xPendingReadyList
-Used By:
-prvAddNewTaskToReadyList
-xTaskResumeAll
-vTaskGenericNotifyGiveFromISR
-xTaskResumeFromISR
-xTaskRemoveFromEventList
-xTaskGenericNotifyFromISR
-****************
-xTasksWaitingTermination
-Used By:
-eTaskGetState
-prvAddNewTaskToReadyList
-vTaskDelete
-prvIdleTask
-xTaskGetHandle
-uxTaskGetSystemState
-vTaskGetInfo
-****************
-xSuspendedTaskList
-Used By:
-eTaskGetState
-ulTaskGenericNotifyTake
-xTaskGenericNotifyWait
-prvAddNewTaskToReadyList
-vTaskSuspend
-vTaskResume
-xTaskResumeFromISR
-xTaskGetHandle
-uxTaskGetSystemState
-xTaskAbortDelay
-vTaskPlaceOnEventList
-vTaskPlaceOnUnorderedEventList
-vTaskPlaceOnEventListRestricted
-vTaskGetInfo
-****************
-pxDelayedTaskList
-Used By:
-xTaskIncrementTick
-vTaskDelay
-eTaskGetState
-ulTaskGenericNotifyTake
-xTaskGenericNotifyWait
-prvAddNewTaskToReadyList
-vTaskDelete
-xTaskDelayUntil
-xTaskResumeAll
-vTaskSuspend
-xTaskGetHandle
-uxTaskGetSystemState
-xTaskAbortDelay
-vTaskPlaceOnEventList
-vTaskPlaceOnUnorderedEventList
-vTaskPlaceOnEventListRestricted
-vTaskGetInfo
-****************
-pxOverflowDelayedTaskList
-Used By:
-xTaskIncrementTick
-vTaskDelay
-eTaskGetState
-ulTaskGenericNotifyTake
-xTaskGenericNotifyWait
-prvAddNewTaskToReadyList
-xTaskDelayUntil
-xTaskGetHandle
-uxTaskGetSystemState
-xTaskAbortDelay
-vTaskPlaceOnEventList
-vTaskPlaceOnUnorderedEventList
-vTaskPlaceOnEventListRestricted
-vTaskGetInfo
-****************
-xSchedulerRunning
-Used By:
-prvAddNewTaskToReadyList
-vTaskDelete
-vTaskSuspend
-vTaskStartScheduler
-vTaskEndScheduler
-xTaskGetSchedulerState
-****************
-uxTaskNumber
-Used By:
-prvAddNewTaskToReadyList
-vTaskDelete
-****************
-uxDeletedTasksWaitingCleanUp
-Used By:
-vTaskDelete
-prvIdleTask
-****************
-xNextTaskUnblockTime
-Used By:
-xTaskIncrementTick
-vTaskDelay
-ulTaskGenericNotifyTake
-xTaskGenericNotifyWait
-vTaskDelete
-xTaskDelayUntil
-xTaskResumeAll
-vTaskSuspend
-vTaskStartScheduler
-vTaskPlaceOnEventList
-vTaskPlaceOnUnorderedEventList
-vTaskPlaceOnEventListRestricted
-****************
-xTickCount
-Used By:
-xTaskIncrementTick
-vTaskDelay
-ulTaskGenericNotifyTake
-xTaskGenericNotifyWait
-xTaskGenericNotify
-xTaskDelayUntil
-vTaskStartScheduler
-xTaskGetTickCount
-xTaskGetTickCountFromISR
-vTaskPlaceOnEventList
-vTaskPlaceOnUnorderedEventList
-vTaskPlaceOnEventListRestricted
-vTaskSetTimeOutState
-vTaskInternalSetTimeOutState
-xTaskCheckForTimeOut
-xTaskGenericNotifyFromISR
-****************
-xPendedTicks
-Used By:
-xTaskIncrementTick
-xTaskResumeAll
-xTaskCatchUpTicks
-****************
-xNumOfOverflows
-Used By:
-xTaskIncrementTick
-vTaskSetTimeOutState
-vTaskInternalSetTimeOutState
-xTaskCheckForTimeOut
-****************
-.str.19
-Used By:
-vTaskStartScheduler
-****************
-xIdleTaskHandle
-Used By:
-vTaskStartScheduler
-xTaskGetIdleTaskHandle
-****************
-xQueueRegistry
-Used By:
-vQueueUnregisterQueue
-vQueueAddToRegistry
-pcQueueGetName
-****************
-xTimerQueue
-Used By:
-xTimerCreateTimerTask
-prvTimerTask
-prvInitialiseNewTimer
-xTimerGenericCommand
-xTimerPendFunctionCallFromISR
-xTimerPendFunctionCall
-****************
-xActiveTimerList1
-Used By:
-xTimerCreateTimerTask
-prvInitialiseNewTimer
-****************
-xActiveTimerList2
-Used By:
-xTimerCreateTimerTask
-prvInitialiseNewTimer
-****************
-pxCurrentTimerList
-Used By:
-xTimerCreateTimerTask
-prvTimerTask
-prvSampleTimeNow
-prvInitialiseNewTimer
-****************
-pxOverflowTimerList
-Used By:
-xTimerCreateTimerTask
-prvTimerTask
-prvSampleTimeNow
-prvInitialiseNewTimer
-****************
-prvCheckForValidListAndQueue.ucStaticTimerQueueStorage
-Used By:
-xTimerCreateTimerTask
-prvInitialiseNewTimer
-****************
-prvCheckForValidListAndQueue.xStaticTimerQueue
-Used By:
-xTimerCreateTimerTask
-prvInitialiseNewTimer
-****************
-.str.1.32
-Used By:
-xTimerCreateTimerTask
-prvInitialiseNewTimer
-****************
-.str.33
-Used By:
-xTimerCreateTimerTask
-****************
-xTimerTaskHandle
-Used By:
-xTimerCreateTimerTask
-xTimerGetTimerDaemonTaskHandle
-****************
-prvSampleTimeNow.xLastTime
-Used By:
-prvSampleTimeNow
-****************
-pvPortMalloc.pucAlignedHeap
-Used By:
-pvPortMalloc
-****************
-ucHeap
-Used By:
-pvPortMalloc
-****************
-xNextFreeByte
-Used By:
-pvPortMalloc
-vPortInitialiseBlocks
-xPortGetFreeHeapSize
-****************
-ulRxEvents
-Used By:
-prvQueueReceiveTask
-****************
-.str.40
-Used By:
-case_prog
-****************
-.str.1.41
-Used By:
-case_prog
-****************
-xQueue
-Used By:
-main_blinky
-prvQueueReceiveTask
-prvQueueSendTask
-****************
-.str.2.44
-Used By:
-main_blinky
-****************
-.str.3.45
-Used By:
-main_blinky
-****************
-.str.4.46
-Used By:
-prvQueueReceiveTask
-****************
+Pass incomplete
+Pass incomplete
+Pass incomplete
+Pass incomplete
+Pass incomplete
+  call void @xcall_arg0(i32 20, void ()* @vPortEnterCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+Pass incomplete
+Pass incomplete
+Pass incomplete
+Pass incomplete
+Pass incomplete
+Pass incomplete
+  call void @xcall_arg0(i32 20, void ()* @vPortEnterCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+Pass incomplete
+Pass incomplete
+  call void @xcall_arg0(i32 20, void ()* @vTaskSuspendAll)
+Pass incomplete
+  %6 = call i32 @icall_arg0(i32 20, i32 ()* @xTaskResumeAll)
+Pass incomplete
+Pass incomplete
+Pass incomplete
+  call void @xcall_arg0(i32 13, void ()* @prvResetNextTaskUnblockTime)
+  %19 = call i32 @icall_arg0(i32 13, i32 ()* @xTaskIncrementTick)
+  call void @xcall_arg0(i32 20, void ()* @vTaskSuspendAll)
+  %2 = call i32 @icall_arg0(i32 20, i32 ()* @xTaskResumeAll)
+  call void @xcall_arg0(i32 20, void ()* @vPortEnterCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortEnterCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortEnterCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortEnterCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortEnterCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortEnterCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+Pass incomplete
+  call void @xcall_arg0(i32 20, void ()* @vPortEnterCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+  call void @xcall_arg0(i32 20, void ()* @vTaskSuspendAll)
+  %3 = call i32 @icall_arg0(i32 20, i32 ()* @xTaskResumeAll)
+  call void @xcall_arg0(i32 20, void ()* @vTaskSuspendAll)
+  %7 = call i32 @icall_arg0(i32 20, i32 ()* @xTaskResumeAll)
+  call void @xcall_arg0(i32 20, void ()* @vTaskSuspendAll)
+  %3 = call i32 @icall_arg0(i32 20, i32 ()* @xTaskResumeAll)
+Pass incomplete
+Pass incomplete
+Pass incomplete
+Pass incomplete
+Pass incomplete
+  call void @xcall_arg0(i32 20, void ()* @vPortEnterCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortEnterCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortEnterCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortEnterCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortEnterCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortEnterCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortEnterCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+Pass incomplete
+  call void @xcall_arg0(i32 13, void ()* @vTaskStartScheduler)
+  call void @xcall_arg0(i32 11, void ()* @SystemInit)
+  call void @xcall_arg0(i32 10, void ()* @vParTestInitialise)
+Pass incomplete
+Pass incomplete
+Pass incomplete
+  call void @xcall_arg0(i32 20, void ()* @vPortEnterCritical)
+Pass incomplete
+Pass incomplete
+Pass incomplete
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+Pass incomplete
+Pass incomplete
+Pass incomplete
+Pass incomplete
+  %7 = call i32 @icall_arg0(i32 20, i32 ()* @xTaskGetSchedulerState)
+  call void @xcall_arg0(i32 20, void ()* @vPortEnterCritical)
+Pass incomplete
+Pass incomplete
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+Pass incomplete
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortEnterCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+Pass incomplete
+Pass incomplete
+Pass incomplete
+Pass incomplete
+  %15 = call i32 @icall_arg0(i32 20, i32 ()* @xTaskResumeAll)
+Pass incomplete
+  %15 = call i32 @icall_arg0(i32 20, i32 ()* @xTaskResumeAll)
+Pass incomplete
+  %15 = call i32 @icall_arg0(i32 20, i32 ()* @xTaskResumeAll)
+Pass incomplete
+  call void @xcall_arg0(i32 20, void ()* @vPortEnterCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortEnterCritical)
+Pass incomplete
+  call void @xcall_arg0(i32 13, void ()* @vTaskMissedYield)
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+Pass incomplete
+  call void @xcall_arg0(i32 13, void ()* @vTaskMissedYield)
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+Pass incomplete
+Pass incomplete
+Pass incomplete
+  %5 = call i32 @icall_arg0(i32 20, i32 ()* @xTaskGetSchedulerState)
+  call void @xcall_arg0(i32 20, void ()* @vPortEnterCritical)
+Pass incomplete
+Pass incomplete
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+Pass incomplete
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortEnterCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+Pass incomplete
+  call void @xcall_arg0(i32 20, void ()* @vPortEnterCritical)
+Pass incomplete
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+Pass incomplete
+  %16 = call i32 @icall_arg0(i32 20, i32 ()* @xTaskResumeAll)
+  %16 = call i32 @icall_arg0(i32 20, i32 ()* @xTaskResumeAll)
+  %16 = call i32 @icall_arg0(i32 20, i32 ()* @xTaskResumeAll)
+  call void @xcall_arg0(i32 20, void ()* @vPortEnterCritical)
+Pass incomplete
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortEnterCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+Pass incomplete
+  call void @xcall_arg0(i32 13, void ()* @vPortValidateInterruptPriority)
+Pass incomplete
+Pass incomplete
+  call void @xcall_arg0(i32 13, void ()* @vPortValidateInterruptPriority)
+Pass incomplete
+  %5 = call i32 @icall_arg0(i32 20, i32 ()* @xTaskGetSchedulerState)
+  call void @xcall_arg0(i32 20, void ()* @vPortEnterCritical)
+Pass incomplete
+Pass incomplete
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+Pass incomplete
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortEnterCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+Pass incomplete
+Pass incomplete
+Pass incomplete
+Pass incomplete
+  %12 = call i32 @icall_arg0(i32 20, i32 ()* @xTaskResumeAll)
+Pass incomplete
+  %12 = call i32 @icall_arg0(i32 20, i32 ()* @xTaskResumeAll)
+Pass incomplete
+  %12 = call i32 @icall_arg0(i32 20, i32 ()* @xTaskResumeAll)
+  %5 = call i32 @icall_arg0(i32 20, i32 ()* @xTaskGetSchedulerState)
+  call void @xcall_arg0(i32 20, void ()* @vPortEnterCritical)
+Pass incomplete
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+Pass incomplete
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortEnterCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+Pass incomplete
+Pass incomplete
+  %13 = call i32 @icall_arg0(i32 20, i32 ()* @xTaskResumeAll)
+  %13 = call i32 @icall_arg0(i32 20, i32 ()* @xTaskResumeAll)
+  %13 = call i32 @icall_arg0(i32 20, i32 ()* @xTaskResumeAll)
+  call void @xcall_arg0(i32 13, void ()* @vPortValidateInterruptPriority)
+Pass incomplete
+  call void @xcall_arg0(i32 13, void ()* @vPortValidateInterruptPriority)
+  call void @xcall_arg0(i32 20, void ()* @vPortEnterCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortEnterCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+Pass incomplete
+  call void @xcall_arg0(i32 20, void ()* @vPortEnterCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+Pass incomplete
+Pass incomplete
+  call void @xcall_arg0(i32 5, void ()* @prvCheckForValidListAndQueue)
+Pass incomplete
+  call void @xcall_arg0(i32 20, void ()* @vPortEnterCritical)
+Pass incomplete
+Pass incomplete
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+  call void @xcall_arg0(i32 20, void ()* @vTaskSuspendAll)
+  %2 = call i32 @icall_arg0(i32 20, i32 ()* @xTaskResumeAll)
+  %5 = call i32 @icall_arg0(i32 20, i32 ()* @xTaskResumeAll)
+  %5 = call i32 @icall_arg0(i32 20, i32 ()* @xTaskResumeAll)
+Pass incomplete
+Indirect Call
+  %15 = load void (%struct.tmrTimerControl*)*, void (%struct.tmrTimerControl*)** %pxCallbackFunction, align 4, !dbg !1147, !tbaa !1148
+  %15 = load void (%struct.tmrTimerControl*)*, void (%struct.tmrTimerControl*)** %pxCallbackFunction, align 4, !dbg !1147, !tbaa !1148
+Zero Target
+Pass incomplete
+Pass incomplete
+  %1 = call i32 @icall_arg0(i32 14, i32 ()* @xTaskGetTickCount)
+Pass incomplete
+Pass incomplete
+Indirect Call
+  %2 = load void (%struct.tmrTimerControl*)*, void (%struct.tmrTimerControl*)** %pxCallbackFunction, align 4, !dbg !1090, !tbaa !1091
+  %2 = load void (%struct.tmrTimerControl*)*, void (%struct.tmrTimerControl*)** %pxCallbackFunction, align 4, !dbg !1090, !tbaa !1091
+Zero Target
+Pass incomplete
+Pass incomplete
+Indirect Call
+  %6 = load void (%struct.tmrTimerControl*)*, void (%struct.tmrTimerControl*)** %pxCallbackFunction, align 4, !dbg !1100, !tbaa !1101
+  %6 = load void (%struct.tmrTimerControl*)*, void (%struct.tmrTimerControl*)** %pxCallbackFunction, align 4, !dbg !1100, !tbaa !1101
+Zero Target
+Pass incomplete
+Pass incomplete
+Pass incomplete
+  %3 = call i32 @icall_arg0(i32 20, i32 ()* @xTaskGetSchedulerState)
+  call void @xcall_arg0(i32 20, void ()* @vPortEnterCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortEnterCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortEnterCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortEnterCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortEnterCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+  call void @xcall_arg0(i32 3, void ()* @vPortSetupTimerInterrupt)
+  call void @xcall_arg0(i32 3, void ()* @vPortEnableVFP)
+  call void @xcall_arg0(i32 3, void ()* @prvPortStartFirstTask)
+  call void @xcall_arg0(i32 3, void ()* @prvTaskExitError)
+  %1 = call i32 @icall_arg0(i32 13, i32 ()* @xTaskIncrementTick)
+  call void @xcall_arg0(i32 16, void ()* @vApplicationMallocFailedHook)
+  call void @xcall_arg0(i32 20, void ()* @vPortEnterCritical)
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+Pass incomplete
+Pass incomplete
+Pass incomplete
+Pass incomplete
+Pass incomplete
+Pass incomplete
+  call void @xcall_arg0(i32 20, void ()* @vPortEnterCritical)
+Pass incomplete
+  call void @xcall_arg0(i32 20, void ()* @vPortExitCritical)
+Pass incomplete
+Pass incomplete
+Pass incomplete
+Pass incomplete
+Pass incomplete
+Pass incomplete
+Pass incomplete
+Pass incomplete
+Pass incomplete
+Pass incomplete
+Pass incomplete
+Pass incomplete
+Pass incomplete
+Pass incomplete
+Pass incomplete
+Pass incomplete
+Pass incomplete
+Pass incomplete
+temp.bc updated
