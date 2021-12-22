@@ -807,6 +807,11 @@ void updateBC() {
         raw_fd_ostream output("temp.bc", EC);
         llvm::WriteBitcodeToFile(*ll_mod, output);
 		cerr<<"temp.bc updated"<<endl;
+
+		for (SVFModule::llvm_iterator F = svfModule->llvmFunBegin(), E = svfModule->llvmFunEnd(); F != E; ++F) {
+        	auto fun = *F;
+			fun->dump();
+		}
 }
 typedef struct {
 		string dir;
@@ -1521,20 +1526,33 @@ int promoteXCall(CallInst * ci, Function * callee, BasicBlock::iterator& stmt) {
                                                         ci->dump();
                                                         return 0;
                                                     }
+													/* If its a normal int we don't need to pass in anything */
 													if (ci->getArgOperand(0)->getType()->isIntegerTy()) {
 														args = "i";
 														v = arg;
 														sizeInt = v;
 													} else if (ci->getArgOperand(0)->getType()->isPointerTy()) {
 														args = "p";
+														IRBuilder<> Builder(ci);
 														v = Builder.CreatePointerCast(arg, Type::getInt8PtrTy(arg->getContext()));
+#if 0
+														if (auto castI = dyn_cast<llvm::Instruction>(v)) {
+																castI->eraseFromParent();
+																ci->insertBefore(castI);
+														}
+#endif 
 
 	                                                    //Get Size
+														//Builder.SetInsertPoint(ci);
+#if 01
     	                                                auto sizeP = Builder.CreateIntToPtr (ConstantInt::get(arg->getContext(),
                                                                                         llvm::APInt(32, 0, false)), arg->getType());
         	                                            auto size = Builder.CreateConstGEP1_32 (NULL, sizeP, 1);
             	                                        sizeInt = Builder.CreatePtrToInt(size, Type::getInt32Ty(arg->getContext()));
+#endif 
 
+//														sizeInt->removeFromParent();
+//														it->getInstList().insert(ci, sizeInt);
 													} else {
 														cerr<<"Pass incomplete" <<endl;
                                                         ci->dump();
@@ -1547,10 +1565,6 @@ int promoteXCall(CallInst * ci, Function * callee, BasicBlock::iterator& stmt) {
                                                     int compID = compartmentMap[callee->getName().str()];
 													auto ccallee = Builder.CreatePointerCast(callee, Type::getInt8PtrTy(arg->getContext()));
 
-													
-
-													v->dump();
-													ccallee->dump();
                                                     auto new_inst = Builder.CreateCall(f,{ConstantInt::get(func->getContext(),
                                                                                         llvm::APInt(32, compID, false)), ccallee, v, sizeInt});
                                                     new_inst->dump();

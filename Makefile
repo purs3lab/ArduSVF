@@ -18,6 +18,7 @@ runz: dev.map FORCE
 runf: FORCE
 	./run3
 	cp ./temp.bc  /home/arslan/stm32_discovery_arm_gcc/blinky/temp.bc
+	llvm-dis ./temp.bc
 
 runfs: FORCE
 	./run4

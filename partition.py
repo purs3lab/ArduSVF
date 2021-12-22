@@ -206,10 +206,10 @@ def printStats():
 			sys.stdout = original_stdout
 
 	with open(".policy", 'w') as f:
-            sys.stdout = f
-            for compartment in compartments:
-                print(compartment)
-            sys.stdout = original_stdout
+			sys.stdout = f
+			for compartment in compartments:
+				print(compartment)
+			sys.stdout = original_stdout
 
 	if printCompartments:
 		for compartment in compartments:
@@ -543,7 +543,7 @@ def main(argv):
 		i +=1
 
 
-	policy = "component"
+	policy = "file"
 
 	if policy == "coloring":
 		paint()
@@ -614,6 +614,7 @@ def main(argv):
 			for funcL in dfmapCoarse[dev]:
 				if compartment != compartmentMap[funcL]:
 					mergeCompartments(compartment, compartmentMap[funcL])
+
 	
 
 	#Assign Objects in unsed compartment
@@ -625,6 +626,39 @@ def main(argv):
 	for var in data:
 		if var not in compartmentMap:
 			addToCompartment(var, unusedComp)
+
+	for var in data:
+		users = []
+		users = compartmentMap[func]
+		compartment = []
+		for func in data[var]:
+			if len(compartment) == 0:
+				compartment = compartmentMap[func]
+			else:
+				if compartment != compartmentMap[func]:
+					print "Merging"
+#print compartment
+#					print compartmentMap[func]
+					mergeCompartments(compartment, compartmentMap[func])
+					compartment = compartmentMap[func]
+
+
+	for var in data:
+		users = []
+		users = compartmentMap[func]
+		compartment = []
+		for func in data[var]:
+			if len(compartment) == 0:
+				compartment = compartmentMap[func]
+			else:
+				if compartment != compartmentMap[func]:
+					print "******************************"
+					print "*********BUG ON***************"
+					print "******************************"
+#print compartment  
+#				   print compartmentMap[func]
+					mergeCompartments(compartment, compartmentMap[func])
+					compartment = compartmentMap[func]
 
 	if len(unusedComp) == 0:
 		compartments.remove(unusedComp)
