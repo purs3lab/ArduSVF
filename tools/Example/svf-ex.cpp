@@ -810,7 +810,7 @@ void updateBC() {
 
 		for (SVFModule::llvm_iterator F = svfModule->llvmFunBegin(), E = svfModule->llvmFunEnd(); F != E; ++F) {
         	auto fun = *F;
-			fun->dump();
+			//fun->dump();
 		}
 }
 typedef struct {
@@ -1480,6 +1480,48 @@ void downgradeISRControl() {
     }
 #endif
 }
+string  argToBridge(CallInst * ci, int argnum, Value ** v, Value ** sizeInt) {
+		auto arg = ci->getArgOperand(argnum);
+		string args;
+		/* If its a normal int we don't need to pass in anything */
+                                                    if (arg->getType()->isIntegerTy()) {
+                                                        args = "i";
+														IRBuilder<> Builder(ci);
+														auto cast = Builder.CreateIntCast (arg, Type::getInt32Ty(arg->getContext()), false);
+                                                        *v = cast;
+                                                        *sizeInt = *v;
+                                                    } else if (arg->getType()->isPointerTy()) {
+                                                        args = "p";
+                                                        IRBuilder<> Builder(ci);
+                                                        *v = Builder.CreatePointerCast(arg, Type::getInt8PtrTy(arg->getContext()));
+                                                        auto sizeP = Builder.CreateIntToPtr (ConstantInt::get(arg->getContext(),
+                                                                                        llvm::APInt(32, 0, false)), arg->getType());
+                                                        auto size = Builder.CreateConstGEP1_32 (NULL, sizeP, 1);
+                                                        *sizeInt = Builder.CreatePtrToInt(size, Type::getInt32Ty(arg->getContext()));
+                                                    } else {
+                                                        cerr<<"Pass incomplete" <<endl;
+                                                        ci->dump();
+														*v = NULL; *sizeInt = NULL;
+														args = "";
+                                                    }
+	return args;
+}
+
+string getRetType(CallInst * ci) {
+		string ret;
+		if (ci->getType()->isVoidTy()) {
+                                                        ret = "x";
+                                                    } else if (ci->getType()->isIntegerTy()) {
+                                                        ret = "i";
+													} else if (ci->getType()->isPointerTy()) {
+														ret = "p";
+                                                    } else {
+                                                        cerr<<"Pass incomplete" <<endl;
+                                                        ci->dump();
+                                                        ret = "";
+                                                    }
+		return ret;
+}
 map<int,vector<string>> compartments;
 map<string, int>compartmentMap;
 int promoteXCall(CallInst * ci, Function * callee, BasicBlock::iterator& stmt) {
@@ -1493,12 +1535,18 @@ int promoteXCall(CallInst * ci, Function * callee, BasicBlock::iterator& stmt) {
                                                         funcName = "xcall_arg0";
                                                     } else if (ci->getType()->isIntegerTy()) {
                                                         funcName = "icall_arg0";
+													} else if (ci->getType()->isPointerTy()) {
+														funcName = "pcall_arg0";
                                                     } else {
 														cerr<<"Pass incomplete" <<endl;
 														ci->dump();
 														return 0;
 													}
                                                     auto func = ll_mod->getFunction(funcName);
+													if (func==NULL) {
+                                                            cerr<< funcName << " not implemented" <<endl;
+                                                            return 0;
+                                                    }
                                                     auto func_type = func->getFunctionType();
                                                     auto f = ll_mod->getOrInsertFunction (funcName, func_type); //FuncCallee
                                                     int compID = compartmentMap[callee->getName().str()];
@@ -1517,49 +1565,18 @@ int promoteXCall(CallInst * ci, Function * callee, BasicBlock::iterator& stmt) {
 													Value *v = NULL;
 													Value *sizeInt = NULL;
 													auto arg = ci->getArgOperand(0);
-                                                    if (ci->getType()->isVoidTy()) {
-														ret = "x";
-                                                    } else if (ci->getType()->isIntegerTy()) {
-                                                        ret = "i";
-                                                    } else {
-                                                        cerr<<"Pass incomplete" <<endl;
-                                                        ci->dump();
-                                                        return 0;
-                                                    }
-													/* If its a normal int we don't need to pass in anything */
-													if (ci->getArgOperand(0)->getType()->isIntegerTy()) {
-														args = "i";
-														v = arg;
-														sizeInt = v;
-													} else if (ci->getArgOperand(0)->getType()->isPointerTy()) {
-														args = "p";
-														IRBuilder<> Builder(ci);
-														v = Builder.CreatePointerCast(arg, Type::getInt8PtrTy(arg->getContext()));
-#if 0
-														if (auto castI = dyn_cast<llvm::Instruction>(v)) {
-																castI->eraseFromParent();
-																ci->insertBefore(castI);
-														}
-#endif 
-
-	                                                    //Get Size
-														//Builder.SetInsertPoint(ci);
-#if 01
-    	                                                auto sizeP = Builder.CreateIntToPtr (ConstantInt::get(arg->getContext(),
-                                                                                        llvm::APInt(32, 0, false)), arg->getType());
-        	                                            auto size = Builder.CreateConstGEP1_32 (NULL, sizeP, 1);
-            	                                        sizeInt = Builder.CreatePtrToInt(size, Type::getInt32Ty(arg->getContext()));
-#endif 
-
-//														sizeInt->removeFromParent();
-//														it->getInstList().insert(ci, sizeInt);
-													} else {
-														cerr<<"Pass incomplete" <<endl;
-                                                        ci->dump();
-                                                        return 0;
-													}
+													ret = getRetType(ci);
+													if (ret.empty())
+															return 0;
+													args = argToBridge(ci, 0, &v, &sizeInt);
+													if (args.empty())
+															return 0;
 													funcName = ret + "call_arg1" + args;
                                                     auto func = ll_mod->getFunction(funcName);
+													if (func==NULL) {
+                                                            cerr<< funcName << " not implemented" <<endl;
+                                                            return 0;
+                                                    }
                                                     auto func_type = func->getFunctionType();
                                                     auto f = ll_mod->getOrInsertFunction (funcName, func_type); //FuncCallee
                                                     int compID = compartmentMap[callee->getName().str()];
@@ -1573,8 +1590,158 @@ int promoteXCall(CallInst * ci, Function * callee, BasicBlock::iterator& stmt) {
                                                     ReplaceInstWithInst(ci, new_inst);
                                                     break;
                                                     }
+											case 2: {
+													string funcName;
+                                                    string ret;
+                                                    string args;
+                                                    Value *v = NULL;
+                                                    Value *sizeInt = NULL;
+													Value *v1 = NULL;
+                                                    Value *sizeInt1 = NULL;
+                                                    auto arg = ci->getArgOperand(0);
+                                                    ret = getRetType(ci);
+                                                    if (ret.empty())
+                                                            return 0;
+                                                    args = argToBridge(ci, 0, &v, &sizeInt);
+													auto args2 = argToBridge(ci, 1, &v1, &sizeInt1);
+                                                    if (args.empty())
+                                                            return 0;
+                                                    funcName = ret + "call_arg2" + args + args2;
+                                                    auto func = ll_mod->getFunction(funcName);
+													if (func==NULL) {
+															cerr<< funcName << " not implemented" <<endl;
+															return 0;
+													}
+
+                                                    auto func_type = func->getFunctionType();
+                                                    auto f = ll_mod->getOrInsertFunction (funcName, func_type); //FuncCallee
+                                                    int compID = compartmentMap[callee->getName().str()];
+                                                    auto ccallee = Builder.CreatePointerCast(callee, Type::getInt8PtrTy(arg->getContext()));
+
+                                                    auto new_inst = Builder.CreateCall(f,{ConstantInt::get(func->getContext(),
+                                                                                        llvm::APInt(32, compID, false)), ccallee, v, sizeInt, v1, sizeInt1});
+                                                    new_inst->dump();
+                                                    stmt++;
+                                                    new_inst->removeFromParent();
+                                                    ReplaceInstWithInst(ci, new_inst);
+													break;
+											}
+											case 3: {
+                                                    string funcName;
+                                                    string ret;
+                                                    string args;
+                                                    Value *v = NULL;
+                                                    Value *sizeInt = NULL;
+                                                    Value *v1 = NULL;
+                                                    Value *sizeInt1 = NULL;
+													Value *v2 = NULL;
+                                                    Value *sizeInt2 = NULL;
+                                                    auto arg = ci->getArgOperand(0);
+                                                    ret = getRetType(ci);
+                                                    if (ret.empty())
+                                                            return 0;
+                                                    args = argToBridge(ci, 0, &v, &sizeInt);
+                                                    auto args2 = argToBridge(ci, 1, &v1, &sizeInt1);
+                                                    if (args.empty())
+                                                            return 0;
+													auto args3 = argToBridge(ci, 2, &v2, &sizeInt2);
+													if (args.empty())
+                                                            return 0;
+                                                    funcName = ret + "call_arg3" + args + args2 + args3;
+                                                    auto func = ll_mod->getFunction(funcName);
+                                                    if (func==NULL) {
+                                                            cerr<< funcName << " not implemented" <<endl;
+                                                            return 0;
+                                                    }
+
+                                                    auto func_type = func->getFunctionType();
+                                                    auto f = ll_mod->getOrInsertFunction (funcName, func_type); //FuncCallee
+                                                    int compID = compartmentMap[callee->getName().str()];
+                                                    auto ccallee = Builder.CreatePointerCast(callee, Type::getInt8PtrTy(arg->getContext()));
+
+                                                    auto new_inst = Builder.CreateCall(f,{ConstantInt::get(func->getContext(),
+                                                                                        llvm::APInt(32, compID, false)), ccallee, v, sizeInt, v1, sizeInt1, v2, sizeInt2});
+                                                    new_inst->dump();
+                                                    stmt++;
+                                                    new_inst->removeFromParent();
+                                                    ReplaceInstWithInst(ci, new_inst);
+                                                    break;
+                                            }
+
+											 case 4: {
+                                                    string funcName;
+                                                    string ret;
+                                                    string args;
+                                                    Value *v = NULL; 
+                                                    Value *sizeInt = NULL;
+                                                    Value *v1 = NULL; 
+                                                    Value *sizeInt1 = NULL;
+                                                    Value *v2 = NULL; 
+                                                    Value *sizeInt2 = NULL;
+													Value *v3 = NULL;
+                                                    Value *sizeInt3 = NULL;
+                                                    auto arg = ci->getArgOperand(0);
+                                                    ret = getRetType(ci);
+                                                    if (ret.empty())
+                                                            return 0;
+                                                    args = argToBridge(ci, 0, &v, &sizeInt);
+                                                    auto args2 = argToBridge(ci, 1, &v1, &sizeInt1);
+                                                    if (args2.empty())
+                                                            return 0;
+                                                    auto args3 = argToBridge(ci, 2, &v2, &sizeInt2);
+                                                    if (args3.empty())
+                                                            return 0;
+													auto args4 = argToBridge(ci, 3, &v3, &sizeInt3);
+                                                    if (args4.empty())
+                                                            return 0;
+                                                    funcName = ret + "call_arg4" + args + args2 + args3 + args4;
+                                                    auto func = ll_mod->getFunction(funcName);
+                                                    if (func==NULL) {
+                                                            cerr<< funcName << " not implemented" <<endl;
+                                                            return 0;
+                                                    }
+                                                    
+                                                    auto func_type = func->getFunctionType();
+                                                    auto f = ll_mod->getOrInsertFunction (funcName, func_type); //FuncCallee
+                                                    int compID = compartmentMap[callee->getName().str()];
+                                                    auto ccallee = Builder.CreatePointerCast(callee, Type::getInt8PtrTy(arg->getContext()));
+                                                    
+                                                    auto new_inst = Builder.CreateCall(f,{ConstantInt::get(func->getContext(),
+                                                                                        llvm::APInt(32, compID, false)), ccallee, v, sizeInt, v1, sizeInt1, v2, sizeInt2, v3, sizeInt3});                                       
+                                                    new_inst->dump();
+                                                    stmt++;
+                                                    new_inst->removeFromParent();
+                                                    ReplaceInstWithInst(ci, new_inst);
+                                                    break;
+                                            }
+
+											case 6: {
+													string funcName;
+                                                    string ret;
+                                                    string args;
+													funcName = callee->getName().str() + "_bridge";
+													auto func = ll_mod->getFunction(funcName);
+                                                    if (func==NULL) {
+                                                            cerr<< funcName << " not implemented" <<endl;
+                                                            return 0;
+                                                    }
+													auto func_type = func->getFunctionType();
+                                                    auto f = ll_mod->getOrInsertFunction (funcName, func_type); //FuncCallee
+                                                    int compID = compartmentMap[callee->getName().str()];
+                                                    auto ccallee = Builder.CreatePointerCast(callee, Type::getInt8PtrTy(ci->getContext()));
+
+                                                    auto new_inst = Builder.CreateCall(f,{ConstantInt::get(func->getContext(),
+                                                                                        llvm::APInt(32, compID, false)), ci->getArgOperand(0), ci->getArgOperand(1), ci->getArgOperand(2), ci->getArgOperand(3), ci->getArgOperand(4),ci->getArgOperand(5)});
+                                                    new_inst->dump();
+                                                    stmt++;
+                                                    new_inst->removeFromParent();
+                                                    ReplaceInstWithInst(ci, new_inst);
+
+													break;
+											}
+
                                             default:
-                                                    cerr<<"Pass incomplete"<<endl;
+                                                    cerr<<"arg count incomplete"<<endl;
 													ci->dump();
                                                     break;
                                     }
@@ -1605,7 +1772,9 @@ int promoteXCallNoCalee(CallInst * ci, BasicBlock::iterator& stmt, int compID) {
                                                     break;
                                                     }
                                             default:
-                                                    cerr<<"Pass incomplete"<<endl;
+                                                    cerr<<"Pass incomplete NoCalee"<<endl;
+													ci->dump();
+
                                                     break;
                                     }
         return 0;
@@ -1633,8 +1802,39 @@ int promoteXCallNoCaleeNoId(CallInst * ci, BasicBlock::iterator& stmt) {
                                                     ReplaceInstWithInst(ci, new_inst);
                                                     break;
                                                     }
+											case 1: {
+                                                    string funcName;
+                                                    string ret;
+                                                    string args;
+                                                    Value *v = NULL;
+                                                    Value *sizeInt = NULL;
+                                                    ret = getRetType(ci);
+                                                    if (ret.empty())
+                                                            return 0;
+                                                    args = argToBridge(ci, 0, &v, &sizeInt);
+                                                    if (args.empty())
+                                                            return 0;
+                                                    funcName = ret + "call_arg1" + args + "_noid";
+                                                    auto func = ll_mod->getFunction(funcName);
+													if (func==NULL) {
+                                                            cerr<< funcName << " not implemented" <<endl;
+                                                            return 0;
+                                                    }
+													auto callee = ci->getCalledOperand ();
+                                                    auto func_type = func->getFunctionType();
+                                                    auto f = ll_mod->getOrInsertFunction (funcName, func_type); //FuncCallee
+                                                    auto ccallee = Builder.CreatePointerCast(callee, Type::getInt8PtrTy(ci->getContext()));
+
+                                                    auto new_inst = Builder.CreateCall(f,{ccallee, v, sizeInt});
+                                                    new_inst->dump();
+                                                    stmt++;
+                                                    new_inst->removeFromParent();
+                                                    ReplaceInstWithInst(ci, new_inst);
+                                                    break;
+                                                    }
                                             default:
-                                                    cerr<<"Pass incomplete"<<endl;
+                                                    cerr<<"Pass incomplete NoCallee No ID"<<endl;
+													ci->dump();
                                                     break;
                                     }
         return 0;
