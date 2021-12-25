@@ -22,7 +22,8 @@ runf: FORCE
 
 runfs: FORCE
 	./run4
-	cp ./temp.bc  ~/projects/LBC/FreeRTOS/FreeRTOS/Demo/CORTEX_M4F_STM32F407ZG-SK
+	llvm-dis ./temp.bc
+#	cp ./temp.bc  ~/projects/LBC/FreeRTOS/FreeRTOS/Demo/CORTEX_M4F_STM32F407ZG-SK
 
 FORCE:
 

@@ -1,18 +1,17 @@
 pxCurrentTCB
 Used By:
 vTaskSwitchContext
+vTaskPrioritySet
 prvAddCurrentTaskToDelayedList
 xTaskResumeAll
 xTaskIncrementTick
 eTaskGetState
 uxTaskPriorityGet
 uxTaskPriorityGetFromISR
-vTaskSuspend
-vTaskResume
-xTaskGetCurrentTaskHandle
 prvAddNewTaskToReadyList
 vTaskDelete
-vTaskPrioritySet
+vTaskSuspend
+vTaskResume
 xTaskResumeFromISR
 pcTaskGetName
 vTaskGetInfo
@@ -21,6 +20,7 @@ vTaskPlaceOnUnorderedEventList
 vTaskPlaceOnEventListRestricted
 xTaskRemoveFromEventList
 vTaskRemoveFromUnorderedEventList
+xTaskGetCurrentTaskHandle
 xTaskPriorityInherit
 xTaskPriorityDisinherit
 vTaskPriorityDisinheritAfterTimeout
@@ -42,13 +42,13 @@ llvm.used
 uxSchedulerSuspended
 Used By:
 vTaskSwitchContext
+xTaskDelayUntil
+vTaskSuspendAll
 xTaskResumeAll
 xTaskIncrementTick
 vTaskDelay
-vTaskSuspend
 vTaskDelete
-xTaskDelayUntil
-vTaskSuspendAll
+vTaskSuspend
 xTaskResumeFromISR
 xTaskCatchUpTicks
 vTaskPlaceOnUnorderedEventList
@@ -73,14 +73,14 @@ vTaskGenericNotifyGiveFromISR
 uxTopReadyPriority
 Used By:
 vTaskSwitchContext
+vTaskPrioritySet
 prvAddCurrentTaskToDelayedList
 xTaskResumeAll
 xTaskIncrementTick
-vTaskSuspend
-vTaskResume
 prvAddNewTaskToReadyList
 vTaskDelete
-vTaskPrioritySet
+vTaskSuspend
+vTaskResume
 xTaskResumeFromISR
 xTaskRemoveFromEventList
 vTaskRemoveFromUnorderedEventList
@@ -94,14 +94,14 @@ vTaskGenericNotifyGiveFromISR
 pxReadyTasksLists
 Used By:
 vTaskSwitchContext
+vTaskPrioritySet
 xTaskResumeAll
 xTaskIncrementTick
-vTaskSuspend
-vTaskResume
 prvAddNewTaskToReadyList
 prvInitialiseTaskLists
 vTaskDelete
-vTaskPrioritySet
+vTaskSuspend
+vTaskResume
 xTaskResumeFromISR
 prvIdleTask
 uxTaskGetSystemState
@@ -117,18 +117,18 @@ vTaskGenericNotifyGiveFromISR
 uxCurrentNumberOfTasks
 Used By:
 xTaskResumeAll
-vTaskSuspend
 prvAddNewTaskToReadyList
 vTaskDelete
+vTaskSuspend
 prvCheckTasksWaitingTermination
 uxTaskGetNumberOfTasks
 uxTaskGetSystemState
 ****************
 xSchedulerRunning
 Used By:
-vTaskSuspend
 prvAddNewTaskToReadyList
 vTaskDelete
+vTaskSuspend
 vTaskStartScheduler
 vTaskEndScheduler
 xTaskGetSchedulerState
@@ -167,9 +167,9 @@ xSuspendedTaskList
 Used By:
 prvAddCurrentTaskToDelayedList
 eTaskGetState
+prvInitialiseTaskLists
 vTaskSuspend
 prvTaskIsTaskSuspended
-prvInitialiseTaskLists
 uxTaskGetSystemState
 ****************
 pxDelayedTaskList
@@ -203,15 +203,15 @@ vTaskStartScheduler
 ****************
 xTickCount
 Used By:
+xTaskDelayUntil
 prvAddCurrentTaskToDelayedList
 xTaskIncrementTick
-xTaskDelayUntil
+vTaskInternalSetTimeOutState
+xTaskCheckForTimeOut
 vTaskStartScheduler
 xTaskGetTickCount
 xTaskGetTickCountFromISR
 vTaskSetTimeOutState
-vTaskInternalSetTimeOutState
-xTaskCheckForTimeOut
 xTaskGenericNotify
 xTaskGenericNotifyFromISR
 ****************
@@ -224,9 +224,9 @@ xTaskCatchUpTicks
 xNumOfOverflows
 Used By:
 xTaskIncrementTick
-vTaskSetTimeOutState
 vTaskInternalSetTimeOutState
 xTaskCheckForTimeOut
+vTaskSetTimeOutState
 ****************
 .str
 Used By:
@@ -336,9 +336,9 @@ pvPortMalloc
 ****************
 xNextFreeByte
 Used By:
+vPortInitialiseBlocks
 xPortGetFreeHeapSize
 pvPortMalloc
-vPortInitialiseBlocks
 ****************
 .str.42
 Used By:
@@ -397,6 +397,25 @@ DebugMon_Handler
 current
 Used By:
 switch_view
+****************
+last
+Used By:
+switch_view
+****************
+_shared_region
+Used By:
+init_mpu
+xcall_arg1p
+xcall_arg2pi
+xcall_arg3pii
+xcall_arg2pp
+icall_arg1p
+icall_arg2pi
+icall_arg2pp
+icall_arg3ppi
+icall_arg4ppii
+icall_arg4pppi
+icall_arg6ppipip
 ****************
 xLEDs
 Used By:

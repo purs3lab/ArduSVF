@@ -1,289 +1,281 @@
-xcall_arg2pp not implemented
-pcall_arg1i not implemented
-pcall_arg1i not implemented
-  call void @xcall_arg1p(i32 14, i8* bitcast (void (i8*)* @vPortFree to i8*), i8* %call, i32 ptrtoint (i8* getelementptr (i8, i8* null, i32 1) to i32))
-  call void @xcall_arg1p(i32 4, i8* bitcast (void (%struct.xLIST_ITEM*)* @vListInitialiseItem to i8*), i8* %8, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32))
-  call void @xcall_arg1p(i32 4, i8* bitcast (void (%struct.xLIST_ITEM*)* @vListInitialiseItem to i8*), i8* %9, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32))
-xcall_arg2pp not implemented
-  call void @xcall_arg1p(i32 4, i8* bitcast (void (%struct.xLIST*)* @vListInitialise to i8*), i8* %0, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32))
-  call void @xcall_arg1p(i32 4, i8* bitcast (void (%struct.xLIST*)* @vListInitialise to i8*), i8* bitcast (%struct.xLIST* @xDelayedTaskList1 to i8*), i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32))
-  call void @xcall_arg1p(i32 4, i8* bitcast (void (%struct.xLIST*)* @vListInitialise to i8*), i8* bitcast (%struct.xLIST* @xPendingReadyList to i8*), i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32))
-  call void @xcall_arg1p(i32 4, i8* bitcast (void (%struct.xLIST*)* @vListInitialise to i8*), i8* bitcast (%struct.xLIST* @xSuspendedTaskList to i8*), i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32))
-  %2 = call i32 @icall_arg1p(i32 4, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %1, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32))
-  %7 = call i32 @icall_arg1p(i32 4, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %6, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32))
-xcall_arg2pp not implemented
-  call void @xcall_arg1p(i32 14, i8* bitcast (void (i8*)* @vPortFree to i8*), i8* %1, i32 ptrtoint (i8* getelementptr (i8, i8* null, i32 1) to i32))
-  call void @xcall_arg1p(i32 14, i8* bitcast (void (i8*)* @vPortFree to i8*), i8* %2, i32 ptrtoint (i8* getelementptr (i8, i8* null, i32 1) to i32))
-  %3 = call i32 @icall_arg1p(i32 4, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %2, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32))
-xcall_arg2pp not implemented
-xcall_arg2pp not implemented
-xcall_arg2pp not implemented
-  %17 = call i32 @icall_arg1p(i32 4, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %11, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32))
-  %18 = call i32 @icall_arg1p(i32 4, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %12, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32))
-xcall_arg2pp not implemented
-  %18 = call i32 @icall_arg1p(i32 4, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %16, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32))
-  %19 = call i32 @icall_arg1p(i32 4, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %18, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32))
-xcall_arg2pp not implemented
-  call void @xcall_arg0(i32 9, void ()* @vApplicationTickHook)
-  call void @xcall_arg0(i32 9, void ()* @vApplicationTickHook)
-  %11 = call i32 @icall_arg1p(i32 4, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %10, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32))
-xcall_arg2pp not implemented
-  %2 = call i32 @icall_arg1p(i32 4, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %1, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32))
-  %7 = call i32 @icall_arg1p(i32 4, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %6, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32))
-xcall_arg2pp not implemented
-  %8 = call i32 @icall_arg1p(i32 4, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %2, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32))
-xcall_arg2pp not implemented
-  %9 = call i32 @icall_arg1p(i32 4, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %6, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32))
-xcall_arg2pp not implemented
-xcall_arg2pp not implemented
-  %1 = call i32 @icall_arg0(i32 6, i32 ()* @xTimerCreateTimerTask)
-  call void @xcall_arg0(i32 9, void ()* @vApplicationIdleHook)
-  %9 = call i32 @icall_arg1p(i32 4, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %5, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32))
-xcall_arg2pp not implemented
-xcall_arg2pp not implemented
-xcall_arg2pp not implemented
-  %6 = call i32 @icall_arg1p(i32 4, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %4, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32))
-  %9 = call i32 @icall_arg1p(i32 4, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %6, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32))
-xcall_arg2pp not implemented
-xcall_arg2pp not implemented
-  %11 = call i32 @icall_arg1p(i32 4, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %5, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32))
-  %12 = call i32 @icall_arg1p(i32 4, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %6, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32))
-xcall_arg2pp not implemented
-  %8 = call i32 @icall_arg1p(i32 4, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %7, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32))
-xcall_arg2pp not implemented
-  %7 = call i32 @icall_arg1p(i32 4, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %6, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32))
-xcall_arg2pp not implemented
-  %9 = call i32 @icall_arg1p(i32 4, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %8, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32))
-xcall_arg2pp not implemented
-  %12 = call i32 @icall_arg1p(i32 4, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %8, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32))
-xcall_arg2pp not implemented
-  %15 = call i32 @icall_arg1p(i32 4, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %12, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32))
-xcall_arg2pp not implemented
-xcall_arg2pp not implemented
-  %11 = call i32 @icall_arg1p(i32 4, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %8, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32))
-xcall_arg2pp not implemented
-xcall_arg2pp not implemented
-  call void @xcall_arg1i(i32 12, i8* bitcast (void (i32)* @vStartLEDFlashTasks to i8*), i32 1, i32 1)
-  call void @xcall_arg0(i32 0, void ()* @SystemInit)
-  call void @xcall_arg0(i32 10, void ()* @vParTestInitialise)
-  call void @xcall_arg1i(i32 11, i8* bitcast (void (i32)* @vRegTestClearFlopRegistersToParameterValue to i8*), i32 1, i32 1)
-  %1 = call i32 @icall_arg1i(i32 11, i8* bitcast (i32 (i32)* @ulRegTestCheckFlopRegistersContainParameterValue to i8*), i32 1, i32 1)
-  call void @xcall_arg1i(i32 15, i8* bitcast (void (i32)* @EXTI_ClearITPendingBit to i8*), i32 64, i32 64)
-icall_arg2pp not implemented
-  call void @xcall_arg0(i32 0, void ()* @vPortEnterCritical)
-  %6 = call i32 @icall_arg1p(i32 0, i8* bitcast (i32 (%struct.xLIST*)* @xTaskRemoveFromEventList to i8*), i8* %5, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32))
-  call void @xcall_arg1p(i32 4, i8* bitcast (void (%struct.xLIST*)* @vListInitialise to i8*), i8* %6, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32))
-  call void @xcall_arg1p(i32 4, i8* bitcast (void (%struct.xLIST*)* @vListInitialise to i8*), i8* %7, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32))
-  call void @xcall_arg0(i32 0, void ()* @vPortExitCritical)
-pcall_arg1i not implemented
-  %7 = call i32 @icall_arg0(i32 0, i32 ()* @xTaskGetSchedulerState)
-  call void @xcall_arg0(i32 0, void ()* @vPortEnterCritical)
-  %12 = call i32 @icall_arg1p(i32 0, i8* bitcast (i32 (%struct.xLIST*)* @xTaskRemoveFromEventList to i8*), i8* %11, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32))
-  call void @xcall_arg0(i32 0, void ()* @vPortExitCritical)
-  call void @xcall_arg0(i32 0, void ()* @vPortExitCritical)
-  call void @xcall_arg1p(i32 0, i8* bitcast (void (%struct.xTIME_OUT*)* @vTaskInternalSetTimeOutState to i8*), i8* %13, i32 mul nuw (i32 ptrtoint (i32* getelementptr (i32, i32* null, i32 1) to i32), i32 2))
-  call void @xcall_arg0(i32 0, void ()* @vPortExitCritical)
-  call void @xcall_arg0(i32 0, void ()* @vPortEnterCritical)
-  call void @xcall_arg0(i32 0, void ()* @vPortExitCritical)
-icall_arg2pp not implemented
-xcall_arg2pi not implemented
-  %20 = call i32 @icall_arg0(i32 0, i32 ()* @xTaskResumeAll)
-  %20 = call i32 @icall_arg0(i32 0, i32 ()* @xTaskResumeAll)
-  %20 = call i32 @icall_arg0(i32 0, i32 ()* @xTaskResumeAll)
-  %5 = call i32 @icall_arg1p(i32 0, i8* bitcast (i32 (%struct.tskTaskControlBlock*)* @xTaskPriorityDisinherit to i8*), i8* %4, i32 ptrtoint (%struct.tskTaskControlBlock* getelementptr (%struct.tskTaskControlBlock, %struct.tskTaskControlBlock* null, i32 1) to i32))
-  call void @xcall_arg0(i32 0, void ()* @vPortEnterCritical)
-  call void @xcall_arg0(i32 0, void ()* @vPortExitCritical)
-  call void @xcall_arg0(i32 0, void ()* @vPortEnterCritical)
-  %3 = call i32 @icall_arg1p(i32 0, i8* bitcast (i32 (%struct.xLIST*)* @xTaskRemoveFromEventList to i8*), i8* %2, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32))
-  call void @xcall_arg0(i32 0, void ()* @vTaskMissedYield)
-  call void @xcall_arg0(i32 0, void ()* @vPortExitCritical)
-  %6 = call i32 @icall_arg1p(i32 0, i8* bitcast (i32 (%struct.xLIST*)* @xTaskRemoveFromEventList to i8*), i8* %5, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32))
-  call void @xcall_arg0(i32 0, void ()* @vTaskMissedYield)
-  call void @xcall_arg0(i32 0, void ()* @vPortExitCritical)
-pcall_arg0 not implemented
-pcall_arg0 not implemented
-  %5 = call i32 @icall_arg0(i32 0, i32 ()* @xTaskGetSchedulerState)
-  call void @xcall_arg0(i32 0, void ()* @vPortEnterCritical)
-pcall_arg0 not implemented
-  %10 = call i32 @icall_arg1p(i32 0, i8* bitcast (i32 (%struct.xLIST*)* @xTaskRemoveFromEventList to i8*), i8* %9, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32))
-  call void @xcall_arg0(i32 0, void ()* @vPortExitCritical)
-  call void @xcall_arg0(i32 0, void ()* @vPortExitCritical)
-  call void @xcall_arg1p(i32 0, i8* bitcast (void (%struct.xTIME_OUT*)* @vTaskInternalSetTimeOutState to i8*), i8* %12, i32 mul nuw (i32 ptrtoint (i32* getelementptr (i32, i32* null, i32 1) to i32), i32 2))
-  call void @xcall_arg0(i32 0, void ()* @vPortExitCritical)
-  call void @xcall_arg0(i32 0, void ()* @vPortEnterCritical)
-  call void @xcall_arg0(i32 0, void ()* @vPortExitCritical)
-icall_arg2pp not implemented
-  call void @xcall_arg0(i32 0, void ()* @vPortEnterCritical)
-  %20 = call i32 @icall_arg1p(i32 0, i8* bitcast (i32 (%struct.tskTaskControlBlock*)* @xTaskPriorityInherit to i8*), i8* %19, i32 ptrtoint (%struct.tskTaskControlBlock* getelementptr (%struct.tskTaskControlBlock, %struct.tskTaskControlBlock* null, i32 1) to i32))
-  call void @xcall_arg0(i32 0, void ()* @vPortExitCritical)
-xcall_arg2pi not implemented
-  %22 = call i32 @icall_arg0(i32 0, i32 ()* @xTaskResumeAll)
-  %22 = call i32 @icall_arg0(i32 0, i32 ()* @xTaskResumeAll)
-  %22 = call i32 @icall_arg0(i32 0, i32 ()* @xTaskResumeAll)
-  call void @xcall_arg0(i32 0, void ()* @vPortEnterCritical)
-xcall_arg2pi not implemented
-  call void @xcall_arg0(i32 0, void ()* @vPortExitCritical)
-  call void @xcall_arg0(i32 0, void ()* @vPortEnterCritical)
-  call void @xcall_arg0(i32 0, void ()* @vPortExitCritical)
-  call void @xcall_arg0(i32 0, void ()* @vPortValidateInterruptPriority)
-  %12 = call i32 @icall_arg1p(i32 0, i8* bitcast (i32 (%struct.xLIST*)* @xTaskRemoveFromEventList to i8*), i8* %11, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32))
-  call void @xcall_arg0(i32 0, void ()* @vPortValidateInterruptPriority)
-  %12 = call i32 @icall_arg1p(i32 0, i8* bitcast (i32 (%struct.xLIST*)* @xTaskRemoveFromEventList to i8*), i8* %11, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32))
-  %5 = call i32 @icall_arg0(i32 0, i32 ()* @xTaskGetSchedulerState)
-  call void @xcall_arg0(i32 0, void ()* @vPortEnterCritical)
-  %9 = call i32 @icall_arg1p(i32 0, i8* bitcast (i32 (%struct.xLIST*)* @xTaskRemoveFromEventList to i8*), i8* %8, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32))
-  call void @xcall_arg0(i32 0, void ()* @vPortExitCritical)
-  call void @xcall_arg0(i32 0, void ()* @vPortExitCritical)
-  call void @xcall_arg1p(i32 0, i8* bitcast (void (%struct.xTIME_OUT*)* @vTaskInternalSetTimeOutState to i8*), i8* %10, i32 mul nuw (i32 ptrtoint (i32* getelementptr (i32, i32* null, i32 1) to i32), i32 2))
-  call void @xcall_arg0(i32 0, void ()* @vPortExitCritical)
-  call void @xcall_arg0(i32 0, void ()* @vPortEnterCritical)
-  call void @xcall_arg0(i32 0, void ()* @vPortExitCritical)
-icall_arg2pp not implemented
-xcall_arg2pi not implemented
-  %17 = call i32 @icall_arg0(i32 0, i32 ()* @xTaskResumeAll)
-  %17 = call i32 @icall_arg0(i32 0, i32 ()* @xTaskResumeAll)
-  %17 = call i32 @icall_arg0(i32 0, i32 ()* @xTaskResumeAll)
-  %5 = call i32 @icall_arg0(i32 0, i32 ()* @xTaskGetSchedulerState)
-  call void @xcall_arg0(i32 0, void ()* @vPortEnterCritical)
-  %10 = call i32 @icall_arg1p(i32 0, i8* bitcast (i32 (%struct.xLIST*)* @xTaskRemoveFromEventList to i8*), i8* %9, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32))
-  call void @xcall_arg0(i32 0, void ()* @vPortExitCritical)
-  call void @xcall_arg0(i32 0, void ()* @vPortExitCritical)
-  call void @xcall_arg1p(i32 0, i8* bitcast (void (%struct.xTIME_OUT*)* @vTaskInternalSetTimeOutState to i8*), i8* %11, i32 mul nuw (i32 ptrtoint (i32* getelementptr (i32, i32* null, i32 1) to i32), i32 2))
-  call void @xcall_arg0(i32 0, void ()* @vPortExitCritical)
-  call void @xcall_arg0(i32 0, void ()* @vPortEnterCritical)
-  call void @xcall_arg0(i32 0, void ()* @vPortExitCritical)
-icall_arg2pp not implemented
-xcall_arg2pi not implemented
-  %18 = call i32 @icall_arg0(i32 0, i32 ()* @xTaskResumeAll)
-  %18 = call i32 @icall_arg0(i32 0, i32 ()* @xTaskResumeAll)
-  %18 = call i32 @icall_arg0(i32 0, i32 ()* @xTaskResumeAll)
-  call void @xcall_arg0(i32 0, void ()* @vPortValidateInterruptPriority)
-  %8 = call i32 @icall_arg1p(i32 0, i8* bitcast (i32 (%struct.xLIST*)* @xTaskRemoveFromEventList to i8*), i8* %7, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32))
-  call void @xcall_arg0(i32 0, void ()* @vPortValidateInterruptPriority)
-  call void @xcall_arg0(i32 0, void ()* @vPortEnterCritical)
-  call void @xcall_arg0(i32 0, void ()* @vPortExitCritical)
-  call void @xcall_arg0(i32 0, void ()* @vPortEnterCritical)
-  call void @xcall_arg0(i32 0, void ()* @vPortExitCritical)
-  call void @xcall_arg1p(i32 14, i8* bitcast (void (i8*)* @vPortFree to i8*), i8* %1, i32 ptrtoint (i8* getelementptr (i8, i8* null, i32 1) to i32))
-  call void @xcall_arg0(i32 0, void ()* @vPortEnterCritical)
-  call void @xcall_arg0(i32 0, void ()* @vPortExitCritical)
-xcall_arg3pii not implemented
-xTaskCreate_bridge not implemented
-  call void @xcall_arg0(i32 0, void ()* @vPortEnterCritical)
-  call void @xcall_arg1p(i32 4, i8* bitcast (void (%struct.xLIST*)* @vListInitialise to i8*), i8* bitcast (%struct.xLIST* @xActiveTimerList1 to i8*), i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32))
-pcall_arg3iii not implemented
-xcall_arg2pp not implemented
-  call void @xcall_arg0(i32 0, void ()* @vPortExitCritical)
-  call void @xcall_arg0(i32 0, void ()* @vTaskSuspendAll)
-  %2 = call i32 @icall_arg0(i32 0, i32 ()* @xTaskResumeAll)
-xcall_arg3pii not implemented
-  %6 = call i32 @icall_arg0(i32 0, i32 ()* @xTaskResumeAll)
-  %6 = call i32 @icall_arg0(i32 0, i32 ()* @xTaskResumeAll)
-icall_arg3ppi not implemented
-  %8 = call i32 @icall_arg1p(i32 4, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %7, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32))
+  call void @xcall_arg2pp(i32 8, i8* bitcast (void (%struct.tskTaskControlBlock*, i8*)* @vApplicationStackOverflowHook to i8*), i8* %9, i32 ptrtoint (%struct.tskTaskControlBlock* getelementptr (%struct.tskTaskControlBlock, %struct.tskTaskControlBlock* null, i32 1) to i32), i8* %arraydecay, i32 ptrtoint (i8* getelementptr (i8, i8* null, i32 1) to i32)), !dbg !1143
+  %0 = call i8* @pcall_arg1i(i32 13, i8* bitcast (i8* (i32)* @pvPortMalloc to i8*), i32 %mul, i32 %mul), !dbg !1130
+  %0 = call i8* @pcall_arg1i(i32 13, i8* bitcast (i8* (i32)* @pvPortMalloc to i8*), i32 88, i32 88), !dbg !1135
+  call void @xcall_arg1p(i32 13, i8* bitcast (void (i8*)* @vPortFree to i8*), i8* %call, i32 ptrtoint (i8* getelementptr (i8, i8* null, i32 1) to i32)), !dbg !1153
+  call void @xcall_arg1p(i32 3, i8* bitcast (void (%struct.xLIST_ITEM*)* @vListInitialiseItem to i8*), i8* %8, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1211
+  call void @xcall_arg1p(i32 3, i8* bitcast (void (%struct.xLIST_ITEM*)* @vListInitialiseItem to i8*), i8* %9, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1213
+  call void @xcall_arg2pp(i32 3, i8* bitcast (void (%struct.xLIST*, %struct.xLIST_ITEM*)* @vListInsertEnd to i8*), i8* %10, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32), i8* %11, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1159
+  call void @xcall_arg1p(i32 3, i8* bitcast (void (%struct.xLIST*)* @vListInitialise to i8*), i8* %0, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32)), !dbg !1116
+  call void @xcall_arg1p(i32 3, i8* bitcast (void (%struct.xLIST*)* @vListInitialise to i8*), i8* bitcast (%struct.xLIST* @xDelayedTaskList1 to i8*), i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32)), !dbg !1123
+  call void @xcall_arg1p(i32 3, i8* bitcast (void (%struct.xLIST*)* @vListInitialise to i8*), i8* bitcast (%struct.xLIST* @xPendingReadyList to i8*), i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32)), !dbg !1125
+  call void @xcall_arg1p(i32 3, i8* bitcast (void (%struct.xLIST*)* @vListInitialise to i8*), i8* bitcast (%struct.xLIST* @xSuspendedTaskList to i8*), i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32)), !dbg !1128
+  %2 = call i32 @icall_arg1p(i32 3, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %1, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1123
+  %7 = call i32 @icall_arg1p(i32 3, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %6, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1147
+  call void @xcall_arg2pp(i32 3, i8* bitcast (void (%struct.xLIST*, %struct.xLIST_ITEM*)* @vListInsertEnd to i8*), i8* bitcast (%struct.xLIST* @xTasksWaitingTermination to i8*), i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32), i8* %9, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1155
+  call void @xcall_arg1p(i32 13, i8* bitcast (void (i8*)* @vPortFree to i8*), i8* %1, i32 ptrtoint (i8* getelementptr (i8, i8* null, i32 1) to i32)), !dbg !1123
+  call void @xcall_arg1p(i32 13, i8* bitcast (void (i8*)* @vPortFree to i8*), i8* %2, i32 ptrtoint (i8* getelementptr (i8, i8* null, i32 1) to i32)), !dbg !1125
+  %3 = call i32 @icall_arg1p(i32 3, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %2, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1128
+  call void @xcall_arg2pp(i32 3, i8* bitcast (void (%struct.xLIST*, %struct.xLIST_ITEM*)* @vListInsertEnd to i8*), i8* bitcast (%struct.xLIST* @xSuspendedTaskList to i8*), i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32), i8* %7, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1146
+  call void @xcall_arg2pp(i32 3, i8* bitcast (void (%struct.xLIST*, %struct.xLIST_ITEM*)* @vListInsert to i8*), i8* %11, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32), i8* %12, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1159
+  call void @xcall_arg2pp(i32 3, i8* bitcast (void (%struct.xLIST*, %struct.xLIST_ITEM*)* @vListInsert to i8*), i8* %15, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32), i8* %16, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1165
+  %12 = call i32 @icall_arg1p(i32 3, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %11, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1163
+  %13 = call i32 @icall_arg1p(i32 3, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %12, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1165
+  call void @xcall_arg2pp(i32 3, i8* bitcast (void (%struct.xLIST*, %struct.xLIST_ITEM*)* @vListInsertEnd to i8*), i8* %15, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32), i8* %16, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1166
+  %17 = call i32 @icall_arg1p(i32 3, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %16, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1190
+  %19 = call i32 @icall_arg1p(i32 3, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %18, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1196
+  call void @xcall_arg2pp(i32 3, i8* bitcast (void (%struct.xLIST*, %struct.xLIST_ITEM*)* @vListInsertEnd to i8*), i8* %21, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32), i8* %22, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1199
+  call void @xcall_arg0(i32 8, i8* bitcast (void ()* @vApplicationTickHook to i8*)), !dbg !1222
+  call void @xcall_arg0(i32 8, i8* bitcast (void ()* @vApplicationTickHook to i8*)), !dbg !1233
+  %11 = call i32 @icall_arg1p(i32 3, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %10, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1194
+  call void @xcall_arg2pp(i32 3, i8* bitcast (void (%struct.xLIST*, %struct.xLIST_ITEM*)* @vListInsertEnd to i8*), i8* %14, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32), i8* %15, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1203
+  %2 = call i32 @icall_arg1p(i32 3, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %1, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1125
+  %7 = call i32 @icall_arg1p(i32 3, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %6, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1149
+  call void @xcall_arg2pp(i32 3, i8* bitcast (void (%struct.xLIST*, %struct.xLIST_ITEM*)* @vListInsertEnd to i8*), i8* bitcast (%struct.xLIST* @xSuspendedTaskList to i8*), i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32), i8* %7, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1152
+  %3 = call i32 @icall_arg1p(i32 3, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %2, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1150
+  call void @xcall_arg2pp(i32 3, i8* bitcast (void (%struct.xLIST*, %struct.xLIST_ITEM*)* @vListInsertEnd to i8*), i8* %5, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32), i8* %6, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1151
+  %7 = call i32 @icall_arg1p(i32 3, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %6, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1177
+  call void @xcall_arg2pp(i32 3, i8* bitcast (void (%struct.xLIST*, %struct.xLIST_ITEM*)* @vListInsertEnd to i8*), i8* %9, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32), i8* %10, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1178
+  call void @xcall_arg2pp(i32 3, i8* bitcast (void (%struct.xLIST*, %struct.xLIST_ITEM*)* @vListInsertEnd to i8*), i8* bitcast (%struct.xLIST* @xPendingReadyList to i8*), i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32), i8* %11, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1182
+  %1 = call i32 @icall_arg0(i32 5, i8* bitcast (i32 ()* @xTimerCreateTimerTask to i8*)), !dbg !1117
+  call void @xcall_arg0(i32 8, i8* bitcast (void ()* @vApplicationIdleHook to i8*)), !dbg !1136
+  %6 = call i32 @icall_arg1p(i32 3, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %5, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1131
+  call void @xcall_arg2pp(i32 3, i8* bitcast (void (%struct.xLIST*, %struct.xLIST_ITEM*)* @vListInsert to i8*), i8* %2, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32), i8* %3, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1140
+  call void @xcall_arg2pp(i32 3, i8* bitcast (void (%struct.xLIST*, %struct.xLIST_ITEM*)* @vListInsertEnd to i8*), i8* %5, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32), i8* %6, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1160
+  call void @xcall_arg2pp(i32 3, i8* bitcast (void (%struct.xLIST*, %struct.xLIST_ITEM*)* @vListInsertEnd to i8*), i8* %2, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32), i8* %3, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1141
+  %5 = call i32 @icall_arg1p(i32 3, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %4, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1148
+  %7 = call i32 @icall_arg1p(i32 3, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %6, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1156
+  call void @xcall_arg2pp(i32 3, i8* bitcast (void (%struct.xLIST*, %struct.xLIST_ITEM*)* @vListInsertEnd to i8*), i8* %9, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32), i8* %10, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1157
+  call void @xcall_arg2pp(i32 3, i8* bitcast (void (%struct.xLIST*, %struct.xLIST_ITEM*)* @vListInsertEnd to i8*), i8* bitcast (%struct.xLIST* @xPendingReadyList to i8*), i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32), i8* %11, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1161
+  %6 = call i32 @icall_arg1p(i32 3, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %5, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1158
+  %7 = call i32 @icall_arg1p(i32 3, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %6, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1160
+  call void @xcall_arg2pp(i32 3, i8* bitcast (void (%struct.xLIST*, %struct.xLIST_ITEM*)* @vListInsertEnd to i8*), i8* %9, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32), i8* %10, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1161
+  %8 = call i32 @icall_arg1p(i32 3, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %7, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1149
+  call void @xcall_arg2pp(i32 3, i8* bitcast (void (%struct.xLIST*, %struct.xLIST_ITEM*)* @vListInsertEnd to i8*), i8* %13, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32), i8* %14, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1161
+  %7 = call i32 @icall_arg1p(i32 3, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %6, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1174
+  call void @xcall_arg2pp(i32 3, i8* bitcast (void (%struct.xLIST*, %struct.xLIST_ITEM*)* @vListInsertEnd to i8*), i8* %11, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32), i8* %12, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1185
+  %9 = call i32 @icall_arg1p(i32 3, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %8, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1191
+  call void @xcall_arg2pp(i32 3, i8* bitcast (void (%struct.xLIST*, %struct.xLIST_ITEM*)* @vListInsertEnd to i8*), i8* %13, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32), i8* %14, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1200
+  %9 = call i32 @icall_arg1p(i32 3, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %8, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1204
+  call void @xcall_arg2pp(i32 3, i8* bitcast (void (%struct.xLIST*, %struct.xLIST_ITEM*)* @vListInsertEnd to i8*), i8* %11, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32), i8* %12, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1205
+  %13 = call i32 @icall_arg1p(i32 3, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %12, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1240
+  call void @xcall_arg2pp(i32 3, i8* bitcast (void (%struct.xLIST*, %struct.xLIST_ITEM*)* @vListInsertEnd to i8*), i8* %15, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32), i8* %16, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1241
+  call void @xcall_arg2pp(i32 3, i8* bitcast (void (%struct.xLIST*, %struct.xLIST_ITEM*)* @vListInsertEnd to i8*), i8* bitcast (%struct.xLIST* @xPendingReadyList to i8*), i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32), i8* %17, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1244
+  %9 = call i32 @icall_arg1p(i32 3, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %8, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1199
+  call void @xcall_arg2pp(i32 3, i8* bitcast (void (%struct.xLIST*, %struct.xLIST_ITEM*)* @vListInsertEnd to i8*), i8* %11, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32), i8* %12, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1200
+  call void @xcall_arg2pp(i32 3, i8* bitcast (void (%struct.xLIST*, %struct.xLIST_ITEM*)* @vListInsertEnd to i8*), i8* bitcast (%struct.xLIST* @xPendingReadyList to i8*), i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32), i8* %13, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1203
+  call void @xcall_arg1i(i32 11, i8* bitcast (void (i32)* @vStartLEDFlashTasks to i8*), i32 1, i32 1), !dbg !1111
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @SystemInit to i8*)), !dbg !1108
+  call void @xcall_arg0(i32 9, i8* bitcast (void ()* @vParTestInitialise to i8*)), !dbg !1110
+  call void @xcall_arg1i(i32 10, i8* bitcast (void (i32)* @vRegTestClearFlopRegistersToParameterValue to i8*), i32 1, i32 1), !dbg !1113
+  %1 = call i32 @icall_arg1i(i32 10, i8* bitcast (i32 (i32)* @ulRegTestCheckFlopRegistersContainParameterValue to i8*), i32 1, i32 1), !dbg !1115
+  call void @xcall_arg1i(i32 14, i8* bitcast (void (i32)* @EXTI_ClearITPendingBit to i8*), i32 64, i32 64), !dbg !1117
+  %2 = call i32 @icall_arg2pp(i32 2, i8* bitcast (i32 (%struct.QueueDefinition*, i32*)* @xQueueGiveFromISR to i8*), i8* null, i32 ptrtoint (%struct.QueueDefinition* getelementptr (%struct.QueueDefinition, %struct.QueueDefinition* null, i32 1) to i32), i8* %1, i32 ptrtoint (i32* getelementptr (i32, i32* null, i32 1) to i32)), !dbg !1118
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortEnterCritical to i8*)), !dbg !1134
+  %6 = call i32 @icall_arg1p(i32 18, i8* bitcast (i32 (%struct.xLIST*)* @xTaskRemoveFromEventList to i8*), i8* %5, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32)), !dbg !1180
+  call void @xcall_arg1p(i32 3, i8* bitcast (void (%struct.xLIST*)* @vListInitialise to i8*), i8* %6, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32)), !dbg !1194
+  call void @xcall_arg1p(i32 3, i8* bitcast (void (%struct.xLIST*)* @vListInitialise to i8*), i8* %7, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32)), !dbg !1196
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortExitCritical to i8*)), !dbg !1197
+  %3 = call i8* @pcall_arg1i(i32 13, i8* bitcast (i8* (i32)* @pvPortMalloc to i8*), i32 %add, i32 %add), !dbg !1164
+  %6 = call i32 @icall_arg0(i32 18, i8* bitcast (i32 ()* @xTaskGetSchedulerState to i8*)), !dbg !1187
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortEnterCritical to i8*)), !dbg !1203
+  %12 = call i32 @icall_arg1p(i32 18, i8* bitcast (i32 (%struct.xLIST*)* @xTaskRemoveFromEventList to i8*), i8* %11, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32)), !dbg !1220
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortExitCritical to i8*)), !dbg !1240
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortExitCritical to i8*)), !dbg !1247
+  call void @xcall_arg1p(i32 18, i8* bitcast (void (%struct.xTIME_OUT*)* @vTaskInternalSetTimeOutState to i8*), i8* %13, i32 mul nuw (i32 ptrtoint (i32* getelementptr (i32, i32* null, i32 1) to i32), i32 2)), !dbg !1251
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortExitCritical to i8*)), !dbg !1255
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortEnterCritical to i8*)), !dbg !1257
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortExitCritical to i8*)), !dbg !1257
+  %18 = call i32 @icall_arg2pp(i32 18, i8* bitcast (i32 (%struct.xTIME_OUT*, i32*)* @xTaskCheckForTimeOut to i8*), i8* %16, i32 mul nuw (i32 ptrtoint (i32* getelementptr (i32, i32* null, i32 1) to i32), i32 2), i8* %17, i32 ptrtoint (i32* getelementptr (i32, i32* null, i32 1) to i32)), !dbg !1270
+  call void @xcall_arg2pi(i32 18, i8* bitcast (void (%struct.xLIST*, i32)* @vTaskPlaceOnEventList to i8*), i8* %19, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32), i32 %18, i32 %18), !dbg !1281
+  %20 = call i32 @icall_arg0(i32 18, i8* bitcast (i32 ()* @xTaskResumeAll to i8*)), !dbg !1283
+  %20 = call i32 @icall_arg0(i32 18, i8* bitcast (i32 ()* @xTaskResumeAll to i8*)), !dbg !1295
+  %20 = call i32 @icall_arg0(i32 18, i8* bitcast (i32 ()* @xTaskResumeAll to i8*)), !dbg !1298
+  %5 = call i32 @icall_arg1p(i32 18, i8* bitcast (i32 (%struct.tskTaskControlBlock*)* @xTaskPriorityDisinherit to i8*), i8* %4, i32 ptrtoint (%struct.tskTaskControlBlock* getelementptr (%struct.tskTaskControlBlock, %struct.tskTaskControlBlock* null, i32 1) to i32)), !dbg !1147
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortEnterCritical to i8*)), !dbg !1116
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortExitCritical to i8*)), !dbg !1133
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortEnterCritical to i8*)), !dbg !1118
+  %3 = call i32 @icall_arg1p(i32 18, i8* bitcast (i32 (%struct.xLIST*)* @xTaskRemoveFromEventList to i8*), i8* %2, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32)), !dbg !1138
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vTaskMissedYield to i8*)), !dbg !1143
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortExitCritical to i8*)), !dbg !1152
+  %6 = call i32 @icall_arg1p(i32 18, i8* bitcast (i32 (%struct.xLIST*)* @xTaskRemoveFromEventList to i8*), i8* %5, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32)), !dbg !1164
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vTaskMissedYield to i8*)), !dbg !1169
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortExitCritical to i8*)), !dbg !1176
+  %4 = call i32 @icall_arg0(i32 18, i8* bitcast (i32 ()* @xTaskGetSchedulerState to i8*)), !dbg !1182
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortEnterCritical to i8*)), !dbg !1198
+  %11 = call i32 @icall_arg1p(i32 18, i8* bitcast (i32 (%struct.xLIST*)* @xTaskRemoveFromEventList to i8*), i8* %10, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32)), !dbg !1223
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortExitCritical to i8*)), !dbg !1234
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortExitCritical to i8*)), !dbg !1256
+  call void @xcall_arg1p(i32 18, i8* bitcast (void (%struct.xTIME_OUT*)* @vTaskInternalSetTimeOutState to i8*), i8* %13, i32 mul nuw (i32 ptrtoint (i32* getelementptr (i32, i32* null, i32 1) to i32), i32 2)), !dbg !1261
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortExitCritical to i8*)), !dbg !1264
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortEnterCritical to i8*)), !dbg !1266
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortExitCritical to i8*)), !dbg !1266
+  %18 = call i32 @icall_arg2pp(i32 18, i8* bitcast (i32 (%struct.xTIME_OUT*, i32*)* @xTaskCheckForTimeOut to i8*), i8* %16, i32 mul nuw (i32 ptrtoint (i32* getelementptr (i32, i32* null, i32 1) to i32), i32 2), i8* %17, i32 ptrtoint (i32* getelementptr (i32, i32* null, i32 1) to i32)), !dbg !1279
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortEnterCritical to i8*)), !dbg !1293
+  %21 = call i32 @icall_arg1p(i32 18, i8* bitcast (i32 (%struct.tskTaskControlBlock*)* @xTaskPriorityInherit to i8*), i8* %20, i32 ptrtoint (%struct.tskTaskControlBlock* getelementptr (%struct.tskTaskControlBlock, %struct.tskTaskControlBlock* null, i32 1) to i32)), !dbg !1297
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortExitCritical to i8*)), !dbg !1298
+  call void @xcall_arg2pi(i32 18, i8* bitcast (void (%struct.xLIST*, i32)* @vTaskPlaceOnEventList to i8*), i8* %22, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32), i32 %21, i32 %21), !dbg !1301
+  %23 = call i32 @icall_arg0(i32 18, i8* bitcast (i32 ()* @xTaskResumeAll to i8*)), !dbg !1303
+  %23 = call i32 @icall_arg0(i32 18, i8* bitcast (i32 ()* @xTaskResumeAll to i8*)), !dbg !1315
+  %23 = call i32 @icall_arg0(i32 18, i8* bitcast (i32 ()* @xTaskResumeAll to i8*)), !dbg !1317
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortEnterCritical to i8*)), !dbg !1323
+  call void @xcall_arg2pi(i32 18, i8* bitcast (void (%struct.tskTaskControlBlock*, i32)* @vTaskPriorityDisinheritAfterTimeout to i8*), i8* %24, i32 ptrtoint (%struct.tskTaskControlBlock* getelementptr (%struct.tskTaskControlBlock, %struct.tskTaskControlBlock* null, i32 1) to i32), i32 %call107, i32 %call107), !dbg !1328
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortEnterCritical to i8*)), !dbg !1116
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortExitCritical to i8*)), !dbg !1131
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortValidateInterruptPriority to i8*)), !dbg !1185
+  %12 = call i32 @icall_arg1p(i32 18, i8* bitcast (i32 (%struct.xLIST*)* @xTaskRemoveFromEventList to i8*), i8* %11, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32)), !dbg !1214
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortValidateInterruptPriority to i8*)), !dbg !1180
+  %12 = call i32 @icall_arg1p(i32 18, i8* bitcast (i32 (%struct.xLIST*)* @xTaskRemoveFromEventList to i8*), i8* %11, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32)), !dbg !1211
+  %4 = call i32 @icall_arg0(i32 18, i8* bitcast (i32 ()* @xTaskGetSchedulerState to i8*)), !dbg !1174
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortEnterCritical to i8*)), !dbg !1190
+  %9 = call i32 @icall_arg1p(i32 18, i8* bitcast (i32 (%struct.xLIST*)* @xTaskRemoveFromEventList to i8*), i8* %8, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32)), !dbg !1205
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortExitCritical to i8*)), !dbg !1216
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortExitCritical to i8*)), !dbg !1223
+  call void @xcall_arg1p(i32 18, i8* bitcast (void (%struct.xTIME_OUT*)* @vTaskInternalSetTimeOutState to i8*), i8* %10, i32 mul nuw (i32 ptrtoint (i32* getelementptr (i32, i32* null, i32 1) to i32), i32 2)), !dbg !1229
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortExitCritical to i8*)), !dbg !1232
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortEnterCritical to i8*)), !dbg !1234
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortExitCritical to i8*)), !dbg !1234
+  %15 = call i32 @icall_arg2pp(i32 18, i8* bitcast (i32 (%struct.xTIME_OUT*, i32*)* @xTaskCheckForTimeOut to i8*), i8* %13, i32 mul nuw (i32 ptrtoint (i32* getelementptr (i32, i32* null, i32 1) to i32), i32 2), i8* %14, i32 ptrtoint (i32* getelementptr (i32, i32* null, i32 1) to i32)), !dbg !1247
+  call void @xcall_arg2pi(i32 18, i8* bitcast (void (%struct.xLIST*, i32)* @vTaskPlaceOnEventList to i8*), i8* %16, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32), i32 %15, i32 %15), !dbg !1258
+  %17 = call i32 @icall_arg0(i32 18, i8* bitcast (i32 ()* @xTaskResumeAll to i8*)), !dbg !1260
+  %17 = call i32 @icall_arg0(i32 18, i8* bitcast (i32 ()* @xTaskResumeAll to i8*)), !dbg !1272
+  %17 = call i32 @icall_arg0(i32 18, i8* bitcast (i32 ()* @xTaskResumeAll to i8*)), !dbg !1275
+  %4 = call i32 @icall_arg0(i32 18, i8* bitcast (i32 ()* @xTaskGetSchedulerState to i8*)), !dbg !1175
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortEnterCritical to i8*)), !dbg !1191
+  %10 = call i32 @icall_arg1p(i32 18, i8* bitcast (i32 (%struct.xLIST*)* @xTaskRemoveFromEventList to i8*), i8* %9, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32)), !dbg !1207
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortExitCritical to i8*)), !dbg !1218
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortExitCritical to i8*)), !dbg !1225
+  call void @xcall_arg1p(i32 18, i8* bitcast (void (%struct.xTIME_OUT*)* @vTaskInternalSetTimeOutState to i8*), i8* %11, i32 mul nuw (i32 ptrtoint (i32* getelementptr (i32, i32* null, i32 1) to i32), i32 2)), !dbg !1231
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortExitCritical to i8*)), !dbg !1234
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortEnterCritical to i8*)), !dbg !1236
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortExitCritical to i8*)), !dbg !1236
+  %16 = call i32 @icall_arg2pp(i32 18, i8* bitcast (i32 (%struct.xTIME_OUT*, i32*)* @xTaskCheckForTimeOut to i8*), i8* %14, i32 mul nuw (i32 ptrtoint (i32* getelementptr (i32, i32* null, i32 1) to i32), i32 2), i8* %15, i32 ptrtoint (i32* getelementptr (i32, i32* null, i32 1) to i32)), !dbg !1249
+  call void @xcall_arg2pi(i32 18, i8* bitcast (void (%struct.xLIST*, i32)* @vTaskPlaceOnEventList to i8*), i8* %17, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32), i32 %16, i32 %16), !dbg !1260
+  %18 = call i32 @icall_arg0(i32 18, i8* bitcast (i32 ()* @xTaskResumeAll to i8*)), !dbg !1262
+  %18 = call i32 @icall_arg0(i32 18, i8* bitcast (i32 ()* @xTaskResumeAll to i8*)), !dbg !1274
+  %18 = call i32 @icall_arg0(i32 18, i8* bitcast (i32 ()* @xTaskResumeAll to i8*)), !dbg !1277
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortValidateInterruptPriority to i8*)), !dbg !1167
+  %8 = call i32 @icall_arg1p(i32 18, i8* bitcast (i32 (%struct.xLIST*)* @xTaskRemoveFromEventList to i8*), i8* %7, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32)), !dbg !1196
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortValidateInterruptPriority to i8*)), !dbg !1173
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortEnterCritical to i8*)), !dbg !1133
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortExitCritical to i8*)), !dbg !1145
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortEnterCritical to i8*)), !dbg !1135
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortExitCritical to i8*)), !dbg !1150
+  call void @xcall_arg1p(i32 13, i8* bitcast (void (i8*)* @vPortFree to i8*), i8* %1, i32 ptrtoint (i8* getelementptr (i8, i8* null, i32 1) to i32)), !dbg !1137
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortEnterCritical to i8*)), !dbg !1118
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortExitCritical to i8*)), !dbg !1118
+  call void @xcall_arg3pii(i32 18, i8* bitcast (void (%struct.xLIST*, i32, i32)* @vTaskPlaceOnEventListRestricted to i8*), i8* %3, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32), i32 %xTicksToWait, i32 %xTicksToWait, i32 %xWaitIndefinitely, i32 %xWaitIndefinitely), !dbg !1146
+  %2 = call i32 @icall_arg6ppipip(i32 18, i8* bitcast (i32 (void (i8*)*, i8*, i16, i8*, i32, %struct.tskTaskControlBlock**)* @xTaskCreate to i8*), i8* bitcast (void (i8*)* @prvTimerTask to i8*), i32 ptrtoint (void (i8*)* getelementptr (void (i8*), void (i8*)* null, i32 1) to i32), i8* %1, i32 ptrtoint (i8* getelementptr (i8, i8* null, i32 1) to i32), i32 260, i32 260, i8* null, i32 ptrtoint (i8* getelementptr (i8, i8* null, i32 1) to i32), i32 2, i32 2, i8* bitcast (%struct.tskTaskControlBlock** @xTimerTaskHandle to i8*), i32 ptrtoint (i1** getelementptr (i1*, i1** null, i32 1) to i32)), !dbg !1121
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortEnterCritical to i8*)), !dbg !1108
+  call void @xcall_arg1p(i32 3, i8* bitcast (void (%struct.xLIST*)* @vListInitialise to i8*), i8* bitcast (%struct.xLIST* @xActiveTimerList1 to i8*), i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32)), !dbg !1118
+  call void @xcall_arg2pp(i32 2, i8* bitcast (void (%struct.QueueDefinition*, i8*)* @vQueueAddToRegistry to i8*), i8* %3, i32 ptrtoint (%struct.QueueDefinition* getelementptr (%struct.QueueDefinition, %struct.QueueDefinition* null, i32 1) to i32), i8* %2, i32 ptrtoint (i8* getelementptr (i8, i8* null, i32 1) to i32)), !dbg !1130
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortExitCritical to i8*)), !dbg !1133
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vTaskSuspendAll to i8*)), !dbg !1118
+  %2 = call i32 @icall_arg0(i32 18, i8* bitcast (i32 ()* @xTaskResumeAll to i8*)), !dbg !1133
+  call void @xcall_arg3pii(i32 2, i8* bitcast (void (%struct.QueueDefinition*, i32, i32)* @vQueueWaitForMessageRestricted to i8*), i8* %5, i32 ptrtoint (%struct.QueueDefinition* getelementptr (%struct.QueueDefinition, %struct.QueueDefinition* null, i32 1) to i32), i32 %sub, i32 %sub, i32 %xListWasEmpty.addr.0, i32 %xListWasEmpty.addr.0), !dbg !1152
+  %6 = call i32 @icall_arg0(i32 18, i8* bitcast (i32 ()* @xTaskResumeAll to i8*)), !dbg !1164
+  %4 = call i32 @icall_arg3ppi(i32 2, i8* bitcast (i32 (%struct.QueueDefinition*, i8*, i32)* @xQueueReceive to i8*), i8* %3, i32 ptrtoint (%struct.QueueDefinition* getelementptr (%struct.QueueDefinition, %struct.QueueDefinition* null, i32 1) to i32), i8* %0, i32 ptrtoint (i8* getelementptr (i8, i8* null, i32 1) to i32), i32 0, i32 0), !dbg !1135
+  %8 = call i32 @icall_arg1p(i32 3, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %7, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1156
 Indirect Call
-  %17 = load void (%struct.tmrTimerControl*)*, void (%struct.tmrTimerControl*)** %pxCallbackFunction, align 4, !dbg !1151, !tbaa !1152
-  %17 = load void (%struct.tmrTimerControl*)*, void (%struct.tmrTimerControl*)** %pxCallbackFunction, align 4, !dbg !1151, !tbaa !1152
+  %17 = load void (%struct.tmrTimerControl*)*, void (%struct.tmrTimerControl*)** %pxCallbackFunction, align 4, !dbg !1188, !tbaa !1189
+  %17 = load void (%struct.tmrTimerControl*)*, void (%struct.tmrTimerControl*)** %pxCallbackFunction, align 4, !dbg !1188, !tbaa !1189
 Zero Target
-xcall_arg1p_noid not implemented
-  call void @xcall_arg1p(i32 14, i8* bitcast (void (i8*)* @vPortFree to i8*), i8* %27, i32 ptrtoint (i8* getelementptr (i8, i8* null, i32 1) to i32))
-  %1 = call i32 @icall_arg0(i32 0, i32 ()* @xTaskGetTickCount)
-xcall_arg2pp not implemented
-xcall_arg2pp not implemented
+  call void @xcall_arg1p_noid(i8* %19, i8* %18, i32 ptrtoint (%struct.tmrTimerControl* getelementptr (%struct.tmrTimerControl, %struct.tmrTimerControl* null, i32 1) to i32)), !dbg !1190
+  call void @xcall_arg1p(i32 13, i8* bitcast (void (i8*)* @vPortFree to i8*), i8* %28, i32 ptrtoint (i8* getelementptr (i8, i8* null, i32 1) to i32)), !dbg !1229
+  %0 = call i32 @icall_arg0(i32 18, i8* bitcast (i32 ()* @xTaskGetTickCount to i8*)), !dbg !1108
+  call void @xcall_arg2pp(i32 3, i8* bitcast (void (%struct.xLIST*, %struct.xLIST_ITEM*)* @vListInsert to i8*), i8* %3, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32), i8* %4, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1143
+  call void @xcall_arg2pp(i32 3, i8* bitcast (void (%struct.xLIST*, %struct.xLIST_ITEM*)* @vListInsert to i8*), i8* %6, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32), i8* %7, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1150
 Indirect Call
-  %2 = load void (%struct.tmrTimerControl*)*, void (%struct.tmrTimerControl*)** %pxCallbackFunction, align 4, !dbg !1094, !tbaa !1095
-  %2 = load void (%struct.tmrTimerControl*)*, void (%struct.tmrTimerControl*)** %pxCallbackFunction, align 4, !dbg !1094, !tbaa !1095
+  %2 = load void (%struct.tmrTimerControl*)*, void (%struct.tmrTimerControl*)** %pxCallbackFunction, align 4, !dbg !1133, !tbaa !1134
+  %2 = load void (%struct.tmrTimerControl*)*, void (%struct.tmrTimerControl*)** %pxCallbackFunction, align 4, !dbg !1133, !tbaa !1134
 Zero Target
-xcall_arg1p_noid not implemented
-  %7 = call i32 @icall_arg1p(i32 4, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %4, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32))
+  call void @xcall_arg1p_noid(i8* %4, i8* %3, i32 ptrtoint (%struct.tmrTimerControl* getelementptr (%struct.tmrTimerControl, %struct.tmrTimerControl* null, i32 1) to i32)), !dbg !1135
+  %5 = call i32 @icall_arg1p(i32 3, i8* bitcast (i32 (%struct.xLIST_ITEM*)* @uxListRemove to i8*), i8* %4, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1130
 Indirect Call
-  %7 = load void (%struct.tmrTimerControl*)*, void (%struct.tmrTimerControl*)** %pxCallbackFunction, align 4, !dbg !1104, !tbaa !1105
-  %7 = load void (%struct.tmrTimerControl*)*, void (%struct.tmrTimerControl*)** %pxCallbackFunction, align 4, !dbg !1104, !tbaa !1105
+  %7 = load void (%struct.tmrTimerControl*)*, void (%struct.tmrTimerControl*)** %pxCallbackFunction, align 4, !dbg !1143, !tbaa !1144
+  %7 = load void (%struct.tmrTimerControl*)*, void (%struct.tmrTimerControl*)** %pxCallbackFunction, align 4, !dbg !1143, !tbaa !1144
 Zero Target
-xcall_arg1p_noid not implemented
-pcall_arg1i not implemented
-  call void @xcall_arg1p(i32 4, i8* bitcast (void (%struct.xLIST_ITEM*)* @vListInitialiseItem to i8*), i8* %1, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32))
-  %3 = call i32 @icall_arg0(i32 0, i32 ()* @xTaskGetSchedulerState)
-icall_arg4ppii not implemented
-icall_arg4ppii not implemented
-icall_arg4pppi not implemented
-  call void @xcall_arg0(i32 0, void ()* @vPortEnterCritical)
-  call void @xcall_arg0(i32 0, void ()* @vPortExitCritical)
-  call void @xcall_arg0(i32 0, void ()* @vPortEnterCritical)
-  call void @xcall_arg0(i32 0, void ()* @vPortExitCritical)
-  call void @xcall_arg0(i32 0, void ()* @vPortEnterCritical)
-  call void @xcall_arg0(i32 0, void ()* @vPortExitCritical)
-  call void @xcall_arg0(i32 0, void ()* @vPortEnterCritical)
-  call void @xcall_arg0(i32 0, void ()* @vPortExitCritical)
-  call void @xcall_arg0(i32 0, void ()* @vPortEnterCritical)
-  call void @xcall_arg0(i32 0, void ()* @vPortExitCritical)
-pcall_arg1i not implemented
-  call void @xcall_arg1p(i32 4, i8* bitcast (void (%struct.xLIST*)* @vListInitialise to i8*), i8* %1, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32))
-  %3 = call i32 @icall_arg0(i32 0, i32 ()* @xTaskGetSchedulerState)
-  call void @xcall_arg0(i32 0, void ()* @vTaskSuspendAll)
-xcall_arg3pii not implemented
-  %8 = call i32 @icall_arg0(i32 0, i32 ()* @xTaskResumeAll)
-  %8 = call i32 @icall_arg0(i32 0, i32 ()* @uxTaskResetEventItemValue)
-  call void @xcall_arg0(i32 0, void ()* @vPortEnterCritical)
-  call void @xcall_arg0(i32 0, void ()* @vPortExitCritical)
-  call void @xcall_arg0(i32 0, void ()* @vTaskSuspendAll)
-xcall_arg2pi not implemented
-  %13 = call i32 @icall_arg0(i32 0, i32 ()* @xTaskResumeAll)
-  %3 = call i32 @icall_arg0(i32 0, i32 ()* @xTaskGetSchedulerState)
-  call void @xcall_arg0(i32 0, void ()* @vTaskSuspendAll)
-xcall_arg3pii not implemented
-  %6 = call i32 @icall_arg0(i32 0, i32 ()* @xTaskResumeAll)
-  %6 = call i32 @icall_arg0(i32 0, i32 ()* @uxTaskResetEventItemValue)
-  call void @xcall_arg0(i32 0, void ()* @vPortEnterCritical)
-  call void @xcall_arg0(i32 0, void ()* @vPortExitCritical)
-  call void @xcall_arg0(i32 0, void ()* @vPortEnterCritical)
-  call void @xcall_arg0(i32 0, void ()* @vPortExitCritical)
-  call void @xcall_arg0(i32 0, void ()* @vTaskSuspendAll)
-xcall_arg2pi not implemented
-  call void @xcall_arg1p(i32 14, i8* bitcast (void (i8*)* @vPortFree to i8*), i8* %7, i32 ptrtoint (i8* getelementptr (i8, i8* null, i32 1) to i32))
-  call void @xcall_arg0(i32 0, void ()* @vTaskSuspendAll)
-  %7 = call i32 @icall_arg0(i32 0, i32 ()* @xTaskResumeAll)
-  call void @xcall_arg0(i32 0, void ()* @vApplicationMallocFailedHook)
-xTaskCreate_bridge not implemented
-  call void @xcall_arg0(i32 0, void ()* @vPortEnterCritical)
-  call void @xcall_arg0(i32 0, void ()* @vPortExitCritical)
-  %3 = call i32 @icall_arg0(i32 0, i32 ()* @xTaskGetTickCount)
-icall_arg2pi not implemented
-  call void @xcall_arg1i(i32 10, i8* bitcast (void (i32)* @vParTestToggleLED to i8*), i32 %1, i32 %1)
-  call void @xcall_arg1i(i32 10, i8* bitcast (void (i32)* @vParTestToggleLED to i8*), i32 %1, i32 %1)
-  call void @xcall_arg1i(i32 17, i8* bitcast (void (i32)* @STM_EVAL_LEDInit to i8*), i32 0, i32 0)
-  call void @xcall_arg1i(i32 17, i8* bitcast (void (i32)* @STM_EVAL_LEDInit to i8*), i32 2, i32 2)
-  call void @xcall_arg1i(i32 17, i8* bitcast (void (i32)* @STM_EVAL_LEDOn to i8*), i32 %0, i32 %0)
-  call void @xcall_arg1i(i32 17, i8* bitcast (void (i32)* @STM_EVAL_LEDOff to i8*), i32 %1, i32 %1)
-  call void @xcall_arg0(i32 0, void ()* @vPortEnterCritical)
-  call void @xcall_arg1i(i32 17, i8* bitcast (void (i32)* @STM_EVAL_LEDToggle to i8*), i32 %0, i32 %0)
-  call void @xcall_arg1p(i32 5, i8* bitcast (void (%struct.GPIO_TypeDef*)* @GPIO_DeInit to i8*), i8* inttoptr (i32 1073872896 to i8*), i32 ptrtoint (%struct.GPIO_TypeDef* getelementptr (%struct.GPIO_TypeDef, %struct.GPIO_TypeDef* null, i32 1) to i32))
-  call void @xcall_arg1p(i32 5, i8* bitcast (void (%struct.GPIO_TypeDef*)* @GPIO_DeInit to i8*), i8* inttoptr (i32 1073874944 to i8*), i32 ptrtoint (%struct.GPIO_TypeDef* getelementptr (%struct.GPIO_TypeDef, %struct.GPIO_TypeDef* null, i32 1) to i32))
-  call void @xcall_arg1p(i32 5, i8* bitcast (void (%struct.GPIO_TypeDef*)* @GPIO_DeInit to i8*), i8* inttoptr (i32 1073876992 to i8*), i32 ptrtoint (%struct.GPIO_TypeDef* getelementptr (%struct.GPIO_TypeDef, %struct.GPIO_TypeDef* null, i32 1) to i32))
-  call void @xcall_arg1p(i32 5, i8* bitcast (void (%struct.GPIO_TypeDef*)* @GPIO_DeInit to i8*), i8* inttoptr (i32 1073879040 to i8*), i32 ptrtoint (%struct.GPIO_TypeDef* getelementptr (%struct.GPIO_TypeDef, %struct.GPIO_TypeDef* null, i32 1) to i32))
-  call void @xcall_arg1p(i32 5, i8* bitcast (void (%struct.GPIO_TypeDef*)* @GPIO_DeInit to i8*), i8* inttoptr (i32 1073881088 to i8*), i32 ptrtoint (%struct.GPIO_TypeDef* getelementptr (%struct.GPIO_TypeDef, %struct.GPIO_TypeDef* null, i32 1) to i32))
-  call void @xcall_arg2ii(i32 7, i8* bitcast (void (i32, i32)* @RCC_AHB1PeriphClockCmd to i8*), i32 %1, i32 %1, i32 1, i32 1)
-xcall_arg2pp not implemented
-  call void @xcall_arg2ii(i32 7, i8* bitcast (void (i32, i32)* @RCC_AHB1PeriphClockCmd to i8*), i32 %3, i32 %3, i32 1, i32 1)
-xcall_arg2pp not implemented
-  call void @xcall_arg2ii(i32 8, i8* bitcast (void (i8, i8)* @SYSCFG_EXTILineConfig to i8*), i32 %10, i32 %10, i32 %11, i32 %11)
-  call void @xcall_arg1p(i32 15, i8* bitcast (void (%struct.EXTI_InitTypeDef*)* @EXTI_Init to i8*), i8* %13, i32 mul nuw (i32 ptrtoint (i32* getelementptr (i32, i32* null, i32 1) to i32), i32 4))
-  call void @xcall_arg1p(i32 1, i8* bitcast (void (%struct.NVIC_InitTypeDef*)* @NVIC_Init to i8*), i8* %15, i32 ptrtoint (%struct.NVIC_InitTypeDef* getelementptr (%struct.NVIC_InitTypeDef, %struct.NVIC_InitTypeDef* null, i32 1) to i32))
-icall_arg2pi not implemented
-  call void @xcall_arg2ii(i32 7, i8* bitcast (void (i32, i32)* @RCC_AHB1PeriphClockCmd to i8*), i32 %or, i32 %or, i32 1, i32 1)
-  call void @xcall_arg2ii(i32 7, i8* bitcast (void (i32, i32)* @RCC_APB2PeriphClockCmd to i8*), i32 32, i32 32, i32 1, i32 1)
-xcall_arg3pii not implemented
-xcall_arg3pii not implemented
-xcall_arg2pp not implemented
-xcall_arg2pp not implemented
-  call void @xcall_arg2ii(i32 7, i8* bitcast (void (i32, i32)* @RCC_AHB1PeriphResetCmd to i8*), i32 1, i32 1, i32 1, i32 1)
-  call void @xcall_arg2ii(i32 7, i8* bitcast (void (i32, i32)* @RCC_AHB1PeriphResetCmd to i8*), i32 2, i32 2, i32 1, i32 1)
-  call void @xcall_arg2ii(i32 7, i8* bitcast (void (i32, i32)* @RCC_AHB1PeriphResetCmd to i8*), i32 4, i32 4, i32 1, i32 1)
-  call void @xcall_arg2ii(i32 7, i8* bitcast (void (i32, i32)* @RCC_AHB1PeriphResetCmd to i8*), i32 8, i32 8, i32 1, i32 1)
-  call void @xcall_arg2ii(i32 7, i8* bitcast (void (i32, i32)* @RCC_AHB1PeriphResetCmd to i8*), i32 16, i32 16, i32 1, i32 1)
-  call void @xcall_arg2ii(i32 7, i8* bitcast (void (i32, i32)* @RCC_AHB1PeriphResetCmd to i8*), i32 32, i32 32, i32 1, i32 1)
-  call void @xcall_arg2ii(i32 7, i8* bitcast (void (i32, i32)* @RCC_AHB1PeriphResetCmd to i8*), i32 64, i32 64, i32 1, i32 1)
-  call void @xcall_arg2ii(i32 7, i8* bitcast (void (i32, i32)* @RCC_AHB1PeriphResetCmd to i8*), i32 128, i32 128, i32 1, i32 1)
-  call void @xcall_arg2ii(i32 7, i8* bitcast (void (i32, i32)* @RCC_AHB1PeriphResetCmd to i8*), i32 256, i32 256, i32 1, i32 1)
-  call void @xcall_arg2ii(i32 7, i8* bitcast (void (i32, i32)* @RCC_APB2PeriphResetCmd to i8*), i32 16384, i32 16384, i32 1, i32 1)
+  call void @xcall_arg1p_noid(i8* %9, i8* %8, i32 ptrtoint (%struct.tmrTimerControl* getelementptr (%struct.tmrTimerControl, %struct.tmrTimerControl* null, i32 1) to i32)), !dbg !1145
+  %0 = call i8* @pcall_arg1i(i32 13, i8* bitcast (i8* (i32)* @pvPortMalloc to i8*), i32 44, i32 44), !dbg !1122
+  call void @xcall_arg1p(i32 3, i8* bitcast (void (%struct.xLIST_ITEM*)* @vListInitialiseItem to i8*), i8* %1, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32)), !dbg !1161
+  %3 = call i32 @icall_arg0(i32 18, i8* bitcast (i32 ()* @xTaskGetSchedulerState to i8*)), !dbg !1176
+  %5 = call i32 @icall_arg4ppii(i32 2, i8* bitcast (i32 (%struct.QueueDefinition*, i8*, i32, i32)* @xQueueGenericSend to i8*), i8* %4, i32 ptrtoint (%struct.QueueDefinition* getelementptr (%struct.QueueDefinition, %struct.QueueDefinition* null, i32 1) to i32), i8* %0, i32 ptrtoint (i8* getelementptr (i8, i8* null, i32 1) to i32), i32 %xTicksToWait, i32 %xTicksToWait, i32 0, i32 0), !dbg !1181
+  %7 = call i32 @icall_arg4ppii(i32 2, i8* bitcast (i32 (%struct.QueueDefinition*, i8*, i32, i32)* @xQueueGenericSend to i8*), i8* %6, i32 ptrtoint (%struct.QueueDefinition* getelementptr (%struct.QueueDefinition, %struct.QueueDefinition* null, i32 1) to i32), i8* %0, i32 ptrtoint (i8* getelementptr (i8, i8* null, i32 1) to i32), i32 0, i32 0, i32 0, i32 0), !dbg !1184
+  %9 = call i32 @icall_arg4pppi(i32 2, i8* bitcast (i32 (%struct.QueueDefinition*, i8*, i32*, i32)* @xQueueGenericSendFromISR to i8*), i8* %7, i32 ptrtoint (%struct.QueueDefinition* getelementptr (%struct.QueueDefinition, %struct.QueueDefinition* null, i32 1) to i32), i8* %0, i32 ptrtoint (i8* getelementptr (i8, i8* null, i32 1) to i32), i8* %8, i32 ptrtoint (i32* getelementptr (i32, i32* null, i32 1) to i32), i32 0, i32 0), !dbg !1186
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortEnterCritical to i8*)), !dbg !1134
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortExitCritical to i8*)), !dbg !1154
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortEnterCritical to i8*)), !dbg !1133
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortExitCritical to i8*)), !dbg !1146
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortEnterCritical to i8*)), !dbg !1133
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortExitCritical to i8*)), !dbg !1147
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortEnterCritical to i8*)), !dbg !1135
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortExitCritical to i8*)), !dbg !1146
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortEnterCritical to i8*)), !dbg !1134
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortExitCritical to i8*)), !dbg !1146
+  %0 = call i8* @pcall_arg1i(i32 13, i8* bitcast (i8* (i32)* @pvPortMalloc to i8*), i32 28, i32 28), !dbg !1114
+  call void @xcall_arg1p(i32 3, i8* bitcast (void (%struct.xLIST*)* @vListInitialise to i8*), i8* %1, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32)), !dbg !1132
+  %2 = call i32 @icall_arg0(i32 18, i8* bitcast (i32 ()* @xTaskGetSchedulerState to i8*)), !dbg !1155
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vTaskSuspendAll to i8*)), !dbg !1169
+  call void @xcall_arg3pii(i32 18, i8* bitcast (void (%struct.xLIST*, i32, i32)* @vTaskPlaceOnUnorderedEventList to i8*), i8* %6, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32), i32 %or31, i32 %or31, i32 %xTicksToWait, i32 %xTicksToWait), !dbg !1197
+  %8 = call i32 @icall_arg0(i32 18, i8* bitcast (i32 ()* @xTaskResumeAll to i8*)), !dbg !1202
+  %8 = call i32 @icall_arg0(i32 18, i8* bitcast (i32 ()* @uxTaskResetEventItemValue to i8*)), !dbg !1216
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortEnterCritical to i8*)), !dbg !1221
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortExitCritical to i8*)), !dbg !1233
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vTaskSuspendAll to i8*)), !dbg !1160
+  call void @xcall_arg2pi(i32 18, i8* bitcast (void (%struct.xLIST_ITEM*, i32)* @vTaskRemoveFromUnorderedEventList to i8*), i8* %10, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32), i32 %or44, i32 %or44), !dbg !1209
+  %12 = call i32 @icall_arg0(i32 18, i8* bitcast (i32 ()* @xTaskResumeAll to i8*)), !dbg !1216
+  %3 = call i32 @icall_arg0(i32 18, i8* bitcast (i32 ()* @xTaskGetSchedulerState to i8*)), !dbg !1173
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vTaskSuspendAll to i8*)), !dbg !1187
+  call void @xcall_arg3pii(i32 18, i8* bitcast (void (%struct.xLIST*, i32, i32)* @vTaskPlaceOnUnorderedEventList to i8*), i8* %5, i32 ptrtoint (%struct.xLIST* getelementptr (%struct.xLIST, %struct.xLIST* null, i32 1) to i32), i32 %or49, i32 %or49, i32 %xTicksToWait, i32 %xTicksToWait), !dbg !1223
+  %6 = call i32 @icall_arg0(i32 18, i8* bitcast (i32 ()* @xTaskResumeAll to i8*)), !dbg !1225
+  %6 = call i32 @icall_arg0(i32 18, i8* bitcast (i32 ()* @uxTaskResetEventItemValue to i8*)), !dbg !1239
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortEnterCritical to i8*)), !dbg !1244
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortExitCritical to i8*)), !dbg !1258
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortEnterCritical to i8*)), !dbg !1150
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortExitCritical to i8*)), !dbg !1164
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vTaskSuspendAll to i8*)), !dbg !1137
+  call void @xcall_arg2pi(i32 18, i8* bitcast (void (%struct.xLIST_ITEM*, i32)* @vTaskRemoveFromUnorderedEventList to i8*), i8* %5, i32 ptrtoint (%struct.xLIST_ITEM* getelementptr (%struct.xLIST_ITEM, %struct.xLIST_ITEM* null, i32 1) to i32), i32 33554432, i32 33554432), !dbg !1165
+  call void @xcall_arg1p(i32 13, i8* bitcast (void (i8*)* @vPortFree to i8*), i8* %7, i32 ptrtoint (i8* getelementptr (i8, i8* null, i32 1) to i32)), !dbg !1171
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vTaskSuspendAll to i8*)), !dbg !1112
+  %7 = call i32 @icall_arg0(i32 18, i8* bitcast (i32 ()* @xTaskResumeAll to i8*)), !dbg !1139
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vApplicationMallocFailedHook to i8*)), !dbg !1144
+  %1 = call i32 @icall_arg6ppipip(i32 18, i8* bitcast (i32 (void (i8*)*, i8*, i16, i8*, i32, %struct.tskTaskControlBlock**)* @xTaskCreate to i8*), i8* bitcast (void (i8*)* @vLEDFlashTask to i8*), i32 ptrtoint (void (i8*)* getelementptr (void (i8*), void (i8*)* null, i32 1) to i32), i8* %0, i32 ptrtoint (i8* getelementptr (i8, i8* null, i32 1) to i32), i32 130, i32 130, i8* null, i32 ptrtoint (i8* getelementptr (i8, i8* null, i32 1) to i32), i32 %uxPriority, i32 %uxPriority, i8* null, i32 ptrtoint (i1** getelementptr (i1*, i1** null, i32 1) to i32)), !dbg !1116
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortEnterCritical to i8*)), !dbg !1115
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortExitCritical to i8*)), !dbg !1123
+  %3 = call i32 @icall_arg0(i32 18, i8* bitcast (i32 ()* @xTaskGetTickCount to i8*)), !dbg !1127
+  %4 = call i32 @icall_arg2pi(i32 18, i8* bitcast (i32 (i32*, i32)* @xTaskDelayUntil to i8*), i8* %3, i32 ptrtoint (i32* getelementptr (i32, i32* null, i32 1) to i32), i32 %div1, i32 %div1), !dbg !1132
+  %5 = call i32 @icall_arg2pi(i32 18, i8* bitcast (i32 (i32*, i32)* @xTaskDelayUntil to i8*), i8* %4, i32 ptrtoint (i32* getelementptr (i32, i32* null, i32 1) to i32), i32 %div1, i32 %div1), !dbg !1138
+  call void @xcall_arg1i(i32 16, i8* bitcast (void (i32)* @STM_EVAL_LEDInit to i8*), i32 0, i32 0), !dbg !1108
+  call void @xcall_arg1i(i32 16, i8* bitcast (void (i32)* @STM_EVAL_LEDInit to i8*), i32 2, i32 2), !dbg !1110
+  call void @xcall_arg1i(i32 16, i8* bitcast (void (i32)* @STM_EVAL_LEDOn to i8*), i32 %0, i32 %0), !dbg !1126
+  call void @xcall_arg1i(i32 16, i8* bitcast (void (i32)* @STM_EVAL_LEDOff to i8*), i32 %1, i32 %1), !dbg !1130
+  call void @xcall_arg0(i32 18, i8* bitcast (void ()* @vPortEnterCritical to i8*)), !dbg !1116
+  call void @xcall_arg1i(i32 16, i8* bitcast (void (i32)* @STM_EVAL_LEDToggle to i8*), i32 %0, i32 %0), !dbg !1123
+  call void @xcall_arg1p(i32 4, i8* bitcast (void (%struct.GPIO_TypeDef*)* @GPIO_DeInit to i8*), i8* inttoptr (i32 1073872896 to i8*), i32 ptrtoint (%struct.GPIO_TypeDef* getelementptr (%struct.GPIO_TypeDef, %struct.GPIO_TypeDef* null, i32 1) to i32)), !dbg !1108
+  call void @xcall_arg1p(i32 4, i8* bitcast (void (%struct.GPIO_TypeDef*)* @GPIO_DeInit to i8*), i8* inttoptr (i32 1073874944 to i8*), i32 ptrtoint (%struct.GPIO_TypeDef* getelementptr (%struct.GPIO_TypeDef, %struct.GPIO_TypeDef* null, i32 1) to i32)), !dbg !1110
+  call void @xcall_arg1p(i32 4, i8* bitcast (void (%struct.GPIO_TypeDef*)* @GPIO_DeInit to i8*), i8* inttoptr (i32 1073876992 to i8*), i32 ptrtoint (%struct.GPIO_TypeDef* getelementptr (%struct.GPIO_TypeDef, %struct.GPIO_TypeDef* null, i32 1) to i32)), !dbg !1112
+  call void @xcall_arg1p(i32 4, i8* bitcast (void (%struct.GPIO_TypeDef*)* @GPIO_DeInit to i8*), i8* inttoptr (i32 1073879040 to i8*), i32 ptrtoint (%struct.GPIO_TypeDef* getelementptr (%struct.GPIO_TypeDef, %struct.GPIO_TypeDef* null, i32 1) to i32)), !dbg !1114
+  call void @xcall_arg1p(i32 4, i8* bitcast (void (%struct.GPIO_TypeDef*)* @GPIO_DeInit to i8*), i8* inttoptr (i32 1073881088 to i8*), i32 ptrtoint (%struct.GPIO_TypeDef* getelementptr (%struct.GPIO_TypeDef, %struct.GPIO_TypeDef* null, i32 1) to i32)), !dbg !1116
+  call void @xcall_arg2ii(i32 6, i8* bitcast (void (i32, i32)* @RCC_AHB1PeriphClockCmd to i8*), i32 %1, i32 %1, i32 1, i32 1), !dbg !1133
+  call void @xcall_arg2pp(i32 4, i8* bitcast (void (%struct.GPIO_TypeDef*, %struct.SEC_INFO*)* @GPIO_Init to i8*), i8* %4, i32 ptrtoint (%struct.GPIO_TypeDef* getelementptr (%struct.GPIO_TypeDef, %struct.GPIO_TypeDef* null, i32 1) to i32), i8* %5, i32 mul nuw (i32 ptrtoint (i32* getelementptr (i32, i32* null, i32 1) to i32), i32 5)), !dbg !1156
+  call void @xcall_arg2ii(i32 6, i8* bitcast (void (i32, i32)* @RCC_AHB1PeriphClockCmd to i8*), i32 %3, i32 %3, i32 1, i32 1), !dbg !1151
+  call void @xcall_arg2pp(i32 4, i8* bitcast (void (%struct.GPIO_TypeDef*, %struct.SEC_INFO*)* @GPIO_Init to i8*), i8* %6, i32 ptrtoint (%struct.GPIO_TypeDef* getelementptr (%struct.GPIO_TypeDef, %struct.GPIO_TypeDef* null, i32 1) to i32), i8* %7, i32 mul nuw (i32 ptrtoint (i32* getelementptr (i32, i32* null, i32 1) to i32), i32 5)), !dbg !1169
+  call void @xcall_arg2ii(i32 7, i8* bitcast (void (i8, i8)* @SYSCFG_EXTILineConfig to i8*), i32 %10, i32 %10, i32 %11, i32 %11), !dbg !1176
+  call void @xcall_arg1p(i32 14, i8* bitcast (void (%struct.EXTI_InitTypeDef*)* @EXTI_Init to i8*), i8* %13, i32 mul nuw (i32 ptrtoint (i32* getelementptr (i32, i32* null, i32 1) to i32), i32 4)), !dbg !1199
+  call void @xcall_arg1p(i32 0, i8* bitcast (void (%struct.NVIC_InitTypeDef*)* @NVIC_Init to i8*), i8* %15, i32 ptrtoint (%struct.NVIC_InitTypeDef* getelementptr (%struct.NVIC_InitTypeDef, %struct.NVIC_InitTypeDef* null, i32 1) to i32)), !dbg !1213
+  call void @xcall_arg2ii(i32 6, i8* bitcast (void (i32, i32)* @RCC_AHB1PeriphClockCmd to i8*), i32 %or, i32 %or, i32 1, i32 1), !dbg !1148
+  call void @xcall_arg2ii(i32 6, i8* bitcast (void (i32, i32)* @RCC_APB2PeriphClockCmd to i8*), i32 32, i32 32, i32 1, i32 1), !dbg !1152
+  call void @xcall_arg3pii(i32 4, i8* bitcast (void (%struct.GPIO_TypeDef*, i16, i8)* @GPIO_PinAFConfig to i8*), i8* %6, i32 ptrtoint (%struct.GPIO_TypeDef* getelementptr (%struct.GPIO_TypeDef, %struct.GPIO_TypeDef* null, i32 1) to i32), i32 %7, i32 %7, i32 %8, i32 %8), !dbg !1162
+  call void @xcall_arg3pii(i32 4, i8* bitcast (void (%struct.GPIO_TypeDef*, i16, i8)* @GPIO_PinAFConfig to i8*), i8* %12, i32 ptrtoint (%struct.GPIO_TypeDef* getelementptr (%struct.GPIO_TypeDef, %struct.GPIO_TypeDef* null, i32 1) to i32), i32 %13, i32 %13, i32 %14, i32 %14), !dbg !1166
+  call void @xcall_arg2pp(i32 4, i8* bitcast (void (%struct.GPIO_TypeDef*, %struct.SEC_INFO*)* @GPIO_Init to i8*), i8* %17, i32 ptrtoint (%struct.GPIO_TypeDef* getelementptr (%struct.GPIO_TypeDef, %struct.GPIO_TypeDef* null, i32 1) to i32), i8* %18, i32 mul nuw (i32 ptrtoint (i32* getelementptr (i32, i32* null, i32 1) to i32), i32 5)), !dbg !1185
+  call void @xcall_arg2pp(i32 4, i8* bitcast (void (%struct.GPIO_TypeDef*, %struct.SEC_INFO*)* @GPIO_Init to i8*), i8* %21, i32 ptrtoint (%struct.GPIO_TypeDef* getelementptr (%struct.GPIO_TypeDef, %struct.GPIO_TypeDef* null, i32 1) to i32), i8* %22, i32 mul nuw (i32 ptrtoint (i32* getelementptr (i32, i32* null, i32 1) to i32), i32 5)), !dbg !1190
+  call void @xcall_arg2ii(i32 6, i8* bitcast (void (i32, i32)* @RCC_AHB1PeriphResetCmd to i8*), i32 1, i32 1, i32 1, i32 1), !dbg !1114
+  call void @xcall_arg2ii(i32 6, i8* bitcast (void (i32, i32)* @RCC_AHB1PeriphResetCmd to i8*), i32 2, i32 2, i32 1, i32 1), !dbg !1119
+  call void @xcall_arg2ii(i32 6, i8* bitcast (void (i32, i32)* @RCC_AHB1PeriphResetCmd to i8*), i32 4, i32 4, i32 1, i32 1), !dbg !1124
+  call void @xcall_arg2ii(i32 6, i8* bitcast (void (i32, i32)* @RCC_AHB1PeriphResetCmd to i8*), i32 8, i32 8, i32 1, i32 1), !dbg !1129
+  call void @xcall_arg2ii(i32 6, i8* bitcast (void (i32, i32)* @RCC_AHB1PeriphResetCmd to i8*), i32 16, i32 16, i32 1, i32 1), !dbg !1134
+  call void @xcall_arg2ii(i32 6, i8* bitcast (void (i32, i32)* @RCC_AHB1PeriphResetCmd to i8*), i32 32, i32 32, i32 1, i32 1), !dbg !1139
+  call void @xcall_arg2ii(i32 6, i8* bitcast (void (i32, i32)* @RCC_AHB1PeriphResetCmd to i8*), i32 64, i32 64, i32 1, i32 1), !dbg !1144
+  call void @xcall_arg2ii(i32 6, i8* bitcast (void (i32, i32)* @RCC_AHB1PeriphResetCmd to i8*), i32 128, i32 128, i32 1, i32 1), !dbg !1149
+  call void @xcall_arg2ii(i32 6, i8* bitcast (void (i32, i32)* @RCC_AHB1PeriphResetCmd to i8*), i32 256, i32 256, i32 1, i32 1), !dbg !1154
+  call void @xcall_arg2ii(i32 6, i8* bitcast (void (i32, i32)* @RCC_APB2PeriphResetCmd to i8*), i32 16384, i32 16384, i32 1, i32 1), !dbg !1108
 temp.bc updated

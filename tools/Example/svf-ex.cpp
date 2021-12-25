@@ -1526,7 +1526,7 @@ map<int,vector<string>> compartments;
 map<string, int>compartmentMap;
 int promoteXCall(CallInst * ci, Function * callee, BasicBlock::iterator& stmt) {
 		//Builder.SetInsertPoint(stmt->getNextNode()->getPrevNode());
-		                            IRBuilder<> Builder(stmt->getParent());
+		                            IRBuilder<> Builder(ci);
                                     BasicBlock::iterator it(stmt);it--;
                                     switch (ci->arg_size()) {
                                             case 0: {
@@ -1550,12 +1550,27 @@ int promoteXCall(CallInst * ci, Function * callee, BasicBlock::iterator& stmt) {
                                                     auto func_type = func->getFunctionType();
                                                     auto f = ll_mod->getOrInsertFunction (funcName, func_type); //FuncCallee
                                                     int compID = compartmentMap[callee->getName().str()];
+													auto ccallee = Builder.CreatePointerCast(callee, Type::getInt8PtrTy(func->getContext()));
                                                     auto new_inst = Builder.CreateCall(f,{ConstantInt::get(func->getContext(),
-                                                                                        llvm::APInt(32, compID, false)), callee});
-                                                    new_inst->dump();
-                                                    stmt++;
-                                                    new_inst->removeFromParent();
-                                                    ReplaceInstWithInst(ci, new_inst);
+                                                                                        llvm::APInt(32, compID, false)), ccallee});
+													if (ci->getType() == new_inst->getType()) {
+                                                            new_inst->dump();
+                                                            stmt++;
+                                                            new_inst->removeFromParent();
+                                                            ReplaceInstWithInst(ci, new_inst);
+                                                    } else {
+														Value * new_inst1;
+														if (ci->getType()->isPointerTy()) {
+															new_inst1 = Builder.CreatePointerCast(new_inst, ci->getType());
+														} else {
+                                                        	new_inst1 = Builder.CreateIntCast(new_inst, ci->getType(),false);
+														}
+                                                        auto ins= dyn_cast<llvm::Instruction>(new_inst1);
+                                                        auto bb = ins->getParent();
+                                                        stmt++;
+                                                        ins->removeFromParent();
+                                                        ReplaceInstWithInst(ci, ins);
+                                                    }
                                                     break;
                                                     }
 											case 1: {
@@ -1584,10 +1599,19 @@ int promoteXCall(CallInst * ci, Function * callee, BasicBlock::iterator& stmt) {
 
                                                     auto new_inst = Builder.CreateCall(f,{ConstantInt::get(func->getContext(),
                                                                                         llvm::APInt(32, compID, false)), ccallee, v, sizeInt});
-                                                    new_inst->dump();
-                                                    stmt++;
-                                                    new_inst->removeFromParent();
-                                                    ReplaceInstWithInst(ci, new_inst);
+													if (ci->getType() == new_inst->getType()) {
+                                                            new_inst->dump();
+                                                            stmt++;
+                                                            new_inst->removeFromParent();
+                                                            ReplaceInstWithInst(ci, new_inst);
+                                                    } else {
+                                                        auto new_inst1 = Builder.CreateIntCast(new_inst, ci->getType(),false);
+                                                        auto ins= dyn_cast<llvm::Instruction>(new_inst1);
+                                                        auto bb = ins->getParent();
+                                                        stmt++;
+                                                        ins->removeFromParent();
+                                                        ReplaceInstWithInst(ci, ins);
+                                                    }
                                                     break;
                                                     }
 											case 2: {
@@ -1618,12 +1642,23 @@ int promoteXCall(CallInst * ci, Function * callee, BasicBlock::iterator& stmt) {
                                                     int compID = compartmentMap[callee->getName().str()];
                                                     auto ccallee = Builder.CreatePointerCast(callee, Type::getInt8PtrTy(arg->getContext()));
 
+													
                                                     auto new_inst = Builder.CreateCall(f,{ConstantInt::get(func->getContext(),
                                                                                         llvm::APInt(32, compID, false)), ccallee, v, sizeInt, v1, sizeInt1});
-                                                    new_inst->dump();
-                                                    stmt++;
-                                                    new_inst->removeFromParent();
-                                                    ReplaceInstWithInst(ci, new_inst);
+
+													if (ci->getType() == new_inst->getType()) {
+															new_inst->dump();
+		                                                    stmt++;
+        		                                            new_inst->removeFromParent();
+                		                                    ReplaceInstWithInst(ci, new_inst);
+													} else {
+														auto new_inst1 = Builder.CreateIntCast(new_inst, ci->getType(),false);
+														auto ins= dyn_cast<llvm::Instruction>(new_inst1);
+														auto bb = ins->getParent();
+        	                                            stmt++;
+            	                                        ins->removeFromParent();
+                	                                    ReplaceInstWithInst(ci, ins);
+													}
 													break;
 											}
 											case 3: {
@@ -1661,10 +1696,24 @@ int promoteXCall(CallInst * ci, Function * callee, BasicBlock::iterator& stmt) {
 
                                                     auto new_inst = Builder.CreateCall(f,{ConstantInt::get(func->getContext(),
                                                                                         llvm::APInt(32, compID, false)), ccallee, v, sizeInt, v1, sizeInt1, v2, sizeInt2});
-                                                    new_inst->dump();
-                                                    stmt++;
-                                                    new_inst->removeFromParent();
-                                                    ReplaceInstWithInst(ci, new_inst);
+													if (ci->getType() == new_inst->getType()) {
+                                                            new_inst->dump();
+                                                            stmt++;
+                                                            new_inst->removeFromParent();
+                                                            ReplaceInstWithInst(ci, new_inst);
+                                                    } else {
+                                                        Value * new_inst1;
+                                                        if (ci->getType()->isPointerTy()) {
+                                                            new_inst1 = Builder.CreatePointerCast(new_inst, ci->getType());
+                                                        } else {
+                                                            new_inst1 = Builder.CreateIntCast(new_inst, ci->getType(),false);
+                                                        }
+                                                        auto ins= dyn_cast<llvm::Instruction>(new_inst1);
+                                                        auto bb = ins->getParent();
+                                                        stmt++;
+                                                        ins->removeFromParent();
+                                                        ReplaceInstWithInst(ci, ins);
+                                                    }
                                                     break;
                                             }
 
@@ -1720,7 +1769,40 @@ int promoteXCall(CallInst * ci, Function * callee, BasicBlock::iterator& stmt) {
                                                     string ret;
                                                     string args;
 													funcName = callee->getName().str() + "_bridge";
-													auto func = ll_mod->getFunction(funcName);
+													Value *v = NULL;
+                                                    Value *sizeInt = NULL;
+                                                    Value *v1 = NULL;
+                                                    Value *sizeInt1 = NULL;
+                                                    Value *v2 = NULL;
+                                                    Value *sizeInt2 = NULL;
+                                                    Value *v3 = NULL;
+                                                    Value *sizeInt3 = NULL;
+													Value *v4 = NULL;
+                                                    Value *sizeInt4 = NULL;
+													Value *v5 = NULL;
+                                                    Value *sizeInt5 = NULL;
+                                                    auto arg = ci->getArgOperand(0);
+                                                    ret = getRetType(ci);
+                                                    if (ret.empty())
+                                                            return 0;
+                                                    args = argToBridge(ci, 0, &v, &sizeInt);
+                                                    auto args2 = argToBridge(ci, 1, &v1, &sizeInt1);
+                                                    if (args2.empty())
+                                                            return 0;
+                                                    auto args3 = argToBridge(ci, 2, &v2, &sizeInt2);
+                                                    if (args3.empty())
+                                                            return 0;
+                                                    auto args4 = argToBridge(ci, 3, &v3, &sizeInt3);
+                                                    if (args4.empty())
+                                                            return 0;
+													auto args5 = argToBridge(ci, 4, &v4, &sizeInt4);
+                                                    if (args5.empty())
+                                                            return 0;
+													auto args6 = argToBridge(ci, 5, &v5, &sizeInt5);
+                                                    if (args6.empty())
+                                                            return 0;
+                                                    funcName = ret + "call_arg6" + args + args2 + args3 + args4 + args5 + args6;
+                                                    auto func = ll_mod->getFunction(funcName);
                                                     if (func==NULL) {
                                                             cerr<< funcName << " not implemented" <<endl;
                                                             return 0;
@@ -1728,10 +1810,10 @@ int promoteXCall(CallInst * ci, Function * callee, BasicBlock::iterator& stmt) {
 													auto func_type = func->getFunctionType();
                                                     auto f = ll_mod->getOrInsertFunction (funcName, func_type); //FuncCallee
                                                     int compID = compartmentMap[callee->getName().str()];
-                                                    auto ccallee = Builder.CreatePointerCast(callee, Type::getInt8PtrTy(ci->getContext()));
+                                                    auto ccallee = Builder.CreatePointerCast(callee, Type::getInt8PtrTy(arg->getContext()));
 
                                                     auto new_inst = Builder.CreateCall(f,{ConstantInt::get(func->getContext(),
-                                                                                        llvm::APInt(32, compID, false)), ci->getArgOperand(0), ci->getArgOperand(1), ci->getArgOperand(2), ci->getArgOperand(3), ci->getArgOperand(4),ci->getArgOperand(5)});
+                                                                                        llvm::APInt(32, compID, false)), ccallee, v, sizeInt, v1, sizeInt1, v2, sizeInt2, v3, sizeInt3, v4, sizeInt4, v5, sizeInt5});
                                                     new_inst->dump();
                                                     stmt++;
                                                     new_inst->removeFromParent();
@@ -1780,7 +1862,7 @@ int promoteXCallNoCalee(CallInst * ci, BasicBlock::iterator& stmt, int compID) {
         return 0;
 }
 int promoteXCallNoCaleeNoId(CallInst * ci, BasicBlock::iterator& stmt) {
-		IRBuilder<> Builder(stmt->getParent());
+		IRBuilder<> Builder(ci);
         BasicBlock::iterator it(stmt);it--;
         //Builder.SetInsertPoint(stmt->getNextNode()->getPrevNode());
                                     switch (ci->arg_size()) {
