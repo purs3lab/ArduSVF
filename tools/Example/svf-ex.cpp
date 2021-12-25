@@ -1494,6 +1494,15 @@ string  argToBridge(CallInst * ci, int argnum, Value ** v, Value ** sizeInt) {
                                                     } else if (arg->getType()->isPointerTy()) {
                                                         args = "p";
                                                         IRBuilder<> Builder(ci);
+														if (arg->getType()->getPointerElementType()->isFunctionTy()) {
+															*v = Builder.CreatePointerCast(arg, Type::getInt8PtrTy(arg->getContext()));
+                                                            auto sizeP = Builder.CreateIntToPtr (ConstantInt::get(arg->getContext(),
+                                                                                        llvm::APInt(32, 0, false)), arg->getType());
+                                                            auto size = Builder.CreateConstGEP1_32 (NULL, sizeP, 1);
+                                                            *sizeInt = ConstantInt::get(arg->getContext(),
+                                                                                        llvm::APInt(32, -1, true));
+
+														} else 
 														if (arg->getType()->isSized()) {
                                                         	*v = Builder.CreatePointerCast(arg, Type::getInt8PtrTy(arg->getContext()));
                                                         	auto sizeP = Builder.CreateIntToPtr (ConstantInt::get(arg->getContext(),

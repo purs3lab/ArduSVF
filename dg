@@ -8,11 +8,11 @@ xTaskIncrementTick
 eTaskGetState
 uxTaskPriorityGet
 uxTaskPriorityGetFromISR
-prvAddNewTaskToReadyList
-vTaskDelete
 vTaskSuspend
 vTaskResume
 xTaskResumeFromISR
+prvAddNewTaskToReadyList
+vTaskDelete
 pcTaskGetName
 vTaskGetInfo
 vTaskPlaceOnEventList
@@ -47,9 +47,9 @@ vTaskSuspendAll
 xTaskResumeAll
 xTaskIncrementTick
 vTaskDelay
-vTaskDelete
 vTaskSuspend
 xTaskResumeFromISR
+vTaskDelete
 xTaskCatchUpTicks
 vTaskPlaceOnUnorderedEventList
 xTaskRemoveFromEventList
@@ -63,8 +63,8 @@ Used By:
 vTaskSwitchContext
 xTaskResumeAll
 xTaskIncrementTick
-vTaskMissedYield
 xTaskResumeFromISR
+vTaskMissedYield
 xTaskRemoveFromEventList
 vTaskRemoveFromUnorderedEventList
 xTaskGenericNotifyFromISR
@@ -77,11 +77,11 @@ vTaskPrioritySet
 prvAddCurrentTaskToDelayedList
 xTaskResumeAll
 xTaskIncrementTick
-prvAddNewTaskToReadyList
-vTaskDelete
 vTaskSuspend
 vTaskResume
 xTaskResumeFromISR
+prvAddNewTaskToReadyList
+vTaskDelete
 xTaskRemoveFromEventList
 vTaskRemoveFromUnorderedEventList
 xTaskPriorityInherit
@@ -97,13 +97,13 @@ vTaskSwitchContext
 vTaskPrioritySet
 xTaskResumeAll
 xTaskIncrementTick
-prvAddNewTaskToReadyList
-prvInitialiseTaskLists
-vTaskDelete
 vTaskSuspend
 vTaskResume
 xTaskResumeFromISR
 prvIdleTask
+prvAddNewTaskToReadyList
+prvInitialiseTaskLists
+vTaskDelete
 uxTaskGetSystemState
 xTaskRemoveFromEventList
 vTaskRemoveFromUnorderedEventList
@@ -117,20 +117,20 @@ vTaskGenericNotifyGiveFromISR
 uxCurrentNumberOfTasks
 Used By:
 xTaskResumeAll
-prvAddNewTaskToReadyList
-vTaskDelete
 vTaskSuspend
 prvCheckTasksWaitingTermination
+prvAddNewTaskToReadyList
+vTaskDelete
 uxTaskGetNumberOfTasks
 uxTaskGetSystemState
 ****************
 xSchedulerRunning
 Used By:
-prvAddNewTaskToReadyList
-vTaskDelete
 vTaskSuspend
 vTaskStartScheduler
 vTaskEndScheduler
+prvAddNewTaskToReadyList
+vTaskDelete
 xTaskGetSchedulerState
 ****************
 uxTaskNumber
@@ -149,8 +149,8 @@ prvInitialiseTaskLists
 xPendingReadyList
 Used By:
 xTaskResumeAll
-prvInitialiseTaskLists
 xTaskResumeFromISR
+prvInitialiseTaskLists
 xTaskRemoveFromEventList
 xTaskGenericNotifyFromISR
 vTaskGenericNotifyGiveFromISR
@@ -158,18 +158,18 @@ vTaskGenericNotifyGiveFromISR
 xTasksWaitingTermination
 Used By:
 eTaskGetState
+prvCheckTasksWaitingTermination
 prvInitialiseTaskLists
 vTaskDelete
-prvCheckTasksWaitingTermination
 uxTaskGetSystemState
 ****************
 xSuspendedTaskList
 Used By:
 prvAddCurrentTaskToDelayedList
 eTaskGetState
-prvInitialiseTaskLists
 vTaskSuspend
 prvTaskIsTaskSuspended
+prvInitialiseTaskLists
 uxTaskGetSystemState
 ****************
 pxDelayedTaskList
@@ -191,25 +191,25 @@ uxTaskGetSystemState
 ****************
 uxDeletedTasksWaitingCleanUp
 Used By:
-vTaskDelete
 prvCheckTasksWaitingTermination
+vTaskDelete
 ****************
 xNextTaskUnblockTime
 Used By:
 prvAddCurrentTaskToDelayedList
 xTaskIncrementTick
-prvResetNextTaskUnblockTime
 vTaskStartScheduler
+prvResetNextTaskUnblockTime
 ****************
 xTickCount
 Used By:
 xTaskDelayUntil
 prvAddCurrentTaskToDelayedList
 xTaskIncrementTick
-vTaskInternalSetTimeOutState
-xTaskCheckForTimeOut
 vTaskStartScheduler
 xTaskGetTickCount
+vTaskInternalSetTimeOutState
+xTaskCheckForTimeOut
 xTaskGetTickCountFromISR
 vTaskSetTimeOutState
 xTaskGenericNotify
@@ -262,11 +262,11 @@ vQueueUnregisterQueue
 ****************
 xTimerQueue
 Used By:
+xTimerCreateTimerTask
 prvCheckForValidListAndQueue
 prvProcessTimerOrBlockTask
 prvProcessReceivedCommands
 xTimerGenericCommand
-xTimerCreateTimerTask
 ****************
 .str.21
 Used By:
