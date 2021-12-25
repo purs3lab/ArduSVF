@@ -804,6 +804,7 @@ void updateBC() {
 		StringRef file = StringRef("temp.bc");
         std::error_code EC;
             //raw_fd_ostream output = raw_fd_ostream("temp.bc", EC); error: use of deleted function ‘llvm::raw_fd_ostream::raw_fd_ostream(const llvm::raw_fd_ostream&)’
+		verifyModule(*ll_mod);
         raw_fd_ostream output("temp.bc", EC);
         llvm::WriteBitcodeToFile(*ll_mod, output);
 		cerr<<"temp.bc updated"<<endl;
@@ -1493,11 +1494,19 @@ string  argToBridge(CallInst * ci, int argnum, Value ** v, Value ** sizeInt) {
                                                     } else if (arg->getType()->isPointerTy()) {
                                                         args = "p";
                                                         IRBuilder<> Builder(ci);
-                                                        *v = Builder.CreatePointerCast(arg, Type::getInt8PtrTy(arg->getContext()));
-                                                        auto sizeP = Builder.CreateIntToPtr (ConstantInt::get(arg->getContext(),
+														if (arg->getType()->isSized()) {
+                                                        	*v = Builder.CreatePointerCast(arg, Type::getInt8PtrTy(arg->getContext()));
+                                                        	auto sizeP = Builder.CreateIntToPtr (ConstantInt::get(arg->getContext(),
                                                                                         llvm::APInt(32, 0, false)), arg->getType());
-                                                        auto size = Builder.CreateConstGEP1_32 (NULL, sizeP, 1);
-                                                        *sizeInt = Builder.CreatePtrToInt(size, Type::getInt32Ty(arg->getContext()));
+                                                        	auto size = Builder.CreateConstGEP1_32 (NULL, sizeP, 1);
+                                                        	*sizeInt = Builder.CreatePtrToInt(size, Type::getInt32Ty(arg->getContext()));
+														} else {
+															*v = Builder.CreatePointerCast(arg, Type::getInt8PtrTy(arg->getContext()));
+															cerr <<"Unsized pointer:";
+															ci->dump();
+															*sizeInt  = ConstantInt::get(arg->getContext(),
+                                                                                        llvm::APInt(32, 1, false));
+														}
                                                     } else {
                                                         cerr<<"Pass incomplete" <<endl;
                                                         ci->dump();
@@ -1765,6 +1774,7 @@ int promoteXCall(CallInst * ci, Function * callee, BasicBlock::iterator& stmt) {
                                             }
 
 											case 6: {
+													//return 0;
 													string funcName;
                                                     string ret;
                                                     string args;
@@ -1811,6 +1821,8 @@ int promoteXCall(CallInst * ci, Function * callee, BasicBlock::iterator& stmt) {
                                                     auto f = ll_mod->getOrInsertFunction (funcName, func_type); //FuncCallee
                                                     int compID = compartmentMap[callee->getName().str()];
                                                     auto ccallee = Builder.CreatePointerCast(callee, Type::getInt8PtrTy(arg->getContext()));
+
+
 
                                                     auto new_inst = Builder.CreateCall(f,{ConstantInt::get(func->getContext(),
                                                                                         llvm::APInt(32, compID, false)), ccallee, v, sizeInt, v1, sizeInt1, v2, sizeInt2, v3, sizeInt3, v4, sizeInt4, v5, sizeInt5});
