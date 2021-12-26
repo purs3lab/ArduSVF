@@ -102,7 +102,7 @@ void * pvPortMalloc( size_t xWantedSize )
         /* Check there is enough room left for the allocation and. */
         if( ( xWantedSize > 0 ) && /* valid size */
             ( ( xNextFreeByte[comp] + xWantedSize ) < configADJUSTED_HEAP_SIZE ) &&
-            ( ( xNextFreeByte[comp] + xWantedSize ) > xNextFreeByte ) ) /* Check for overflow. */
+            ( ( xNextFreeByte[comp] + xWantedSize ) > xNextFreeByte[comp] ) ) /* Check for overflow. */
         {
             /* Return the next free byte then increment the index past this
              * block. */
