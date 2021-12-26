@@ -2100,6 +2100,14 @@ int compartmentalize(char * argv[]) {
 				if (go->getSection().str().find(init) != std::string::npos) {
                         continue;
                 }
+				string osec= "osection";
+				if (go->getSection().str().find(osec) != std::string::npos) {
+                        continue;
+                }
+				string csec= "csection";
+                if (go->getSection().str().find(csec) != std::string::npos) {
+                        continue;
+                }
 				debug<<go->getName().str()<<":"<<endl;
 				debug<<"moved from "<<go->getSection().str()<< " to ";
 				auto compartmentID = compartmentMap[go->getName().str()]; 
@@ -2151,6 +2159,53 @@ int compartmentalize(char * argv[]) {
 	}
 
 
+	ofstream stats;
+    stats.open("./rtmk.stat");
+	map<string, int> gstat;
+	for (auto G = svfModule->global_begin(), E = svfModule->global_end(); G != E; ++G) {
+			auto glob = &*G;
+			gstat[(*glob)->getSection().str()]=0;
+	}
+	for (auto G = svfModule->global_begin(), E = svfModule->global_end(); G != E; ++G) {
+			auto glob = &*G;
+            gstat[(*glob)->getSection().str()]++;
+    }
+	for (auto cset : compartments) {
+			int instructions =0;
+			int objects = 0;
+			string fnName;
+			string obName;
+			for (auto obj : cset.second) {
+					auto fun = ll_mod->getFunction(obj);
+					if (fun) {
+							fnName = fun->getSection().str();
+							for (auto bb=fun->begin();bb!=fun->end();bb++) {
+									for (auto stmt =bb->begin();stmt!=bb->end(); stmt++) {
+										instructions++;
+									}
+							}
+					}
+					else {
+						auto glob=	ll_mod->getGlobalVariable(obj);
+						if (glob) {
+							obName = glob->getSection().str();
+							objects++;
+						}
+						else cerr<<obj<<endl;
+					}
+			}
+			stats<<"Compartment"<<cset.first<<":"<<endl;
+			stats<<"	Code Section Name: "	<<fnName<<endl;
+			stats<<"	Object Section Name: "	<<gstat[".osection"+ std::to_string(cset.first)]<<endl; 
+			stats<<"	instructions: "<< instructions<<endl;
+			stats<<"	objects: "<<objects<<endl;
+	}
+
+	for (auto temp: gstat) {
+			stats<<temp.first<<":"<<temp.second<<endl;
+	}
+
+	/* Instrument code for interprocess calls */
 	for (SVFModule::llvm_iterator F = svfModule->llvmFunBegin(), E = svfModule->llvmFunEnd(); F != E; ++F) {
         auto fun = *F;
         string rtmksec= "rtmk";

@@ -52,7 +52,13 @@ runp:
 	./partition.py -c /home/arslan/zephyrproject/zephyr/build2/build/zephyr/zephyr.elf.bc -d ./dg
 
 ld:
-	./setupLD.py -n 6 -l /home/arslan/stm32_discovery_arm_gcc/blinky/stm32_flash.overlay -c /home/arslan/stm32_discovery_arm_gcc/blinky/./autogen_data.c 
+	./setupLD.py -n 6 -l /home/arslan/stm32_discovery_arm_gcc/blinky/stm32_flash.overlay -c /home/arslan/stm32_discovery_arm_gcc/blinky/./autogen_data.c
+
+ldF:
+	./setupLD.py -n 19 -l ~/projects/LBC/FreeRTOS/FreeRTOS/Demo/CORTEX_M4F_STM32F407ZG-SK/./scripts/stm32_flash.overlay -c ~/projects/LBC/FreeRTOS/FreeRTOS/Demo/CORTEX_M4F_STM32F407ZG-SK/./autogen_data.c -H /home/arslan/projects/LBC/FreeRTOS/FreeRTOS/Source/portable/MemMang/autogen_heap.c
 
 verif:
-	./checkMPUReq.py -i /home/arslan/stm32_discovery_arm_gcc/blinky/sizeinfo -l /home/arslan/stm32_discovery_arm_gcc/blinky/stm32_flash.overlay -c /home/arslan/stm32_discovery_arm_gcc/blinky/./autogen_data.c 
+	./checkMPUReq.py -i /home/arslan/stm32_discovery_arm_gcc/blinky/sizeinfo -l /home/arslan/stm32_discovery_arm_gcc/blinky/stm32_flash.overlay -c /home/arslan/stm32_discovery_arm_gcc/blinky/./autogen_data.c
+
+verifF:
+	./checkMPUReq.py -i ~/projects/LBC/FreeRTOS/FreeRTOS/Demo/CORTEX_M4F_STM32F407ZG-SK/sizeinfo -l ~/projects/LBC/FreeRTOS/FreeRTOS/Demo/CORTEX_M4F_STM32F407ZG-SK/./scripts/stm32_flash.overlay -c ~/projects/LBC/FreeRTOS/FreeRTOS/Demo/CORTEX_M4F_STM32F407ZG-SK/./autogen_data.c

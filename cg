@@ -3,7 +3,7 @@ This is inadvisable as it may cause display problems. If
 you REALLY want to taste LLVM bitcode first-hand, you
 can force output with the `-f' option.
 
-Call graph node <<null function>><<0x55ba0d7d6320>>  #uses=0
+Call graph node <<null function>><<0x56008731dd40>>  #uses=0
   CS<None> calls function 'vTaskSwitchContext'
   CS<None> calls function 'xTaskCreate'
   CS<None> calls function 'llvm.memset.p0i8.i32'
@@ -266,1361 +266,1361 @@ Call graph node <<null function>><<0x55ba0d7d6320>>  #uses=0
   CS<None> calls function 'SYSCFG_CompensationCellCmd'
   CS<None> calls function 'SYSCFG_GetCompensationCellStatus'
 
-Call graph node for function: 'DebugMon_Handler'<<0x55ba0d81f300>>  #uses=1
-  CS<0x55ba0d9574c0> calls external node
+Call graph node for function: 'DebugMon_Handler'<<0x560087364260>>  #uses=1
+  CS<0x560087492430> calls external node
 
-Call graph node for function: 'EXTI9_5_IRQHandler'<<0x55ba0d80d350>>  #uses=1
-  CS<0x55ba0d94db80> calls function 'xcall_arg1i'
-  CS<0x55ba0d94ded0> calls function 'icall_arg2pp'
-  CS<0x55ba0d94e300> calls external node
-  CS<0x55ba0d94e380> calls external node
+Call graph node for function: 'EXTI9_5_IRQHandler'<<0x560087363000>>  #uses=1
+  CS<0x56008741ac60> calls function 'EXTI_ClearITPendingBit'
+  CS<0x56008741ae90> calls function 'xQueueGiveFromISR'
+  CS<0x56008741b2f0> calls external node
+  CS<0x56008741b370> calls external node
 
-Call graph node for function: 'EXTI_ClearFlag'<<0x55ba0d866b10>>  #uses=1
+Call graph node for function: 'EXTI_ClearFlag'<<0x5600873ac450>>  #uses=1
 
-Call graph node for function: 'EXTI_ClearITPendingBit'<<0x55ba0d866c10>>  #uses=1
+Call graph node for function: 'EXTI_ClearITPendingBit'<<0x560087363080>>  #uses=2
 
-Call graph node for function: 'EXTI_DeInit'<<0x55ba0d866890>>  #uses=1
+Call graph node for function: 'EXTI_DeInit'<<0x5600873ac250>>  #uses=1
 
-Call graph node for function: 'EXTI_GenerateSWInterrupt'<<0x55ba0d866a10>>  #uses=1
+Call graph node for function: 'EXTI_GenerateSWInterrupt'<<0x5600873ac350>>  #uses=1
 
-Call graph node for function: 'EXTI_GetFlagStatus'<<0x55ba0d866a90>>  #uses=1
+Call graph node for function: 'EXTI_GetFlagStatus'<<0x5600873ac3d0>>  #uses=1
 
-Call graph node for function: 'EXTI_GetITStatus'<<0x55ba0d866b90>>  #uses=1
+Call graph node for function: 'EXTI_GetITStatus'<<0x5600873ac4d0>>  #uses=1
 
-Call graph node for function: 'EXTI_Init'<<0x55ba0d866910>>  #uses=1
+Call graph node for function: 'EXTI_Init'<<0x5600873a9a60>>  #uses=2
 
-Call graph node for function: 'EXTI_StructInit'<<0x55ba0d866990>>  #uses=1
+Call graph node for function: 'EXTI_StructInit'<<0x5600873ac2d0>>  #uses=1
 
-Call graph node for function: 'GPIO_DeInit'<<0x55ba0d7c45f0>>  #uses=5
-  CS<0x55ba0d8250b0> calls function 'xcall_arg2ii'
-  CS<0x55ba0d8251a0> calls function 'RCC_AHB1PeriphResetCmd'
-  CS<0x55ba0d8253b0> calls function 'xcall_arg2ii'
-  CS<0x55ba0d8254a0> calls function 'RCC_AHB1PeriphResetCmd'
-  CS<0x55ba0d8256b0> calls function 'xcall_arg2ii'
-  CS<0x55ba0d8257a0> calls function 'RCC_AHB1PeriphResetCmd'
-  CS<0x55ba0d8259b0> calls function 'xcall_arg2ii'
-  CS<0x55ba0d825aa0> calls function 'RCC_AHB1PeriphResetCmd'
-  CS<0x55ba0d825cb0> calls function 'xcall_arg2ii'
-  CS<0x55ba0d825da0> calls function 'RCC_AHB1PeriphResetCmd'
-  CS<0x55ba0d825fb0> calls function 'xcall_arg2ii'
-  CS<0x55ba0d8260a0> calls function 'RCC_AHB1PeriphResetCmd'
-  CS<0x55ba0d8262b0> calls function 'xcall_arg2ii'
-  CS<0x55ba0d8263a0> calls function 'RCC_AHB1PeriphResetCmd'
-  CS<0x55ba0d8265b0> calls function 'xcall_arg2ii'
-  CS<0x55ba0d8266a0> calls function 'RCC_AHB1PeriphResetCmd'
-  CS<0x55ba0d8268b0> calls function 'xcall_arg2ii'
-  CS<0x55ba0d8269a0> calls function 'RCC_AHB1PeriphResetCmd'
+Call graph node for function: 'GPIO_DeInit'<<0x56008730e790>>  #uses=10
+  CS<0x5600875d1480> calls function 'RCC_AHB1PeriphResetCmd'
+  CS<0x5600875d1570> calls function 'RCC_AHB1PeriphResetCmd'
+  CS<0x5600875d1700> calls function 'RCC_AHB1PeriphResetCmd'
+  CS<0x5600875d17f0> calls function 'RCC_AHB1PeriphResetCmd'
+  CS<0x5600875d1980> calls function 'RCC_AHB1PeriphResetCmd'
+  CS<0x5600875d1a70> calls function 'RCC_AHB1PeriphResetCmd'
+  CS<0x5600875d1c00> calls function 'RCC_AHB1PeriphResetCmd'
+  CS<0x5600875d1cf0> calls function 'RCC_AHB1PeriphResetCmd'
+  CS<0x5600875d1e80> calls function 'RCC_AHB1PeriphResetCmd'
+  CS<0x5600875d1f70> calls function 'RCC_AHB1PeriphResetCmd'
+  CS<0x5600875d2100> calls function 'RCC_AHB1PeriphResetCmd'
+  CS<0x5600875d21f0> calls function 'RCC_AHB1PeriphResetCmd'
+  CS<0x5600875d2380> calls function 'RCC_AHB1PeriphResetCmd'
+  CS<0x5600875d2470> calls function 'RCC_AHB1PeriphResetCmd'
+  CS<0x5600875d2600> calls function 'RCC_AHB1PeriphResetCmd'
+  CS<0x5600875d26f0> calls function 'RCC_AHB1PeriphResetCmd'
+  CS<0x5600875d2880> calls function 'RCC_AHB1PeriphResetCmd'
+  CS<0x5600875d2970> calls function 'RCC_AHB1PeriphResetCmd'
 
-Call graph node for function: 'GPIO_Init'<<0x55ba0d7c5ad0>>  #uses=1
+Call graph node for function: 'GPIO_Init'<<0x56008730eda0>>  #uses=5
 
-Call graph node for function: 'GPIO_PinAFConfig'<<0x55ba0d7c6150>>  #uses=1
+Call graph node for function: 'GPIO_PinAFConfig'<<0x5600873a9c90>>  #uses=3
 
-Call graph node for function: 'GPIO_PinLockConfig'<<0x55ba0d7c5c50>>  #uses=1
+Call graph node for function: 'GPIO_PinLockConfig'<<0x5600873aa950>>  #uses=1
 
-Call graph node for function: 'GPIO_ReadInputData'<<0x55ba0d7c5d50>>  #uses=1
+Call graph node for function: 'GPIO_ReadInputData'<<0x5600873aa9d0>>  #uses=1
 
-Call graph node for function: 'GPIO_ReadInputDataBit'<<0x55ba0d7c5cd0>>  #uses=1
+Call graph node for function: 'GPIO_ReadInputDataBit'<<0x5600873a9b60>>  #uses=2
 
-Call graph node for function: 'GPIO_ReadOutputData'<<0x55ba0d7c5e50>>  #uses=1
+Call graph node for function: 'GPIO_ReadOutputData'<<0x5600873aaad0>>  #uses=1
 
-Call graph node for function: 'GPIO_ReadOutputDataBit'<<0x55ba0d7c5dd0>>  #uses=1
+Call graph node for function: 'GPIO_ReadOutputDataBit'<<0x5600873aaa50>>  #uses=1
 
-Call graph node for function: 'GPIO_ResetBits'<<0x55ba0d7c5f50>>  #uses=1
+Call graph node for function: 'GPIO_ResetBits'<<0x5600873aabd0>>  #uses=1
 
-Call graph node for function: 'GPIO_SetBits'<<0x55ba0d7c5ed0>>  #uses=1
+Call graph node for function: 'GPIO_SetBits'<<0x5600873aab50>>  #uses=1
 
-Call graph node for function: 'GPIO_StructInit'<<0x55ba0d7c5b50>>  #uses=1
+Call graph node for function: 'GPIO_StructInit'<<0x5600873aa850>>  #uses=1
 
-Call graph node for function: 'GPIO_ToggleBits'<<0x55ba0d7c60d0>>  #uses=1
+Call graph node for function: 'GPIO_ToggleBits'<<0x5600873aad50>>  #uses=1
 
-Call graph node for function: 'GPIO_Write'<<0x55ba0d7c6050>>  #uses=1
+Call graph node for function: 'GPIO_Write'<<0x5600873aacd0>>  #uses=1
 
-Call graph node for function: 'GPIO_WriteBit'<<0x55ba0d7c5fd0>>  #uses=1
+Call graph node for function: 'GPIO_WriteBit'<<0x5600873aac50>>  #uses=1
 
-Call graph node for function: 'NVIC_Init'<<0x55ba0d81e890>>  #uses=1
+Call graph node for function: 'NVIC_Init'<<0x560087363970>>  #uses=2
 
-Call graph node for function: 'NVIC_PriorityGroupConfig'<<0x55ba0d80cdc0>>  #uses=2
+Call graph node for function: 'NVIC_PriorityGroupConfig'<<0x560087362b20>>  #uses=2
 
-Call graph node for function: 'NVIC_SetPendingIRQ'<<0x55ba0d80d070>>  #uses=1
+Call graph node for function: 'NVIC_SetPendingIRQ'<<0x560087362e50>>  #uses=1
 
-Call graph node for function: 'NVIC_SetVectorTable'<<0x55ba0d81e910>>  #uses=1
+Call graph node for function: 'NVIC_SetVectorTable'<<0x5600873639f0>>  #uses=1
 
-Call graph node for function: 'NVIC_SystemLPConfig'<<0x55ba0d81e990>>  #uses=1
+Call graph node for function: 'NVIC_SystemLPConfig'<<0x560087363a70>>  #uses=1
 
-Call graph node for function: 'PendSV_Handler'<<0x55ba0d81e3a0>>  #uses=1
-  CS<0x55ba0d941bd0> calls external node
+Call graph node for function: 'PendSV_Handler'<<0x560087363580>>  #uses=1
+  CS<0x5600874856a0> calls external node
 
-Call graph node for function: 'RCC_AHB1PeriphClockCmd'<<0x55ba0d7c6e50>>  #uses=1
+Call graph node for function: 'RCC_AHB1PeriphClockCmd'<<0x56008730ed20>>  #uses=4
 
-Call graph node for function: 'RCC_AHB1PeriphClockLPModeCmd'<<0x55ba0d866410>>  #uses=1
+Call graph node for function: 'RCC_AHB1PeriphClockLPModeCmd'<<0x5600873abdd0>>  #uses=1
 
-Call graph node for function: 'RCC_AHB1PeriphResetCmd'<<0x55ba0d7c50e0>>  #uses=10
+Call graph node for function: 'RCC_AHB1PeriphResetCmd'<<0x5600873a9e60>>  #uses=19
 
-Call graph node for function: 'RCC_AHB2PeriphClockCmd'<<0x55ba0d866090>>  #uses=1
+Call graph node for function: 'RCC_AHB2PeriphClockCmd'<<0x5600873aba50>>  #uses=1
 
-Call graph node for function: 'RCC_AHB2PeriphClockLPModeCmd'<<0x55ba0d866490>>  #uses=1
+Call graph node for function: 'RCC_AHB2PeriphClockLPModeCmd'<<0x5600873abe50>>  #uses=1
 
-Call graph node for function: 'RCC_AHB2PeriphResetCmd'<<0x55ba0d866210>>  #uses=1
+Call graph node for function: 'RCC_AHB2PeriphResetCmd'<<0x5600873abbd0>>  #uses=1
 
-Call graph node for function: 'RCC_AHB3PeriphClockCmd'<<0x55ba0d866110>>  #uses=1
+Call graph node for function: 'RCC_AHB3PeriphClockCmd'<<0x5600873abad0>>  #uses=1
 
-Call graph node for function: 'RCC_AHB3PeriphClockLPModeCmd'<<0x55ba0d866510>>  #uses=1
+Call graph node for function: 'RCC_AHB3PeriphClockLPModeCmd'<<0x5600873abed0>>  #uses=1
 
-Call graph node for function: 'RCC_AHB3PeriphResetCmd'<<0x55ba0d866290>>  #uses=1
+Call graph node for function: 'RCC_AHB3PeriphResetCmd'<<0x5600873abc50>>  #uses=1
 
-Call graph node for function: 'RCC_APB1PeriphClockCmd'<<0x55ba0d866190>>  #uses=1
+Call graph node for function: 'RCC_APB1PeriphClockCmd'<<0x5600873abb50>>  #uses=1
 
-Call graph node for function: 'RCC_APB1PeriphClockLPModeCmd'<<0x55ba0d866590>>  #uses=1
+Call graph node for function: 'RCC_APB1PeriphClockLPModeCmd'<<0x5600873abf50>>  #uses=1
 
-Call graph node for function: 'RCC_APB1PeriphResetCmd'<<0x55ba0d866310>>  #uses=1
+Call graph node for function: 'RCC_APB1PeriphResetCmd'<<0x5600873abcd0>>  #uses=1
 
-Call graph node for function: 'RCC_APB2PeriphClockCmd'<<0x55ba0d7c4d80>>  #uses=2
+Call graph node for function: 'RCC_APB2PeriphClockCmd'<<0x56008730ee60>>  #uses=3
 
-Call graph node for function: 'RCC_APB2PeriphClockLPModeCmd'<<0x55ba0d866610>>  #uses=1
+Call graph node for function: 'RCC_APB2PeriphClockLPModeCmd'<<0x5600873abfd0>>  #uses=1
 
-Call graph node for function: 'RCC_APB2PeriphResetCmd'<<0x55ba0d866390>>  #uses=2
+Call graph node for function: 'RCC_APB2PeriphResetCmd'<<0x5600873abd50>>  #uses=3
 
-Call graph node for function: 'RCC_AdjustHSICalibrationValue'<<0x55ba0d7c63d0>>  #uses=1
+Call graph node for function: 'RCC_AdjustHSICalibrationValue'<<0x5600873aafd0>>  #uses=1
 
-Call graph node for function: 'RCC_BackupResetCmd'<<0x55ba0d7c6d50>>  #uses=1
+Call graph node for function: 'RCC_BackupResetCmd'<<0x5600873ab950>>  #uses=1
 
-Call graph node for function: 'RCC_ClearFlag'<<0x55ba0d866710>>  #uses=1
+Call graph node for function: 'RCC_ClearFlag'<<0x5600873ac0d0>>  #uses=1
 
-Call graph node for function: 'RCC_ClearITPendingBit'<<0x55ba0d866810>>  #uses=1
+Call graph node for function: 'RCC_ClearITPendingBit'<<0x5600873ac1d0>>  #uses=1
 
-Call graph node for function: 'RCC_ClockSecuritySystemCmd'<<0x55ba0d7c67d0>>  #uses=1
+Call graph node for function: 'RCC_ClockSecuritySystemCmd'<<0x5600873ab3d0>>  #uses=1
 
-Call graph node for function: 'RCC_DeInit'<<0x55ba0d7c61d0>>  #uses=1
+Call graph node for function: 'RCC_DeInit'<<0x5600873aadd0>>  #uses=1
 
-Call graph node for function: 'RCC_GetClocksFreq'<<0x55ba0d7c6bd0>>  #uses=1
+Call graph node for function: 'RCC_GetClocksFreq'<<0x5600873ab7d0>>  #uses=1
 
-Call graph node for function: 'RCC_GetFlagStatus'<<0x55ba0d7c6350>>  #uses=3
+Call graph node for function: 'RCC_GetFlagStatus'<<0x5600873aaf50>>  #uses=3
 
-Call graph node for function: 'RCC_GetITStatus'<<0x55ba0d866790>>  #uses=1
+Call graph node for function: 'RCC_GetITStatus'<<0x5600873ac150>>  #uses=1
 
-Call graph node for function: 'RCC_GetSYSCLKSource'<<0x55ba0d7c69d0>>  #uses=1
+Call graph node for function: 'RCC_GetSYSCLKSource'<<0x5600873ab5d0>>  #uses=1
 
-Call graph node for function: 'RCC_HCLKConfig'<<0x55ba0d7c6a50>>  #uses=1
+Call graph node for function: 'RCC_HCLKConfig'<<0x5600873ab650>>  #uses=1
 
-Call graph node for function: 'RCC_HSEConfig'<<0x55ba0d7c6250>>  #uses=1
+Call graph node for function: 'RCC_HSEConfig'<<0x5600873aae50>>  #uses=1
 
-Call graph node for function: 'RCC_HSICmd'<<0x55ba0d7c6450>>  #uses=1
+Call graph node for function: 'RCC_HSICmd'<<0x5600873ab050>>  #uses=1
 
-Call graph node for function: 'RCC_I2SCLKConfig'<<0x55ba0d7c6dd0>>  #uses=1
+Call graph node for function: 'RCC_I2SCLKConfig'<<0x5600873ab9d0>>  #uses=1
 
-Call graph node for function: 'RCC_ITConfig'<<0x55ba0d866690>>  #uses=1
+Call graph node for function: 'RCC_ITConfig'<<0x5600873ac050>>  #uses=1
 
-Call graph node for function: 'RCC_LSEConfig'<<0x55ba0d7c64d0>>  #uses=1
+Call graph node for function: 'RCC_LSEConfig'<<0x5600873ab0d0>>  #uses=1
 
-Call graph node for function: 'RCC_LSICmd'<<0x55ba0d7c6550>>  #uses=1
+Call graph node for function: 'RCC_LSICmd'<<0x5600873ab150>>  #uses=1
 
-Call graph node for function: 'RCC_MCO1Config'<<0x55ba0d7c6850>>  #uses=1
+Call graph node for function: 'RCC_MCO1Config'<<0x5600873ab450>>  #uses=1
 
-Call graph node for function: 'RCC_MCO2Config'<<0x55ba0d7c68d0>>  #uses=1
+Call graph node for function: 'RCC_MCO2Config'<<0x5600873ab4d0>>  #uses=1
 
-Call graph node for function: 'RCC_PCLK1Config'<<0x55ba0d7c6ad0>>  #uses=1
+Call graph node for function: 'RCC_PCLK1Config'<<0x5600873ab6d0>>  #uses=1
 
-Call graph node for function: 'RCC_PCLK2Config'<<0x55ba0d7c6b50>>  #uses=1
+Call graph node for function: 'RCC_PCLK2Config'<<0x5600873ab750>>  #uses=1
 
-Call graph node for function: 'RCC_PLLCmd'<<0x55ba0d7c6650>>  #uses=1
+Call graph node for function: 'RCC_PLLCmd'<<0x5600873ab250>>  #uses=1
 
-Call graph node for function: 'RCC_PLLConfig'<<0x55ba0d7c65d0>>  #uses=1
+Call graph node for function: 'RCC_PLLConfig'<<0x5600873ab1d0>>  #uses=1
 
-Call graph node for function: 'RCC_PLLI2SCmd'<<0x55ba0d7c6750>>  #uses=1
+Call graph node for function: 'RCC_PLLI2SCmd'<<0x5600873ab350>>  #uses=1
 
-Call graph node for function: 'RCC_PLLI2SConfig'<<0x55ba0d7c66d0>>  #uses=1
+Call graph node for function: 'RCC_PLLI2SConfig'<<0x5600873ab2d0>>  #uses=1
 
-Call graph node for function: 'RCC_RTCCLKCmd'<<0x55ba0d7c6cd0>>  #uses=1
+Call graph node for function: 'RCC_RTCCLKCmd'<<0x5600873ab8d0>>  #uses=1
 
-Call graph node for function: 'RCC_RTCCLKConfig'<<0x55ba0d7c6c50>>  #uses=1
+Call graph node for function: 'RCC_RTCCLKConfig'<<0x5600873ab850>>  #uses=1
 
-Call graph node for function: 'RCC_SYSCLKConfig'<<0x55ba0d7c6950>>  #uses=1
+Call graph node for function: 'RCC_SYSCLKConfig'<<0x5600873ab550>>  #uses=1
 
-Call graph node for function: 'RCC_WaitForHSEStartUp'<<0x55ba0d7c62d0>>  #uses=1
-  CS<0x55ba0d9f5a30> calls function 'RCC_GetFlagStatus'
-  CS<0x55ba0d9f6130> calls function 'RCC_GetFlagStatus'
+Call graph node for function: 'RCC_WaitForHSEStartUp'<<0x5600873aaed0>>  #uses=1
+  CS<0x560087533170> calls function 'RCC_GetFlagStatus'
+  CS<0x560087533870> calls function 'RCC_GetFlagStatus'
 
-Call graph node for function: 'STM_EVAL_COMInit'<<0x55ba0d7c4ee0>>  #uses=1
-  CS<0x55ba0da93ee0> calls function 'xcall_arg2ii'
-  CS<0x55ba0da941f0> calls function 'xcall_arg2ii'
-  CS<0x55ba0da94a50> calls function 'xcall_arg3pii'
-  CS<0x55ba0da951e0> calls function 'xcall_arg3pii'
-  CS<0x55ba0da95f10> calls function 'xcall_arg2pp'
-  CS<0x55ba0da96550> calls function 'xcall_arg2pp'
+Call graph node for function: 'STM_EVAL_COMInit'<<0x5600873a9be0>>  #uses=1
+  CS<0x5600875cd890> calls function 'RCC_AHB1PeriphClockCmd'
+  CS<0x5600875cdb20> calls function 'RCC_APB2PeriphClockCmd'
+  CS<0x5600875ce160> calls function 'GPIO_PinAFConfig'
+  CS<0x5600875ce700> calls function 'GPIO_PinAFConfig'
+  CS<0x5600875cf2d0> calls function 'GPIO_Init'
+  CS<0x5600875cf7b0> calls function 'GPIO_Init'
 
-Call graph node for function: 'STM_EVAL_GPIOReset'<<0x55ba0d7c4570>>  #uses=1
-  CS<0x55ba0da86c60> calls function 'xcall_arg1p'
-  CS<0x55ba0da86d00> calls function 'GPIO_DeInit'
-  CS<0x55ba0da86e30> calls function 'xcall_arg1p'
-  CS<0x55ba0da86f00> calls function 'GPIO_DeInit'
-  CS<0x55ba0da87030> calls function 'xcall_arg1p'
-  CS<0x55ba0da87100> calls function 'GPIO_DeInit'
-  CS<0x55ba0da87230> calls function 'xcall_arg1p'
-  CS<0x55ba0da87300> calls function 'GPIO_DeInit'
-  CS<0x55ba0da87430> calls function 'xcall_arg1p'
+Call graph node for function: 'STM_EVAL_GPIOReset'<<0x56008730e710>>  #uses=1
+  CS<0x5600875c2440> calls function 'GPIO_DeInit'
+  CS<0x5600875c24e0> calls function 'GPIO_DeInit'
+  CS<0x5600875c25b0> calls function 'GPIO_DeInit'
+  CS<0x5600875c2680> calls function 'GPIO_DeInit'
+  CS<0x5600875c2750> calls function 'GPIO_DeInit'
+  CS<0x5600875c2820> calls function 'GPIO_DeInit'
+  CS<0x5600875c28f0> calls function 'GPIO_DeInit'
+  CS<0x5600875c29c0> calls function 'GPIO_DeInit'
+  CS<0x5600875c2a90> calls function 'GPIO_DeInit'
 
-Call graph node for function: 'STM_EVAL_LEDInit'<<0x55ba0d7c4b00>>  #uses=1
-  CS<0x55ba0da881a0> calls function 'xcall_arg2ii'
-  CS<0x55ba0da88fc0> calls function 'xcall_arg2pp'
+Call graph node for function: 'STM_EVAL_LEDInit'<<0x56008730eca0>>  #uses=1
+  CS<0x5600875c3620> calls function 'RCC_AHB1PeriphClockCmd'
+  CS<0x5600875c42b0> calls function 'GPIO_Init'
 
-Call graph node for function: 'STM_EVAL_LEDOff'<<0x55ba0d7c4c00>>  #uses=1
+Call graph node for function: 'STM_EVAL_LEDOff'<<0x56008730e5b0>>  #uses=2
 
-Call graph node for function: 'STM_EVAL_LEDOn'<<0x55ba0d7c4b80>>  #uses=1
+Call graph node for function: 'STM_EVAL_LEDOn'<<0x56008730e530>>  #uses=2
 
-Call graph node for function: 'STM_EVAL_LEDToggle'<<0x55ba0d7c4c80>>  #uses=1
+Call graph node for function: 'STM_EVAL_LEDToggle'<<0x56008730e630>>  #uses=2
 
-Call graph node for function: 'STM_EVAL_PBGetState'<<0x55ba0d7c4e60>>  #uses=1
-  CS<0x55ba0da92520> calls function 'icall_arg2pi'
+Call graph node for function: 'STM_EVAL_PBGetState'<<0x5600873a9ae0>>  #uses=1
+  CS<0x5600875cc010> calls function 'GPIO_ReadInputDataBit'
 
-Call graph node for function: 'STM_EVAL_PBInit'<<0x55ba0d7c4d00>>  #uses=1
-  CS<0x55ba0da8e1f0> calls function 'xcall_arg2ii'
-  CS<0x55ba0da8e2e0> calls function 'RCC_APB2PeriphClockCmd'
-  CS<0x55ba0da8eda0> calls function 'xcall_arg2pp'
-  CS<0x55ba0da8f530> calls function 'xcall_arg2ii'
-  CS<0x55ba0da903c0> calls function 'xcall_arg1p'
-  CS<0x55ba0da90d00> calls function 'xcall_arg1p'
+Call graph node for function: 'STM_EVAL_PBInit'<<0x56008730ee20>>  #uses=1
+  CS<0x5600875c8350> calls function 'RCC_AHB1PeriphClockCmd'
+  CS<0x5600875c8440> calls function 'RCC_APB2PeriphClockCmd'
+  CS<0x5600875c8d70> calls function 'GPIO_Init'
+  CS<0x5600875c93a0> calls function 'SYSCFG_EXTILineConfig'
+  CS<0x5600875ca160> calls function 'EXTI_Init'
+  CS<0x5600875ca9d0> calls function 'NVIC_Init'
 
-Call graph node for function: 'SVC_Handler'<<0x55ba0d7c0600>>  #uses=1
-  CS<0x55ba0d96adc0> calls external node
+Call graph node for function: 'SVC_Handler'<<0x560087309eb0>>  #uses=1
+  CS<0x5600874ac750> calls external node
 
-Call graph node for function: 'SYSCFG_CompensationCellCmd'<<0x55ba0d86bf00>>  #uses=1
+Call graph node for function: 'SYSCFG_CompensationCellCmd'<<0x5600873b1740>>  #uses=1
 
-Call graph node for function: 'SYSCFG_DeInit'<<0x55ba0d866c90>>  #uses=1
-  CS<0x55ba0daea060> calls function 'xcall_arg2ii'
-  CS<0x55ba0daea120> calls function 'RCC_APB2PeriphResetCmd'
+Call graph node for function: 'SYSCFG_DeInit'<<0x5600873ac550>>  #uses=1
+  CS<0x5600876235f0> calls function 'RCC_APB2PeriphResetCmd'
+  CS<0x5600876236b0> calls function 'RCC_APB2PeriphResetCmd'
 
-Call graph node for function: 'SYSCFG_ETH_MediaInterfaceConfig'<<0x55ba0d86be80>>  #uses=1
+Call graph node for function: 'SYSCFG_ETH_MediaInterfaceConfig'<<0x5600873b16c0>>  #uses=1
 
-Call graph node for function: 'SYSCFG_EXTILineConfig'<<0x55ba0d86be00>>  #uses=1
+Call graph node for function: 'SYSCFG_EXTILineConfig'<<0x5600873a99e0>>  #uses=2
 
-Call graph node for function: 'SYSCFG_GetCompensationCellStatus'<<0x55ba0d86bf80>>  #uses=1
+Call graph node for function: 'SYSCFG_GetCompensationCellStatus'<<0x5600873b17c0>>  #uses=1
 
-Call graph node for function: 'SYSCFG_MemoryRemapConfig'<<0x55ba0d866d70>>  #uses=1
+Call graph node for function: 'SYSCFG_MemoryRemapConfig'<<0x5600873ac630>>  #uses=1
 
-Call graph node for function: 'SetSysClock'<<0x55ba0d81ef40>>  #uses=1
+Call graph node for function: 'SetSysClock'<<0x560087363ea0>>  #uses=1
 
-Call graph node for function: 'SysTick_CLKSourceConfig'<<0x55ba0d81ea10>>  #uses=1
+Call graph node for function: 'SysTick_CLKSourceConfig'<<0x560087363af0>>  #uses=1
 
-Call graph node for function: 'SysTick_Handler'<<0x55ba0d81e420>>  #uses=1
-  CS<0x55ba0d9421b0> calls external node
-  CS<0x55ba0d942310> calls function 'xTaskIncrementTick'
-  CS<0x55ba0d9426c0> calls external node
+Call graph node for function: 'SysTick_Handler'<<0x560087363600>>  #uses=1
+  CS<0x560087485c80> calls external node
+  CS<0x560087485de0> calls function 'xTaskIncrementTick'
+  CS<0x560087486190> calls external node
 
-Call graph node for function: 'SystemCoreClockUpdate'<<0x55ba0d81efc0>>  #uses=1
+Call graph node for function: 'SystemCoreClockUpdate'<<0x560087363f20>>  #uses=1
 
-Call graph node for function: 'SystemInit'<<0x55ba0d81eec0>>  #uses=1
-  CS<0x55ba0da55390> calls function 'SetSysClock'
+Call graph node for function: 'SystemInit'<<0x560087362aa0>>  #uses=2
+  CS<0x5600875900b0> calls function 'SetSysClock'
 
-Call graph node for function: 'TIM2_IRQHandler'<<0x55ba0d80cff0>>  #uses=1
-  CS<0x55ba0d94c060> calls function 'xcall_arg1i'
-  CS<0x55ba0d94c0e0> calls function 'NVIC_SetPendingIRQ'
-  CS<0x55ba0d94c1e0> calls function 'icall_arg1i'
-  CS<0x55ba0d94c420> calls external node
+Call graph node for function: 'TIM2_IRQHandler'<<0x560087362d50>>  #uses=1
+  CS<0x56008748d580> calls function 'vRegTestClearFlopRegistersToParameterValue'
+  CS<0x56008748d600> calls function 'NVIC_SetPendingIRQ'
+  CS<0x56008748d6a0> calls function 'ulRegTestCheckFlopRegistersContainParameterValue'
+  CS<0x56008748d8e0> calls external node
 
-Call graph node for function: 'TIM3_IRQHandler'<<0x55ba0d80cf70>>  #uses=1
+Call graph node for function: 'TIM3_IRQHandler'<<0x560087362cd0>>  #uses=1
 
-Call graph node for function: '_sbrk'<<0x55ba0d80d7e0>>  #uses=1
+Call graph node for function: '_sbrk'<<0x560087363410>>  #uses=1
 
-Call graph node for function: 'eTaskGetState'<<0x55ba0d9e06e0>>  #uses=2
-  CS<0x55ba0d8b6460> calls external node
-  CS<0x55ba0d8b6900> calls function 'vPortEnterCritical'
-  CS<0x55ba0d8b6fa0> calls function 'vPortExitCritical'
+Call graph node for function: 'eTaskGetState'<<0x5600876290c0>>  #uses=2
+  CS<0x560087359500> calls external node
+  CS<0x5600873599a0> calls function 'vPortEnterCritical'
+  CS<0x56008735a040> calls function 'vPortExitCritical'
 
-Call graph node for function: 'getCompartmentFromAddr'<<0x55ba0d7c3a00>>  #uses=3
+Call graph node for function: 'getCompartmentFromAddr'<<0x56008730d720>>  #uses=3
 
-Call graph node for function: 'icall_arg0'<<0x55ba0d9e1930>>  #uses=32
-  CS<0x55ba0da64680> calls function 'switch_view'
-  CS<0x55ba0da649f0> calls external node
-  CS<0x55ba0da64bd0> calls function 'switch_view'
+Call graph node for function: 'icall_arg0'<<0x56008730d390>>  #uses=2
+  CS<0x56008759f400> calls function 'switch_view'
+  CS<0x56008759f770> calls external node
+  CS<0x56008759f950> calls function 'switch_view'
 
-Call graph node for function: 'icall_arg0_noid'<<0x55ba0d7c3980>>  #uses=1
-  CS<0x55ba0da68640> calls function 'getCompartmentFromAddr'
-  CS<0x55ba0da687d0> calls function 'icall_arg0'
+Call graph node for function: 'icall_arg0_noid'<<0x56008730d6a0>>  #uses=1
+  CS<0x5600875a33c0> calls function 'getCompartmentFromAddr'
+  CS<0x5600875a3550> calls function 'icall_arg0'
 
-Call graph node for function: 'icall_arg1i'<<0x55ba0d80d0f0>>  #uses=2
-  CS<0x55ba0da65ea0> calls function 'switch_view'
-  CS<0x55ba0da66230> calls external node
-  CS<0x55ba0da66410> calls function 'switch_view'
+Call graph node for function: 'icall_arg1i'<<0x56008730d440>>  #uses=1
+  CS<0x5600875a0c20> calls function 'switch_view'
+  CS<0x5600875a0fb0> calls external node
+  CS<0x5600875a1190> calls function 'switch_view'
 
-Call graph node for function: 'icall_arg1p'<<0x55ba0d7d46e0>>  #uses=38
-  CS<0x55ba0da677f0> calls function 'rtmkcpy'
-  CS<0x55ba0da678c0> calls function 'switch_view'
-  CS<0x55ba0da67c50> calls external node
-  CS<0x55ba0da67e30> calls function 'switch_view'
+Call graph node for function: 'icall_arg1p'<<0x56008730d570>>  #uses=1
+  CS<0x5600875a2570> calls function 'rtmkcpy'
+  CS<0x5600875a2640> calls function 'switch_view'
+  CS<0x5600875a29d0> calls external node
+  CS<0x5600875a2bb0> calls function 'switch_view'
 
-Call graph node for function: 'icall_arg2pi'<<0x55ba0d81ec70>>  #uses=4
-  CS<0x55ba0da6d660> calls function 'rtmkcpy'
-  CS<0x55ba0da6d730> calls function 'switch_view'
-  CS<0x55ba0da6dae0> calls external node
-  CS<0x55ba0da6dcc0> calls function 'switch_view'
+Call graph node for function: 'icall_arg2pi'<<0x56008730d960>>  #uses=1
+  CS<0x5600875a8410> calls function 'rtmkcpy'
+  CS<0x5600875a84e0> calls function 'switch_view'
+  CS<0x5600875a8890> calls external node
+  CS<0x5600875a8a70> calls function 'switch_view'
 
-Call graph node for function: 'icall_arg2pp'<<0x55ba0d80d400>>  #uses=6
-  CS<0x55ba0da6f5c0> calls function 'rtmkcpy'
-  CS<0x55ba0da6f7a0> calls function 'rtmkcpy'
-  CS<0x55ba0da6f870> calls function 'switch_view'
-  CS<0x55ba0da6fc20> calls external node
-  CS<0x55ba0da6fe00> calls function 'switch_view'
+Call graph node for function: 'icall_arg2pp'<<0x56008730daf0>>  #uses=1
+  CS<0x5600875aa370> calls function 'rtmkcpy'
+  CS<0x5600875aa550> calls function 'rtmkcpy'
+  CS<0x5600875aa620> calls function 'switch_view'
+  CS<0x5600875aa9d0> calls external node
+  CS<0x5600875aabb0> calls function 'switch_view'
 
-Call graph node for function: 'icall_arg3ppi'<<0x55ba0d823330>>  #uses=2
-  CS<0x55ba0da71c80> calls function 'rtmkcpy'
-  CS<0x55ba0da71e60> calls function 'rtmkcpy'
-  CS<0x55ba0da71f30> calls function 'switch_view'
-  CS<0x55ba0d9cb7b0> calls external node
-  CS<0x55ba0d9cb990> calls function 'switch_view'
+Call graph node for function: 'icall_arg3ppi'<<0x56008730dd70>>  #uses=1
+  CS<0x5600875aca30> calls function 'rtmkcpy'
+  CS<0x5600875acc10> calls function 'rtmkcpy'
+  CS<0x5600875acce0> calls function 'switch_view'
+  CS<0x560087509d80> calls external node
+  CS<0x560087509f60> calls function 'switch_view'
 
-Call graph node for function: 'icall_arg4ppii'<<0x55ba0d823c20>>  #uses=3
-  CS<0x55ba0d9cdc50> calls function 'rtmkcpy'
-  CS<0x55ba0d9cde30> calls function 'rtmkcpy'
-  CS<0x55ba0d9cdf00> calls function 'switch_view'
-  CS<0x55ba0d9ce2f0> calls external node
-  CS<0x55ba0d9ce4d0> calls function 'switch_view'
+Call graph node for function: 'icall_arg4ppii'<<0x56008730df40>>  #uses=1
+  CS<0x56008750c220> calls function 'rtmkcpy'
+  CS<0x56008750c400> calls function 'rtmkcpy'
+  CS<0x56008750c4d0> calls function 'switch_view'
+  CS<0x56008750c8c0> calls external node
+  CS<0x56008750caa0> calls function 'switch_view'
 
-Call graph node for function: 'icall_arg4pppi'<<0x55ba0d823d50>>  #uses=2
-  CS<0x55ba0d9d07d0> calls function 'rtmkcpy'
-  CS<0x55ba0d9d09b0> calls function 'rtmkcpy'
-  CS<0x55ba0d9d0c20> calls function 'rtmkcpy'
-  CS<0x55ba0d9d0cf0> calls function 'switch_view'
-  CS<0x55ba0d9d10e0> calls external node
-  CS<0x55ba0d9d12c0> calls function 'switch_view'
+Call graph node for function: 'icall_arg4pppi'<<0x56008730e110>>  #uses=1
+  CS<0x56008750fdb0> calls function 'rtmkcpy'
+  CS<0x56008750ff90> calls function 'rtmkcpy'
+  CS<0x560087510200> calls function 'rtmkcpy'
+  CS<0x5600875102d0> calls function 'switch_view'
+  CS<0x5600875106c0> calls external node
+  CS<0x5600875108a0> calls function 'switch_view'
 
-Call graph node for function: 'icall_arg6ppipip'<<0x55ba0d822a80>>  #uses=3
-  CS<0x55ba0da82c80> calls function 'rtmkcpy'
-  CS<0x55ba0da82e60> calls function 'rtmkcpy'
-  CS<0x55ba0da830d0> calls function 'rtmkcpy'
-  CS<0x55ba0da83340> calls function 'rtmkcpy'
-  CS<0x55ba0da83410> calls function 'switch_view'
-  CS<0x55ba0da83840> calls external node
-  CS<0x55ba0da83a20> calls function 'switch_view'
+Call graph node for function: 'icall_arg6ppipip'<<0x56008730e2e0>>  #uses=1
+  CS<0x5600875bea50> calls function 'rtmkcpy'
+  CS<0x5600875bec30> calls function 'rtmkcpy'
+  CS<0x5600875beea0> calls function 'rtmkcpy'
+  CS<0x5600875bf110> calls function 'rtmkcpy'
+  CS<0x5600875bf1e0> calls function 'switch_view'
+  CS<0x5600875bf640> calls external node
+  CS<0x5600875bf820> calls function 'switch_view'
 
-Call graph node for function: 'init_mpu'<<0x55ba0d81f040>>  #uses=2
-  CS<0x55ba0da5f300> calls external node
-  CS<0x55ba0da5f3b0> calls external node
-  CS<0x55ba0da60ae0> calls external node
-  CS<0x55ba0da60b90> calls external node
+Call graph node for function: 'init_mpu'<<0x560087363fa0>>  #uses=2
+  CS<0x56008759a080> calls external node
+  CS<0x56008759a130> calls external node
+  CS<0x56008759b860> calls external node
+  CS<0x56008759b910> calls external node
 
-Call graph node for function: 'llvm.fshl.i32'<<0x55ba0d7c5a50>>  #uses=1
+Call graph node for function: 'llvm.fshl.i32'<<0x5600873aa7d0>>  #uses=1
 
-Call graph node for function: 'llvm.lifetime.end.p0i8'<<0x55ba0d80d5b0>>  #uses=1
+Call graph node for function: 'llvm.lifetime.end.p0i8'<<0x5600873632e0>>  #uses=1
 
-Call graph node for function: 'llvm.lifetime.start.p0i8'<<0x55ba0d80d530>>  #uses=1
+Call graph node for function: 'llvm.lifetime.start.p0i8'<<0x560087363260>>  #uses=1
 
-Call graph node for function: 'llvm.memcpy.p0i8.p0i8.i32'<<0x55ba0d80b880>>  #uses=1
+Call graph node for function: 'llvm.memcpy.p0i8.p0i8.i32'<<0x560087365000>>  #uses=1
 
-Call graph node for function: 'llvm.memset.p0i8.i32'<<0x55ba0d7d45e0>>  #uses=1
+Call graph node for function: 'llvm.memset.p0i8.i32'<<0x560087305840>>  #uses=1
 
-Call graph node for function: 'llvm.memset.p0i8.i64'<<0x55ba0d7c5bd0>>  #uses=1
+Call graph node for function: 'llvm.memset.p0i8.i64'<<0x5600873aa8d0>>  #uses=1
 
-Call graph node for function: 'llvm.umul.with.overflow.i32'<<0x55ba0d80de10>>  #uses=1
+Call graph node for function: 'llvm.umul.with.overflow.i32'<<0x5600873537f0>>  #uses=1
 
-Call graph node for function: 'main'<<0x55ba0d80cb30>>  #uses=1
-  CS<0x55ba0d94a120> calls function 'prvSetupHardware'
-  CS<0x55ba0d94a220> calls function 'xcall_arg1i'
-  CS<0x55ba0d94a2a0> calls function 'vTaskStartScheduler'
+Call graph node for function: 'main'<<0x560087362810>>  #uses=1
+  CS<0x56008748b880> calls function 'prvSetupHardware'
+  CS<0x56008748b920> calls function 'vStartLEDFlashTasks'
+  CS<0x56008748b9a0> calls function 'vTaskStartScheduler'
 
-Call graph node for function: 'pcQueueGetName'<<0x55ba0d8226f0>>  #uses=1
-  CS<0x55ba0d888f70> calls external node
+Call graph node for function: 'pcQueueGetName'<<0x560087307210>>  #uses=1
+  CS<0x56008751e010> calls external node
 
-Call graph node for function: 'pcTaskGetName'<<0x55ba0d80a0d0>>  #uses=1
-  CS<0x55ba0d896f80> calls external node
+Call graph node for function: 'pcTaskGetName'<<0x5600873524c0>>  #uses=1
+  CS<0x560087375d30> calls external node
 
-Call graph node for function: 'pcTimerGetName'<<0x55ba0d824160>>  #uses=1
-  CS<0x55ba0da0c2f0> calls external node
+Call graph node for function: 'pcTimerGetName'<<0x560087308880>>  #uses=1
+  CS<0x560087548f60> calls external node
 
-Call graph node for function: 'pcall_arg0'<<0x55ba0d80b980>>  #uses=4
-  CS<0x55ba0d95a8f0> calls function 'switch_view'
-  CS<0x55ba0d95ad00> calls external node
-  CS<0x55ba0d95aeb0> calls function 'switch_view'
+Call graph node for function: 'pcall_arg0'<<0x560087364570>>  #uses=1
+  CS<0x560087495860> calls function 'switch_view'
+  CS<0x560087495c70> calls external node
+  CS<0x560087495e20> calls function 'switch_view'
 
-Call graph node for function: 'pcall_arg1i'<<0x55ba0d7d3bb0>>  #uses=6
-  CS<0x55ba0d95e360> calls function 'switch_view'
-  CS<0x55ba0d95e6f0> calls external node
-  CS<0x55ba0d95e8d0> calls function 'switch_view'
+Call graph node for function: 'pcall_arg1i'<<0x5600873647d0>>  #uses=1
+  CS<0x5600874992d0> calls function 'switch_view'
+  CS<0x560087499660> calls external node
+  CS<0x560087499840> calls function 'switch_view'
 
-Call graph node for function: 'pcall_arg3iii'<<0x55ba0d822c60>>  #uses=2
-  CS<0x55ba0d95cb00> calls function 'switch_view'
-  CS<0x55ba0d95ced0> calls external node
-  CS<0x55ba0d95d0b0> calls function 'switch_view'
+Call graph node for function: 'pcall_arg3iii'<<0x5600873646a0>>  #uses=1
+  CS<0x560087497a70> calls function 'switch_view'
+  CS<0x560087497e40> calls external node
+  CS<0x560087498020> calls function 'switch_view'
 
-Call graph node for function: 'prvAddCurrentTaskToDelayedList'<<0x55ba0d7bdde0>>  #uses=7
-  CS<0x55ba0d8819c0> calls function 'icall_arg1p'
-  CS<0x55ba0d8a23f0> calls function 'xcall_arg2pp'
-  CS<0x55ba0d8a2e90> calls function 'xcall_arg2pp'
-  CS<0x55ba0d8a33b0> calls function 'xcall_arg2pp'
+Call graph node for function: 'prvAddCurrentTaskToDelayedList'<<0x560087306050>>  #uses=7
+  CS<0x5600873c7a10> calls function 'uxListRemove'
+  CS<0x5600873e7500> calls function 'vListInsertEnd'
+  CS<0x5600873e7e40> calls function 'vListInsert'
+  CS<0x5600873e8200> calls function 'vListInsert'
 
-Call graph node for function: 'prvAddNewTaskToReadyList'<<0x55ba0d7d3e40>>  #uses=1
-  CS<0x55ba0d801190> calls function 'vPortEnterCritical'
-  CS<0x55ba0d801940> calls function 'prvInitialiseTaskLists'
-  CS<0x55ba0d88def0> calls function 'xcall_arg2pp'
-  CS<0x55ba0d88df70> calls function 'vPortExitCritical'
-  CS<0x55ba0d88e730> calls external node
-  CS<0x55ba0d88e7b0> calls external node
+Call graph node for function: 'prvAddNewTaskToReadyList'<<0x56008731c110>>  #uses=1
+  CS<0x56008735f520> calls function 'vPortEnterCritical'
+  CS<0x56008735fcd0> calls function 'prvInitialiseTaskLists'
+  CS<0x5600873d38e0> calls function 'vListInsertEnd'
+  CS<0x5600873d3960> calls function 'vPortExitCritical'
+  CS<0x5600873d4150> calls external node
+  CS<0x5600873d41d0> calls external node
 
-Call graph node for function: 'prvCheckForValidListAndQueue'<<0x55ba0d822a00>>  #uses=2
-  CS<0x55ba0d9e5050> calls function 'xcall_arg0'
-  CS<0x55ba0d9e5390> calls function 'xcall_arg1p'
-  CS<0x55ba0d9e5460> calls function 'vListInitialise'
-  CS<0x55ba0d9e5790> calls function 'pcall_arg3iii'
-  CS<0x55ba0d9e5d30> calls function 'xcall_arg2pp'
-  CS<0x55ba0d9e5e90> calls function 'xcall_arg0'
+Call graph node for function: 'prvCheckForValidListAndQueue'<<0x560087307420>>  #uses=2
+  CS<0x560087523230> calls function 'vPortEnterCritical'
+  CS<0x560087523510> calls function 'vListInitialise'
+  CS<0x5600875235e0> calls function 'vListInitialise'
+  CS<0x560087523870> calls function 'xQueueGenericCreate'
+  CS<0x560087523bc0> calls function 'vQueueAddToRegistry'
+  CS<0x560087523d10> calls function 'vPortExitCritical'
 
-Call graph node for function: 'prvCheckTasksWaitingTermination'<<0x55ba0d9e1c00>>  #uses=1
-  CS<0x55ba0d89d570> calls function 'vPortEnterCritical'
-  CS<0x55ba0d89dc60> calls function 'icall_arg1p'
-  CS<0x55ba0d89e060> calls function 'vPortExitCritical'
-  CS<0x55ba0d89e130> calls function 'prvDeleteTCB'
+Call graph node for function: 'prvCheckTasksWaitingTermination'<<0x56008762a0d0>>  #uses=1
+  CS<0x5600873d76a0> calls function 'vPortEnterCritical'
+  CS<0x5600873d7bb0> calls function 'uxListRemove'
+  CS<0x5600873d7fe0> calls function 'vPortExitCritical'
+  CS<0x5600873d80b0> calls function 'prvDeleteTCB'
 
-Call graph node for function: 'prvCopyDataFromQueue'<<0x55ba0d820f80>>  #uses=4
+Call graph node for function: 'prvCopyDataFromQueue'<<0x560087365910>>  #uses=4
 
-Call graph node for function: 'prvCopyDataToQueue'<<0x55ba0d80b360>>  #uses=2
-  CS<0x55ba0d980520> calls function 'icall_arg1p'
+Call graph node for function: 'prvCopyDataToQueue'<<0x560087353c00>>  #uses=2
+  CS<0x5600874c0bb0> calls function 'xTaskPriorityDisinherit'
 
-Call graph node for function: 'prvDeleteTCB'<<0x55ba0d7d4810>>  #uses=2
-  CS<0x55ba0d83cd70> calls function 'xcall_arg1p'
-  CS<0x55ba0d83cf40> calls function 'xcall_arg1p'
+Call graph node for function: 'prvDeleteTCB'<<0x560087305a70>>  #uses=2
+  CS<0x5600873bfd00> calls function 'vPortFree'
+  CS<0x5600873bfe70> calls function 'vPortFree'
 
-Call graph node for function: 'prvGetDisinheritPriorityAfterTimeout'<<0x55ba0d81ffe0>>  #uses=1
+Call graph node for function: 'prvGetDisinheritPriorityAfterTimeout'<<0x5600873654b0>>  #uses=1
 
-Call graph node for function: 'prvGetNextExpireTime'<<0x55ba0d822eb0>>  #uses=1
+Call graph node for function: 'prvGetNextExpireTime'<<0x5600873077d0>>  #uses=1
 
-Call graph node for function: 'prvIdleTask'<<0x55ba0d9e1b80>>  #uses=1
-  CS<0x55ba0d8d91a0> calls function 'prvCheckTasksWaitingTermination'
-  CS<0x55ba0d8d9630> calls external node
-  CS<0x55ba0d8d96b0> calls external node
-  CS<0x55ba0d8d9810> calls function 'xcall_arg0'
+Call graph node for function: 'prvIdleTask'<<0x56008762a050>>  #uses=1
+  CS<0x5600873e05d0> calls function 'prvCheckTasksWaitingTermination'
+  CS<0x5600873e0980> calls external node
+  CS<0x5600873e0a00> calls external node
+  CS<0x5600873e0b20> calls function 'vApplicationIdleHook'
 
-Call graph node for function: 'prvInitialiseMutex'<<0x55ba0d80b080>>  #uses=1
-  CS<0x55ba0d972f00> calls function 'xQueueGenericSend'
+Call graph node for function: 'prvInitialiseMutex'<<0x560087353920>>  #uses=1
+  CS<0x5600874b3ee0> calls function 'xQueueGenericSend'
 
-Call graph node for function: 'prvInitialiseNewQueue'<<0x55ba0d80dc40>>  #uses=1
-  CS<0x55ba0d970d80> calls function 'xQueueGenericReset'
+Call graph node for function: 'prvInitialiseNewQueue'<<0x560087353620>>  #uses=1
+  CS<0x5600874b1d60> calls function 'xQueueGenericReset'
 
-Call graph node for function: 'prvInitialiseNewTask'<<0x55ba0d7d3dc0>>  #uses=1
-  CS<0x55ba0d8840a0> calls external node
-  CS<0x55ba0d884be0> calls function 'xcall_arg1p'
-  CS<0x55ba0d884e70> calls function 'xcall_arg1p'
-  CS<0x55ba0d885920> calls function 'pxPortInitialiseStack'
+Call graph node for function: 'prvInitialiseNewTask'<<0x56008731e300>>  #uses=1
+  CS<0x5600873c9eb0> calls external node
+  CS<0x5600873ca8f0> calls function 'vListInitialiseItem'
+  CS<0x56008735c150> calls function 'vListInitialiseItem'
+  CS<0x56008735cc30> calls function 'pxPortInitialiseStack'
 
-Call graph node for function: 'prvInitialiseNewTimer'<<0x55ba0d823a10>>  #uses=1
-  CS<0x55ba0da00240> calls external node
-  CS<0x55ba0da004a0> calls function 'prvCheckForValidListAndQueue'
-  CS<0x55ba0da00e20> calls function 'xcall_arg1p'
+Call graph node for function: 'prvInitialiseNewTimer'<<0x560087308230>>  #uses=1
+  CS<0x5600873ce5a0> calls external node
+  CS<0x5600873ce800> calls function 'prvCheckForValidListAndQueue'
+  CS<0x5600873cf080> calls function 'vListInitialiseItem'
 
-Call graph node for function: 'prvInitialiseTaskLists'<<0x55ba0d7d4110>>  #uses=1
-  CS<0x55ba0d890430> calls function 'xcall_arg1p'
-  CS<0x55ba0d890840> calls function 'xcall_arg1p'
-  CS<0x55ba0d890910> calls function 'vListInitialise'
-  CS<0x55ba0d890a40> calls function 'xcall_arg1p'
-  CS<0x55ba0d890b10> calls function 'vListInitialise'
-  CS<0x55ba0d890c40> calls function 'xcall_arg1p'
+Call graph node for function: 'prvInitialiseTaskLists'<<0x56008731c460>>  #uses=1
+  CS<0x5600873d5c50> calls function 'vListInitialise'
+  CS<0x5600873d6030> calls function 'vListInitialise'
+  CS<0x5600873d6100> calls function 'vListInitialise'
+  CS<0x5600873d61d0> calls function 'vListInitialise'
+  CS<0x5600873d62a0> calls function 'vListInitialise'
+  CS<0x5600873d6370> calls function 'vListInitialise'
 
-Call graph node for function: 'prvInsertTimerInActiveList'<<0x55ba0d8233b0>>  #uses=3
-  CS<0x55ba0d9f6f10> calls function 'xcall_arg2pp'
-  CS<0x55ba0d9f7530> calls function 'xcall_arg2pp'
+Call graph node for function: 'prvInsertTimerInActiveList'<<0x560087307c50>>  #uses=3
+  CS<0x5600875344c0> calls function 'vListInsert'
+  CS<0x560087534980> calls function 'vListInsert'
 
-Call graph node for function: 'prvIsQueueEmpty'<<0x55ba0d8204f0>>  #uses=6
-  CS<0x55ba0d99bb30> calls function 'xcall_arg0'
-  CS<0x55ba0d99d0e0> calls function 'xcall_arg0'
+Call graph node for function: 'prvIsQueueEmpty'<<0x5600873659c0>>  #uses=6
+  CS<0x5600874dc240> calls function 'vPortEnterCritical'
+  CS<0x5600874dd7c0> calls function 'vPortExitCritical'
 
-Call graph node for function: 'prvIsQueueFull'<<0x55ba0d80b670>>  #uses=1
-  CS<0x55ba0d983a40> calls function 'xcall_arg0'
-  CS<0x55ba0d984060> calls function 'xcall_arg0'
+Call graph node for function: 'prvIsQueueFull'<<0x560087353c80>>  #uses=1
+  CS<0x5600874c40c0> calls function 'vPortEnterCritical'
+  CS<0x5600874c46a0> calls function 'vPortExitCritical'
 
-Call graph node for function: 'prvListTasksWithinSingleList'<<0x55ba0d80a230>>  #uses=5
-  CS<0x55ba0d8eb510> calls function 'vTaskGetInfo'
+Call graph node for function: 'prvListTasksWithinSingleList'<<0x560087352620>>  #uses=5
+  CS<0x5600874329e0> calls function 'vTaskGetInfo'
 
-Call graph node for function: 'prvPortStartFirstTask'<<0x55ba0d7c0960>>  #uses=1
-  CS<0x55ba0d93c6b0> calls external node
+Call graph node for function: 'prvPortStartFirstTask'<<0x56008730a210>>  #uses=1
+  CS<0x5600874802e0> calls external node
 
-Call graph node for function: 'prvProcessExpiredTimer'<<0x55ba0d823160>>  #uses=2
-  CS<0x55ba0d9fc250> calls function 'icall_arg1p'
-  CS<0x55ba0d9fc6f0> calls function 'prvReloadTimer'
-  CS<0x55ba0d9fccd0> calls function 'xcall_arg1p_noid'
+Call graph node for function: 'prvProcessExpiredTimer'<<0x560087307a80>>  #uses=2
+  CS<0x5600875394b0> calls function 'uxListRemove'
+  CS<0x5600873cabd0> calls function 'prvReloadTimer'
+  CS<0x5600873cb060> calls external node
 
-Call graph node for function: 'prvProcessReceivedCommands'<<0x55ba0d822fb0>>  #uses=1
-  CS<0x55ba0d9ee340> calls function 'icall_arg3ppi'
-  CS<0x55ba0d9eed90> calls function 'icall_arg1p'
-  CS<0x55ba0d9ef010> calls function 'prvSampleTimeNow'
-  CS<0x55ba0d9efb20> calls function 'prvInsertTimerInActiveList'
-  CS<0x55ba0d9f02d0> calls function 'prvReloadTimer'
-  CS<0x55ba0d9f08b0> calls function 'xcall_arg1p_noid'
-  CS<0x55ba0d9f13e0> calls external node
-  CS<0x55ba0d9f1820> calls function 'prvInsertTimerInActiveList'
-  CS<0x55ba0d9f1e50> calls function 'xcall_arg1p'
+Call graph node for function: 'prvProcessReceivedCommands'<<0x5600873078d0>>  #uses=1
+  CS<0x56008752bd20> calls function 'xQueueReceive'
+  CS<0x56008752c6a0> calls function 'uxListRemove'
+  CS<0x56008752c950> calls function 'prvSampleTimeNow'
+  CS<0x56008752d460> calls function 'prvInsertTimerInActiveList'
+  CS<0x56008752dc10> calls function 'prvReloadTimer'
+  CS<0x56008752e0a0> calls external node
+  CS<0x56008752ec00> calls external node
+  CS<0x56008752f040> calls function 'prvInsertTimerInActiveList'
+  CS<0x56008752f610> calls function 'vPortFree'
 
-Call graph node for function: 'prvProcessTimerOrBlockTask'<<0x55ba0d822f30>>  #uses=1
-  CS<0x55ba0d9e9df0> calls function 'xcall_arg0'
-  CS<0x55ba0d9ea000> calls function 'prvSampleTimeNow'
-  CS<0x55ba0d9ea7e0> calls function 'icall_arg0'
-  CS<0x55ba0d9ea8d0> calls function 'prvProcessExpiredTimer'
-  CS<0x55ba0d9eb450> calls function 'xcall_arg3pii'
-  CS<0x55ba0d9eb4d0> calls function 'xTaskResumeAll'
-  CS<0x55ba0d9eb7e0> calls external node
-  CS<0x55ba0d9eb860> calls external node
-  CS<0x55ba0d9eb9c0> calls function 'icall_arg0'
+Call graph node for function: 'prvProcessTimerOrBlockTask'<<0x560087307850>>  #uses=1
+  CS<0x560087527bb0> calls function 'vTaskSuspendAll'
+  CS<0x560087527dc0> calls function 'prvSampleTimeNow'
+  CS<0x560087528560> calls function 'xTaskResumeAll'
+  CS<0x560087528650> calls function 'prvProcessExpiredTimer'
+  CS<0x560087529090> calls function 'vQueueWaitForMessageRestricted'
+  CS<0x560087529140> calls function 'xTaskResumeAll'
+  CS<0x560087529450> calls external node
+  CS<0x5600875294d0> calls external node
+  CS<0x5600875295f0> calls function 'xTaskResumeAll'
 
-Call graph node for function: 'prvReloadTimer'<<0x55ba0d823430>>  #uses=2
-  CS<0x55ba0d9f8ef0> calls function 'prvInsertTimerInActiveList'
-  CS<0x55ba0d9f9560> calls function 'xcall_arg1p_noid'
+Call graph node for function: 'prvReloadTimer'<<0x560087307cd0>>  #uses=2
+  CS<0x560087536370> calls function 'prvInsertTimerInActiveList'
+  CS<0x560087536890> calls external node
 
-Call graph node for function: 'prvResetNextTaskUnblockTime'<<0x55ba0d7bd880>>  #uses=4
+Call graph node for function: 'prvResetNextTaskUnblockTime'<<0x560087305c40>>  #uses=4
 
-Call graph node for function: 'prvSampleTimeNow'<<0x55ba0d823030>>  #uses=2
-  CS<0x55ba0d9f3800> calls function 'icall_arg0'
-  CS<0x55ba0d9f3b50> calls function 'prvSwitchTimerLists'
+Call graph node for function: 'prvSampleTimeNow'<<0x560087307950>>  #uses=2
+  CS<0x560087530f50> calls function 'xTaskGetTickCount'
+  CS<0x5600875312d0> calls function 'prvSwitchTimerLists'
 
-Call graph node for function: 'prvSetupHardware'<<0x55ba0d80cbb0>>  #uses=1
-  CS<0x55ba0d94a780> calls function 'xcall_arg0'
-  CS<0x55ba0d94a820> calls function 'NVIC_PriorityGroupConfig'
-  CS<0x55ba0d94a910> calls function 'xcall_arg0'
+Call graph node for function: 'prvSetupHardware'<<0x560087362890>>  #uses=1
+  CS<0x56008748bdc0> calls function 'SystemInit'
+  CS<0x56008748be60> calls function 'NVIC_PriorityGroupConfig'
+  CS<0x56008748bf10> calls function 'vParTestInitialise'
 
-Call graph node for function: 'prvSwitchTimerLists'<<0x55ba0d8237c0>>  #uses=1
-  CS<0x55ba0d9fa790> calls function 'prvProcessExpiredTimer'
+Call graph node for function: 'prvSwitchTimerLists'<<0x560087307fe0>>  #uses=1
+  CS<0x560087537af0> calls function 'prvProcessExpiredTimer'
 
-Call graph node for function: 'prvTaskCheckFreeStackSpace'<<0x55ba0d80a5c0>>  #uses=1
+Call graph node for function: 'prvTaskCheckFreeStackSpace'<<0x5600873529b0>>  #uses=1
 
-Call graph node for function: 'prvTaskExitError'<<0x55ba0d7c0550>>  #uses=2
-  CS<0x55ba0d969440> calls external node
-  CS<0x55ba0d9696f0> calls external node
+Call graph node for function: 'prvTaskExitError'<<0x560087309e00>>  #uses=2
+  CS<0x5600874aadd0> calls external node
+  CS<0x5600874ab080> calls external node
 
-Call graph node for function: 'prvTaskIsTaskSuspended'<<0x55ba0d9e1150>>  #uses=2
-  CS<0x55ba0d8d00f0> calls external node
+Call graph node for function: 'prvTaskIsTaskSuspended'<<0x560087629b30>>  #uses=2
+  CS<0x560087413e90> calls external node
 
-Call graph node for function: 'prvTestWaitCondition'<<0x55ba0d7bfd80>>  #uses=2
+Call graph node for function: 'prvTestWaitCondition'<<0x560087309630>>  #uses=2
 
-Call graph node for function: 'prvTimerTask'<<0x55ba0d822e30>>  #uses=1
-  CS<0x55ba0d9e6d90> calls function 'prvGetNextExpireTime'
-  CS<0x55ba0d9e7110> calls function 'prvProcessTimerOrBlockTask'
-  CS<0x55ba0d9e71c0> calls function 'prvProcessReceivedCommands'
+Call graph node for function: 'prvTimerTask'<<0x560087307750>>  #uses=1
+  CS<0x560087524c10> calls function 'prvGetNextExpireTime'
+  CS<0x560087524f90> calls function 'prvProcessTimerOrBlockTask'
+  CS<0x560087525040> calls function 'prvProcessReceivedCommands'
 
-Call graph node for function: 'prvUnlockQueue'<<0x55ba0d80b770>>  #uses=13
-  CS<0x55ba0d985550> calls function 'xcall_arg0'
-  CS<0x55ba0d9860e0> calls function 'icall_arg1p'
-  CS<0x55ba0d986340> calls function 'xcall_arg0'
-  CS<0x55ba0d986870> calls function 'xcall_arg0'
-  CS<0x55ba0d986920> calls function 'vPortEnterCritical'
-  CS<0x55ba0d987500> calls function 'icall_arg1p'
-  CS<0x55ba0d987760> calls function 'xcall_arg0'
-  CS<0x55ba0d987c90> calls function 'xcall_arg0'
+Call graph node for function: 'prvUnlockQueue'<<0x560087353d00>>  #uses=13
+  CS<0x5600874c5b10> calls function 'vPortEnterCritical'
+  CS<0x5600874c65a0> calls function 'xTaskRemoveFromEventList'
+  CS<0x5600874c67f0> calls function 'vTaskMissedYield'
+  CS<0x5600874c6ce0> calls function 'vPortExitCritical'
+  CS<0x5600874c6d90> calls function 'vPortEnterCritical'
+  CS<0x5600874c7870> calls function 'xTaskRemoveFromEventList'
+  CS<0x5600874c7ac0> calls function 'vTaskMissedYield'
+  CS<0x5600874c7fb0> calls function 'vPortExitCritical'
 
-Call graph node for function: 'pvPortMalloc'<<0x55ba0d81e5e0>>  #uses=1
-  CS<0x55ba0d9467e0> calls function 'xcall_arg0'
-  CS<0x55ba0d947970> calls function 'icall_arg0'
-  CS<0x55ba0d947c00> calls function 'xcall_arg0'
+Call graph node for function: 'pvPortMalloc'<<0x56008731e0f0>>  #uses=6
+  CS<0x560087489160> calls function 'vTaskSuspendAll'
+  CS<0x560087582ca0> calls function 'xTaskResumeAll'
+  CS<0x560087582ef0> calls function 'vApplicationMallocFailedHook'
 
-Call graph node for function: 'pvTaskIncrementMutexHeldCount'<<0x55ba0d80bd70>>  #uses=1
+Call graph node for function: 'pvTaskIncrementMutexHeldCount'<<0x560087361a50>>  #uses=2
 
-Call graph node for function: 'pvTimerGetTimerID'<<0x55ba0d7bf1e0>>  #uses=1
-  CS<0x55ba0da0e9b0> calls external node
-  CS<0x55ba0da0ec50> calls function 'xcall_arg0'
-  CS<0x55ba0da0efb0> calls function 'xcall_arg0'
+Call graph node for function: 'pvTimerGetTimerID'<<0x560087308a90>>  #uses=1
+  CS<0x56008754b5a0> calls external node
+  CS<0x56008754b800> calls function 'vPortEnterCritical'
+  CS<0x56008754bb20> calls function 'vPortExitCritical'
 
-Call graph node for function: 'pxPortInitialiseStack'<<0x55ba0d7d4010>>  #uses=2
+Call graph node for function: 'pxPortInitialiseStack'<<0x56008731c360>>  #uses=2
 
-Call graph node for function: 'rtmk_init'<<0x55ba0d81f0f0>>  #uses=1
-  CS<0x55ba0d9537f0> calls function 'init_mpu'
-  CS<0x55ba0d953890> calls function 'switch_view'
+Call graph node for function: 'rtmk_init'<<0x560087364050>>  #uses=1
+  CS<0x56008748e760> calls function 'init_mpu'
+  CS<0x56008748e800> calls function 'switch_view'
 
-Call graph node for function: 'rtmkcpy'<<0x55ba0d7c32e0>>  #uses=21
+Call graph node for function: 'rtmkcpy'<<0x56008730cc80>>  #uses=21
 
-Call graph node for function: 'switch_view'<<0x55ba0d81f170>>  #uses=40
-  CS<0x55ba0d954020> calls external node
-  CS<0x55ba0d955370> calls external node
-  CS<0x55ba0d955420> calls external node
+Call graph node for function: 'switch_view'<<0x5600873640d0>>  #uses=40
+  CS<0x56008748ef90> calls external node
+  CS<0x5600874902e0> calls external node
+  CS<0x560087490390> calls external node
 
-Call graph node for function: 'switch_view_svc'<<0x55ba0d7c3770>>  #uses=1
-  CS<0x55ba0da63830> calls external node
+Call graph node for function: 'switch_view_svc'<<0x56008730d310>>  #uses=1
+  CS<0x56008759e5b0> calls external node
 
-Call graph node for function: 'ucQueueGetQueueType'<<0x55ba0d822460>>  #uses=1
+Call graph node for function: 'ucQueueGetQueueType'<<0x5600873678b0>>  #uses=1
 
-Call graph node for function: 'ulRegTestCheckFlopRegistersContainParameterValue'<<0x55ba0d80d2a0>>  #uses=1
+Call graph node for function: 'ulRegTestCheckFlopRegistersContainParameterValue'<<0x560087362ed0>>  #uses=2
   CS<None> calls external node
 
-Call graph node for function: 'ulTaskGenericNotifyTake'<<0x55ba0d80bdf0>>  #uses=1
-  CS<0x55ba0d91fa60> calls external node
-  CS<0x55ba0d91fcc0> calls function 'vPortEnterCritical'
-  CS<0x55ba0d920520> calls function 'prvAddCurrentTaskToDelayedList'
-  CS<0x55ba0d920690> calls external node
-  CS<0x55ba0d920710> calls external node
-  CS<0x55ba0d920830> calls function 'vPortExitCritical'
-  CS<0x55ba0d9208e0> calls function 'vPortEnterCritical'
-  CS<0x55ba0d921860> calls function 'vPortExitCritical'
+Call graph node for function: 'ulTaskGenericNotifyTake'<<0x560087361ad0>>  #uses=1
+  CS<0x560087461a70> calls external node
+  CS<0x560087461cd0> calls function 'vPortEnterCritical'
+  CS<0x560087462530> calls function 'prvAddCurrentTaskToDelayedList'
+  CS<0x5600874626a0> calls external node
+  CS<0x560087462720> calls external node
+  CS<0x560087462840> calls function 'vPortExitCritical'
+  CS<0x5600874628f0> calls function 'vPortEnterCritical'
+  CS<0x560087463870> calls function 'vPortExitCritical'
 
-Call graph node for function: 'ulTaskGenericNotifyValueClear'<<0x55ba0d80cab0>>  #uses=1
-  CS<0x55ba0d949420> calls function 'vPortEnterCritical'
-  CS<0x55ba0d9499e0> calls function 'vPortExitCritical'
+Call graph node for function: 'ulTaskGenericNotifyValueClear'<<0x560087362790>>  #uses=1
+  CS<0x56008748abd0> calls function 'vPortEnterCritical'
+  CS<0x56008748b190> calls function 'vPortExitCritical'
 
-Call graph node for function: 'uxEventGroupGetNumber'<<0x55ba0d7c0450>>  #uses=1
+Call graph node for function: 'uxEventGroupGetNumber'<<0x560087309d00>>  #uses=1
 
-Call graph node for function: 'uxListRemove'<<0x55ba0d80d9e0>>  #uses=1
+Call graph node for function: 'uxListRemove'<<0x560087305940>>  #uses=26
 
-Call graph node for function: 'uxQueueGetQueueNumber'<<0x55ba0d822360>>  #uses=1
+Call graph node for function: 'uxQueueGetQueueNumber'<<0x5600873677b0>>  #uses=1
 
-Call graph node for function: 'uxQueueMessagesWaiting'<<0x55ba0d821f80>>  #uses=1
-  CS<0x55ba0d925090> calls external node
-  CS<0x55ba0d925330> calls function 'xcall_arg0'
-  CS<0x55ba0d925690> calls function 'xcall_arg0'
+Call graph node for function: 'uxQueueMessagesWaiting'<<0x5600873673d0>>  #uses=1
+  CS<0x5600874670a0> calls external node
+  CS<0x560087467300> calls function 'vPortEnterCritical'
+  CS<0x560087467620> calls function 'vPortExitCritical'
 
-Call graph node for function: 'uxQueueMessagesWaitingFromISR'<<0x55ba0d822130>>  #uses=1
-  CS<0x55ba0d9d3830> calls external node
+Call graph node for function: 'uxQueueMessagesWaitingFromISR'<<0x560087367580>>  #uses=1
+  CS<0x560087511d20> calls external node
 
-Call graph node for function: 'uxQueueSpacesAvailable'<<0x55ba0d822000>>  #uses=1
-  CS<0x55ba0d9263d0> calls external node
-  CS<0x55ba0d926670> calls function 'xcall_arg0'
-  CS<0x55ba0d926bf0> calls function 'xcall_arg0'
+Call graph node for function: 'uxQueueSpacesAvailable'<<0x560087367450>>  #uses=1
+  CS<0x560087468360> calls external node
+  CS<0x5600874685c0> calls function 'vPortEnterCritical'
+  CS<0x560087468b00> calls function 'vPortExitCritical'
 
-Call graph node for function: 'uxTaskGetNumberOfTasks'<<0x55ba0d80a050>>  #uses=1
+Call graph node for function: 'uxTaskGetNumberOfTasks'<<0x560087352440>>  #uses=1
 
-Call graph node for function: 'uxTaskGetSystemState'<<0x55ba0d80a180>>  #uses=1
-  CS<0x55ba0d8a1bc0> calls function 'vTaskSuspendAll'
-  CS<0x55ba0d8e6180> calls function 'prvListTasksWithinSingleList'
-  CS<0x55ba0d8e6740> calls function 'prvListTasksWithinSingleList'
-  CS<0x55ba0d8e6b60> calls function 'prvListTasksWithinSingleList'
-  CS<0x55ba0d8e6ee0> calls function 'prvListTasksWithinSingleList'
-  CS<0x55ba0d8e7260> calls function 'prvListTasksWithinSingleList'
-  CS<0x55ba0d8e7960> calls function 'xTaskResumeAll'
+Call graph node for function: 'uxTaskGetSystemState'<<0x560087352570>>  #uses=1
+  CS<0x56008742bcc0> calls function 'vTaskSuspendAll'
+  CS<0x56008742c640> calls function 'prvListTasksWithinSingleList'
+  CS<0x56008742cc00> calls function 'prvListTasksWithinSingleList'
+  CS<0x56008742d020> calls function 'prvListTasksWithinSingleList'
+  CS<0x56008742d3a0> calls function 'prvListTasksWithinSingleList'
+  CS<0x56008742d720> calls function 'prvListTasksWithinSingleList'
+  CS<0x56008742de20> calls function 'xTaskResumeAll'
 
-Call graph node for function: 'uxTaskGetTaskNumber'<<0x55ba0d9e1720>>  #uses=1
+Call graph node for function: 'uxTaskGetTaskNumber'<<0x560087351d70>>  #uses=1
 
-Call graph node for function: 'uxTaskPriorityGet'<<0x55ba0d9e0760>>  #uses=1
-  CS<0x55ba0d813440> calls function 'vPortEnterCritical'
-  CS<0x55ba0d813ac0> calls function 'vPortExitCritical'
+Call graph node for function: 'uxTaskPriorityGet'<<0x560087629140>>  #uses=1
+  CS<0x560087401710> calls function 'vPortEnterCritical'
+  CS<0x560087401df0> calls function 'vPortExitCritical'
 
-Call graph node for function: 'uxTaskPriorityGetFromISR'<<0x55ba0d9e07e0>>  #uses=1
-  CS<0x55ba0d8149e0> calls function 'vPortValidateInterruptPriority'
-  CS<0x55ba0d814ab0> calls external node
-  CS<0x55ba0d815700> calls external node
+Call graph node for function: 'uxTaskPriorityGetFromISR'<<0x5600876291c0>>  #uses=1
+  CS<0x560087402d10> calls function 'vPortValidateInterruptPriority'
+  CS<0x560087402de0> calls external node
+  CS<0x560087403a30> calls external node
 
-Call graph node for function: 'uxTaskResetEventItemValue'<<0x55ba0d80bcf0>>  #uses=1
+Call graph node for function: 'uxTaskResetEventItemValue'<<0x560087352200>>  #uses=3
 
-Call graph node for function: 'uxTimerGetReloadMode'<<0x55ba0d823fb0>>  #uses=1
-  CS<0x55ba0da09d70> calls external node
-  CS<0x55ba0da0a010> calls function 'xcall_arg0'
-  CS<0x55ba0da0a530> calls function 'xcall_arg0'
+Call graph node for function: 'uxTimerGetReloadMode'<<0x5600873086d0>>  #uses=1
+  CS<0x560087546a60> calls external node
+  CS<0x560087546cc0> calls function 'vPortEnterCritical'
+  CS<0x5600875471a0> calls function 'vPortExitCritical'
 
-Call graph node for function: 'uxTimerGetTimerNumber'<<0x55ba0d7bf440>>  #uses=1
+Call graph node for function: 'uxTimerGetTimerNumber'<<0x560087308cf0>>  #uses=1
 
-Call graph node for function: 'vApplicationIdleHook'<<0x55ba0d80d6b0>>  #uses=1
+Call graph node for function: 'vApplicationIdleHook'<<0x56008762a150>>  #uses=2
 
-Call graph node for function: 'vApplicationMallocFailedHook'<<0x55ba0d80d630>>  #uses=1
-  CS<0x55ba0d94ebe0> calls external node
+Call graph node for function: 'vApplicationMallocFailedHook'<<0x560087363360>>  #uses=2
+  CS<0x56008741bc30> calls external node
 
-Call graph node for function: 'vApplicationStackOverflowHook'<<0x55ba0d80d730>>  #uses=1
-  CS<0x55ba0d8c0ca0> calls external node
+Call graph node for function: 'vApplicationStackOverflowHook'<<0x56008731deb0>>  #uses=2
+  CS<0x560087404ab0> calls external node
 
-Call graph node for function: 'vApplicationTickHook'<<0x55ba0d80cef0>>  #uses=1
+Call graph node for function: 'vApplicationTickHook'<<0x560087306780>>  #uses=3
 
-Call graph node for function: 'vEventGroupClearBitsCallback'<<0x55ba0d7c03a0>>  #uses=1
-  CS<0x55ba0da36800> calls function 'xEventGroupClearBits'
+Call graph node for function: 'vEventGroupClearBitsCallback'<<0x560087309c50>>  #uses=1
+  CS<0x5600875726b0> calls function 'xEventGroupClearBits'
 
-Call graph node for function: 'vEventGroupDelete'<<0x55ba0d7c0190>>  #uses=1
-  CS<0x55ba0da33ca0> calls external node
-  CS<0x55ba0da34160> calls function 'xcall_arg0'
-  CS<0x55ba0da349f0> calls external node
-  CS<0x55ba0da34e50> calls function 'xcall_arg2pi'
-  CS<0x55ba0da351a0> calls function 'xcall_arg1p'
-  CS<0x55ba0da35250> calls function 'xTaskResumeAll'
+Call graph node for function: 'vEventGroupDelete'<<0x560087309a40>>  #uses=1
+  CS<0x56008756fce0> calls external node
+  CS<0x560087570160> calls function 'vTaskSuspendAll'
+  CS<0x5600875709f0> calls external node
+  CS<0x560087570d30> calls function 'vTaskRemoveFromUnorderedEventList'
+  CS<0x560087571050> calls function 'vPortFree'
+  CS<0x560087571100> calls function 'xTaskResumeAll'
 
-Call graph node for function: 'vEventGroupSetBitsCallback'<<0x55ba0d7c0320>>  #uses=1
-  CS<0x55ba0da35e80> calls function 'xEventGroupSetBits'
+Call graph node for function: 'vEventGroupSetBitsCallback'<<0x560087309bd0>>  #uses=1
+  CS<0x560087571d30> calls function 'xEventGroupSetBits'
 
-Call graph node for function: 'vEventGroupSetNumber'<<0x55ba0d7c04d0>>  #uses=1
+Call graph node for function: 'vEventGroupSetNumber'<<0x560087309d80>>  #uses=1
 
-Call graph node for function: 'vLEDFlashTask'<<0x55ba0d81eb10>>  #uses=1
-  CS<0x55ba0da52a50> calls function 'xcall_arg0'
-  CS<0x55ba0da52eb0> calls function 'xcall_arg0'
-  CS<0x55ba0da533d0> calls function 'icall_arg0'
-  CS<0x55ba0da53960> calls function 'icall_arg2pi'
-  CS<0x55ba0da53a00> calls function 'vParTestToggleLED'
-  CS<0x55ba0da53c10> calls function 'icall_arg2pi'
-  CS<0x55ba0da53cb0> calls function 'vParTestToggleLED'
+Call graph node for function: 'vLEDFlashTask'<<0x560087363b70>>  #uses=1
+  CS<0x56008758d9a0> calls function 'vPortEnterCritical'
+  CS<0x56008758ddc0> calls function 'vPortExitCritical'
+  CS<0x56008758e2a0> calls function 'xTaskGetTickCount'
+  CS<0x56008758e710> calls function 'xTaskDelayUntil'
+  CS<0x56008758e7e0> calls function 'vParTestToggleLED'
+  CS<0x56008758e8d0> calls function 'xTaskDelayUntil'
+  CS<0x56008758e9a0> calls function 'vParTestToggleLED'
 
-Call graph node for function: 'vListInitialise'<<0x55ba0d7d4410>>  #uses=4
+Call graph node for function: 'vListInitialise'<<0x56008731c7e0>>  #uses=12
 
-Call graph node for function: 'vListInitialiseItem'<<0x55ba0d80d860>>  #uses=1
+Call graph node for function: 'vListInitialiseItem'<<0x56008731c2e0>>  #uses=4
 
-Call graph node for function: 'vListInsert'<<0x55ba0d80d960>>  #uses=1
+Call graph node for function: 'vListInsert'<<0x5600873062a0>>  #uses=6
 
-Call graph node for function: 'vListInsertEnd'<<0x55ba0d80d8e0>>  #uses=1
+Call graph node for function: 'vListInsertEnd'<<0x56008731c4e0>>  #uses=24
 
-Call graph node for function: 'vParTestInitialise'<<0x55ba0d7c4410>>  #uses=1
+Call graph node for function: 'vParTestInitialise'<<0x560087362ba0>>  #uses=2
 
-Call graph node for function: 'vParTestSetLED'<<0x55ba0d7c4490>>  #uses=1
-  CS<0x55ba0da850c0> calls function 'xcall_arg1i'
-  CS<0x55ba0da853f0> calls function 'xcall_arg1i'
+Call graph node for function: 'vParTestSetLED'<<0x56008730e4b0>>  #uses=1
+  CS<0x5600875c0da0> calls function 'STM_EVAL_LEDOn'
+  CS<0x5600875c1070> calls function 'STM_EVAL_LEDOff'
 
-Call graph node for function: 'vParTestToggleLED'<<0x55ba0d81ecf0>>  #uses=3
-  CS<0x55ba0da85f00> calls function 'xcall_arg0'
-  CS<0x55ba0da86190> calls function 'xcall_arg1i'
-  CS<0x55ba0da86240> calls function 'vPortExitCritical'
+Call graph node for function: 'vParTestToggleLED'<<0x560087363cd0>>  #uses=3
+  CS<0x5600875c1b00> calls function 'vPortEnterCritical'
+  CS<0x5600875c1d30> calls function 'STM_EVAL_LEDToggle'
+  CS<0x5600875c1de0> calls function 'vPortExitCritical'
 
-Call graph node for function: 'vPortEnableVFP'<<0x55ba0d7c0790>>  #uses=1
-  CS<0x55ba0d93b8a0> calls external node
+Call graph node for function: 'vPortEnableVFP'<<0x56008730a040>>  #uses=1
+  CS<0x56008747f4d0> calls external node
 
-Call graph node for function: 'vPortEndScheduler'<<0x55ba0d809ed0>>  #uses=2
-  CS<0x55ba0d93cce0> calls external node
+Call graph node for function: 'vPortEndScheduler'<<0x5600873522c0>>  #uses=2
+  CS<0x560087480910> calls external node
 
-Call graph node for function: 'vPortEnterCritical'<<0x55ba0d7d4090>>  #uses=21
-  CS<0x55ba0d93d650> calls external node
-  CS<0x55ba0d93dd10> calls external node
+Call graph node for function: 'vPortEnterCritical'<<0x56008731c3e0>>  #uses=49
+  CS<0x560087481280> calls external node
+  CS<0x560087481940> calls external node
 
-Call graph node for function: 'vPortExitCritical'<<0x55ba0d7d4240>>  #uses=22
-  CS<0x55ba0d93e890> calls external node
-  CS<0x55ba0d93ef80> calls external node
+Call graph node for function: 'vPortExitCritical'<<0x56008731c610>>  #uses=57
+  CS<0x5600874824c0> calls external node
+  CS<0x560087482bb0> calls external node
 
-Call graph node for function: 'vPortFree'<<0x55ba0d81e710>>  #uses=1
+Call graph node for function: 'vPortFree'<<0x56008731e1d0>>  #uses=7
 
-Call graph node for function: 'vPortInitialiseBlocks'<<0x55ba0d81e790>>  #uses=1
+Call graph node for function: 'vPortInitialiseBlocks'<<0x560087363870>>  #uses=1
 
-Call graph node for function: 'vPortSetupTimerInterrupt'<<0x55ba0d7c0710>>  #uses=2
+Call graph node for function: 'vPortSetupTimerInterrupt'<<0x560087309fc0>>  #uses=2
 
-Call graph node for function: 'vPortValidateInterruptPriority'<<0x55ba0d9e0860>>  #uses=6
-  CS<0x55ba0d9445c0> calls external node
-  CS<0x55ba0d944c00> calls external node
-  CS<0x55ba0d945190> calls external node
+Call graph node for function: 'vPortValidateInterruptPriority'<<0x560087629240>>  #uses=10
+  CS<0x560087487080> calls external node
+  CS<0x5600874876c0> calls external node
+  CS<0x560087487c50> calls external node
 
-Call graph node for function: 'vQueueAddToRegistry'<<0x55ba0d822640>>  #uses=1
-  CS<0x55ba0d9dc550> calls external node
+Call graph node for function: 'vQueueAddToRegistry'<<0x560087307160>>  #uses=2
+  CS<0x56008751a9c0> calls external node
 
-Call graph node for function: 'vQueueDelete'<<0x55ba0d8221b0>>  #uses=1
-  CS<0x55ba0d9d48a0> calls external node
-  CS<0x55ba0d9d4b20> calls function 'vQueueUnregisterQueue'
-  CS<0x55ba0d9d4cf0> calls function 'xcall_arg1p'
+Call graph node for function: 'vQueueDelete'<<0x560087367600>>  #uses=1
+  CS<0x560087512d70> calls external node
+  CS<0x560087512ff0> calls function 'vQueueUnregisterQueue'
+  CS<0x560087513160> calls function 'vPortFree'
 
-Call graph node for function: 'vQueueSetQueueNumber'<<0x55ba0d8223e0>>  #uses=1
+Call graph node for function: 'vQueueSetQueueNumber'<<0x560087367830>>  #uses=1
 
-Call graph node for function: 'vQueueUnregisterQueue'<<0x55ba0d822230>>  #uses=2
-  CS<0x55ba0d9d5c50> calls external node
+Call graph node for function: 'vQueueUnregisterQueue'<<0x560087367680>>  #uses=2
+  CS<0x5600875140c0> calls external node
 
-Call graph node for function: 'vQueueWaitForMessageRestricted'<<0x55ba0d8227a0>>  #uses=1
-  CS<0x55ba0d88b2a0> calls function 'xcall_arg0'
-  CS<0x55ba0d88bb60> calls function 'xcall_arg0'
-  CS<0x55ba0d7e1050> calls function 'xcall_arg3pii'
-  CS<0x55ba0d88c130> calls function 'prvUnlockQueue'
+Call graph node for function: 'vQueueWaitForMessageRestricted'<<0x5600873072c0>>  #uses=2
+  CS<0x5600875202c0> calls function 'vPortEnterCritical'
+  CS<0x560087520b40> calls function 'vPortExitCritical'
+  CS<0x560087521010> calls function 'vTaskPlaceOnEventListRestricted'
+  CS<0x560087521180> calls function 'prvUnlockQueue'
 
-Call graph node for function: 'vRegTestClearFlopRegistersToParameterValue'<<0x55ba0d80d220>>  #uses=1
+Call graph node for function: 'vRegTestClearFlopRegistersToParameterValue'<<0x560087362dd0>>  #uses=2
   CS<None> calls external node
 
-Call graph node for function: 'vStartLEDFlashTasks'<<0x55ba0d81ea90>>  #uses=1
-  CS<0x55ba0da51680> calls function 'icall_arg6ppipip'
-
-Call graph node for function: 'vTaskDelay'<<0x55ba0d7be510>>  #uses=1
-  CS<0x55ba0d8b4250> calls external node
-  CS<0x55ba0d8b44b0> calls function 'vTaskSuspendAll'
-  CS<0x55ba0d8b45a0> calls function 'prvAddCurrentTaskToDelayedList'
-  CS<0x55ba0d8b4650> calls function 'xTaskResumeAll'
-  CS<0x55ba0d8b4b50> calls external node
-  CS<0x55ba0d8b4bd0> calls external node
-
-Call graph node for function: 'vTaskDelete'<<0x55ba0d7d4660>>  #uses=1
-  CS<0x55ba0d892340> calls function 'vPortEnterCritical'
-  CS<0x55ba0d8928d0> calls function 'icall_arg1p'
-  CS<0x55ba0d893760> calls function 'icall_arg1p'
-  CS<0x55ba0d893de0> calls function 'xcall_arg2pp'
-  CS<0x55ba0d8942a0> calls function 'prvDeleteTCB'
-  CS<0x55ba0d894350> calls function 'prvResetNextTaskUnblockTime'
-  CS<0x55ba0d894470> calls function 'vPortExitCritical'
-  CS<0x55ba0d894bd0> calls external node
-  CS<0x55ba0d7fe9c0> calls external node
-  CS<0x55ba0d7fea40> calls external node
-
-Call graph node for function: 'vTaskEndScheduler'<<0x55ba0d9e1d30>>  #uses=1
-  CS<0x55ba0d89e9d0> calls external node
-  CS<0x55ba0d89eb30> calls function 'vPortEndScheduler'
-
-Call graph node for function: 'vTaskGenericNotifyGiveFromISR'<<0x55ba0d80c720>>  #uses=1
-  CS<0x55ba0d8ba730> calls external node
-  CS<0x55ba0d8bab50> calls external node
-  CS<0x55ba0d8badb0> calls function 'vPortValidateInterruptPriority'
-  CS<0x55ba0d8baf90> calls external node
-  CS<0x55ba0d8bbed0> calls external node
-  CS<0x55ba0d8bc580> calls function 'icall_arg1p'
-  CS<0x55ba0d8bcbe0> calls function 'xcall_arg2pp'
-  CS<0x55ba0d8bce60> calls function 'xcall_arg2pp'
-  CS<0x55ba0d8bdc30> calls external node
-
-Call graph node for function: 'vTaskGetInfo'<<0x55ba0d80a510>>  #uses=2
-  CS<0x55ba0d8b0150> calls function 'vTaskSuspendAll'
-  CS<0x55ba0d8b0680> calls function 'xTaskResumeAll'
-  CS<0x55ba0d8b07f0> calls function 'eTaskGetState'
-  CS<0x55ba0d8b0d90> calls function 'prvTaskCheckFreeStackSpace'
-
-Call graph node for function: 'vTaskInternalSetTimeOutState'<<0x55ba0d80afd0>>  #uses=2
-
-Call graph node for function: 'vTaskMissedYield'<<0x55ba0d9e16a0>>  #uses=1
-
-Call graph node for function: 'vTaskPlaceOnEventList'<<0x55ba0d80a770>>  #uses=1
-  CS<0x55ba0d830600> calls external node
-  CS<0x55ba0d830bc0> calls function 'xcall_arg2pp'
-  CS<0x55ba0d830c80> calls function 'prvAddCurrentTaskToDelayedList'
-
-Call graph node for function: 'vTaskPlaceOnEventListRestricted'<<0x55ba0d80a9d0>>  #uses=1
-  CS<0x55ba0d8feae0> calls external node
-  CS<0x55ba0d8ff0a0> calls function 'xcall_arg2pp'
-  CS<0x55ba0d8ff3e0> calls function 'prvAddCurrentTaskToDelayedList'
-
-Call graph node for function: 'vTaskPlaceOnUnorderedEventList'<<0x55ba0d80a8a0>>  #uses=1
-  CS<0x55ba0d8fcaa0> calls external node
-  CS<0x55ba0d8fcf30> calls external node
-  CS<0x55ba0d8fd790> calls function 'xcall_arg2pp'
-  CS<0x55ba0d8fd850> calls function 'prvAddCurrentTaskToDelayedList'
-
-Call graph node for function: 'vTaskPriorityDisinheritAfterTimeout'<<0x55ba0d80bbc0>>  #uses=1
-  CS<0x55ba0d919ad0> calls external node
-  CS<0x55ba0d91a8b0> calls external node
-  CS<0x55ba0d91b820> calls function 'icall_arg1p'
-  CS<0x55ba0d91c350> calls function 'xcall_arg2pp'
-
-Call graph node for function: 'vTaskPrioritySet'<<0x55ba0d9e09f0>>  #uses=1
-  CS<0x55ba0d8745b0> calls external node
-  CS<0x55ba0d8c29e0> calls function 'vPortEnterCritical'
-  CS<0x55ba0d8c4e70> calls function 'icall_arg1p'
-  CS<0x55ba0d8c5930> calls function 'xcall_arg2pp'
-  CS<0x55ba0d8c5bf0> calls external node
-  CS<0x55ba0d8c5c70> calls external node
-  CS<0x55ba0d8c5d90> calls function 'vPortExitCritical'
-
-Call graph node for function: 'vTaskRemoveFromUnorderedEventList'<<0x55ba0d80ad80>>  #uses=1
-  CS<0x55ba0d904cb0> calls external node
-  CS<0x55ba0d9055c0> calls external node
-  CS<0x55ba0d905940> calls function 'icall_arg1p'
-  CS<0x55ba0d905bd0> calls function 'icall_arg1p'
-  CS<0x55ba0d906230> calls function 'xcall_arg2pp'
-
-Call graph node for function: 'vTaskResume'<<0x55ba0d9e10d0>>  #uses=1
-  CS<0x55ba0d8cd590> calls external node
-  CS<0x55ba0d8cdb50> calls function 'vPortEnterCritical'
-  CS<0x55ba0d8cdc20> calls function 'prvTaskIsTaskSuspended'
-  CS<0x55ba0d8ce080> calls function 'icall_arg1p'
-  CS<0x55ba0d8ce6e0> calls function 'xcall_arg2pp'
-  CS<0x55ba0d8cec60> calls external node
-  CS<0x55ba0d8cece0> calls external node
-  CS<0x55ba0d8cee00> calls function 'vPortExitCritical'
-
-Call graph node for function: 'vTaskSetTaskNumber'<<0x55ba0d9e17a0>>  #uses=1
-
-Call graph node for function: 'vTaskSetTimeOutState'<<0x55ba0d80af50>>  #uses=1
-  CS<0x55ba0d9075a0> calls external node
-  CS<0x55ba0d907800> calls function 'vPortEnterCritical'
-  CS<0x55ba0d907d50> calls function 'vPortExitCritical'
-
-Call graph node for function: 'vTaskStartScheduler'<<0x55ba0d9e13a0>>  #uses=2
-  CS<0x55ba0d8d75a0> calls function 'xTaskCreate'
-  CS<0x55ba0d8d7770> calls function 'icall_arg0'
-  CS<0x55ba0d8d7c50> calls external node
-  CS<0x55ba0d8d8050> calls function 'xPortStartScheduler'
-  CS<0x55ba0d8d81c0> calls external node
-
-Call graph node for function: 'vTaskSuspend'<<0x55ba0d9e0c70>>  #uses=1
-  CS<0x55ba0d8c85d0> calls function 'vPortEnterCritical'
-  CS<0x55ba0d8c8bc0> calls function 'icall_arg1p'
-  CS<0x55ba0d8c9a50> calls function 'icall_arg1p'
-  CS<0x55ba0d8c9cd0> calls function 'xcall_arg2pp'
-  CS<0x55ba0d8ca5b0> calls function 'vPortExitCritical'
-  CS<0x55ba0d8ca8a0> calls function 'vPortEnterCritical'
-  CS<0x55ba0d8ca950> calls function 'prvResetNextTaskUnblockTime'
-  CS<0x55ba0d8caa00> calls function 'vPortExitCritical'
-  CS<0x55ba0d8cb200> calls external node
-  CS<0x55ba0d8cb520> calls external node
-  CS<0x55ba0d8cb5a0> calls external node
-  CS<0x55ba0d8cbbc0> calls function 'vTaskSwitchContext'
-
-Call graph node for function: 'vTaskSuspendAll'<<0x55ba0d7bdd60>>  #uses=10
-  CS<0x55ba0d879c50> calls external node
-
-Call graph node for function: 'vTaskSwitchContext'<<0x55ba0d9e41f0>>  #uses=3
-  CS<0x55ba0d83d580> calls function 'xcall_arg2pp'
-  CS<0x55ba0d874d40> calls external node
-  CS<0x55ba0d875420> calls external node
-
-Call graph node for function: 'vTimerSetReloadMode'<<0x55ba0d823f00>>  #uses=1
-  CS<0x55ba0da08390> calls external node
-  CS<0x55ba0da08630> calls function 'xcall_arg0'
-  CS<0x55ba0da08f30> calls function 'xcall_arg0'
-
-Call graph node for function: 'vTimerSetTimerID'<<0x55ba0d7bf310>>  #uses=1
-  CS<0x55ba0da0fed0> calls external node
-  CS<0x55ba0da10170> calls function 'xcall_arg0'
-  CS<0x55ba0da10410> calls function 'xcall_arg0'
-
-Call graph node for function: 'vTimerSetTimerNumber'<<0x55ba0d7bf4c0>>  #uses=1
-
-Call graph node for function: 'xEventGroupClearBits'<<0x55ba0d7c0090>>  #uses=2
-  CS<0x55ba0da30510> calls external node
-  CS<0x55ba0da30930> calls external node
-  CS<0x55ba0da20dc0> calls function 'xcall_arg0'
-  CS<0x55ba0da31080> calls function 'xcall_arg0'
-
-Call graph node for function: 'xEventGroupCreate'<<0x55ba0d7bf540>>  #uses=1
-  CS<0x55ba0da11db0> calls function 'pcall_arg1i'
-  CS<0x55ba0da124d0> calls function 'xcall_arg1p'
-
-Call graph node for function: 'xEventGroupGetBitsFromISR'<<0x55ba0d7c0110>>  #uses=1
-  CS<0x55ba0da32480> calls external node
-  CS<0x55ba0da32c60> calls external node
-
-Call graph node for function: 'xEventGroupSetBits'<<0x55ba0d7bf8a0>>  #uses=3
-  CS<0x55ba0da1c6d0> calls external node
-  CS<0x55ba0da1caf0> calls external node
-  CS<0x55ba0da1d160> calls function 'xcall_arg0'
-  CS<0x55ba0da1f720> calls function 'xcall_arg2pi'
-  CS<0x55ba0da1ff60> calls function 'icall_arg0'
-
-Call graph node for function: 'xEventGroupSync'<<0x55ba0d7bf5c0>>  #uses=1
-  CS<0x55ba0da15540> calls external node
-  CS<0x55ba0da15990> calls external node
-  CS<0x55ba0da15c30> calls function 'icall_arg0'
-  CS<0x55ba0da15f90> calls external node
-  CS<0x55ba0da16230> calls function 'xcall_arg0'
-  CS<0x55ba0da16590> calls function 'xEventGroupSetBits'
-  CS<0x55ba0da172a0> calls function 'xcall_arg3pii'
-  CS<0x55ba0da17bd0> calls function 'icall_arg0'
-  CS<0x55ba0da180d0> calls external node
-  CS<0x55ba0da18150> calls external node
-  CS<0x55ba0da182b0> calls function 'icall_arg0'
-  CS<0x55ba0da186e0> calls function 'xcall_arg0'
-  CS<0x55ba0da18e60> calls function 'xcall_arg0'
-
-Call graph node for function: 'xEventGroupWaitBits'<<0x55ba0d7bfbb0>>  #uses=1
-  CS<0x55ba0d9500f0> calls external node
-  CS<0x55ba0d9504a0> calls external node
-  CS<0x55ba0d9508c0> calls external node
-  CS<0x55ba0d950b60> calls function 'icall_arg0'
-  CS<0x55ba0d950ec0> calls external node
-  CS<0x55ba0d951160> calls function 'xcall_arg0'
-  CS<0x55ba0d951510> calls function 'prvTestWaitCondition'
-  CS<0x55ba0d952930> calls function 'xcall_arg3pii'
-  CS<0x55ba0d952fc0> calls function 'icall_arg0'
-  CS<0x55ba0d9534c0> calls external node
-  CS<0x55ba0d953540> calls external node
-  CS<0x55ba0da2b480> calls function 'icall_arg0'
-  CS<0x55ba0da2b820> calls function 'xcall_arg0'
-  CS<0x55ba0da2bab0> calls function 'prvTestWaitCondition'
-  CS<0x55ba0da2c1f0> calls function 'xcall_arg0'
-
-Call graph node for function: 'xPortGetFreeHeapSize'<<0x55ba0d81e810>>  #uses=1
-
-Call graph node for function: 'xPortStartScheduler'<<0x55ba0d9e19b0>>  #uses=2
-  CS<0x55ba0d96c220> calls external node
-  CS<0x55ba0d96c620> calls external node
-  CS<0x55ba0d96e0a0> calls external node
-  CS<0x55ba0d96ecf0> calls function 'vPortSetupTimerInterrupt'
-  CS<0x55ba0d96ee60> calls function 'vPortEnableVFP'
-  CS<0x55ba0d96f0d0> calls function 'prvPortStartFirstTask'
-  CS<0x55ba0d96f180> calls function 'vTaskSwitchContext'
-  CS<0x55ba0d96f230> calls function 'prvTaskExitError'
-
-Call graph node for function: 'xQueueCreateCountingSemaphore'<<0x55ba0d820060>>  #uses=1
-  CS<0x55ba0d99ffe0> calls external node
-  CS<0x55ba0d9a0400> calls external node
-  CS<0x55ba0d9a06c0> calls function 'xQueueGenericCreate'
-
-Call graph node for function: 'xQueueCreateMutex'<<0x55ba0d80de90>>  #uses=1
-  CS<0x55ba0d971cc0> calls function 'xQueueGenericCreate'
-  CS<0x55ba0d971ea0> calls function 'prvInitialiseMutex'
-
-Call graph node for function: 'xQueueGenericCreate'<<0x55ba0d80dbc0>>  #uses=3
-  CS<0x55ba0d8f2330> calls external node
-  CS<0x55ba0d8f29b0> calls external node
-  CS<0x55ba0d8f2e60> calls external node
-  CS<0x55ba0d8f3140> calls function 'pcall_arg1i'
-  CS<0x55ba0d7e66e0> calls function 'prvInitialiseNewQueue'
-
-Call graph node for function: 'xQueueGenericReset'<<0x55ba0d80da60>>  #uses=2
-  CS<0x55ba0d8e1770> calls external node
-  CS<0x55ba0d8e1a40> calls function 'xcall_arg0'
-  CS<0x55ba0d8e33e0> calls function 'icall_arg1p'
-  CS<0x55ba0d8e36c0> calls external node
-  CS<0x55ba0d8e3740> calls external node
-  CS<0x55ba0d8e3a70> calls function 'xcall_arg1p'
-  CS<0x55ba0d8f0200> calls function 'xcall_arg1p'
-  CS<0x55ba0d8f0330> calls function 'xcall_arg0'
-
-Call graph node for function: 'xQueueGenericSend'<<0x55ba0d80b100>>  #uses=3
-  CS<0x55ba0d976c90> calls external node
-  CS<0x55ba0d977320> calls external node
-  CS<0x55ba0d9779b0> calls external node
-  CS<0x55ba0d977c50> calls function 'icall_arg0'
-  CS<0x55ba0d978100> calls external node
-  CS<0x55ba0d978940> calls function 'xcall_arg0'
-  CS<0x55ba0d978dc0> calls function 'prvCopyDataToQueue'
-  CS<0x55ba0d979430> calls function 'icall_arg1p'
-  CS<0x55ba0d979710> calls external node
-  CS<0x55ba0d979790> calls external node
-  CS<0x55ba0d979b10> calls external node
-  CS<0x55ba0d979b90> calls external node
-  CS<0x55ba0d979cf0> calls function 'xcall_arg0'
-  CS<0x55ba0d97a1a0> calls function 'xcall_arg0'
-  CS<0x55ba0d97a4f0> calls function 'xcall_arg1p'
-  CS<0x55ba0d97a810> calls function 'xcall_arg0'
-  CS<0x55ba0d97a8c0> calls function 'vTaskSuspendAll'
-  CS<0x55ba0d97a9b0> calls function 'xcall_arg0'
-  CS<0x55ba0d97b0f0> calls function 'xcall_arg0'
-  CS<0x55ba0d97b450> calls function 'icall_arg2pp'
-  CS<0x55ba0d97b690> calls function 'prvIsQueueFull'
-  CS<0x55ba0d97bbc0> calls function 'xcall_arg2pi'
-  CS<0x55ba0d97bc60> calls function 'prvUnlockQueue'
-  CS<0x55ba0d97bd50> calls function 'icall_arg0'
-  CS<0x55ba0d97c060> calls external node
-  CS<0x55ba0d97c0e0> calls external node
-  CS<0x55ba0d97c220> calls function 'prvUnlockQueue'
-  CS<0x55ba0d97cb30> calls function 'icall_arg0'
-  CS<0x55ba0d97cc70> calls function 'prvUnlockQueue'
-  CS<0x55ba0d97cd60> calls function 'icall_arg0'
-
-Call graph node for function: 'xQueueGenericSendFromISR'<<0x55ba0d820140>>  #uses=1
-  CS<0x55ba0d9a3330> calls external node
-  CS<0x55ba0d9a39c0> calls external node
-  CS<0x55ba0d9a4050> calls external node
-  CS<0x55ba0d9a42f0> calls function 'xcall_arg0'
-  CS<0x55ba0d9a43c0> calls external node
-  CS<0x55ba0d9a5170> calls function 'prvCopyDataToQueue'
-  CS<0x55ba0d9a57d0> calls function 'icall_arg1p'
-  CS<0x55ba0d9a5c90> calls external node
-  CS<0x55ba0d9a66f0> calls external node
-
-Call graph node for function: 'xQueueGiveFromISR'<<0x55ba0d820270>>  #uses=1
-  CS<0x55ba0d9a8f30> calls external node
-  CS<0x55ba0d9a9480> calls external node
-  CS<0x55ba0d9a9cb0> calls external node
-  CS<0x55ba0d9a9f50> calls function 'xcall_arg0'
-  CS<0x55ba0d9aa020> calls external node
-  CS<0x55ba0d9ab340> calls function 'icall_arg1p'
-  CS<0x55ba0d9ab800> calls external node
-  CS<0x55ba0d9ac230> calls external node
-
-Call graph node for function: 'xQueueGiveMutexRecursive'<<0x55ba0d80b900>>  #uses=1
-  CS<0x55ba0d989320> calls external node
-  CS<0x55ba0d9897c0> calls function 'pcall_arg0'
-  CS<0x55ba0d98a000> calls function 'xQueueGenericSend'
-
-Call graph node for function: 'xQueueIsQueueEmptyFromISR'<<0x55ba0d8224e0>>  #uses=1
-  CS<0x55ba0d9d9240> calls external node
-
-Call graph node for function: 'xQueueIsQueueFullFromISR'<<0x55ba0d822590>>  #uses=1
-  CS<0x55ba0d9da550> calls external node
-
-Call graph node for function: 'xQueuePeek'<<0x55ba0d8217a0>>  #uses=1
-  CS<0x55ba0d9bb900> calls external node
-  CS<0x55ba0d9bbf90> calls external node
-  CS<0x55ba0d9bc230> calls function 'icall_arg0'
-  CS<0x55ba0d9bc6e0> calls external node
-  CS<0x55ba0d9bd1f0> calls function 'xcall_arg0'
-  CS<0x55ba0d9bd810> calls function 'prvCopyDataFromQueue'
-  CS<0x55ba0d9bdcb0> calls function 'icall_arg1p'
-  CS<0x55ba0d9bdf90> calls external node
-  CS<0x55ba0d9be010> calls external node
-  CS<0x55ba0d9be170> calls function 'xcall_arg0'
-  CS<0x55ba0d9be620> calls function 'xcall_arg0'
-  CS<0x55ba0d9bea30> calls function 'xcall_arg1p'
-  CS<0x55ba0d9bf100> calls function 'xcall_arg0'
-  CS<0x55ba0d9bf180> calls function 'vTaskSuspendAll'
-  CS<0x55ba0d9bf270> calls function 'xcall_arg0'
-  CS<0x55ba0d9bf9b0> calls function 'xcall_arg0'
-  CS<0x55ba0d9bfd10> calls function 'icall_arg2pp'
-  CS<0x55ba0d9bff50> calls function 'prvIsQueueEmpty'
-  CS<0x55ba0d9c0480> calls function 'xcall_arg2pi'
-  CS<0x55ba0d9c0520> calls function 'prvUnlockQueue'
-  CS<0x55ba0d9c0610> calls function 'icall_arg0'
-  CS<0x55ba0d9c0920> calls external node
-  CS<0x55ba0d9c09a0> calls external node
-  CS<0x55ba0d9c0ae0> calls function 'prvUnlockQueue'
-  CS<0x55ba0d9c0bd0> calls function 'icall_arg0'
-  CS<0x55ba0d9c0d10> calls function 'prvUnlockQueue'
-  CS<0x55ba0d9c0e00> calls function 'icall_arg0'
-  CS<0x55ba0d9c0ed0> calls function 'prvIsQueueEmpty'
-
-Call graph node for function: 'xQueuePeekFromISR'<<0x55ba0d821db0>>  #uses=1
-  CS<0x55ba0d9c9ee0> calls external node
-  CS<0x55ba0d9ca500> calls external node
-  CS<0x55ba0d9caa50> calls external node
-  CS<0x55ba0d9cacf0> calls function 'xcall_arg0'
-  CS<0x55ba0d9cadc0> calls external node
-  CS<0x55ba0d923870> calls function 'prvCopyDataFromQueue'
-  CS<0x55ba0d924080> calls external node
-
-Call graph node for function: 'xQueueReceive'<<0x55ba0d8202f0>>  #uses=1
-  CS<0x55ba0d9aff60> calls external node
-  CS<0x55ba0d9b05f0> calls external node
-  CS<0x55ba0d9b0890> calls function 'icall_arg0'
-  CS<0x55ba0d9b0d40> calls external node
-  CS<0x55ba0d9b1750> calls function 'xcall_arg0'
-  CS<0x55ba0d9b1bc0> calls function 'prvCopyDataFromQueue'
-  CS<0x55ba0d9b2120> calls function 'icall_arg1p'
-  CS<0x55ba0d9b2400> calls external node
-  CS<0x55ba0d9b2480> calls external node
-  CS<0x55ba0d9b25e0> calls function 'xcall_arg0'
-  CS<0x55ba0d9b2a90> calls function 'xcall_arg0'
-  CS<0x55ba0d9b2ea0> calls function 'xcall_arg1p'
-  CS<0x55ba0d9b3570> calls function 'xcall_arg0'
-  CS<0x55ba0d9b35f0> calls function 'vTaskSuspendAll'
-  CS<0x55ba0d9b36e0> calls function 'xcall_arg0'
-  CS<0x55ba0d9b3e20> calls function 'xcall_arg0'
-  CS<0x55ba0d9b4180> calls function 'icall_arg2pp'
-  CS<0x55ba0d9b43c0> calls function 'prvIsQueueEmpty'
-  CS<0x55ba0d9b48f0> calls function 'xcall_arg2pi'
-  CS<0x55ba0d9b4990> calls function 'prvUnlockQueue'
-  CS<0x55ba0d9b4a80> calls function 'icall_arg0'
-  CS<0x55ba0d9b4d90> calls external node
-  CS<0x55ba0d9b4e10> calls external node
-  CS<0x55ba0d9b4f50> calls function 'prvUnlockQueue'
-  CS<0x55ba0d9b5040> calls function 'icall_arg0'
-  CS<0x55ba0d9b5180> calls function 'prvUnlockQueue'
-  CS<0x55ba0d9b5270> calls function 'icall_arg0'
-  CS<0x55ba0d9b5340> calls function 'prvIsQueueEmpty'
-
-Call graph node for function: 'xQueueReceiveFromISR'<<0x55ba0d821d30>>  #uses=1
-  CS<0x55ba0d9c53d0> calls external node
-  CS<0x55ba0d9c5a60> calls external node
-  CS<0x55ba0d9c5d00> calls function 'xcall_arg0'
-  CS<0x55ba0d9c5dd0> calls external node
-  CS<0x55ba0d9c68a0> calls function 'prvCopyDataFromQueue'
-  CS<0x55ba0d9b87a0> calls function 'icall_arg1p'
-  CS<0x55ba0d9c7440> calls external node
-  CS<0x55ba0d9c7e70> calls external node
-
-Call graph node for function: 'xQueueSemaphoreTake'<<0x55ba0d81fcb0>>  #uses=2
-  CS<0x55ba0d8e58e0> calls external node
-  CS<0x55ba0d9934c0> calls external node
-  CS<0x55ba0d993760> calls function 'icall_arg0'
-  CS<0x55ba0d993c10> calls external node
-  CS<0x55ba0d994b90> calls function 'xcall_arg0'
-  CS<0x55ba0d9953c0> calls function 'pcall_arg0'
-  CS<0x55ba0d995970> calls function 'icall_arg1p'
-  CS<0x55ba0d995c50> calls external node
-  CS<0x55ba0d995cd0> calls external node
-  CS<0x55ba0d995e30> calls function 'xcall_arg0'
-  CS<0x55ba0d996460> calls external node
-  CS<0x55ba0d996700> calls function 'xcall_arg0'
-  CS<0x55ba0d996b10> calls function 'xcall_arg1p'
-  CS<0x55ba0d9971e0> calls function 'xcall_arg0'
-  CS<0x55ba0d997260> calls function 'vTaskSuspendAll'
-  CS<0x55ba0d997350> calls function 'xcall_arg0'
-  CS<0x55ba0d997a90> calls function 'xcall_arg0'
-  CS<0x55ba0d997df0> calls function 'icall_arg2pp'
-  CS<0x55ba0d998030> calls function 'prvIsQueueEmpty'
-  CS<0x55ba0d998500> calls function 'xcall_arg0'
-  CS<0x55ba0d998770> calls function 'icall_arg1p'
-  CS<0x55ba0d998910> calls function 'xcall_arg0'
-  CS<0x55ba0d998ed0> calls function 'xcall_arg2pi'
-  CS<0x55ba0d998f70> calls function 'prvUnlockQueue'
-  CS<0x55ba0d999060> calls function 'icall_arg0'
-  CS<0x55ba0d999370> calls external node
-  CS<0x55ba0d9993f0> calls external node
-  CS<0x55ba0d999530> calls function 'prvUnlockQueue'
-  CS<0x55ba0d999620> calls function 'icall_arg0'
-  CS<0x55ba0d999760> calls function 'prvUnlockQueue'
-  CS<0x55ba0d999850> calls function 'icall_arg0'
-  CS<0x55ba0d999920> calls function 'prvIsQueueEmpty'
-  CS<0x55ba0d999d50> calls function 'xcall_arg0'
-  CS<0x55ba0d999e20> calls function 'prvGetDisinheritPriorityAfterTimeout'
-  CS<0x55ba0d99a370> calls function 'xcall_arg2pi'
-  CS<0x55ba0d99a3f0> calls function 'vPortExitCritical'
-
-Call graph node for function: 'xQueueTakeMutexRecursive'<<0x55ba0d81fc30>>  #uses=1
-  CS<0x55ba0d98b7d0> calls external node
-  CS<0x55ba0d98bc70> calls function 'pcall_arg0'
-  CS<0x55ba0d98c480> calls function 'xQueueSemaphoreTake'
-
-Call graph node for function: 'xTaskCatchUpTicks'<<0x55ba0d80a640>>  #uses=1
-  CS<0x55ba0d82f250> calls external node
-  CS<0x55ba0d82f4b0> calls function 'vTaskSuspendAll'
-  CS<0x55ba0d82f720> calls function 'xTaskResumeAll'
-
-Call graph node for function: 'xTaskCheckForTimeOut'<<0x55ba0d9e1420>>  #uses=1
-  CS<0x55ba0d909ea0> calls external node
-  CS<0x55ba0d90a2c0> calls external node
-  CS<0x55ba0d90a520> calls function 'vPortEnterCritical'
-  CS<0x55ba0d90b760> calls function 'vTaskInternalSetTimeOutState'
-  CS<0x55ba0d90bd60> calls function 'vPortExitCritical'
-
-Call graph node for function: 'xTaskCreate'<<0x55ba0d7d3b30>>  #uses=2
-  CS<0x55ba0d87cff0> calls function 'pcall_arg1i'
-  CS<0x55ba0d87d430> calls function 'pcall_arg1i'
-  CS<0x55ba0d87dc30> calls function 'xcall_arg1p'
-  CS<0x55ba0d844ed0> calls function 'prvInitialiseNewTask'
-  CS<0x55ba0d87e0d0> calls function 'prvAddNewTaskToReadyList'
-
-Call graph node for function: 'xTaskDelayUntil'<<0x55ba0d7bdb90>>  #uses=1
-  CS<0x55ba0d899f70> calls external node
-  CS<0x55ba0d89a390> calls external node
-  CS<0x55ba0d89a820> calls external node
-  CS<0x55ba0d89aa80> calls function 'vTaskSuspendAll'
-  CS<0x55ba0d89bc00> calls function 'prvAddCurrentTaskToDelayedList'
-  CS<0x55ba0d89bd50> calls function 'xTaskResumeAll'
-  CS<0x55ba0d89c170> calls external node
-  CS<0x55ba0d89c1f0> calls external node
-
-Call graph node for function: 'xTaskGenericNotify'<<0x55ba0d80c240>>  #uses=1
-  CS<0x55ba0d92ad90> calls external node
-  CS<0x55ba0d92b1b0> calls external node
-  CS<0x55ba0d92b520> calls function 'vPortEnterCritical'
-  CS<0x55ba0d92cd60> calls external node
-  CS<0x55ba0d92d4a0> calls function 'icall_arg1p'
-  CS<0x55ba0d92db00> calls function 'xcall_arg2pp'
-  CS<0x55ba0d92de90> calls external node
-  CS<0x55ba0d92e5f0> calls external node
-  CS<0x55ba0d92e670> calls external node
-  CS<0x55ba0d92e790> calls function 'vPortExitCritical'
-
-Call graph node for function: 'xTaskGenericNotifyFromISR'<<0x55ba0d80c410>>  #uses=1
-  CS<0x55ba0d932b60> calls external node
-  CS<0x55ba0d932f80> calls external node
-  CS<0x55ba0d9331e0> calls function 'vPortValidateInterruptPriority'
-  CS<0x55ba0d9333c0> calls external node
-  CS<0x55ba0d934f00> calls external node
-  CS<0x55ba0d935950> calls external node
-  CS<0x55ba0d936000> calls function 'icall_arg1p'
-  CS<0x55ba0d936660> calls function 'xcall_arg2pp'
-  CS<0x55ba0d9368e0> calls function 'xcall_arg2pp'
-  CS<0x55ba0d9376b0> calls external node
-
-Call graph node for function: 'xTaskGenericNotifyStateClear'<<0x55ba0d80ca30>>  #uses=1
-  CS<0x55ba0d8bf580> calls external node
-  CS<0x55ba0d8bfba0> calls function 'vPortEnterCritical'
-  CS<0x55ba0d8c03a0> calls function 'vPortExitCritical'
-
-Call graph node for function: 'xTaskGenericNotifyWait'<<0x55ba0d80c070>>  #uses=1
-  CS<0x55ba0d8d2ad0> calls external node
-  CS<0x55ba0d8d2d30> calls function 'vPortEnterCritical'
-  CS<0x55ba0d8d3990> calls function 'prvAddCurrentTaskToDelayedList'
-  CS<0x55ba0d8d3b00> calls external node
-  CS<0x55ba0d8d3b80> calls external node
-  CS<0x55ba0d8d3ca0> calls function 'vPortExitCritical'
-  CS<0x55ba0d8d3d50> calls function 'vPortEnterCritical'
-  CS<0x55ba0d927fa0> calls function 'vPortExitCritical'
-
-Call graph node for function: 'xTaskGetCurrentTaskHandle'<<0x55ba0d9e1820>>  #uses=1
-
-Call graph node for function: 'xTaskGetSchedulerState'<<0x55ba0d9e18a0>>  #uses=1
-
-Call graph node for function: 'xTaskGetTickCount'<<0x55ba0d809f50>>  #uses=1
-
-Call graph node for function: 'xTaskGetTickCountFromISR'<<0x55ba0d809fd0>>  #uses=1
-  CS<0x55ba0d89f5d0> calls function 'vPortValidateInterruptPriority'
-
-Call graph node for function: 'xTaskIncrementTick'<<0x55ba0d7be180>>  #uses=3
-  CS<0x55ba0d8ac7d0> calls external node
-  CS<0x55ba0d8acf00> calls function 'prvResetNextTaskUnblockTime'
-  CS<0x55ba0d8ae5c0> calls function 'icall_arg1p'
-  CS<0x55ba0d8aeb40> calls function 'icall_arg1p'
-  CS<0x55ba0d8af240> calls function 'xcall_arg2pp'
-  CS<0x55ba0d895c30> calls function 'xcall_arg0'
-  CS<0x55ba0d8b1bf0> calls function 'xcall_arg0'
-
-Call graph node for function: 'xTaskPriorityDisinherit'<<0x55ba0d80bae0>>  #uses=1
-  CS<0x55ba0d915430> calls external node
-  CS<0x55ba0d915980> calls external node
-  CS<0x55ba0d916530> calls function 'icall_arg1p'
-  CS<0x55ba0d917380> calls function 'xcall_arg2pp'
-
-Call graph node for function: 'xTaskPriorityInherit'<<0x55ba0d80ba60>>  #uses=1
-  CS<0x55ba0d911d60> calls function 'icall_arg1p'
-  CS<0x55ba0d912ae0> calls function 'xcall_arg2pp'
-
-Call graph node for function: 'xTaskRemoveFromEventList'<<0x55ba0d80ab00>>  #uses=1
-  CS<0x55ba0d900980> calls external node
-  CS<0x55ba0d900df0> calls function 'icall_arg1p'
-  CS<0x55ba0d9012c0> calls function 'icall_arg1p'
-  CS<0x55ba0d901920> calls function 'xcall_arg2pp'
-  CS<0x55ba0d901ba0> calls function 'xcall_arg2pp'
-
-Call graph node for function: 'xTaskResumeAll'<<0x55ba0d7bdfb0>>  #uses=8
-  CS<0x55ba0d8a59d0> calls external node
-  CS<0x55ba0d8a5c30> calls function 'vPortEnterCritical'
-  CS<0x55ba0d8a6cb0> calls function 'icall_arg1p'
-  CS<0x55ba0d8a6f40> calls function 'icall_arg1p'
-  CS<0x55ba0d8a75a0> calls function 'xcall_arg2pp'
-  CS<0x55ba0d8a80b0> calls function 'prvResetNextTaskUnblockTime'
-  CS<0x55ba0d8a86c0> calls function 'xTaskIncrementTick'
-  CS<0x55ba0d8a92f0> calls external node
-  CS<0x55ba0d8a9370> calls external node
-  CS<0x55ba0d8a9670> calls function 'vPortExitCritical'
-
-Call graph node for function: 'xTaskResumeFromISR'<<0x55ba0d9e11d0>>  #uses=1
-  CS<0x55ba0d87aed0> calls external node
-  CS<0x55ba0d87b130> calls function 'vPortValidateInterruptPriority'
-  CS<0x55ba0d87b200> calls external node
-  CS<0x55ba0d87b5d0> calls function 'prvTaskIsTaskSuspended'
-  CS<0x55ba0d8d4fc0> calls function 'icall_arg1p'
-  CS<0x55ba0d8d5560> calls function 'xcall_arg2pp'
-  CS<0x55ba0d8d58d0> calls function 'xcall_arg2pp'
-  CS<0x55ba0d8d5ef0> calls external node
-
-Call graph node for function: 'xTimerCreate'<<0x55ba0d823990>>  #uses=1
-  CS<0x55ba0d9fe250> calls function 'pcall_arg1i'
-  CS<0x55ba0d9fe8a0> calls function 'prvInitialiseNewTimer'
-
-Call graph node for function: 'xTimerCreateTimerTask'<<0x55ba0d822980>>  #uses=1
-  CS<0x55ba0d88cfe0> calls function 'prvCheckForValidListAndQueue'
-  CS<0x55ba0d88d490> calls function 'icall_arg6ppipip'
-  CS<0x55ba0d9e4600> calls external node
-
-Call graph node for function: 'xTimerGenericCommand'<<0x55ba0d823ba0>>  #uses=1
-  CS<0x55ba0da03800> calls external node
-  CS<0x55ba0da04410> calls function 'icall_arg0'
-  CS<0x55ba0d76d3d0> calls function 'icall_arg4ppii'
-  CS<0x55ba0da04b40> calls function 'icall_arg4ppii'
-  CS<0x55ba0da04f60> calls function 'icall_arg4pppi'
-
-Call graph node for function: 'xTimerGetExpiryTime'<<0x55ba0d8240e0>>  #uses=1
-  CS<0x55ba0da0b250> calls external node
-
-Call graph node for function: 'xTimerGetPeriod'<<0x55ba0d823e50>>  #uses=1
-  CS<0x55ba0da06f60> calls external node
-
-Call graph node for function: 'xTimerGetTimerDaemonTaskHandle'<<0x55ba0d823dd0>>  #uses=1
-  CS<0x55ba0da06310> calls external node
-
-Call graph node for function: 'xTimerIsTimerActive'<<0x55ba0d824210>>  #uses=1
-  CS<0x55ba0da0d410> calls external node
-  CS<0x55ba0da0d6b0> calls function 'xcall_arg0'
-  CS<0x55ba0da0db70> calls function 'xcall_arg0'
-
-Call graph node for function: 'xcall_arg0'<<0x55ba0d7be490>>  #uses=83
-  CS<0x55ba0d9582b0> calls function 'switch_view'
-  CS<0x55ba0d958620> calls external node
-  CS<0x55ba0d9586f0> calls function 'switch_view'
-
-Call graph node for function: 'xcall_arg0_noid'<<0x55ba0d7c3a80>>  #uses=1
-  CS<0x55ba0da6afa0> calls function 'getCompartmentFromAddr'
-  CS<0x55ba0da6b130> calls function 'xcall_arg0'
-
-Call graph node for function: 'xcall_arg1i'<<0x55ba0d80cc30>>  #uses=7
-  CS<0x55ba0d959770> calls function 'switch_view'
-  CS<0x55ba0d959b00> calls external node
-  CS<0x55ba0d959bd0> calls function 'switch_view'
-
-Call graph node for function: 'xcall_arg1p'<<0x55ba0d7d3c90>>  #uses=30
-  CS<0x55ba0d962fc0> calls function 'rtmkcpy'
-  CS<0x55ba0d963090> calls function 'switch_view'
-  CS<0x55ba0d963420> calls external node
-  CS<0x55ba0d9634f0> calls function 'switch_view'
-
-Call graph node for function: 'xcall_arg1p_noid'<<0x55ba0d8234b0>>  #uses=4
-  CS<0x55ba0da6bd50> calls function 'getCompartmentFromAddr'
-  CS<0x55ba0da63260> calls function 'xcall_arg1p'
-
-Call graph node for function: 'xcall_arg2ii'<<0x55ba0d7c31b0>>  #uses=16
-  CS<0x55ba0d95fda0> calls function 'switch_view'
-  CS<0x55ba0d960150> calls external node
-  CS<0x55ba0d960220> calls function 'switch_view'
-
-Call graph node for function: 'xcall_arg2pi'<<0x55ba0d80b6f0>>  #uses=8
-  CS<0x55ba0d964ac0> calls function 'rtmkcpy'
-  CS<0x55ba0d964b90> calls function 'switch_view'
-  CS<0x55ba0d964f40> calls external node
-  CS<0x55ba0d965010> calls function 'switch_view'
-
-Call graph node for function: 'xcall_arg2pp'<<0x55ba0d9e42a0>>  #uses=35
-  CS<0x55ba0da62120> calls function 'rtmkcpy'
-  CS<0x55ba0da62300> calls function 'rtmkcpy'
-  CS<0x55ba0da623d0> calls function 'switch_view'
-  CS<0x55ba0da62780> calls external node
-  CS<0x55ba0da62850> calls function 'switch_view'
-
-Call graph node for function: 'xcall_arg3pii'<<0x55ba0d822850>>  #uses=7
-  CS<0x55ba0d966b80> calls function 'rtmkcpy'
-  CS<0x55ba0d966c50> calls function 'switch_view'
-  CS<0x55ba0d967020> calls external node
-  CS<0x55ba0d9670f0> calls function 'switch_view'
+Call graph node for function: 'vStartLEDFlashTasks'<<0x560087362910>>  #uses=2
+  CS<0x56008758c610> calls function 'xTaskCreate'
+
+Call graph node for function: 'vTaskDelay'<<0x560087306800>>  #uses=1
+  CS<0x5600873f8930> calls external node
+  CS<0x5600873f8b90> calls function 'vTaskSuspendAll'
+  CS<0x5600873f8c80> calls function 'prvAddCurrentTaskToDelayedList'
+  CS<0x5600873f8d30> calls function 'xTaskResumeAll'
+  CS<0x5600873f9230> calls external node
+  CS<0x5600873f92b0> calls external node
+
+Call graph node for function: 'vTaskDelete'<<0x5600873058c0>>  #uses=1
+  CS<0x5600873d8250> calls function 'vPortEnterCritical'
+  CS<0x5600873d8680> calls function 'uxListRemove'
+  CS<0x5600873d9440> calls function 'uxListRemove'
+  CS<0x5600873d99d0> calls function 'vListInsertEnd'
+  CS<0x5600873d9ec0> calls function 'prvDeleteTCB'
+  CS<0x5600873d9f70> calls function 'prvResetNextTaskUnblockTime'
+  CS<0x5600873da090> calls function 'vPortExitCritical'
+  CS<0x5600873da7f0> calls external node
+  CS<0x56008735ce40> calls external node
+  CS<0x56008735cec0> calls external node
+
+Call graph node for function: 'vTaskEndScheduler'<<0x560087352240>>  #uses=1
+  CS<0x560087373af0> calls external node
+  CS<0x560087373c50> calls function 'vPortEndScheduler'
+
+Call graph node for function: 'vTaskGenericNotifyGiveFromISR'<<0x560087362400>>  #uses=1
+  CS<0x5600873fb6e0> calls external node
+  CS<0x5600873fbb00> calls external node
+  CS<0x5600873fbd60> calls function 'vPortValidateInterruptPriority'
+  CS<0x5600873fbf40> calls external node
+  CS<0x5600873fce80> calls external node
+  CS<0x5600873fd430> calls function 'uxListRemove'
+  CS<0x5600873fd960> calls function 'vListInsertEnd'
+  CS<0x5600873fdac0> calls function 'vListInsertEnd'
+  CS<0x5600873fe8c0> calls external node
+
+Call graph node for function: 'vTaskGetInfo'<<0x560087352900>>  #uses=2
+  CS<0x5600873f4ad0> calls function 'vTaskSuspendAll'
+  CS<0x5600873f5000> calls function 'xTaskResumeAll'
+  CS<0x5600873f5170> calls function 'eTaskGetState'
+  CS<0x5600873f5710> calls function 'prvTaskCheckFreeStackSpace'
+
+Call graph node for function: 'vTaskInternalSetTimeOutState'<<0x5600873533c0>>  #uses=6
+
+Call graph node for function: 'vTaskMissedYield'<<0x5600873540d0>>  #uses=3
+
+Call graph node for function: 'vTaskPlaceOnEventList'<<0x560087352b60>>  #uses=5
+  CS<0x56008743f6b0> calls external node
+  CS<0x56008743fae0> calls function 'vListInsert'
+  CS<0x56008743fbd0> calls function 'prvAddCurrentTaskToDelayedList'
+
+Call graph node for function: 'vTaskPlaceOnEventListRestricted'<<0x560087352dc0>>  #uses=2
+  CS<0x560087442d20> calls external node
+  CS<0x560087443150> calls function 'vListInsertEnd'
+  CS<0x5600874434c0> calls function 'prvAddCurrentTaskToDelayedList'
+
+Call graph node for function: 'vTaskPlaceOnUnorderedEventList'<<0x560087352c90>>  #uses=3
+  CS<0x560087440e20> calls external node
+  CS<0x5600874412b0> calls external node
+  CS<0x560087441980> calls function 'vListInsertEnd'
+  CS<0x560087441a70> calls function 'prvAddCurrentTaskToDelayedList'
+
+Call graph node for function: 'vTaskPriorityDisinheritAfterTimeout'<<0x5600873520d0>>  #uses=2
+  CS<0x56008745bd10> calls external node
+  CS<0x56008745caf0> calls external node
+  CS<0x56008745d960> calls function 'uxListRemove'
+  CS<0x56008745e360> calls function 'vListInsertEnd'
+
+Call graph node for function: 'vTaskPrioritySet'<<0x5600876293d0>>  #uses=1
+  CS<0x560087406b40> calls external node
+  CS<0x560087406f10> calls function 'vPortEnterCritical'
+  CS<0x5600874092a0> calls function 'uxListRemove'
+  CS<0x560087409c30> calls function 'vListInsertEnd'
+  CS<0x560087409ef0> calls external node
+  CS<0x560087409f70> calls external node
+  CS<0x56008740a090> calls function 'vPortExitCritical'
+
+Call graph node for function: 'vTaskRemoveFromUnorderedEventList'<<0x560087353170>>  #uses=3
+  CS<0x560087447990> calls external node
+  CS<0x5600874482a0> calls external node
+  CS<0x560087448520> calls function 'uxListRemove'
+  CS<0x5600874486e0> calls function 'uxListRemove'
+  CS<0x560087448c10> calls function 'vListInsertEnd'
+
+Call graph node for function: 'vTaskResume'<<0x560087629ab0>>  #uses=1
+  CS<0x5600874115c0> calls external node
+  CS<0x560087411b80> calls function 'vPortEnterCritical'
+  CS<0x560087411c50> calls function 'prvTaskIsTaskSuspended'
+  CS<0x560087411fb0> calls function 'uxListRemove'
+  CS<0x5600874124e0> calls function 'vListInsertEnd'
+  CS<0x560087412a60> calls external node
+  CS<0x560087412ae0> calls external node
+  CS<0x560087412c00> calls function 'vPortExitCritical'
+
+Call graph node for function: 'vTaskSetTaskNumber'<<0x560087351df0>>  #uses=1
+
+Call graph node for function: 'vTaskSetTimeOutState'<<0x560087353340>>  #uses=1
+  CS<0x560087449f80> calls external node
+  CS<0x56008744a1e0> calls function 'vPortEnterCritical'
+  CS<0x56008744a730> calls function 'vPortExitCritical'
+
+Call graph node for function: 'vTaskStartScheduler'<<0x560087629d80>>  #uses=2
+  CS<0x560087382700> calls function 'xTaskCreate'
+  CS<0x5600873dcb20> calls function 'xTimerCreateTimerTask'
+  CS<0x5600873dd000> calls external node
+  CS<0x5600873dd400> calls function 'xPortStartScheduler'
+  CS<0x5600873dd570> calls external node
+
+Call graph node for function: 'vTaskSuspend'<<0x560087629650>>  #uses=1
+  CS<0x56008740c8d0> calls function 'vPortEnterCritical'
+  CS<0x56008740ce50> calls function 'uxListRemove'
+  CS<0x56008740dc10> calls function 'uxListRemove'
+  CS<0x56008740dda0> calls function 'vListInsertEnd'
+  CS<0x56008740e6b0> calls function 'vPortExitCritical'
+  CS<0x56008740e9a0> calls function 'vPortEnterCritical'
+  CS<0x56008740ea50> calls function 'prvResetNextTaskUnblockTime'
+  CS<0x56008740eb00> calls function 'vPortExitCritical'
+  CS<0x56008740f300> calls external node
+  CS<0x56008740f620> calls external node
+  CS<0x56008740f6a0> calls external node
+  CS<0x56008740fc00> calls function 'vTaskSwitchContext'
+
+Call graph node for function: 'vTaskSuspendAll'<<0x560087305fd0>>  #uses=16
+  CS<0x5600873e4e30> calls external node
+
+Call graph node for function: 'vTaskSwitchContext'<<0x56008731de00>>  #uses=3
+  CS<0x5600873bef50> calls function 'vApplicationStackOverflowHook'
+  CS<0x5600873bf160> calls external node
+  CS<0x5600873bf790> calls external node
+
+Call graph node for function: 'vTimerSetReloadMode'<<0x560087308620>>  #uses=1
+  CS<0x560087545100> calls external node
+  CS<0x560087545360> calls function 'vPortEnterCritical'
+  CS<0x560087545c20> calls function 'vPortExitCritical'
+
+Call graph node for function: 'vTimerSetTimerID'<<0x560087308bc0>>  #uses=1
+  CS<0x56008754ca40> calls external node
+  CS<0x56008754cca0> calls function 'vPortEnterCritical'
+  CS<0x56008754cf00> calls function 'vPortExitCritical'
+
+Call graph node for function: 'vTimerSetTimerNumber'<<0x560087308d70>>  #uses=1
+
+Call graph node for function: 'xEventGroupClearBits'<<0x560087309940>>  #uses=2
+  CS<0x56008756c5d0> calls external node
+  CS<0x56008756c9f0> calls external node
+  CS<0x56008756cc50> calls function 'vPortEnterCritical'
+  CS<0x56008756d0c0> calls function 'vPortExitCritical'
+
+Call graph node for function: 'xEventGroupCreate'<<0x560087308df0>>  #uses=1
+  CS<0x56008754e840> calls function 'pvPortMalloc'
+  CS<0x56008754ee60> calls function 'vListInitialise'
+
+Call graph node for function: 'xEventGroupGetBitsFromISR'<<0x5600873099c0>>  #uses=1
+  CS<0x56008756e4c0> calls external node
+  CS<0x56008756eca0> calls external node
+
+Call graph node for function: 'xEventGroupSetBits'<<0x560087309150>>  #uses=3
+  CS<0x560087558d40> calls external node
+  CS<0x560087559160> calls external node
+  CS<0x560087559790> calls function 'vTaskSuspendAll'
+  CS<0x56008755bc30> calls function 'vTaskRemoveFromUnorderedEventList'
+  CS<0x56008755c460> calls function 'xTaskResumeAll'
+
+Call graph node for function: 'xEventGroupSync'<<0x560087308e70>>  #uses=1
+  CS<0x560087551e80> calls external node
+  CS<0x5600875522d0> calls external node
+  CS<0x560087552530> calls function 'xTaskGetSchedulerState'
+  CS<0x560087552890> calls external node
+  CS<0x560087552af0> calls function 'vTaskSuspendAll'
+  CS<0x560087552e50> calls function 'xEventGroupSetBits'
+  CS<0x560087553a20> calls function 'vTaskPlaceOnUnorderedEventList'
+  CS<0x560087554340> calls function 'xTaskResumeAll'
+  CS<0x560087554840> calls external node
+  CS<0x5600875548c0> calls external node
+  CS<0x5600875549e0> calls function 'uxTaskResetEventItemValue'
+  CS<0x560087554dd0> calls function 'vPortEnterCritical'
+  CS<0x560087555510> calls function 'vPortExitCritical'
+
+Call graph node for function: 'xEventGroupWaitBits'<<0x560087309460>>  #uses=1
+  CS<0x56008741d140> calls external node
+  CS<0x56008741d4f0> calls external node
+  CS<0x56008741d910> calls external node
+  CS<0x56008741db70> calls function 'xTaskGetSchedulerState'
+  CS<0x56008741ded0> calls external node
+  CS<0x56008741e130> calls function 'vTaskSuspendAll'
+  CS<0x56008741e4e0> calls function 'prvTestWaitCondition'
+  CS<0x56008741f7c0> calls function 'vTaskPlaceOnUnorderedEventList'
+  CS<0x56008741fe40> calls function 'xTaskResumeAll'
+  CS<0x560087420340> calls external node
+  CS<0x5600874203c0> calls external node
+  CS<0x5600874204e0> calls function 'uxTaskResetEventItemValue'
+  CS<0x560087567ae0> calls function 'vPortEnterCritical'
+  CS<0x560087567d70> calls function 'prvTestWaitCondition'
+  CS<0x560087568470> calls function 'vPortExitCritical'
+
+Call graph node for function: 'xPortGetFreeHeapSize'<<0x5600873638f0>>  #uses=1
+
+Call graph node for function: 'xPortStartScheduler'<<0x560087629e80>>  #uses=2
+  CS<0x5600874adbb0> calls external node
+  CS<0x5600874adfb0> calls external node
+  CS<0x56008747c5d0> calls external node
+  CS<0x56008747d220> calls function 'vPortSetupTimerInterrupt'
+  CS<0x56008747d390> calls function 'vPortEnableVFP'
+  CS<0x56008747d600> calls function 'prvPortStartFirstTask'
+  CS<0x56008747d6b0> calls function 'vTaskSwitchContext'
+  CS<0x56008747d760> calls function 'prvTaskExitError'
+
+Call graph node for function: 'xQueueCreateCountingSemaphore'<<0x560087365530>>  #uses=1
+  CS<0x5600874e06a0> calls external node
+  CS<0x5600874e0ac0> calls external node
+  CS<0x5600874e0d80> calls function 'xQueueGenericCreate'
+
+Call graph node for function: 'xQueueCreateMutex'<<0x560087353870>>  #uses=1
+  CS<0x5600874b2ca0> calls function 'xQueueGenericCreate'
+  CS<0x5600874b2e80> calls function 'prvInitialiseMutex'
+
+Call graph node for function: 'xQueueGenericCreate'<<0x5600873535a0>>  #uses=4
+  CS<0x56008743b1c0> calls external node
+  CS<0x5600874af120> calls external node
+  CS<0x5600874af5d0> calls external node
+  CS<0x5600874af850> calls function 'pvPortMalloc'
+  CS<0x56008732e760> calls function 'prvInitialiseNewQueue'
+
+Call graph node for function: 'xQueueGenericReset'<<0x560087353440>>  #uses=2
+  CS<0x5600874a6680> calls external node
+  CS<0x5600874a6910> calls function 'vPortEnterCritical'
+  CS<0x560087438860> calls function 'xTaskRemoveFromEventList'
+  CS<0x560087438b70> calls external node
+  CS<0x560087438bf0> calls external node
+  CS<0x560087438e20> calls function 'vListInitialise'
+  CS<0x560087438fe0> calls function 'vListInitialise'
+  CS<0x560087439100> calls function 'vPortExitCritical'
+
+Call graph node for function: 'xQueueGenericSend'<<0x5600873539a0>>  #uses=5
+  CS<0x5600874b7ad0> calls external node
+  CS<0x5600874b8160> calls external node
+  CS<0x5600874b87f0> calls external node
+  CS<0x5600874b8a50> calls function 'xTaskGetSchedulerState'
+  CS<0x5600874b8f00> calls external node
+  CS<0x5600874b9700> calls function 'vPortEnterCritical'
+  CS<0x5600874b9b80> calls function 'prvCopyDataToQueue'
+  CS<0x5600874ba0f0> calls function 'xTaskRemoveFromEventList'
+  CS<0x5600874ba400> calls external node
+  CS<0x5600874ba480> calls external node
+  CS<0x5600874ba800> calls external node
+  CS<0x5600874ba880> calls external node
+  CS<0x5600874ba9a0> calls function 'vPortExitCritical'
+  CS<0x5600874bae10> calls function 'vPortExitCritical'
+  CS<0x5600874bb060> calls function 'vTaskInternalSetTimeOutState'
+  CS<0x5600874bb370> calls function 'vPortExitCritical'
+  CS<0x5600874bb420> calls function 'vTaskSuspendAll'
+  CS<0x5600874bb4d0> calls function 'vPortEnterCritical'
+  CS<0x5600874bbbd0> calls function 'vPortExitCritical'
+  CS<0x5600874bbda0> calls function 'xTaskCheckForTimeOut'
+  CS<0x5600874bc010> calls function 'prvIsQueueFull'
+  CS<0x5600874bc420> calls function 'vTaskPlaceOnEventList'
+  CS<0x5600874bc4f0> calls function 'prvUnlockQueue'
+  CS<0x5600874bc5a0> calls function 'xTaskResumeAll'
+  CS<0x5600874bc8b0> calls external node
+  CS<0x5600874bc930> calls external node
+  CS<0x5600874bca70> calls function 'prvUnlockQueue'
+  CS<0x5600874bcb20> calls function 'xTaskResumeAll'
+  CS<0x5600874bcc60> calls function 'prvUnlockQueue'
+  CS<0x5600874bcd10> calls function 'xTaskResumeAll'
+
+Call graph node for function: 'xQueueGenericSendFromISR'<<0x560087365610>>  #uses=2
+  CS<0x5600874e39b0> calls external node
+  CS<0x5600874e4040> calls external node
+  CS<0x5600874e46d0> calls external node
+  CS<0x5600874e4930> calls function 'vPortValidateInterruptPriority'
+  CS<0x5600874e4a00> calls external node
+  CS<0x5600874e57b0> calls function 'prvCopyDataToQueue'
+  CS<0x5600874e5d10> calls function 'xTaskRemoveFromEventList'
+  CS<0x5600874e6200> calls external node
+  CS<0x5600874e6c60> calls external node
+
+Call graph node for function: 'xQueueGiveFromISR'<<0x560087363130>>  #uses=2
+  CS<0x5600874e94a0> calls external node
+  CS<0x5600874e99f0> calls external node
+  CS<0x5600874ea220> calls external node
+  CS<0x5600874ea480> calls function 'vPortValidateInterruptPriority'
+  CS<0x5600874ea550> calls external node
+  CS<0x5600874eb770> calls function 'xTaskRemoveFromEventList'
+  CS<0x5600874ebc60> calls external node
+  CS<0x5600874ec690> calls external node
+
+Call graph node for function: 'xQueueGiveMutexRecursive'<<0x560087365080>>  #uses=1
+  CS<0x5600874c9600> calls external node
+  CS<0x5600874c9a60> calls function 'xTaskGetCurrentTaskHandle'
+  CS<0x5600874ca230> calls function 'xQueueGenericSend'
+
+Call graph node for function: 'xQueueIsQueueEmptyFromISR'<<0x560087367930>>  #uses=1
+  CS<0x5600875176b0> calls external node
+
+Call graph node for function: 'xQueueIsQueueFullFromISR'<<0x5600873679e0>>  #uses=1
+  CS<0x5600875189c0> calls external node
+
+Call graph node for function: 'xQueuePeek'<<0x560087366bf0>>  #uses=1
+  CS<0x5600874fb6f0> calls external node
+  CS<0x5600874fbd80> calls external node
+  CS<0x5600874fbfe0> calls function 'xTaskGetSchedulerState'
+  CS<0x5600874fc490> calls external node
+  CS<0x5600874fcf60> calls function 'vPortEnterCritical'
+  CS<0x5600874fd580> calls function 'prvCopyDataFromQueue'
+  CS<0x5600874fd920> calls function 'xTaskRemoveFromEventList'
+  CS<0x5600874fdc30> calls external node
+  CS<0x5600874fdcb0> calls external node
+  CS<0x5600874fddd0> calls function 'vPortExitCritical'
+  CS<0x5600874fe240> calls function 'vPortExitCritical'
+  CS<0x5600874fe550> calls function 'vTaskInternalSetTimeOutState'
+  CS<0x5600874fec10> calls function 'vPortExitCritical'
+  CS<0x5600874fec90> calls function 'vTaskSuspendAll'
+  CS<0x5600874fed40> calls function 'vPortEnterCritical'
+  CS<0x5600874ff440> calls function 'vPortExitCritical'
+  CS<0x5600874ff610> calls function 'xTaskCheckForTimeOut'
+  CS<0x5600874ff880> calls function 'prvIsQueueEmpty'
+  CS<0x5600874ffc90> calls function 'vTaskPlaceOnEventList'
+  CS<0x5600874ffd60> calls function 'prvUnlockQueue'
+  CS<0x5600874ffe10> calls function 'xTaskResumeAll'
+  CS<0x560087500120> calls external node
+  CS<0x5600875001a0> calls external node
+  CS<0x5600875002e0> calls function 'prvUnlockQueue'
+  CS<0x560087500390> calls function 'xTaskResumeAll'
+  CS<0x5600875004d0> calls function 'prvUnlockQueue'
+  CS<0x560087500580> calls function 'xTaskResumeAll'
+  CS<0x560087500650> calls function 'prvIsQueueEmpty'
+
+Call graph node for function: 'xQueuePeekFromISR'<<0x560087367200>>  #uses=1
+  CS<0x5600875085f0> calls external node
+  CS<0x560087508c10> calls external node
+  CS<0x560087509160> calls external node
+  CS<0x5600875093c0> calls function 'vPortValidateInterruptPriority'
+  CS<0x560087509490> calls external node
+  CS<0x560087465880> calls function 'prvCopyDataFromQueue'
+  CS<0x560087466090> calls external node
+
+Call graph node for function: 'xQueueReceive'<<0x560087365740>>  #uses=2
+  CS<0x5600874f03c0> calls external node
+  CS<0x5600874f0a50> calls external node
+  CS<0x5600874f0cb0> calls function 'xTaskGetSchedulerState'
+  CS<0x5600874f1160> calls external node
+  CS<0x5600874f1b30> calls function 'vPortEnterCritical'
+  CS<0x5600874f1fa0> calls function 'prvCopyDataFromQueue'
+  CS<0x5600874f2400> calls function 'xTaskRemoveFromEventList'
+  CS<0x5600874f2710> calls external node
+  CS<0x5600874f2790> calls external node
+  CS<0x5600874f28b0> calls function 'vPortExitCritical'
+  CS<0x5600874f2d20> calls function 'vPortExitCritical'
+  CS<0x5600874f3030> calls function 'vTaskInternalSetTimeOutState'
+  CS<0x5600874f36f0> calls function 'vPortExitCritical'
+  CS<0x5600874f3770> calls function 'vTaskSuspendAll'
+  CS<0x5600874f3820> calls function 'vPortEnterCritical'
+  CS<0x5600874f3f20> calls function 'vPortExitCritical'
+  CS<0x5600874f40f0> calls function 'xTaskCheckForTimeOut'
+  CS<0x5600874f4360> calls function 'prvIsQueueEmpty'
+  CS<0x5600874f4770> calls function 'vTaskPlaceOnEventList'
+  CS<0x5600874f4840> calls function 'prvUnlockQueue'
+  CS<0x5600874f48f0> calls function 'xTaskResumeAll'
+  CS<0x5600874f4c00> calls external node
+  CS<0x5600874f4c80> calls external node
+  CS<0x5600874f4dc0> calls function 'prvUnlockQueue'
+  CS<0x5600874f4e70> calls function 'xTaskResumeAll'
+  CS<0x5600874f4fb0> calls function 'prvUnlockQueue'
+  CS<0x5600874f5060> calls function 'xTaskResumeAll'
+  CS<0x5600874f5130> calls function 'prvIsQueueEmpty'
+
+Call graph node for function: 'xQueueReceiveFromISR'<<0x560087367180>>  #uses=1
+  CS<0x560087503af0> calls external node
+  CS<0x560087504180> calls external node
+  CS<0x5600875043e0> calls function 'vPortValidateInterruptPriority'
+  CS<0x5600875044b0> calls external node
+  CS<0x560087504f80> calls function 'prvCopyDataFromQueue'
+  CS<0x560087505660> calls function 'xTaskRemoveFromEventList'
+  CS<0x560087505b50> calls external node
+  CS<0x560087506580> calls external node
+
+Call graph node for function: 'xQueueSemaphoreTake'<<0x560087365180>>  #uses=2
+  CS<0x5600874d4080> calls external node
+  CS<0x5600874d45d0> calls external node
+  CS<0x5600874d4830> calls function 'xTaskGetSchedulerState'
+  CS<0x5600874d4ce0> calls external node
+  CS<0x5600874d5c20> calls function 'vPortEnterCritical'
+  CS<0x5600874d6410> calls function 'pvTaskIncrementMutexHeldCount'
+  CS<0x5600874d6850> calls function 'xTaskRemoveFromEventList'
+  CS<0x5600874d6b60> calls external node
+  CS<0x5600874d6be0> calls external node
+  CS<0x5600874d6d00> calls function 'vPortExitCritical'
+  CS<0x5600874d7330> calls external node
+  CS<0x5600874d7590> calls function 'vPortExitCritical'
+  CS<0x5600874d78a0> calls function 'vTaskInternalSetTimeOutState'
+  CS<0x5600874d7f60> calls function 'vPortExitCritical'
+  CS<0x5600874d7fe0> calls function 'vTaskSuspendAll'
+  CS<0x5600874d8090> calls function 'vPortEnterCritical'
+  CS<0x5600874d8790> calls function 'vPortExitCritical'
+  CS<0x5600874d8960> calls function 'xTaskCheckForTimeOut'
+  CS<0x5600874d8bd0> calls function 'prvIsQueueEmpty'
+  CS<0x5600874d9060> calls function 'vPortEnterCritical'
+  CS<0x5600874d91d0> calls function 'xTaskPriorityInherit'
+  CS<0x5600874d9360> calls function 'vPortExitCritical'
+  CS<0x5600874d9800> calls function 'vTaskPlaceOnEventList'
+  CS<0x5600874d98d0> calls function 'prvUnlockQueue'
+  CS<0x5600874d9980> calls function 'xTaskResumeAll'
+  CS<0x5600874d9c90> calls external node
+  CS<0x5600874d9d10> calls external node
+  CS<0x5600874d9e50> calls function 'prvUnlockQueue'
+  CS<0x5600874d9f00> calls function 'xTaskResumeAll'
+  CS<0x5600874da040> calls function 'prvUnlockQueue'
+  CS<0x5600874da0f0> calls function 'xTaskResumeAll'
+  CS<0x5600874da1c0> calls function 'prvIsQueueEmpty'
+  CS<0x5600874da5b0> calls function 'vPortEnterCritical'
+  CS<0x5600874da680> calls function 'prvGetDisinheritPriorityAfterTimeout'
+  CS<0x5600874daab0> calls function 'vTaskPriorityDisinheritAfterTimeout'
+  CS<0x5600874dab60> calls function 'vPortExitCritical'
+
+Call graph node for function: 'xQueueTakeMutexRecursive'<<0x560087365100>>  #uses=1
+  CS<0x5600874cba00> calls external node
+  CS<0x5600874cbe60> calls function 'xTaskGetCurrentTaskHandle'
+  CS<0x5600874cc600> calls function 'xQueueSemaphoreTake'
+
+Call graph node for function: 'xTaskCatchUpTicks'<<0x560087352a30>>  #uses=1
+  CS<0x56008743e340> calls external node
+  CS<0x56008743e5a0> calls function 'vTaskSuspendAll'
+  CS<0x56008743e810> calls function 'xTaskResumeAll'
+
+Call graph node for function: 'xTaskCheckForTimeOut'<<0x560087353e50>>  #uses=5
+  CS<0x56008744c880> calls external node
+  CS<0x56008744cca0> calls external node
+  CS<0x56008744cf00> calls function 'vPortEnterCritical'
+  CS<0x56008744e140> calls function 'vTaskInternalSetTimeOutState'
+  CS<0x56008744e740> calls function 'vPortExitCritical'
+
+Call graph node for function: 'xTaskCreate'<<0x56008731e070>>  #uses=4
+  CS<0x5600873c2eb0> calls function 'pvPortMalloc'
+  CS<0x5600873c3260> calls function 'pvPortMalloc'
+  CS<0x5600873c3a00> calls function 'vPortFree'
+  CS<0x56008737ffa0> calls function 'prvInitialiseNewTask'
+  CS<0x5600873c3ea0> calls function 'prvAddNewTaskToReadyList'
+
+Call graph node for function: 'xTaskDelayUntil'<<0x560087305f50>>  #uses=3
+  CS<0x5600873e1ae0> calls external node
+  CS<0x5600873e1f00> calls external node
+  CS<0x5600873e2390> calls external node
+  CS<0x5600873e25f0> calls function 'vTaskSuspendAll'
+  CS<0x5600873e3770> calls function 'prvAddCurrentTaskToDelayedList'
+  CS<0x5600873e38c0> calls function 'xTaskResumeAll'
+  CS<0x5600873e3ce0> calls external node
+  CS<0x5600873e3d60> calls external node
+
+Call graph node for function: 'xTaskGenericNotify'<<0x560087361f20>>  #uses=1
+  CS<0x56008746cdc0> calls external node
+  CS<0x56008746d1e0> calls external node
+  CS<0x56008746d550> calls function 'vPortEnterCritical'
+  CS<0x56008746ed90> calls external node
+  CS<0x56008746f3d0> calls function 'uxListRemove'
+  CS<0x56008746f900> calls function 'vListInsertEnd'
+  CS<0x56008746fc90> calls external node
+  CS<0x5600874703f0> calls external node
+  CS<0x560087470470> calls external node
+  CS<0x560087470590> calls function 'vPortExitCritical'
+
+Call graph node for function: 'xTaskGenericNotifyFromISR'<<0x5600873620f0>>  #uses=1
+  CS<0x560087474940> calls external node
+  CS<0x560087474d60> calls external node
+  CS<0x560087474fc0> calls function 'vPortValidateInterruptPriority'
+  CS<0x5600874751a0> calls external node
+  CS<0x560087476ce0> calls external node
+  CS<0x560087477730> calls external node
+  CS<0x560087477ce0> calls function 'uxListRemove'
+  CS<0x560087478210> calls function 'vListInsertEnd'
+  CS<0x560087478370> calls function 'vListInsertEnd'
+  CS<0x560087479170> calls external node
+
+Call graph node for function: 'xTaskGenericNotifyStateClear'<<0x560087362710>>  #uses=1
+  CS<0x560087400210> calls external node
+  CS<0x560087400830> calls function 'vPortEnterCritical'
+  CS<0x560087401030> calls function 'vPortExitCritical'
+
+Call graph node for function: 'xTaskGenericNotifyWait'<<0x560087361d50>>  #uses=1
+  CS<0x560087416670> calls external node
+  CS<0x5600874168d0> calls function 'vPortEnterCritical'
+  CS<0x560087417530> calls function 'prvAddCurrentTaskToDelayedList'
+  CS<0x5600874176a0> calls external node
+  CS<0x560087417720> calls external node
+  CS<0x560087417840> calls function 'vPortExitCritical'
+  CS<0x5600874178f0> calls function 'vPortEnterCritical'
+  CS<0x560087469fb0> calls function 'vPortExitCritical'
+
+Call graph node for function: 'xTaskGetCurrentTaskHandle'<<0x560087351e70>>  #uses=3
+
+Call graph node for function: 'xTaskGetSchedulerState'<<0x560087351ef0>>  #uses=8
+
+Call graph node for function: 'xTaskGetTickCount'<<0x560087352340>>  #uses=3
+
+Call graph node for function: 'xTaskGetTickCountFromISR'<<0x5600873523c0>>  #uses=1
+  CS<0x5600873746f0> calls function 'vPortValidateInterruptPriority'
+
+Call graph node for function: 'xTaskIncrementTick'<<0x560087306470>>  #uses=3
+  CS<0x5600873f1230> calls external node
+  CS<0x5600873f1960> calls function 'prvResetNextTaskUnblockTime'
+  CS<0x5600873f2f20> calls function 'uxListRemove'
+  CS<0x5600873f33d0> calls function 'uxListRemove'
+  CS<0x5600873f39a0> calls function 'vListInsertEnd'
+  CS<0x5600873db810> calls function 'vApplicationTickHook'
+  CS<0x5600873f62b0> calls function 'vApplicationTickHook'
+
+Call graph node for function: 'xTaskPriorityDisinherit'<<0x560087351ff0>>  #uses=2
+  CS<0x5600874578a0> calls external node
+  CS<0x560087457df0> calls external node
+  CS<0x5600874588a0> calls function 'uxListRemove'
+  CS<0x5600874595c0> calls function 'vListInsertEnd'
+
+Call graph node for function: 'xTaskPriorityInherit'<<0x560087351f70>>  #uses=2
+  CS<0x560087454440> calls function 'uxListRemove'
+  CS<0x560087455090> calls function 'vListInsertEnd'
+
+Call graph node for function: 'xTaskRemoveFromEventList'<<0x560087352ef0>>  #uses=11
+  CS<0x560087444a60> calls external node
+  CS<0x560087444dd0> calls function 'uxListRemove'
+  CS<0x5600874451d0> calls function 'uxListRemove'
+  CS<0x560087445700> calls function 'vListInsertEnd'
+  CS<0x560087445860> calls function 'vListInsertEnd'
+
+Call graph node for function: 'xTaskResumeAll'<<0x560087306220>>  #uses=26
+  CS<0x5600873ea9d0> calls external node
+  CS<0x5600873eac30> calls function 'vPortEnterCritical'
+  CS<0x5600873eba10> calls function 'uxListRemove'
+  CS<0x5600873ebbd0> calls function 'uxListRemove'
+  CS<0x5600873ec100> calls function 'vListInsertEnd'
+  CS<0x5600873ecb50> calls function 'prvResetNextTaskUnblockTime'
+  CS<0x5600873ed160> calls function 'xTaskIncrementTick'
+  CS<0x5600873edd90> calls external node
+  CS<0x5600873ede10> calls external node
+  CS<0x5600873ee110> calls function 'vPortExitCritical'
+
+Call graph node for function: 'xTaskResumeFromISR'<<0x560087629bb0>>  #uses=1
+  CS<0x5600873e6070> calls external node
+  CS<0x5600873e62d0> calls function 'vPortValidateInterruptPriority'
+  CS<0x5600873e63a0> calls external node
+  CS<0x5600873e6770> calls function 'prvTaskIsTaskSuspended'
+  CS<0x560087418a60> calls function 'uxListRemove'
+  CS<0x560087418ed0> calls function 'vListInsertEnd'
+  CS<0x560087419120> calls function 'vListInsertEnd'
+  CS<0x560087419770> calls external node
+
+Call graph node for function: 'xTimerCreate'<<0x5600873081b0>>  #uses=1
+  CS<0x5600873cc5b0> calls function 'pvPortMalloc'
+  CS<0x5600873ccc00> calls function 'prvInitialiseNewTimer'
+
+Call graph node for function: 'xTimerCreateTimerTask'<<0x560087629e00>>  #uses=2
+  CS<0x560087522000> calls function 'prvCheckForValidListAndQueue'
+  CS<0x5600875222f0> calls function 'xTaskCreate'
+  CS<0x560087522820> calls external node
+
+Call graph node for function: 'xTimerGenericCommand'<<0x5600873083c0>>  #uses=1
+  CS<0x5600873d1a30> calls external node
+  CS<0x5600873d2600> calls function 'xTaskGetSchedulerState'
+  CS<0x5600873d2970> calls function 'xQueueGenericSend'
+  CS<0x560087541a50> calls function 'xQueueGenericSend'
+  CS<0x560087541ca0> calls function 'xQueueGenericSendFromISR'
+
+Call graph node for function: 'xTimerGetExpiryTime'<<0x560087308800>>  #uses=1
+  CS<0x560087547ec0> calls external node
+
+Call graph node for function: 'xTimerGetPeriod'<<0x560087308570>>  #uses=1
+  CS<0x560087543cd0> calls external node
+
+Call graph node for function: 'xTimerGetTimerDaemonTaskHandle'<<0x5600873084f0>>  #uses=1
+  CS<0x560087543080> calls external node
+
+Call graph node for function: 'xTimerIsTimerActive'<<0x560087308930>>  #uses=1
+  CS<0x56008754a080> calls external node
+  CS<0x56008754a2e0> calls function 'vPortEnterCritical'
+  CS<0x56008754a760> calls function 'vPortExitCritical'
+
+Call graph node for function: 'xcall_arg0'<<0x5600873642e0>>  #uses=2
+  CS<0x560087493220> calls function 'switch_view'
+  CS<0x560087493590> calls external node
+  CS<0x560087493660> calls function 'switch_view'
+
+Call graph node for function: 'xcall_arg0_noid'<<0x56008730d7a0>>  #uses=1
+  CS<0x5600875a5d50> calls function 'getCompartmentFromAddr'
+  CS<0x5600875a5ee0> calls function 'xcall_arg0'
+
+Call graph node for function: 'xcall_arg1i'<<0x560087364440>>  #uses=1
+  CS<0x5600874946e0> calls function 'switch_view'
+  CS<0x560087494a70> calls external node
+  CS<0x560087494b40> calls function 'switch_view'
+
+Call graph node for function: 'xcall_arg1p'<<0x56008730cd00>>  #uses=2
+  CS<0x56008749df30> calls function 'rtmkcpy'
+  CS<0x56008749e000> calls function 'switch_view'
+  CS<0x56008749e390> calls external node
+  CS<0x56008749e460> calls function 'switch_view'
+
+Call graph node for function: 'xcall_arg1p_noid'<<0x56008730d880>>  #uses=1
+  CS<0x5600875a6b00> calls function 'getCompartmentFromAddr'
+  CS<0x56008759dfe0> calls function 'xcall_arg1p'
+
+Call graph node for function: 'xcall_arg2ii'<<0x56008730cb50>>  #uses=1
+  CS<0x56008749ad10> calls function 'switch_view'
+  CS<0x56008749b0c0> calls external node
+  CS<0x56008749b190> calls function 'switch_view'
+
+Call graph node for function: 'xcall_arg2pi'<<0x56008730ce30>>  #uses=1
+  CS<0x56008749fa30> calls function 'rtmkcpy'
+  CS<0x56008749fb00> calls function 'switch_view'
+  CS<0x56008749feb0> calls external node
+  CS<0x56008749ff80> calls function 'switch_view'
+
+Call graph node for function: 'xcall_arg2pp'<<0x56008730d090>>  #uses=1
+  CS<0x56008759cea0> calls function 'rtmkcpy'
+  CS<0x56008759d080> calls function 'rtmkcpy'
+  CS<0x56008759d150> calls function 'switch_view'
+  CS<0x56008759d500> calls external node
+  CS<0x56008759d5d0> calls function 'switch_view'
+
+Call graph node for function: 'xcall_arg3pii'<<0x56008730cf60>>  #uses=1
+  CS<0x5600874a1af0> calls function 'rtmkcpy'
+  CS<0x5600874a1bc0> calls function 'switch_view'
+  CS<0x5600874a1f90> calls external node
+  CS<0x5600874a2060> calls function 'switch_view'
 

@@ -10,7 +10,7 @@ def Log2(x):
 			math.log10(2));
 def isPowerOfTwo(n):
 	return (math.ceil(Log2(n)) == math.floor(Log2(n)));
-sizeRegionMap= { 0:"0", 32: "REGION_32B", 64: "REGION_64B", 128: "REGION_128B", 256: "REGION_256B", 512: "REGION_512B", 1024: "REGION_1K", 2048: "REGION_2K", 4096: "REGION_4K", 16384: "REGION_16K", 32768: "REGION_32K", 65536: "REGION_64K", 131072: "REGION_128K", 262144: "REGION_256K", 524288: "REGION_512K", 1048576: "REGION_1M", 2097152:"REGION_2M", 4194304:"REGION_4M",8388608:"REGION_8M",16777216:"REGION_16M",33554432:"REGION_32M",67108864:"REGION_64M",134217728:"REGION_128M",268435456:"REGION_256M",536870912:"REGION_512M",1073741824:"REGION_1G",2147483648:"REGION_2G",4294967296:"REGION_4G"}
+sizeRegionMap= { 0:"0", 32: "REGION_32B", 64: "REGION_64B", 128: "REGION_128B", 256: "REGION_256B", 512: "REGION_512B", 1024: "REGION_1K", 2048: "REGION_2K", 4096: "REGION_4K", 8192:"REGION_8K", 16384: "REGION_16K", 32768: "REGION_32K", 65536: "REGION_64K", 131072: "REGION_128K", 262144: "REGION_256K", 524288: "REGION_512K", 1048576: "REGION_1M", 2097152:"REGION_2M", 4194304:"REGION_4M",8388608:"REGION_8M",16777216:"REGION_16M",33554432:"REGION_32M",67108864:"REGION_64M",134217728:"REGION_128M",268435456:"REGION_256M",536870912:"REGION_512M",1073741824:"REGION_1G",2147483648:"REGION_2G",4294967296:"REGION_4G"}
 	
 
 def valid(base, size):
@@ -31,26 +31,28 @@ def valid(base, size):
 			print("Is less than 32 bytes")
 def writeCodeSections(cpatch, csections):
 	i = 0
-	for section in sorted(csections):
-				cpatch.write("  . = "+ str(csections[section][1]) +";\n")
+	cs = ".csection"
+	for section in range(len(csections)):
+				cpatch.write("  . = "+ str(csections[cs + str(section)][1]) +";\n")
 				cpatch.write("  .csection"+str(i) +" : \n")
 				cpatch.write("  {\n")
 				cpatch.write("_scsection"+str(i)+" = .;\n")
-				cpatch.write("	*(.csection"+str(i)+"*)\n")
-				cpatch.write("	. = "+ str(csections[section][0] + csections[section][1])+";\n")
+				cpatch.write("	*(.csection"+str(i)+")\n")
+				cpatch.write("	. = "+ str(csections[cs + str(section)][0] + csections[cs + str(section)][1])+";\n")
 				cpatch.write("_ecsection"+str(i)+" = .;\n")
 				cpatch.write("  } > FLASH \n")
 				i +=1
 
 def writeDataSections(dpatch, dsections):
 	i =0
-	for section in sorted(dsections):
+	os = ".osection"
+	for section in range(len(dsections)):
 				dpatch.write("  .osection"+str(i) +" : AT ( _sidata  + compartLMA)\n")
 				dpatch.write("  {\n")
-				dpatch.write("	. = "+ str(dsections[section][1])+";\n")
+				dpatch.write("	. = "+ str(dsections[os + str(section)][1])+";\n")
 				dpatch.write("	_sosection" +str(i) +" = .;\n")
-				dpatch.write("	*(.osection"+str(i)+"*)\n")
-				dpatch.write("	. = "+ str(dsections[section][0] + dsections[section][1])+";\n")
+				dpatch.write("	*(.osection"+str(i)+")\n")
+				dpatch.write("	. = "+ str(dsections[os + str(section)][0] + dsections[os + str(section)][1])+";\n")
 				dpatch.write("	_eosection" +str(i) +" = .;\n")
 				dpatch.write("  }  > RAM \n")
 #				dpatch.write("  }  > RAM \n")
@@ -71,7 +73,7 @@ def fixup(section):
 				section[1] = int(section[0] * div)
 		print(section)
 		return section[0]+section[1]
-
+'''
 def updateSize(codesections):
 	it = sorted(codesections)
 	for csec in sorted(codesections):
@@ -85,18 +87,21 @@ def updateSize(codesections):
 				if not sizePad == size:
 					print ("Updating size from" + str(size) + " to " + str(sizePad))
 					codesections[csec][0] = sizePad
+'''
+
 
 def printSortedAndFixupSections(sections, start):
 	lc = start
-	for elem in sorted(sections):
-		print(elem + ":")
-		print(sections[elem])
+	elemi = ''.join([i for i in list(sections.keys())[0] if not i.isdigit()])
+	for elem in range(len(sections)):
+		print(elemi + str(elem) + ":")
+		print(sections[elemi + str(elem)])
 		if not lc == -1: 
-			sections[elem][1] = lc 
-		if not sections[elem][0] == 0:
-			valid(sections[elem][1],sections[elem][0])
-			lc = fixup(sections[elem]) #Location counter tells from where the next section base should begin.
-			print(sections[elem])
+			sections[elemi + str(elem)][1] = lc 
+		if not sections[elemi + str(elem)][0] == 0:
+			valid(sections[elemi + str(elem)][1],sections[elemi + str(elem)][0])
+			lc = fixup(sections[elemi + str(elem)]) #Location counter tells from where the next section base should begin.
+			print(sections[elemi + str(elem)])
 
 def printSortedAndVerifSections(sections):
 	for elem in sorted(sections):
@@ -206,9 +211,11 @@ def main(argv):
 	f = open(configFile, "w")
 	f.write(prologue_string)
 	print(datasections)
-	i =0 
-	for section in sorted(codesections):
-			dsection = section
+	i =0
+	
+	for sect in range(len(codesections)):
+			section = ".csection" + str(sect)
+			dsection = section 
 			f.write("/*"+ section + "*/")
 			dsection = ".o" + section[2:]
 			dsection = datasections[dsection]
@@ -216,12 +223,16 @@ def main(argv):
 			f.write("{")
 			f.write(str(csection[1]))#Offset
 			f.write(",")
-			print(csection[0])
+			print(section +":")
+			print(hex(int(csection[1])))
+			print(hex(int(csection[0])))
+
 			f.write(sizeRegionMap[csection[0]])#Size
 			f.write(",")
 			f.write(str(dsection[1]))
 			f.write(",")
-			print(dsection[0])
+			print(hex(int(dsection[1])))
+			print(hex(int(dsection[0])))
 			f.write(sizeRegionMap[dsection[0]])
 			f.write(",")
 			f.write(str(csection[0] + csection[1]))
