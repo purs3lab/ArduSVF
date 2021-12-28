@@ -4,6 +4,8 @@ vTaskSwitchContext
 prvAddNewTaskToReadyList
 vTaskDelete
 vTaskPrioritySet
+vTaskGetInfo
+vTaskPlaceOnEventList
 prvAddCurrentTaskToDelayedList
 xTaskResumeAll
 xTaskIncrementTick
@@ -14,8 +16,6 @@ vTaskSuspend
 vTaskResume
 xTaskResumeFromISR
 pcTaskGetName
-vTaskGetInfo
-vTaskPlaceOnEventList
 vTaskPlaceOnUnorderedEventList
 vTaskPlaceOnEventListRestricted
 xTaskRemoveFromEventList
@@ -45,12 +45,12 @@ vTaskSwitchContext
 vTaskDelete
 xTaskDelayUntil
 vTaskSuspendAll
+xTaskCatchUpTicks
 xTaskResumeAll
 xTaskIncrementTick
 vTaskDelay
 vTaskSuspend
 xTaskResumeFromISR
-xTaskCatchUpTicks
 vTaskPlaceOnUnorderedEventList
 xTaskRemoveFromEventList
 vTaskRemoveFromUnorderedEventList
@@ -95,7 +95,6 @@ pxReadyTasksLists
 Used By:
 vTaskSwitchContext
 prvAddNewTaskToReadyList
-prvIdleTask
 prvInitialiseTaskLists
 vTaskDelete
 vTaskPrioritySet
@@ -104,6 +103,7 @@ xTaskIncrementTick
 vTaskSuspend
 vTaskResume
 xTaskResumeFromISR
+prvIdleTask
 uxTaskGetSystemState
 xTaskRemoveFromEventList
 vTaskRemoveFromUnorderedEventList
@@ -117,20 +117,20 @@ vTaskGenericNotifyGiveFromISR
 uxCurrentNumberOfTasks
 Used By:
 prvAddNewTaskToReadyList
-prvCheckTasksWaitingTermination
 vTaskDelete
 xTaskResumeAll
 vTaskSuspend
+prvCheckTasksWaitingTermination
 uxTaskGetNumberOfTasks
 uxTaskGetSystemState
 ****************
 xSchedulerRunning
 Used By:
 prvAddNewTaskToReadyList
-vTaskStartScheduler
-vTaskEndScheduler
 vTaskDelete
 vTaskSuspend
+vTaskStartScheduler
+vTaskEndScheduler
 xTaskGetSchedulerState
 ****************
 uxTaskNumber
@@ -150,6 +150,7 @@ xPendingReadyList
 Used By:
 prvInitialiseTaskLists
 xTaskResumeAll
+prvTaskIsTaskSuspended
 xTaskResumeFromISR
 xTaskRemoveFromEventList
 xTaskGenericNotifyFromISR
@@ -157,10 +158,10 @@ vTaskGenericNotifyGiveFromISR
 ****************
 xTasksWaitingTermination
 Used By:
-prvCheckTasksWaitingTermination
 prvInitialiseTaskLists
 vTaskDelete
 eTaskGetState
+prvCheckTasksWaitingTermination
 uxTaskGetSystemState
 ****************
 xSuspendedTaskList
@@ -191,22 +192,22 @@ uxTaskGetSystemState
 ****************
 uxDeletedTasksWaitingCleanUp
 Used By:
-prvCheckTasksWaitingTermination
 vTaskDelete
+prvCheckTasksWaitingTermination
 ****************
 xNextTaskUnblockTime
 Used By:
-vTaskStartScheduler
 prvResetNextTaskUnblockTime
 prvAddCurrentTaskToDelayedList
 xTaskIncrementTick
+vTaskStartScheduler
 ****************
 xTickCount
 Used By:
-vTaskStartScheduler
 xTaskDelayUntil
 prvAddCurrentTaskToDelayedList
 xTaskIncrementTick
+vTaskStartScheduler
 xTaskGetTickCount
 xTaskGetTickCountFromISR
 vTaskSetTimeOutState
@@ -217,9 +218,9 @@ xTaskGenericNotifyFromISR
 ****************
 xPendedTicks
 Used By:
+xTaskCatchUpTicks
 xTaskResumeAll
 xTaskIncrementTick
-xTaskCatchUpTicks
 ****************
 xNumOfOverflows
 Used By:
@@ -254,19 +255,23 @@ TIM3_IRQHandler
 ulButtonPressCounts
 Used By:
 ****************
+xTestSemaphore
+Used By:
+EXTI9_5_IRQHandler
+****************
 xQueueRegistry
 Used By:
+vQueueUnregisterQueue
 vQueueAddToRegistry
 pcQueueGetName
-vQueueUnregisterQueue
 ****************
 xTimerQueue
 Used By:
-xTimerCreateTimerTask
-prvCheckForValidListAndQueue
 prvProcessTimerOrBlockTask
 prvProcessReceivedCommands
 xTimerGenericCommand
+xTimerCreateTimerTask
+prvCheckForValidListAndQueue
 ****************
 .str.21
 Used By:
@@ -274,23 +279,23 @@ xTimerCreateTimerTask
 ****************
 xTimerTaskHandle
 Used By:
-xTimerCreateTimerTask
 xTimerGetTimerDaemonTaskHandle
+xTimerCreateTimerTask
 ****************
 pxOverflowTimerList
 Used By:
-prvCheckForValidListAndQueue
 prvProcessTimerOrBlockTask
 prvInsertTimerInActiveList
 prvSwitchTimerLists
+prvCheckForValidListAndQueue
 ****************
 pxCurrentTimerList
 Used By:
-prvCheckForValidListAndQueue
 prvGetNextExpireTime
 prvInsertTimerInActiveList
 prvSwitchTimerLists
 prvProcessExpiredTimer
+prvCheckForValidListAndQueue
 ****************
 prvSampleTimeNow.xLastTime
 Used By:
@@ -310,113 +315,65 @@ prvCheckForValidListAndQueue
 ****************
 uxCriticalNesting
 Used By:
-xPortStartScheduler
 vPortEndScheduler
 vPortEnterCritical
 vPortExitCritical
 prvTaskExitError
+xPortStartScheduler
 ****************
 ucMaxSysCallPriority
 Used By:
-xPortStartScheduler
 vPortValidateInterruptPriority
+xPortStartScheduler
 ****************
 ulMaxPRIGROUPValue
 Used By:
-xPortStartScheduler
 vPortValidateInterruptPriority
-****************
-ucHeap0
-Used By:
-pvPortMalloc
-****************
-ucHeap1
-Used By:
-pvPortMalloc
+xPortStartScheduler
 ****************
 ucHeap2
 Used By:
-pvPortMalloc
-****************
-ucHeap3
-Used By:
-pvPortMalloc
-****************
-ucHeap4
-Used By:
-pvPortMalloc
+pvPortMallocbyID
 ****************
 ucHeap5
 Used By:
-pvPortMalloc
-****************
-ucHeap6
-Used By:
-pvPortMalloc
-****************
-ucHeap7
-Used By:
-pvPortMalloc
+pvPortMallocbyID
 ****************
 ucHeap8
 Used By:
-pvPortMalloc
-****************
-ucHeap9
-Used By:
-pvPortMalloc
-****************
-ucHeap10
-Used By:
-pvPortMalloc
+pvPortMallocbyID
 ****************
 ucHeap11
 Used By:
-pvPortMalloc
-****************
-ucHeap12
-Used By:
-pvPortMalloc
-****************
-ucHeap13
-Used By:
-pvPortMalloc
-****************
-ucHeap14
-Used By:
-pvPortMalloc
+pvPortMallocbyID
 ****************
 ucHeap15
 Used By:
-pvPortMalloc
-****************
-ucHeap16
-Used By:
-pvPortMalloc
+pvPortMallocbyID
 ****************
 ucHeap17
 Used By:
-pvPortMalloc
+pvPortMallocbyID
 ****************
 ucHeap18
 Used By:
-pvPortMalloc
+pvPortMallocbyID
 ****************
 ucHeap
 Used By:
-pvPortMalloc
+pvPortMallocbyID
 ****************
-pvPortMalloc.pucAlignedHeap
+ucHeapInitFlag
 Used By:
-pvPortMalloc
+pvPortMallocbyID
 ****************
 xNextFreeByte
 Used By:
-pvPortMalloc
 vPortInitialiseBlocks
 xPortGetFreeHeapSize
+pvPortMallocbyID
 ****************
-.str.42
+.str.44
 Used By:
 vStartLEDFlashTasks
 ****************
@@ -438,18 +395,6 @@ Used By:
 getCompartmentFromAddr
 switch_view
 ****************
-selectedFunction
-Used By:
-switch_view_svc
-****************
-arg
-Used By:
-switch_view_svc
-****************
-sret
-Used By:
-switch_view_svc
-****************
 code_base
 Used By:
 init_mpu
@@ -466,30 +411,47 @@ data_size
 Used By:
 init_mpu
 ****************
+selectedFunction
+Used By:
+switch_view_svc
+****************
+arg
+Used By:
+switch_view_svc
+****************
+sret
+Used By:
+switch_view_svc
+****************
 counter
 Used By:
 DebugMon_Handler
+****************
+last
+Used By:
+switch_view
+lastCompart
+****************
+init
+Used By:
+switch_view
 ****************
 current
 Used By:
 switch_view
 ****************
-last
-Used By:
-switch_view
-****************
 _shared_region
 Used By:
-icall_arg2pi
-icall_arg2pp
-icall_arg3ppi
-icall_arg4ppii
-icall_arg4pppi
 xcall_arg1p
 xcall_arg2pi
 xcall_arg3pii
 xcall_arg2pp
 icall_arg1p
+icall_arg2pi
+icall_arg2pp
+icall_arg3ppi
+icall_arg4ppii
+icall_arg4pppi
 icall_arg6ppipip
 init_mpu
 ****************
@@ -559,6 +521,7 @@ STM_EVAL_COMInit
 ****************
 COM_USART_CLK
 Used By:
+STM_EVAL_COMInit
 ****************
 COM_TX_PORT_CLK
 Used By:

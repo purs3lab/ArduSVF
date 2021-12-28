@@ -33,9 +33,9 @@ def writeCodeSections(cpatch, csections):
 	i = 0
 	cs = ".csection"
 	for section in range(len(csections)):
-				cpatch.write("  . = "+ str(csections[cs + str(section)][1]) +";\n")
 				cpatch.write("  .csection"+str(i) +" : \n")
 				cpatch.write("  {\n")
+				cpatch.write("  . = "+ str(csections[cs + str(section)][1]) +";\n")
 				cpatch.write("_scsection"+str(i)+" = .;\n")
 				cpatch.write("	*(.csection"+str(i)+")\n")
 				cpatch.write("	. = "+ str(csections[cs + str(section)][0] + csections[cs + str(section)][1])+";\n")
@@ -62,6 +62,9 @@ def writeDataSections(dpatch, dsections):
 
 
 def fixup(section):
+		if section[0] == 0:
+			print "Returning empty section"
+			return section[0]
 		if section[0] < 32:
 			section[0] = 32
 		upSize = 2 ** math.ceil(Log2(section[0]))
@@ -104,11 +107,12 @@ def printSortedAndFixupSections(sections, start):
 			print(sections[elemi + str(elem)])
 
 def printSortedAndVerifSections(sections):
-	for elem in sorted(sections):
-		 print(elem + ":")
-		 print(sections[elem])
-		 if not sections[elem][0] == 0:
-				valid(sections[elem][1],sections[elem][0])
+	elemi = ''.join([i for i in list(sections.keys())[0] if not i.isdigit()])
+	for elem in range(len(sections)):
+		 print(str(elem) + ":")
+		 print(sections[elemi + str(elem)])
+		 if not sections[elemi + str(elem)][0] == 0:
+				valid(sections[elemi + str(elem)][1],sections[elemi + str(elem)][0])
 	
 
 def main(argv):
@@ -236,6 +240,8 @@ def main(argv):
 			f.write(sizeRegionMap[dsection[0]])
 			f.write(",")
 			f.write(str(csection[0] + csection[1]))
+			f.write(",")
+			f.write(str(dsection[0] + dsection[1]))
 			f.write("}")
 			i +=1
 			if i!= len(codesections):

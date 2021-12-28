@@ -605,6 +605,46 @@ vector<tcb> tasks;
 string SEND_FUNC = "xQueueSend";
 /* Value(Global Object)-New queue */
 map<Value *, Value *> qmap;
+
+void getTasks() {
+		for (SVFModule::llvm_iterator F = svfModule->llvmFunBegin(), E = svfModule->llvmFunEnd(); F != E; ++F) {
+        //const SVFFunction* fun = LLVMModuleSet::getLLVMModuleSet()->getSVFFunction(*F);
+        Function *fun = *F;
+        Value * val = (Value *)fun;
+        //cout << (*F)->getName().str()<<endl;
+        auto name = (*F)->getName().data();
+        /* Get all tasks */
+        if(creators.count(name)) {
+            /* Find all callers of this function */
+            for(auto U : val->users()){
+                    for(auto op: U->operand_values())
+                            /* Here we can explicitly get the function
+                               using the argument information, however instead
+                               let's use a heuristic that only functions can
+                               be passed taskcreation APIs as task, so probably
+                               that would be the task function, in operand list
+                               one could be creator itself */
+                            if (auto task= dyn_cast<llvm::Function>(op)) {
+                                if(task->getName().str() == name)
+                                        continue;
+
+                                TCB tcb;
+                                tcb.name = task->getName().str();
+                                tcb.func = task;
+#if 0
+                                for (auto bb=task->begin();bb!=task->end();bb++) {
+                                        for (auto stmt =bb->begin();stmt!=bb->end(); stmt++) {
+                                                cout<<stmt->getOpcodeName()<<endl;
+                                        }
+                                }
+#endif
+                                pushValsInFun(task, tcb.objects,pag,NULL);
+                                tasks.push_back(tcb);
+                            }
+            }
+        }
+    }
+}
 int taskTaskVoilations() {
 	int error_value =0;
 	for (SVFModule::llvm_iterator F = svfModule->llvmFunBegin(), E = svfModule->llvmFunEnd(); F != E; ++F) {
@@ -2158,6 +2198,54 @@ int compartmentalize(char * argv[]) {
 		}
 	}
 
+	map<int, int>heapMap;
+	/* Find heap accesses */
+	for (auto cset : compartments) {
+            int instructions =0;
+            int objects = 0;
+            string fnName;
+            string obName;
+            for (auto obj : cset.second) {
+                    auto fun = ll_mod->getFunction(obj);
+					if (fun) {
+							auto callerID  = compartmentMap[fun->getName().str()];
+                            fnName = fun->getSection().str();
+                            for (auto bb=fun->begin();bb!=fun->end();bb++) {
+                                    for (auto stmt =bb->begin();stmt!=bb->end(); stmt++) {
+                                       if (auto ci= dyn_cast<llvm::CallInst> (stmt)) {
+			                                if (ci->isInlineAsm ()) continue; /* TODO: Currently we don't cater to inline asm */
+            			                    auto callee = ci->getCalledFunction ();
+                        			        if (callee) {
+													if (callee->getName().str() == "pvPortMalloc") {
+															heapMap[callerID] = 1; // 1 means for sure
+													}
+											} else {
+													if (heapMap.count(callerID)) {
+														if (heapMap[callerID] != 1) {
+															heapMap[callerID] = 2; // 2 means maybe
+														}
+													}
+													else {
+														heapMap[callerID] = 2;
+													}
+											}
+                                    }
+                            }
+                    }
+			}
+		}
+	}
+	getTasks();
+	for (auto task:tasks) {
+			heapMap[compartmentMap[task.name]] =1;
+    }
+
+	ofstream hstats;
+	hstats.open("./rtmk.ha");
+
+	for (auto pair: heapMap) {
+		hstats<<pair.first<<":"<<pair.second<<endl;
+	}
 
 	ofstream stats;
     stats.open("./rtmk.stat");
@@ -2199,6 +2287,14 @@ int compartmentalize(char * argv[]) {
 			stats<<"	Object Section Name: "	<<gstat[".osection"+ std::to_string(cset.first)]<<endl; 
 			stats<<"	instructions: "<< instructions<<endl;
 			stats<<"	objects: "<<objects<<endl;
+			stats<<"	Heap Access:";
+			if (heapMap[cset.first] == 0) {
+					stats<< "No" <<endl;
+			} else if (heapMap[cset.first] == 1) {
+					stats<< "Yes" <<endl;
+			} else {
+					stats<< "Maybe" <<endl;
+			}
 	}
 
 	for (auto temp: gstat) {
@@ -2224,6 +2320,11 @@ int compartmentalize(char * argv[]) {
 								if (ci->isInlineAsm ()) continue; /* TODO: Currently we don't cater to inline asm */
 								auto callee = ci->getCalledFunction ();
 								if (callee) {
+									string rtmksec= "rtmk";
+							        if (callee->getSection().str().find(rtmksec) != std::string::npos) {
+										cout<<"Skipping call because its to rtmk"<<endl;
+							            continue;
+							        }
 									auto calleeID = compartmentMap[callee->getName().str()];
 									/* See if this is a cross call */
 	                                if (callerID == calleeID)
