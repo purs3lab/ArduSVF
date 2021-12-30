@@ -1524,6 +1524,8 @@ void downgradeISRControl() {
 string  argToBridge(CallInst * ci, int argnum, Value ** v, Value ** sizeInt) {
 		auto arg = ci->getArgOperand(argnum);
 		string args;
+		auto md = ci->hasFnAttr ("rtmkxcmd");
+		auto fun = ci->getCalledFunction();
 		/* If its a normal int we don't need to pass in anything */
                                                     if (arg->getType()->isIntegerTy()) {
                                                         args = "i";
@@ -1534,7 +1536,21 @@ string  argToBridge(CallInst * ci, int argnum, Value ** v, Value ** sizeInt) {
                                                     } else if (arg->getType()->isPointerTy()) {
                                                         args = "p";
                                                         IRBuilder<> Builder(ci);
-														if (arg->getType()->getPointerElementType()->isFunctionTy()) {
+														if (fun && fun->getAttributes().hasParamAttr (argnum, "rtmkxcmd") ) {
+																cout<<"******************"<<endl;
+																cout<<"******************"<<endl;
+																cout<<"Metadata Found	 "<<endl;
+																auto attr = fun->getAttributes().getParamAttr (argnum, "rtmkxcmd");
+																auto kw = attr.getValueAsString().str();
+																*v = Builder.CreatePointerCast(arg, Type::getInt8PtrTy(arg->getContext()));
+															
+																if (kw == "opaque") {
+																		*sizeInt = ConstantInt::get(arg->getContext(),llvm::APInt(32, -1, true));
+																} else { 
+																		*sizeInt = ConstantInt::get(arg->getContext(),llvm::APInt(32, 0, true));
+																}
+														}
+														else if (arg->getType()->getPointerElementType()->isFunctionTy()) {
 															*v = Builder.CreatePointerCast(arg, Type::getInt8PtrTy(arg->getContext()));
                                                             auto sizeP = Builder.CreateIntToPtr (ConstantInt::get(arg->getContext(),
                                                                                         llvm::APInt(32, 0, false)), arg->getType());

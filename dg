@@ -4,8 +4,6 @@ vTaskSwitchContext
 prvAddNewTaskToReadyList
 vTaskDelete
 vTaskPrioritySet
-vTaskGetInfo
-vTaskPlaceOnEventList
 prvAddCurrentTaskToDelayedList
 xTaskResumeAll
 xTaskIncrementTick
@@ -14,6 +12,8 @@ uxTaskPriorityGet
 uxTaskPriorityGetFromISR
 vTaskSuspend
 vTaskResume
+vTaskGetInfo
+vTaskPlaceOnEventList
 xTaskResumeFromISR
 pcTaskGetName
 vTaskPlaceOnUnorderedEventList
@@ -45,11 +45,11 @@ vTaskSwitchContext
 vTaskDelete
 xTaskDelayUntil
 vTaskSuspendAll
-xTaskCatchUpTicks
 xTaskResumeAll
 xTaskIncrementTick
 vTaskDelay
 vTaskSuspend
+xTaskCatchUpTicks
 xTaskResumeFromISR
 vTaskPlaceOnUnorderedEventList
 xTaskRemoveFromEventList
@@ -218,9 +218,9 @@ xTaskGenericNotifyFromISR
 ****************
 xPendedTicks
 Used By:
-xTaskCatchUpTicks
 xTaskResumeAll
 xTaskIncrementTick
+xTaskCatchUpTicks
 ****************
 xNumOfOverflows
 Used By:
@@ -261,17 +261,17 @@ EXTI9_5_IRQHandler
 ****************
 xQueueRegistry
 Used By:
-vQueueUnregisterQueue
 vQueueAddToRegistry
 pcQueueGetName
+vQueueUnregisterQueue
 ****************
 xTimerQueue
 Used By:
+xTimerCreateTimerTask
+prvCheckForValidListAndQueue
 prvProcessTimerOrBlockTask
 prvProcessReceivedCommands
 xTimerGenericCommand
-xTimerCreateTimerTask
-prvCheckForValidListAndQueue
 ****************
 .str.21
 Used By:
@@ -279,23 +279,23 @@ xTimerCreateTimerTask
 ****************
 xTimerTaskHandle
 Used By:
-xTimerGetTimerDaemonTaskHandle
 xTimerCreateTimerTask
+xTimerGetTimerDaemonTaskHandle
 ****************
 pxOverflowTimerList
 Used By:
+prvCheckForValidListAndQueue
 prvProcessTimerOrBlockTask
 prvInsertTimerInActiveList
 prvSwitchTimerLists
-prvCheckForValidListAndQueue
 ****************
 pxCurrentTimerList
 Used By:
+prvCheckForValidListAndQueue
 prvGetNextExpireTime
 prvInsertTimerInActiveList
 prvSwitchTimerLists
 prvProcessExpiredTimer
-prvCheckForValidListAndQueue
 ****************
 prvSampleTimeNow.xLastTime
 Used By:
@@ -442,17 +442,17 @@ switch_view
 ****************
 _shared_region
 Used By:
+icall_arg2pp
+icall_arg3ppi
+icall_arg4ppii
+icall_arg4pppi
+icall_arg6ppipip
 xcall_arg1p
 xcall_arg2pi
 xcall_arg3pii
 xcall_arg2pp
 icall_arg1p
 icall_arg2pi
-icall_arg2pp
-icall_arg3ppi
-icall_arg4ppii
-icall_arg4pppi
-icall_arg6ppipip
 init_mpu
 ****************
 xLEDs
