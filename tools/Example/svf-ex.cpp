@@ -1537,9 +1537,6 @@ string  argToBridge(CallInst * ci, int argnum, Value ** v, Value ** sizeInt) {
                                                         args = "p";
                                                         IRBuilder<> Builder(ci);
 														if (fun && fun->getAttributes().hasParamAttr (argnum, "rtmkxcmd") ) {
-																cout<<"******************"<<endl;
-																cout<<"******************"<<endl;
-																cout<<"Metadata Found	 "<<endl;
 																auto attr = fun->getAttributes().getParamAttr (argnum, "rtmkxcmd");
 																auto kw = attr.getValueAsString().str();
 																*v = Builder.CreatePointerCast(arg, Type::getInt8PtrTy(arg->getContext()));
@@ -1601,8 +1598,20 @@ map<string, int>compartmentMap;
 int promoteXCall(CallInst * ci, Function * callee, BasicBlock::iterator& stmt) {
 		//Builder.SetInsertPoint(stmt->getNextNode()->getPrevNode());
 		                            IRBuilder<> Builder(ci);
+									auto num = ci->arg_size();
                                     BasicBlock::iterator it(stmt);it--;
-                                    switch (ci->arg_size()) {
+									auto fun = ci->getCalledFunction();
+									if (fun && fun->getAttributes().getFnAttributes().hasAttribute("rtmkxcmd")) {
+										cout<<"Found function with metadata" <<endl;
+                                    	auto attr = fun->getAttributes().getFnAttributes().getAttribute("rtmkxcmd");
+                                        auto kw = attr.getValueAsString().str();
+                                                                if (kw == "custom_bridge") {
+																		num = -1;
+																		cout<<"CUstom Bridge found";
+                                                                }
+                                    }
+
+                                    switch (num) {
                                             case 0: {
                                                     string funcName;
                                                     if (ci->getType()->isVoidTy()) {
@@ -1897,6 +1906,30 @@ int promoteXCall(CallInst * ci, Function * callee, BasicBlock::iterator& stmt) {
                                                     ReplaceInstWithInst(ci, new_inst);
 
 													break;
+											}
+											case (-1) : {
+													auto funcName = callee->getName().str() + "_bridge";
+													auto func = ll_mod->getFunction(funcName);
+													if (func==NULL) {
+                                                            cerr<< funcName << " not implemented" <<endl;
+                                                            return 0;
+                                                    }
+													int compID = compartmentMap[callee->getName().str()];
+													vector<Value *> args;
+                                                    args.push_back(ConstantInt::get(func->getContext(),
+                                                                                        llvm::APInt(32, compID, false)));
+                                                    for (int i =0; i< ci->arg_size(); i++) {
+                                                            args.push_back(ci->getArgOperand(i));
+                                                    }
+													auto func_type = func->getFunctionType();
+                                                    auto f = ll_mod->getOrInsertFunction (funcName, func_type);
+													auto new_inst = Builder.CreateCall(f, ArrayRef<Value *>(args));
+													new_inst->dump();
+                                                    stmt++;
+                                                    new_inst->removeFromParent();
+                                                    ReplaceInstWithInst(ci, new_inst);
+													break;
+
 											}
 
                                             default:
