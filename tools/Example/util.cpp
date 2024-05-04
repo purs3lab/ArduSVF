@@ -316,64 +316,10 @@ void buildPTA() {
 
 #if 01
 	PTACallGraph* callgraph = fspta->getPTACallGraph();
-    // do what I did for iCFG here for callgraph
-    const SVFFunction* src, *src2;
-    const SVFFunction* sink, *sink2;
-    for (PTACallGraph::const_iterator it = callgraph->begin(), eit = callgraph->end(); it != eit; ++it) {
-        PTACallGraphNode* node = it->second;
-        // cout << node->getFun()->getName() << "\n";
-        if (node->getFunction()) {
-            // get the name in a variable
-            auto name = node->getFunction()->getName().data();
-            // check if name contains "update"
-            if (strstr(name, "run_rate_controller")) {
-                SVFUtil::outs() << node->getFunction()->getName() << "\n";
-            }
-            if (strstr(name, "rate_controller_run")) {
-                SVFUtil::outs() << node->getFunction()->getName() << "\n";
-                src = node->getFunction();
-            }
-            if (strstr(name, "get_rate_roll_pid")) {
-                SVFUtil::outs() << node->getFunction()->getName() << "\n";
-            }
-            if (strstr(name, "update_all")) {
-                SVFUtil::outs() << node->getFunction()->getName() << "\n";
-                sink = node->getFunction();
-            }
-            if (strstr(name, "ZNK12AP_AHRS_View15get_gyro_latestEv")) {
-                SVFUtil::outs() << node->getFunction()->getName() << "\n";
-            }
-            if (strstr(name, "ZNK7AP_AHRS15get_gyro_latestEv")) {
-                SVFUtil::outs() << node->getFunction()->getName() << "\n";
-                sink2 = node->getFunction();
-            }
-        }
-        // TODO: use  PTACallGraph::isReachableBetweenFunctions to check reachability
-        // between target functions
-    }
 
-    bool reachable = callgraph->isReachableBetweenFunctions(src, sink);
-    bool reachable2 = callgraph->isReachableBetweenFunctions(src, sink2);
-
-    cout << "Is reachable (rate_controller_run -> update_all ): " << reachable << "\n";
-    cout << "Is reachable (rate_controller_run -> get_gyro  ): " << reachable2 << "\n";
-
-	    /// ICFG
+	/// ICFG
     ICFG* icfg = pag->getICFG();
     // icfg->dump("icfg");
-    // iterate and print the names of nodes in ICFG
-    for (ICFG::const_iterator it = icfg->begin(), eit = icfg->end(); it != eit; ++it) {
-        ICFGNode* node = it->second;
-        // cout << node->getFun()->getName() << "\n";
-        if (node->getFun()) {
-            // get the name in a variable
-            auto name = node->getFun()->getName().data();
-            // check if name contains "update"
-            // if (strstr(name, "run_rate_controller")) {
-                // SVFUtil::outs() << node->getFun()->getName() << "\n";
-            //}
-        }
-    }
 
     /// Value-Flow Graph (VFG)
     VFG* vfg = new VFG(callgraph);
@@ -385,12 +331,47 @@ void buildPTA() {
 
 	//svfg->dump("svfg");
 
-
 #endif 
 
 	SVFModule::llvm_iterator F = svfModule->llvmFunBegin();
 	Function *fun = *F;
 	ll_mod = fun->getParent();
+
+    const SVFFunction* src, *src2;
+    const SVFFunction* sink, *sink2;
+    for (PTACallGraph::const_iterator it = callgraph->begin(), eit = callgraph->end(); it != eit; ++it) {
+        PTACallGraphNode* node = it->second;
+        // cout << node->getFun()->getName() << "\n";
+        if (node->getFunction()) {
+            // get the name in a variable
+            auto name = node->getFunction()->getName().data();
+            // check if name contains "update"
+            if (strstr(name, "ZN6Copter19run_rate_controllerEv")) {
+                SVFUtil::outs() << node->getFunction()->getName() << "\n";
+            }
+            if (strstr(name, "ZN24AC_AttitudeControl_Multi19rate_controller_runEv")) {
+                SVFUtil::outs() << node->getFunction()->getName() << "\n";
+                src = node->getFunction();
+            }
+            if (strstr(name, "ZN6AC_PID10update_allEfffbf")) {
+                SVFUtil::outs() << node->getFunction()->getName() << "\n";
+                sink = node->getFunction();
+            }
+            if (strstr(name, "ZNK12AP_AHRS_View15get_gyro_latestEv")) {
+                SVFUtil::outs() << node->getFunction()->getName() << "\n";
+            }
+            if (strstr(name, "ZNK7AP_AHRS15get_gyro_latestEv")) {
+                SVFUtil::outs() << node->getFunction()->getName() << "\n";
+                sink2 = node->getFunction();
+            }
+        }
+    }
+
+    bool reachable = callgraph->isReachableBetweenFunctions(src, sink);
+    bool reachable2 = callgraph->isReachableBetweenFunctions(src, sink2);
+
+    cout << "Is reachable (rate_controller_run -> update_all ): " << reachable << "\n";
+    cout << "Is reachable (rate_controller_run -> get_gyro  ): " << reachable2 << "\n";
 
 }
 void printDI(Instruction * instruction) {
