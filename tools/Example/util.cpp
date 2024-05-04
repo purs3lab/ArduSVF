@@ -317,6 +317,8 @@ void buildPTA() {
 #if 01
 	PTACallGraph* callgraph = fspta->getPTACallGraph();
     // do what I did for iCFG here for callgraph
+    const SVFFunction* src, *src2;
+    const SVFFunction* sink, *sink2;
     for (PTACallGraph::const_iterator it = callgraph->begin(), eit = callgraph->end(); it != eit; ++it) {
         PTACallGraphNode* node = it->second;
         // cout << node->getFun()->getName() << "\n";
@@ -329,17 +331,32 @@ void buildPTA() {
             }
             if (strstr(name, "rate_controller_run")) {
                 SVFUtil::outs() << node->getFunction()->getName() << "\n";
+                src = node->getFunction();
             }
             if (strstr(name, "get_rate_roll_pid")) {
                 SVFUtil::outs() << node->getFunction()->getName() << "\n";
             }
             if (strstr(name, "update_all")) {
                 SVFUtil::outs() << node->getFunction()->getName() << "\n";
+                sink = node->getFunction();
+            }
+            if (strstr(name, "ZNK12AP_AHRS_View15get_gyro_latestEv")) {
+                SVFUtil::outs() << node->getFunction()->getName() << "\n";
+            }
+            if (strstr(name, "ZNK7AP_AHRS15get_gyro_latestEv")) {
+                SVFUtil::outs() << node->getFunction()->getName() << "\n";
+                sink2 = node->getFunction();
             }
         }
         // TODO: use  PTACallGraph::isReachableBetweenFunctions to check reachability
         // between target functions
     }
+
+    bool reachable = callgraph->isReachableBetweenFunctions(src, sink);
+    bool reachable2 = callgraph->isReachableBetweenFunctions(src, sink2);
+
+    cout << "Is reachable (rate_controller_run -> update_all ): " << reachable << "\n";
+    cout << "Is reachable (rate_controller_run -> get_gyro  ): " << reachable2 << "\n";
 
 	    /// ICFG
     ICFG* icfg = pag->getICFG();
