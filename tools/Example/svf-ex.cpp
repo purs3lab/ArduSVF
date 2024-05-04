@@ -29,6 +29,19 @@
 #include "ec.h"
 #include "crt.h"
 #include "etsan.h"
+
+#include "SVF-LLVM/LLVMUtil.h"
+#include "Graphs/SVFG.h"
+#include "WPA/Andersen.h"
+#include "SVF-LLVM/SVFIRBuilder.h"
+#include "Util/Options.h"
+
+
+using namespace llvm;
+using namespace std;
+using namespace SVF;
+
+
 bool EC = true;
 bool TestPass = false;
 bool CRT = false; bool emitAll = true;
@@ -36,38 +49,48 @@ bool ETSAN = false;
 bool analyzecode = true;
 int main(int argc, char ** argv) {
     int error_value = 0;
-    parseArguments(argc,argv);
+
+
+	int arg_num = 0;
+    char **arg_value = new char*[argc];
+    SVFUtil::processArguments(argc, argv, arg_num, arg_value, moduleNameVec);
+    cl::ParseCommandLineOptions(arg_num, arg_value,
+                                "Whole Program Points-to Analysis\n");
+    
     buildPTA();
 
-    if (EC) {
-        compartmentalize(argv);
-    }
-    if (TestPass) {
-        error_value = testPass();
-        return error_value;
-    }
-	if (analyzecode) {
-		analyze();
-	}
-    if (CRT) {
-			printBanner("Driver Isolation");
-            error_value = driverIsolation();
-			return 0;
+    // parseArguments(argc,argv);
+    // buildPTA();
 
-            if (error_value || emitAll) {
-					printBanner("Task Kernel Isolation");
-                    error_value = taskKernelVoilations();
+    // if (EC) {
+    //     compartmentalize(argv);
+    // }
+    // if (TestPass) {
+    //     error_value = testPass();
+    //     return error_value;
+    // }
+	// if (analyzecode) {
+	// 	analyze();
+	// }
+    // if (CRT) {
+	// 		printBanner("Driver Isolation");
+    //         error_value = driverIsolation();
+	// 		return 0;
 
-					if (error_value || emitAll) {
-					   printBanner("Task Task Isolation");
-                       /* Check task-task voilations */
-                       error_value = taskTaskVoilations();
-                    }
-            }
-    }
-	if (ETSAN) {
-			etsan();
-	}
+    //         if (error_value || emitAll) {
+	// 				printBanner("Task Kernel Isolation");
+    //                 error_value = taskKernelVoilations();
+
+	// 				if (error_value || emitAll) {
+	// 				   printBanner("Task Task Isolation");
+    //                    /* Check task-task voilations */
+    //                    error_value = taskTaskVoilations();
+    //                 }
+    //         }
+    // }
+    // if (ETSAN) {
+	// 		etsan();
+	// }
 	//updateBC();
 
     //Temp for debugging and hacking

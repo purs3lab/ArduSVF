@@ -49,14 +49,14 @@ extern map<Function*,di> functionDI;
 llvm::cl::opt<std::string> InputFilename(cl::Positional,
         llvm::cl::desc("<input bitcode>"), llvm::cl::init("-"), cl::Required);
 
-llvm::cl::opt<std::string> KernFuncs(cl::Positional, llvm::cl::desc("<kernel functions>"), cl::Required);
-llvm::cl::opt<std::string> UserFuncs(cl::Positional, llvm::cl::desc("<user functions>"), cl::Required);
-llvm::cl::opt<std::string> SafeFuncs(cl::Positional, llvm::cl::desc("<safelist functions>"), cl::Required);
-llvm::cl::opt<std::string> TaskCreateFuncs(cl::Positional, llvm::cl::desc("<Task Create functions>"), cl::Required);
-llvm::cl::opt<std::string> IOMAP(cl::Positional, llvm::cl::desc("<IO Map for the device compiled"), cl::Required);
-llvm::cl::opt<std::string> kleeFile("k", llvm::cl::desc("<KLEE Compatible bc for taint analysis/symex>"), cl::Optional);
+// llvm::cl::opt<std::string> KernFuncs(cl::Positional, llvm::cl::desc("<kernel functions>"), cl::Required);
+// llvm::cl::opt<std::string> UserFuncs(cl::Positional, llvm::cl::desc("<user functions>"), cl::Required);
+// llvm::cl::opt<std::string> SafeFuncs(cl::Positional, llvm::cl::desc("<safelist functions>"), cl::Required);
+// llvm::cl::opt<std::string> TaskCreateFuncs(cl::Positional, llvm::cl::desc("<Task Create functions>"), cl::Required);
+// llvm::cl::opt<std::string> IOMAP(cl::Positional, llvm::cl::desc("<IO Map for the device compiled"), cl::Required);
+// llvm::cl::opt<std::string> kleeFile("k", llvm::cl::desc("<KLEE Compatible bc for taint analysis/symex>"), cl::Optional);
 
-llvm::cl::opt<std::string> partGuide("p", llvm::cl::desc("<KLEE Compatible bc for taint analysis/symex>"), cl::Optional);
+// llvm::cl::opt<std::string> partGuide("p", llvm::cl::desc("<KLEE Compatible bc for taint analysis/symex>"), cl::Optional);
 
 
 llvm::cl::opt<bool> LEAKCHECKER("leak", llvm::cl::init(false),
@@ -248,55 +248,55 @@ void parseArguments(int argc, char ** argv) {
     cl::ParseCommandLineOptions(arg_num, arg_value,
                                 "Whole Program Points-to Analysis\n");
 
-	ifstream kernFuncsFile(argv[KernFuncs.getPosition()]);
-    streamToVec(kernFuncsFile, kernFuncs);
-#if 0
-    std::vector<string> kernFuncs((std::istreambuf_iterator<string>(kernFuncsFile)),
-    std::istreambuf_iterator<string>());
-#endif
-    ifstream userFuncsFile(argv[UserFuncs.getPosition()]);
-    streamToVec(userFuncsFile, userFuncs);
-
-
-    ifstream safeFuncsFile(argv[SafeFuncs.getPosition()]);
-    streamToVec(safeFuncsFile, safeFuncs);
-
-    ifstream createFuncsFile(argv[TaskCreateFuncs.getPosition()]);
-    vector<string> createFuncs;
-    streamToVec(createFuncsFile, createFuncs);
-
-
-    for (auto s: createFuncs) {
-            std::string delimiter = ":";
-            std::string name = s.substr(0, s.find(delimiter));
-            string arg = s.substr(s.find(delimiter) + 1, s.size());
-            int argi = stoi(arg, 0);
-            creators.insert(pair<string, int>(name,argi));
-    }
-
-	ifstream iomapFile(argv[IOMAP.getPosition()]);
-	desc temp;
-	unsigned int addr;
-	while(iomapFile >> temp.name)
-	{
-		iomapFile >> addr;
-		iomapFile >> temp.size;
-		iomapFile >> temp.driver;
-		svdmap[addr] = temp;
-	}
-
-	cout << "*********************************" <<endl;
-#if 0
-	for (pair<int, desc> p : svdmap) {
-			cout << std::hex << p.first << p.second.name << p.second.size <<endl;
-	}
-#endif 
-
-	//REmove the functions that are supposed to be interfaces for the kernel. We could have local variables that
-    //may alias to the local pointers in that function
-    for (auto func: safeFuncs) {
-        kernFuncs.erase(std::remove(kernFuncs.begin(), kernFuncs.end(), func), kernFuncs.end());
-    }
+//	ifstream kernFuncsFile(argv[KernFuncs.getPosition()]);
+//    streamToVec(kernFuncsFile, kernFuncs);
+//#if 0
+//    std::vector<string> kernFuncs((std::istreambuf_iterator<string>(kernFuncsFile)),
+//    std::istreambuf_iterator<string>());
+//#endif
+//    ifstream userFuncsFile(argv[UserFuncs.getPosition()]);
+//    streamToVec(userFuncsFile, userFuncs);
+//
+//
+//    ifstream safeFuncsFile(argv[SafeFuncs.getPosition()]);
+//    streamToVec(safeFuncsFile, safeFuncs);
+//
+//    ifstream createFuncsFile(argv[TaskCreateFuncs.getPosition()]);
+//    vector<string> createFuncs;
+//    streamToVec(createFuncsFile, createFuncs);
+//
+//
+//    for (auto s: createFuncs) {
+//            std::string delimiter = ":";
+//            std::string name = s.substr(0, s.find(delimiter));
+//            string arg = s.substr(s.find(delimiter) + 1, s.size());
+//            int argi = stoi(arg, 0);
+//            creators.insert(pair<string, int>(name,argi));
+//    }
+//
+//	ifstream iomapFile(argv[IOMAP.getPosition()]);
+//	desc temp;
+//	unsigned int addr;
+//	while(iomapFile >> temp.name)
+//	{
+//		iomapFile >> addr;
+//		iomapFile >> temp.size;
+//		iomapFile >> temp.driver;
+//		svdmap[addr] = temp;
+//	}
+//
+//	cout << "*********************************" <<endl;
+//#if 0
+//	for (pair<int, desc> p : svdmap) {
+//			cout << std::hex << p.first << p.second.name << p.second.size <<endl;
+//	}
+//#endif 
+//
+//	//REmove the functions that are supposed to be interfaces for the kernel. We could have local variables that
+//    //may alias to the local pointers in that function
+//    for (auto func: safeFuncs) {
+//        kernFuncs.erase(std::remove(kernFuncs.begin(), kernFuncs.end(), func), kernFuncs.end());
+//    }
 
 }
 void buildPTA() {
@@ -316,13 +316,51 @@ void buildPTA() {
 
 #if 01
 	PTACallGraph* callgraph = fspta->getPTACallGraph();
+    // do what I did for iCFG here for callgraph
+    for (PTACallGraph::const_iterator it = callgraph->begin(), eit = callgraph->end(); it != eit; ++it) {
+        PTACallGraphNode* node = it->second;
+        // cout << node->getFun()->getName() << "\n";
+        if (node->getFunction()) {
+            // get the name in a variable
+            auto name = node->getFunction()->getName().data();
+            // check if name contains "update"
+            if (strstr(name, "run_rate_controller")) {
+                SVFUtil::outs() << node->getFunction()->getName() << "\n";
+            }
+            if (strstr(name, "rate_controller_run")) {
+                SVFUtil::outs() << node->getFunction()->getName() << "\n";
+            }
+            if (strstr(name, "get_rate_roll_pid")) {
+                SVFUtil::outs() << node->getFunction()->getName() << "\n";
+            }
+            if (strstr(name, "update_all")) {
+                SVFUtil::outs() << node->getFunction()->getName() << "\n";
+            }
+        }
+        // TODO: use  PTACallGraph::isReachableBetweenFunctions to check reachability
+        // between target functions
+    }
+
 	    /// ICFG
     ICFG* icfg = pag->getICFG();
-    //icfg->dump("icfg");
+    // icfg->dump("icfg");
+    // iterate and print the names of nodes in ICFG
+    for (ICFG::const_iterator it = icfg->begin(), eit = icfg->end(); it != eit; ++it) {
+        ICFGNode* node = it->second;
+        // cout << node->getFun()->getName() << "\n";
+        if (node->getFun()) {
+            // get the name in a variable
+            auto name = node->getFun()->getName().data();
+            // check if name contains "update"
+            // if (strstr(name, "run_rate_controller")) {
+                // SVFUtil::outs() << node->getFun()->getName() << "\n";
+            //}
+        }
+    }
 
     /// Value-Flow Graph (VFG)
     VFG* vfg = new VFG(callgraph);
-	vfg->dump("vfg");
+	// vfg->dump("vfg");
 
     /// Sparse value-flow graph (SVFG)
     SVFGBuilder svfBuilder(true);
