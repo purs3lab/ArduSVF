@@ -25,9 +25,16 @@
  //
  // Author: Yulei Sui,
  */
+
+
+
 #include "util.h"
+#include <Graphs/PTACallGraph.h>
 #include <fstream>
 #include <limits>
+
+#include <vector>
+#include <stack>
 
 vector<VFPair *> vfp;
 vector<Value *> vec;
@@ -299,6 +306,61 @@ void parseArguments(int argc, char ** argv) {
 //    }
 
 }
+
+typedef std::vector<const SVFFunction*> Path;
+
+Path findPathBetweenFunctions(const SVFFunction* srcFn, const SVFFunction* dstFn, PTACallGraph* callgraph)
+{
+    PTACallGraphNode* dstNode = callgraph->getCallGraphNode(dstFn);
+
+    std::stack<std::pair<const PTACallGraphNode*, Path>> nodeStack;
+    NodeBS visitedNodes;
+    Path initialPath;
+    initialPath.push_back(dstFn);
+    nodeStack.push(std::make_pair(dstNode, initialPath));
+    visitedNodes.set(dstNode->getId());
+
+    while (!nodeStack.empty())
+    {
+        const auto [node, path] = nodeStack.top();
+        nodeStack.pop();
+
+        if (node->getFunction() == srcFn)
+        {
+            return path; // Path found
+        }
+
+        for (auto it = node->InEdgeBegin(), eit = node->InEdgeEnd(); it != eit; ++it)
+        {
+            PTACallGraphEdge* edge = *it;
+            if (!visitedNodes.test_and_set(edge->getSrcID()))
+            {
+                Path newPath = path;
+                newPath.push_back(edge->getSrcNode()->getFunction());
+                nodeStack.push(std::make_pair(edge->getSrcNode(), newPath));
+            }
+        }
+    }
+
+    return Path(); // No path found
+}
+
+void printPath(const Path& path)
+{
+    if (path.empty())
+    {
+        SVFUtil::outs() << "No path found between the given functions." << "\n";
+        return;
+    }
+
+    SVFUtil::outs() << "Path found between functions:" << "\n";
+    for (size_t i = 0; i < path.size(); ++i)
+    {
+        auto func_name = path[i]->getName().str();
+        SVFUtil::outs() << "  " << i + 1 << ". " << func_name << "\n"; // Assuming getName() returns the name of the function
+    }
+}
+
 void buildPTA() {
 	svfModule = LLVMModuleSet::getLLVMModuleSet()->buildSVFModule(moduleNameVec);
     PAGBuilder builder;
@@ -370,10 +432,21 @@ void buildPTA() {
     bool reachable = callgraph->isReachableBetweenFunctions(src, sink);
     bool reachable2 = callgraph->isReachableBetweenFunctions(src, sink2);
 
+    auto path1 = findPathBetweenFunctions(src, sink, callgraph);
+    auto path2 = findPathBetweenFunctions(src, sink2, callgraph);
+
+
     cout << "Is reachable (rate_controller_run -> update_all ): " << reachable << "\n";
+    printPath(path1);
     cout << "Is reachable (rate_controller_run -> get_gyro  ): " << reachable2 << "\n";
+    printPath(path2);
 
 }
+
+
+
+
+
 void printDI(Instruction * instruction) {
 		const llvm::DebugLoc &debugInfo = instruction->getDebugLoc();
 						if (debugInfo) {
