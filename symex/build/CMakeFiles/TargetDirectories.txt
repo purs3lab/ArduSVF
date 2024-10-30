@@ -1,0 +1,3 @@
+/workdisk/akul/fire2/Pieces/partitioner/llvm/symex/build/CMakeFiles/symex.dir
+/workdisk/akul/fire2/Pieces/partitioner/llvm/symex/build/CMakeFiles/edit_cache.dir
+/workdisk/akul/fire2/Pieces/partitioner/llvm/symex/build/CMakeFiles/rebuild_cache.dir

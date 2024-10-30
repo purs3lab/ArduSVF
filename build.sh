@@ -135,7 +135,7 @@ else
 	cd ./'Release-build'
 	cmake ../
 fi
-make -j 4
+make -j 20
 
 ########
 # Set up environment variables of SVF
