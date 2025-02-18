@@ -30,10 +30,10 @@
 #include "crt.h"
 #include "etsan.h"
 
-#include "SVF-LLVM/LLVMUtil.h"
+#include "SVF-FE/LLVMUtil.h"
 #include "Graphs/SVFG.h"
 #include "WPA/Andersen.h"
-#include "SVF-LLVM/SVFIRBuilder.h"
+//#include "SVF-FE/SVFIRBuilder.h"
 #include "Util/Options.h"
 
 
